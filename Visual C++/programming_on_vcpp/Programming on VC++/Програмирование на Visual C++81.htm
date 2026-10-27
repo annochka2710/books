@@ -1,0 +1,347 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0046)http://vnews.uka.ru/html/Lessons/lesson008.htm -->
+<HTML><HEAD><TITLE>Програмирование на Visual C++</TITLE>
+<META content="text/html; charset=windows-1251" http-equiv=Content-Type>
+<META content="Kuklin Alexey Email: vnews@mail.ru" name=author>
+<META 
+content="programming, программирование, soft, helps, web webdizain, photo, photoshop, internet, examples, conference, конференция, софт, примеры программ, исходники, source, codes, MFC, MTL, vc, visual, c , c++, с++,с, документация, documentation" 
+name=keywords>
+<META 
+content="Документация C, C++ , Visual C , Object C, Quick C, Turbo C, ActiveX. Школа MFC, софт, примеры программ и исходники к ним, справочные книги и конференция." 
+name=description><LINK href="Програмирование на Visual C++81.files/styles.css" 
+rel=STYLESHEET title=Style type=text/css>
+<META content="MSHTML 5.00.2614.3500" name=GENERATOR></HEAD>
+<BODY bgColor=#e9d7b1 leftMargin=0 text=black topMargin=0>
+<DIV align=center><BR>
+<TABLE bgColor=#f8f1e4 border=1 borderColor=#800000 borderColorDark=#f8f1e4 
+borderColorLight=#f8f1e4 cellPadding=0 cellSpacing=4 height=250 width=700>
+  <TBODY>
+  <TR>
+    <TD borderColorDark=#800000 borderColorLight=#800000 colSpan=2 height=80>
+      <DIV align=center>
+      <SCRIPT>
+// <!--
+var default_user_id = 65561;
+var userid = default_user_id;
+get_user_id();
+if (userid == 123456) {userid=default_user_id;}
+var page = 1;
+var rndnum = Math.round(Math.random() * 10000);
+document.write('<A HREF="http://ad.tbn.ru/bb.cgi?cmd=go&pubid=' + userid + '&pg=' + page + '&vbn=189&num=1&w=468&h=60&nocache=' + rndnum + '" target="_blank">');
+document.write('<IMG SRC="http://ad.tbn.ru/bb.cgi?cmd=ad&pubid=' + userid + '&pg=' + page + '&vbn=189&num=1&w=468&h=60&nocache=' + rndnum + '" width=468 height=60 Alt="TBN.ru" border=1></A>');
+
+function get_user_id(){
+        var tmp = window.parent.location.href;
+        var user_id = tmp.replace(/.+user_id=/,"");
+        if(user_id.search(/^[0123456789]+.*$/g)!=-1)
+                       userid = user_id;                       
+                                else
+                                  userid = default_user_id;
+}
+
+// -->
+</SCRIPT>
+
+      <SCRIPT>
+// <!--
+var ie4 = (document.all) ? true : false;
+if (ie4) { document.write('<img src="/ad/counter" WIDTH=1 HEIGHT=0 border=0>'); }
+// -->
+</SCRIPT>
+      <BR><B><FONT face=tahoma size=2><A href="http://www.sudba.ru/" 
+      target=_blank>Е-ЛЮБОВЬ</A> | <A href="http://love.uka.ru/" 
+      target=_blank>ЗНАКОМСТВА</A> | <A href="http://chat.uka.ru/" 
+      target=_blank><FONT color=red>взрывЧАТка</FONT></A> <!--
+| <a href="http://www.anekdots.ru" target='_blank'>АНЕКДОТЫ</a>
+| <a href="http://www.anekdots.ru" target='_blank'>ИГРЫ</a>
+| <a href="http://www.anekdots.ru" target='_blank'>MУЗЫКА</a>
+--></FONT></B></DIV></TD></TR>
+  <TR>
+    <TD borderColorDark=#800000 borderColorLight=#800000 width="29%">
+      <CENTER>
+      <DIV class=base style="COLOR: #000080"><B>Меню</B></DIV></CENTER><BR><FONT 
+      size=1><IMG border=0 hspace=3 
+      src="Програмирование на Visual C++81.files/uk.gif"><A 
+      href="http://vnews.uka.ru/html/about.htm"><B class=base2>О Проекте</B>
+      <P></A><IMG border=0 hspace=3 
+      src="Програмирование на Visual C++81.files/uk.gif"><A 
+      href="http://vnews.uka.ru/index.html"><B class=base2> Новости</B>
+      <P></A><IMG border=0 hspace=3 
+      src="Програмирование на Visual C++81.files/uk.gif"><A 
+      href="http://vnews.uka.ru/html/pclub.htm"><B class=base2> Клуб 
+      Программеров С++</B>
+      <P></A><IMG border=0 hspace=3 
+      src="Програмирование на Visual C++81.files/uk.gif"><A 
+      href="http://vnews.uka.ru/html/docs.htm"><B class=base2> Документация</B>
+      <P></A><IMG border=0 hspace=3 
+      src="Програмирование на Visual C++81.files/uk.gif"><A 
+      href="http://vnews.uka.ru/html/components.htm"><B class=base2> 
+      Инструментарий</B>
+      <P></A><IMG border=0 hspace=3 
+      src="Програмирование на Visual C++81.files/uk.gif"><A 
+      href="http://vnews.uka.ru/html/school.htm"><B class=base2> Школа C++</B>
+      <P></A><IMG border=0 hspace=3 
+      src="Програмирование на Visual C++81.files/uk.gif"><A 
+      href="http://vnews.uka.ru/html/Examples/sources.htm"><B class=base2> 
+      Исходники</B>
+      <P></A><IMG border=0 hspace=3 
+      src="Програмирование на Visual C++81.files/uk.gif"><A 
+      href="http://www.fido7.com/cgi-fido7/forumi.pl?user=vnews"><B 
+      class=base2>Форум С++</B>
+      <P></A><IMG border=0 hspace=3 
+      src="Програмирование на Visual C++81.files/uk.gif"><A 
+      href="http://vnews.uka.ru/html/links.htm"><B class=base2> Ссылки</B>
+      <P></A><IMG border=0 hspace=3 
+      src="Програмирование на Visual C++81.files/uk.gif"><A 
+      href="http://www.guestbook.ru/book.cgi?user=cppmfc&amp;action=show"><B 
+      class=base2> Отзывы и предложения</B>
+      <P></A><IMG border=0 hspace=3 
+      src="Програмирование на Visual C++81.files/uk.gif"><A 
+      href="http://vnews.uka.ru/html/map.htm"><B class=base2> Карта сайта</B>
+      <P></A>
+      <HR width="90%">
+
+      <DIV align=center>
+      <SCRIPT language=javascript>
+<!-- 
+an=navigator.appName;d=document;function 
+pr(){d.write("<A HREF=\"http://count.ru/cgi-bin/href.cgi?", 
+"id=9203\"><img src=\"http://count.ru/cgi-bin/", 
+"count.cgi?id=9203&j=y&w="+srw+"&c="+srb+"&", 
+"ref="+escape(d.referrer)+"\" height=31 border=0", 
+" width=88></A>");}srb="na";srw="na";//--> 
+</SCRIPT>
+
+      <SCRIPT language=javascript1.2><!-- 
+s=screen;srw=s.width;an!="Netscape"? 
+srb=s.colorDepth:srb=s.pixelDepth;//--> 
+</SCRIPT>
+
+      <SCRIPT language=javascript><!-- 
+pr();//--> 
+</SCRIPT>
+      <NOSCRIPT><BR><A href="http://count.ru/cgi-bin/href.cgi?id=9203"><IMG 
+      border=0 height=31 src="Програмирование на Visual C++81.files/count.html" 
+      vspace=3 width=88></A> </NOSCRIPT><BR><!--LIST100 COUNTER--><A 
+      href="http://counter.list.ru/cgi-bin/jump?from=12813" target=_top>
+      <SCRIPT>
+<!--
+d=document;js=10;a='&pageref='+escape(d.referrer)
+//--></SCRIPT>
+
+      <SCRIPT language=JavaScript1.1><!--
+js=11;a+='&jsbool='+navigator.javaEnabled()
+//--></SCRIPT>
+
+      <SCRIPT language=JavaScript1.2><!--
+js=12;s=screen;a+='&res='+s.width+'*'+s.height
+a+='&depth='+(s.colorDepth?s.colorDepth:s.pixelDepth)
+//--></SCRIPT>
+
+      <SCRIPT language=JavaScript1.3><!--
+js=13//--></SCRIPT>
+
+      <SCRIPT><!--
+d.write('<img src="http://counter.list.ru/cgi-bin/counter.dll'+
+'?id=12813&type=1&cd=1&bt=0&jsver='+js+a+
+'" alt="LIST100 Counter" border="0" height="40" width="88">')
+if(js>11)d.write('<'+'!-- ')//--></SCRIPT>
+      <NOSCRIPT><IMG alt="LIST100 Counter" border=0 height=32 
+      src="Програмирование на Visual C++81.files/counter.gif" vspace=3 
+      width=80></NOSCRIPT>
+      <SCRIPT><!--
+if(js>11)d.write('--'+'>')
+//-->
+</SCRIPT>
+      </A> <!--LIST100 COUNTER--><BR><A href="http://www.index99.kiev.ua/" 
+      target=_blank><IMG alt="Index'99" border=0 height=31 
+      src="Програмирование на Visual C++81.files/count1.gif" vspace=3 
+      width=88></A><BR><!--NUMBER ONE COUNTER--><A href="http://www.one.ru/" 
+      target=_top>
+      <SCRIPT language=javascript><!--
+document.write("<img src=\"http://www.one.ru/cgi-bin/cnt.cgi?id=4201&t=1",
+"&r="+escape(parent.document.referrer),"\" width=88 height=31 ",
+"border=0 alt=\"become number one\">");//--></SCRIPT>
+      <NOSCRIPT><IMG alt="be number one" border=0 height=31 
+      src="Програмирование на Visual C++81.files/cnt.gif" 
+      width=88></NOSCRIPT></A> <!--NUMBER ONE COUNTER--><BR><!--3P COUNTER--><A 
+      href="http://www.3p.com/" target=_top>
+      <SCRIPT language=javascript><!--
+document.write("<img src=\"http://www.3p.com/cgi-bin/cnt.cgi?id=620&t=1",
+"&r="+escape(parent.document.referrer),"\" width=88 height=31 ",
+"border=0 alt=\"3P.RU\">");//--></SCRIPT>
+      <NOSCRIPT><IMG alt=3P.COM border=0 height=31 
+      src="C:\users\max\work\VISUAL\KNIGA2\Програмирование на Visual C++81.files\cnt(1).gif" 
+      width=88></NOSCRIPT></A> <!--3P COUNTER--><BR><A 
+      href="http://www.stars.ru/" target=_top><IMG border=0 height=30 
+      src="Програмирование на Visual C++81.files/1000.gif" width=50></A><BR>
+      <P> </P></DIV>
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> </P></FONT></TD>
+    <TD borderColorDark=#800000 borderColorLight=#800000><FONT color=green 
+      face=TAHOMA size=5>
+      <CENTER><B>Урок VIII</B></CENTER></FONT>
+      <P>
+      <DIV align=center>
+      <TABLE width="95%">
+        <TBODY>
+        <TR>
+          <TD><FONT color=black face=TAHOMA size=2>Сейчас мы создадим 
+            программу <B>PaintORama</B><BR>Посмотрим на ее спецификацию.<BR>
+            <LI>Программа <B>PaintORama</B> - это графический редактор, который 
+            может рисовать разные фигуры, разным цветом, разной толщины, 
+            используя при этом разнообразные кисти и варианты заливки. 
+            <P align=center><IMG 
+            src="Програмирование на Visual C++81.files/vc_secdlg_drawgraph.gif"></P>
+            <P><B>План урока:</B><BR>1) Создание проекта программы.<BR>2) 
+            Проектирование диалоговой панели, очищение экрана.<BR>3) Код выбора 
+            цвета для рисования и код рисования.<BR>4) Добавление возможности 
+            выбора цвета пера.<BR>5) Добавление возможности выбора размера пера 
+            и стиля пера.<BR>6) Добавление кода для рисования различных 
+            фигур.<BR>7) Добавление возможности выбора стиля и цвета 
+            заливки(кисти).<BR>8) Добавление возможности перерисовки и 
+            сохранения области рисования.<BR>9) Резюме.<BR>
+            <P>Вы можете скачать исходник: <A 
+            href="http://vnews.uka.ru/Visual%20Progs/MFC_Source/lesson8.zip"><B>Скачать 
+            исходник программы восьмого урока</B></A> 
+            <P>Теперь рассмотрим все пункты попорядку.<BR></P>
+            <LI>Вначале запустим Visual C++. Зайдем в меню <B>FILE -&gt; 
+            NEW...</B>, выберем там <B>Project</B>. Ваша панель должна выглядеть 
+            теперь так: 
+            <P align=center><IMG 
+            src="Програмирование на Visual C++81.files/vc_project_main_point.gif"></P>
+            <LI>Выберем там <B>MFC AppWizard(exe)</B>, это значит вы хотите 
+            создать запускаемый файл. 
+            <LI>В <B>Project Name</B> задайте имя программы <B>PaintORama</B>. И 
+            щелкните <B>OK</B>. 
+            <LI>В раскрывшемся окне(<B>STEP1</B>) выбирете <B>Dialog Based</B>. 
+            Это означает, что ваша программа будет основана на диалоге. Щелкните 
+            <B>Next</B>. 
+            <LI>В <B>STEP2</B> задайте в <B>Please enter title of your 
+            dialog</B> имя программы <B>The PaintORama Program</B>. Остальное 
+            оставьте без изменения и нажпмите <B>NEXT</B>. 
+            <LI>В <B>STEP3</B> Оставьте все без изменения и щелкните 
+            <B>NEXT</B>. Здесь вы указали, что ваша программа будет иметь 
+            библиотеку с динамической конпановкой(<B>DLL</B>), а не статической. 
+
+            <LI>В <B>STEP4</B> Оставьте все без изменения. Посмотрите, чтобы в 
+            <B>Class Name</B> было выбрано <B>CPaintORamaApp</B> и щелкните 
+            <B>FINISH</B>. 
+            <P>Вы закончили создание проекта программы!<BR>Все каркасные файлы 
+            для вашей программы написал <B>Visual C++</B>, с помощью мастера 
+            настроек <B>MFC AppWizard.</B><BR>А теперь мы спроектируем 
+            диалогувую панель, добавим выбор цвета кисти и выбор размера. <A 
+            href="http://vnews.uka.ru/html/Lessons/lesson018.htm"><B 
+            class=base2>Дальше -&gt; </B></A>
+            <P>
+            <CENTER><B><FONT color=green>[1]<A 
+            href="http://vnews.uka.ru/html/Lessons/lesson018.htm"> [2]</A> <A 
+            href="http://vnews.uka.ru/html/Lessons/lesson028.htm">[3]</A><A 
+            href="http://vnews.uka.ru/html/Lessons/lesson038.htm"> [4]</A><A 
+            href="http://vnews.uka.ru/html/Lessons/lesson048.htm"> [5] </A><A 
+            href="http://vnews.uka.ru/html/Lessons/lesson058.htm">[6]</A><A 
+            href="http://vnews.uka.ru/html/Lessons/lesson068.htm"> [7]<A> <A 
+            href="http://vnews.uka.ru/html/Lessons/lesson078.htm">[8]</A> <A 
+            href="http://vnews.uka.ru/html/Lessons/lesson088.htm">[9]</A></B></FONT></CENTER></LI></FONT></TD></TR></TBODY></TABLE></DIV></TD></TR>
+  <TR>
+    <TD borderColorDark=#800000 borderColorLight=#800000 colSpan=2>
+      <DIV align=center>
+      <TABLE border=0 cellPadding=0 cellSpacing=0 width="70%">
+        <TBODY>
+        <TR>
+          <TD><FONT color=black face="MS SANS SERIF" size=1><A 
+            href="http://algo.da.ru/" target=_top><B>Algorithm project</A>:</B> 
+            Кольцо сайтов, посвященных программированию (<A 
+            href="http://webring.da.ru/" style="COLOR: black" 
+            target=_top>подробнее о проекте WebRing...</A>)<BR>[<A 
+            href="http://www.webring.org/cgi-bin/webring?ring=ru_rk_ring;id=10;prev5" 
+            target=_top>Предыдущие 5 сайтов</A> | <A 
+            href="http://www.webring.org/cgi-bin/webring?ring=ru_rk_ring;id=10;prev" 
+            target=_top>Предыдуший</A> | <A 
+            href="http://www.webring.org/cgi-bin/webring?ring=ru_rk_ring;id=10;next" 
+            target=_top>Следующий</A> | <A 
+            href="http://www.webring.org/cgi-bin/webring?ring=ru_rk_ring;id=10;next5" 
+            target=_top>Следующие 5 сайтов</A> | <A 
+            href="http://www.webring.org/cgi-bin/webring?ring=ru_rk_ring;random" 
+            target=_top>Выбрать сайт случайным образом</A> <A 
+            href="http://www.webring.org/cgi-bin/webring?ring=ru_rk_ring;list" 
+            target=_top>Список всех сайтов</A> ] 
+      </FONT></TD></TR></TBODY></TABLE></DIV></TD></TR></TBODY></TABLE><BR>
+<TABLE bgColor=#f8f1e4 border=1 borderColor=#800000 cellPadding=0 cellSpacing=5 
+width=700>
+  <TBODY>
+  <TR>
+    <TD height=40>
+      <DIV align=center>
+      <TABLE border=0 cellPadding=0 cellSpacing=10 width="37%">
+        <TBODY>
+        <TR>
+          <TD width="16%">
+            <P align=center>
+            <SCRIPT>
+// <!--
+
+var rndnum = Math.round(Math.random() * 10000);
+if (rndnum < 3) {
+
+document.write('<a href=http://www.linkexchange.ru/users/051294/goto.map target=_blank>');
+document.write('<img src=http://www.linkexchange.ru/cgi-bin/rle.cgi?51294?' + rndnum + ' ');
+document.write('alt="RLE Banner Network" border=0 height=60 width=468></a>');
+
+} else {
+document.write('<a href="http://m2k.ru/cgi-bin/t2-click//T2RB//533/' + rndnum + '/1/" target=_blank><img src="http://m2k.ru/cgi-bin/t2-requester?account=533&network=1&format=468|60&dumb=&magic=' + rndnum + '&keywords=" alt="M2K Network" width=468 height=60 border=0></a>');
+//document.write('<a href="http://m2k.ru/cgi-bin/t2-click//T2RB//anekdots/' + rndnum + '/" target=_blank><img src="http://m2k.ru/cgi-bin/t2-requester?account=anekdots&dumb=&magic=' + rndnum + '" alt="M2K Network" width=468 height=60 border=0></a>');
+}
+// -->
+</SCRIPT>
+
+            <SCRIPT>
+// <!--
+var ie4 = (document.all) ? true : false;
+if (ie4) { document.write('<img src="/ad/counter" WIDTH=1 HEIGHT=0 border=0>'); }
+// -->
+</SCRIPT>
+            <BR><B><FONT face=tahoma size=2><A href="http://www.sudba.ru/" 
+            target=_blank>Е-ЛЮБОВЬ</A> | <A href="http://love.uka.ru/" 
+            target=_blank>ЗНАКОМСТВА</A> | <A href="http://chat.uka.ru/" 
+            target=_blank><FONT color=red>взрывЧАТка</FONT></A> <!--
+| <a href="http://www.anekdots.ru" target='_blank'>АНЕКДОТЫ</a>
+| <a href="http://www.anekdots.ru" target='_blank'>ИГРЫ</a>
+--></FONT></B></P></TD></TR></TBODY></TABLE></DIV></TD></TR></TBODY></TABLE></DIV>
+<P>
+<CENTER>
+<DIV class=base2 style="COLOR: black">Copyright © 1999 C++ Programmers Club 
+</DIV>
+<DIV class=base2 style="COLOR: black">Author: <A 
+href="mailto:vnews@mail.ru">Kuklin Alexey</A> All Rights Reserved 
+</DIV></CENTER>
+<P> </P></BODY></HTML>

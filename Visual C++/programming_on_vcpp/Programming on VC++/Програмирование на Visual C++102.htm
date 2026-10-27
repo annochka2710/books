@@ -1,0 +1,426 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0046)http://vnews.uka.ru/html/Lessons/lesson010.htm -->
+<HTML><HEAD><TITLE>Програмирование на Visual C++</TITLE>
+<META content="text/html; charset=windows-1251" http-equiv=Content-Type>
+<META content="Kuklin Alexey Email: vnews@mail.ru" name=author>
+<META 
+content="programming, программирование, soft, helps, web webdizain, photo, photoshop, internet, examples, conference, конференция, софт, примеры программ, исходники, source, codes, MFC, MTL, vc, visual, c , c++, с++,с, документация, documentation" 
+name=keywords>
+<META 
+content="Документация C, C++ , Visual C , Object C, Quick C, Turbo C, ActiveX. Школа MFC, софт, примеры программ и исходники к ним, справочные книги и конференция." 
+name=description><LINK href="Програмирование на Visual C++102.files/styles.css" 
+rel=STYLESHEET title=Style type=text/css>
+<META content="MSHTML 5.00.2614.3500" name=GENERATOR></HEAD>
+<BODY bgColor=#e9d7b1 leftMargin=0 text=black topMargin=0>
+<DIV align=center><BR>
+<TABLE bgColor=#f8f1e4 border=1 borderColor=#800000 borderColorDark=#f8f1e4 
+borderColorLight=#f8f1e4 cellPadding=0 cellSpacing=4 height=250 width=700>
+  <TBODY>
+  <TR>
+    <TD borderColorDark=#800000 borderColorLight=#800000 colSpan=2 height=80>
+      <DIV align=center>
+      <SCRIPT>
+// <!--
+var default_user_id = 65561;
+var userid = default_user_id;
+get_user_id();
+if (userid == 123456) {userid=default_user_id;}
+var page = 1;
+var rndnum = Math.round(Math.random() * 10000);
+document.write('<A HREF="http://ad.tbn.ru/bb.cgi?cmd=go&pubid=' + userid + '&pg=' + page + '&vbn=189&num=1&w=468&h=60&nocache=' + rndnum + '" target="_blank">');
+document.write('<IMG SRC="http://ad.tbn.ru/bb.cgi?cmd=ad&pubid=' + userid + '&pg=' + page + '&vbn=189&num=1&w=468&h=60&nocache=' + rndnum + '" width=468 height=60 Alt="TBN.ru" border=1></A>');
+
+function get_user_id(){
+        var tmp = window.parent.location.href;
+        var user_id = tmp.replace(/.+user_id=/,"");
+        if(user_id.search(/^[0123456789]+.*$/g)!=-1)
+                       userid = user_id;                       
+                                else
+                                  userid = default_user_id;
+}
+
+// -->
+</SCRIPT>
+
+      <SCRIPT>
+// <!--
+var ie4 = (document.all) ? true : false;
+if (ie4) { document.write('<img src="/ad/counter" WIDTH=1 HEIGHT=0 border=0>'); }
+// -->
+</SCRIPT>
+      <BR><B><FONT face=tahoma size=2><A href="http://www.sudba.ru/" 
+      target=_blank>Е-ЛЮБОВЬ</A> | <A href="http://love.uka.ru/" 
+      target=_blank>ЗНАКОМСТВА</A> | <A href="http://chat.uka.ru/" 
+      target=_blank><FONT color=red>взрывЧАТка</FONT></A> <!--
+| <a href="http://www.anekdots.ru" target='_blank'>АНЕКДОТЫ</a>
+| <a href="http://www.anekdots.ru" target='_blank'>ИГРЫ</a>
+| <a href="http://www.anekdots.ru" target='_blank'>MУЗЫКА</a>
+--></FONT></B></DIV></TD></TR>
+  <TR>
+    <TD borderColorDark=#800000 borderColorLight=#800000 width="29%">
+      <CENTER>
+      <DIV class=base style="COLOR: #000080"><B>Меню</B></DIV></CENTER><BR><FONT 
+      size=1><IMG border=0 hspace=3 
+      src="Програмирование на Visual C++102.files/uk.gif"><A 
+      href="http://vnews.uka.ru/html/about.htm"><B class=base2>О Проекте</B>
+      <P></A><IMG border=0 hspace=3 
+      src="Програмирование на Visual C++102.files/uk.gif"><A 
+      href="http://vnews.uka.ru/index.html"><B class=base2> Новости</B>
+      <P></A><IMG border=0 hspace=3 
+      src="Програмирование на Visual C++102.files/uk.gif"><A 
+      href="http://vnews.uka.ru/html/pclub.htm"><B class=base2> Клуб 
+      Программеров С++</B>
+      <P></A><IMG border=0 hspace=3 
+      src="Програмирование на Visual C++102.files/uk.gif"><A 
+      href="http://vnews.uka.ru/html/docs.htm"><B class=base2> Документация</B>
+      <P></A><IMG border=0 hspace=3 
+      src="Програмирование на Visual C++102.files/uk.gif"><A 
+      href="http://vnews.uka.ru/html/components.htm"><B class=base2> 
+      Инструментарий</B>
+      <P></A><IMG border=0 hspace=3 
+      src="Програмирование на Visual C++102.files/uk.gif"><A 
+      href="http://vnews.uka.ru/html/school.htm"><B class=base2> Школа C++</B>
+      <P></A><IMG border=0 hspace=3 
+      src="Програмирование на Visual C++102.files/uk.gif"><A 
+      href="http://vnews.uka.ru/html/Examples/sources.htm"><B class=base2> 
+      Исходники</B>
+      <P></A><IMG border=0 hspace=3 
+      src="Програмирование на Visual C++102.files/uk.gif"><A 
+      href="http://www.fido7.com/cgi-fido7/forumi.pl?user=vnews"><B 
+      class=base2>Форум С++</B>
+      <P></A><IMG border=0 hspace=3 
+      src="Програмирование на Visual C++102.files/uk.gif"><A 
+      href="http://vnews.uka.ru/html/links.htm"><B class=base2> Ссылки</B>
+      <P></A><IMG border=0 hspace=3 
+      src="Програмирование на Visual C++102.files/uk.gif"><A 
+      href="http://www.guestbook.ru/book.cgi?user=cppmfc&amp;action=show"><B 
+      class=base2> Отзывы и предложения</B>
+      <P></A><IMG border=0 hspace=3 
+      src="Програмирование на Visual C++102.files/uk.gif"><A 
+      href="http://vnews.uka.ru/html/map.htm"><B class=base2> Карта сайта</B>
+      <P></A>
+      <HR width="90%">
+
+      <DIV align=center>
+      <SCRIPT language=javascript>
+<!-- 
+an=navigator.appName;d=document;function 
+pr(){d.write("<A HREF=\"http://count.ru/cgi-bin/href.cgi?", 
+"id=9203\"><img src=\"http://count.ru/cgi-bin/", 
+"count.cgi?id=9203&j=y&w="+srw+"&c="+srb+"&", 
+"ref="+escape(d.referrer)+"\" height=31 border=0", 
+" width=88></A>");}srb="na";srw="na";//--> 
+</SCRIPT>
+
+      <SCRIPT language=javascript1.2><!-- 
+s=screen;srw=s.width;an!="Netscape"? 
+srb=s.colorDepth:srb=s.pixelDepth;//--> 
+</SCRIPT>
+
+      <SCRIPT language=javascript><!-- 
+pr();//--> 
+</SCRIPT>
+      <NOSCRIPT><BR><A href="http://count.ru/cgi-bin/href.cgi?id=9203"><IMG 
+      border=0 height=31 src="Програмирование на Visual C++102.files/count.html" 
+      vspace=3 width=88></A> </NOSCRIPT><BR><!--LIST100 COUNTER--><A 
+      href="http://counter.list.ru/cgi-bin/jump?from=12813" target=_top>
+      <SCRIPT>
+<!--
+d=document;js=10;a='&pageref='+escape(d.referrer)
+//--></SCRIPT>
+
+      <SCRIPT language=JavaScript1.1><!--
+js=11;a+='&jsbool='+navigator.javaEnabled()
+//--></SCRIPT>
+
+      <SCRIPT language=JavaScript1.2><!--
+js=12;s=screen;a+='&res='+s.width+'*'+s.height
+a+='&depth='+(s.colorDepth?s.colorDepth:s.pixelDepth)
+//--></SCRIPT>
+
+      <SCRIPT language=JavaScript1.3><!--
+js=13//--></SCRIPT>
+
+      <SCRIPT><!--
+d.write('<img src="http://counter.list.ru/cgi-bin/counter.dll'+
+'?id=12813&type=1&cd=1&bt=0&jsver='+js+a+
+'" alt="LIST100 Counter" border="0" height="40" width="88">')
+if(js>11)d.write('<'+'!-- ')//--></SCRIPT>
+      <NOSCRIPT><IMG alt="LIST100 Counter" border=0 height=32 
+      src="Програмирование на Visual C++102.files/counter.gif" vspace=3 
+      width=80></NOSCRIPT>
+      <SCRIPT><!--
+if(js>11)d.write('--'+'>')
+//-->
+</SCRIPT>
+      </A> <!--LIST100 COUNTER--><BR><A href="http://www.index99.kiev.ua/" 
+      target=_blank><IMG alt="Index'99" border=0 height=31 
+      src="Програмирование на Visual C++102.files/count1.gif" vspace=3 
+      width=88></A><BR><!--NUMBER ONE COUNTER--><A href="http://www.one.ru/" 
+      target=_top>
+      <SCRIPT language=javascript><!--
+document.write("<img src=\"http://www.one.ru/cgi-bin/cnt.cgi?id=4201&t=1",
+"&r="+escape(parent.document.referrer),"\" width=88 height=31 ",
+"border=0 alt=\"become number one\">");//--></SCRIPT>
+      <NOSCRIPT><IMG alt="be number one" border=0 height=31 
+      src="Програмирование на Visual C++102.files/cnt.gif" 
+      width=88></NOSCRIPT></A> <!--NUMBER ONE COUNTER--><BR><!--3P COUNTER--><A 
+      href="http://www.3p.com/" target=_top>
+      <SCRIPT language=javascript><!--
+document.write("<img src=\"http://www.3p.com/cgi-bin/cnt.cgi?id=620&t=1",
+"&r="+escape(parent.document.referrer),"\" width=88 height=31 ",
+"border=0 alt=\"3P.RU\">");//--></SCRIPT>
+      <NOSCRIPT><IMG alt=3P.COM border=0 height=31 
+      src="C:\users\max\inet\BD\Програмирование на Visual C++102.files\cnt(1).gif" 
+      width=88></NOSCRIPT></A> <!--3P COUNTER--><BR><A 
+      href="http://www.stars.ru/" target=_top><IMG border=0 height=30 
+      src="Програмирование на Visual C++102.files/1000.gif" width=50></A><BR>
+      <P> </P></DIV>
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> </P></FONT></TD>
+    <TD borderColorDark=#800000 borderColorLight=#800000><FONT color=green 
+      face=TAHOMA size=5>
+      <CENTER><B>Урок X</B></CENTER></FONT>
+      <P>
+      <P align=center><FONT color=black face=ARIAL size=4>Проектирование 
+      диалоговой панели</FONT></P>
+      <DIV align=center>
+      <TABLE width="95%">
+        <TBODY>
+        <TR>
+          <TD><FONT color=black face=TAHOMA size=2>Сейчас мы визуально 
+            спроектируем диалоговую панель. Для этого вначале выбирете закладку 
+            <B>"Resourse View"</B> и раскройте пункт <B>FourUp Resource</B>. 
+            Выполните слдеующие действия <BR>
+            <UL type=square>
+              <LI>У нас не будет ни каких кнопок, но у нас будет меню, и вы его 
+              сейчас добавите. 
+              <LI>Добавьте меню свой проект с помощью <B>WorkSpace</B>. Откройте 
+              закладку с ресурсами, вызовите контексное меню, там найдите 
+              <B>Insert...</B>, появится такое диалоговое окно: 
+              <P align=center><IMG 
+              src="Програмирование на Visual C++102.files/vc_insert_icon.gif"></P>
+              <LI>Теперь спроектируем меню. Щелкните по названию меню два раза, 
+              в окне проектирования добавьте вначале пункт файл <B>File</B>, 
+              потом в раскрывшемся ниже окошке, добавьте пункт <B>Open...</B>, а 
+              еще ниже добавьте пункт <B>Exit</B>. В окне пропертионс ничего не 
+              меняйте. 
+              <LI>Для работы c <B>bmp</B> файлами вам необходимо будет скачать 
+              два <A 
+              href="http://vnews.uka.ru/html/Lessons/Lessons/Visual%20Progs/MFC_Source/ln10res.zip"><B>файла</B></A>, 
+              которые нужно будет добавить в проект. 
+              <LI>Чтобы добавить в проект файлы, необходимо, зайти в 
+              <B>Project-&gt;Add to Project-&gt;Files...</B> выбирите эти два 
+              файла: <B>dib.cpp</B> и <B>Showdib.h</B>. 
+              <LI>Добавьте следующую строку в файл <B>BmpOpenDlg.cpp</B>: 
+              <BR><B>#include"Showdib.h"</B>. 
+              <LI>Эта файл заголовков функций, после этого вы можете 
+              использовать функции, для открытия <B>BMP</B> файлов. 
+              <LI>Теперь свяжем код с пунктом меню <B>Exit</B>. 
+              <LI>Откройте <B>Сlass Wizard</B> на странице <B>Message Maps</B>, 
+              возможно у вас появится окно, в котором будет предлагаться создать 
+              или выбрать класс для меню, нажмите здесь <B>Cancel</B>. 
+              <LI>Выберите индетификатор <B>ID_FILE_EXIT</B> и событие 
+              <B>BN_CLICKED</B>, добавьте функцию и напишите в ней 
+              <B>OnOK();</B>. 
+              <LI>Эта функция завершает работу программы. 
+              <LI>Добавьте две переменные в класс <B>CBmpOpenDlg</B>: <BR>1) 
+              Тип: <B>BITMAP</B>, название <B>bm</B>.<BR>2) Тип: <B>HBITMAP</B>, 
+              название <B>hbm</B>.<BR>
+              <LI>Первая переменная будет хранить параметры изображения, такие 
+              как размер и т.д. 
+              <LI>Вторая переменная, это указатель на объект картинки в памяти, 
+              с помощью нее мы будем, выводить картинку. 
+              <LI>Свяжите таким же образом код с пунктом <B>ID_FILE_OPEN</B>. 
+              <LI>И добавьте следующий код туда:
+              <P><B>void CMPODlg::OnFileOpen() <BR>{<BR>//Заголовок и путь к 
+              файлу<BR>char FileName[500];<BR>char 
+              FileTitle[100];<BR>FileName[0]='\0';
+              <P>//Создать объект диалогового окна <BR>CFileDialog 
+              file(TRUE);<BR>//Уставновить аттрибуты диалогового 
+              окна<BR>file.m_ofn.lpstrFilter=TEXT("Bitmap picture files 
+              *.bmp\0*.bmp\0All Files 
+              *.*\0*.*\0\0");<BR>file.m_ofn.lpstrFileTitle=FileTitle;<BR>file.m_ofn.lpstrFile=FileName;<BR>file.m_ofn.lpstrTitle="Open 
+              BMP File";<BR>//Вывести диалоговое окно<BR>file.DoModal();
+              <P>//Если ничего не выбранно, то вернуться<BR>if 
+              (FileName[0]=='\0')return;<BR>//Изменить заголовок окна на имя 
+              файла<BR>SetWindowText(FileTitle);
+              <P>//Получить указатель на объект в памяти<BR>HANDLE hdibCurrent1 
+              = OpenDIB(FileName);<BR>hbm=0;
+              <P>//Получить указатель на 
+              изображение<BR>hbm=BitmapFromDib(hdibCurrent1,0);
+              <P>//Записать параметры изображения 
+              <BR>GetObject(hbm,sizeof(BITMAP),(LPSTR)&amp;bm);
+              <P>//Получить координаты окна<BR>CRect 
+              wdRect;<BR>GetClientRect(&amp;wdRect);<BR>ClientToScreen(&amp;wdRect);
+              <P>//Изменить размеры 
+              окна<BR>SetWindowPos(NULL,wdRect.left-4,wdRect.top-42,bm.bmWidth+wdRect.left,bm.bmHeight+wdRect.top,NULL);
+              <P>//Вывести картинку<BR>OnPaint();<BR>}
+              <P></B></P>
+              <LI>Вначале вы создаете объект диалогового окна открытия файла, 
+              потом устанавливаете его атрибуты, вродк типы файлов, заголовок 
+              окна, куда записывать путь и название файла. 
+              <LI>Потом вы выводите это окно, если ничего не выбранно, то вы 
+              возращаетесь. 
+              <LI>Затем вы изменяете заголовок окна на имя файла. 
+              <LI>Размещаете объект в памяти, потом обработываете его, получаете 
+              указатель на объект, затем получаете указатель на изображение. 
+              <LI>Записываете параметры изображения в переменную <B>bm</B>. 
+              <LI>Получаете размеры окна, и в зависимости от размера изображения 
+              изменяете размер окна. 
+              <LI>Затем вызывается функция рисования окна <B>OnPaint()</B>, 
+              сейчас мы добавим туда код.
+              <P><B>void CMPODlg::OnPaint() <BR>{<BR>if 
+              (IsIconic())<BR>{<BR>.........<BR>}<BR>else<BR>{
+              <P>////-Ваш код начинается здесь-////
+              <P>//Если открыт bmp файл<BR>if(hbm) { CClientDC dc(this);
+              <P>//Получить указатель на DC.
+              <P>HDC hdc=::GetDC(m_hWnd);<BR>HDC 
+              hdcBits=::CreateCompatibleDC(hdc);
+              <P>//Выбрать объект<BR>SelectObject(hdcBits,hbm);
+              <P>//Закрасить клиентскую облаcть черным цветом<BR>CRect 
+              wdRect;<BR>GetClientRect(&amp;wdRect);<BR>CBrush 
+              brush;<BR>brush.CreateSolidBrush(RGB(0,0,0));<BR>dc.FillRect(&amp;wdRect,&amp;brush);
+              <P>//Вывести изображение<BR>BitBlt(hdc, 0, 0, 
+              bm.bmWidth,bm.bmHeight,hdcBits,0,0, SRCCOPY);
+              <P>//Удалить 
+              DC<BR>DeleteDC(hdcBits);<BR>::ReleaseDC(m_hWnd,hdc);<BR>}
+              <P>////-Ваш код заканчивается здесь-////
+              <P>CDialog::OnPaint();<BR>}<BR>}<BR></B></P>
+              <LI>Оператор <B>IF</B> проверяет было ли открыто изображение. 
+              <LI>Затем вы получаете указатель на <B>DC</B>, и создаете 
+              локальный <B>DC</B>. 
+              <LI>Выбираете <B>DC</B>. 
+              <LI>Закрашиваете экран черным цветом. 
+              <LI>Потом выводите изображение, без масштабирования. Для 
+              маштабирования используется функция <B>StretchBlt</B>. 
+              <LI>Затем вы удаляете <B>DC</B>. 
+              <LI>Теперь добавьте в конструктор класса <B>CBmpOpenDlg</B> 
+              следующую строку: <BR><B>hbm=0;</B>. 
+              <LI>Это значит, что при запуске функции <B>OnPaint()</B>, картинка 
+              не будет рисоваться, т.е. до ее открытия. 
+              <LI>Вот вроде и все. Удачи. 
+              <P><BR><BR>В начало<BR><A 
+              href="http://vnews.uka.ru/html/Lessons/lesson000.htm"><B 
+              class=base2>&lt;-Назад</B></A> 
+      </P></LI></UL></FONT></TD></TR></TBODY></TABLE></DIV></TD></TR>
+  <TR>
+    <TD borderColorDark=#800000 borderColorLight=#800000 colSpan=2>
+      <DIV align=center>
+      <TABLE border=0 cellPadding=0 cellSpacing=0 width="70%">
+        <TBODY>
+        <TR>
+          <TD><FONT color=black face="MS SANS SERIF" size=1><A 
+            href="http://algo.da.ru/" target=_top><B>Algorithm project</A>:</B> 
+            Кольцо сайтов, посвященных программированию (<A 
+            href="http://webring.da.ru/" style="COLOR: black" 
+            target=_top>подробнее о проекте WebRing...</A>)<BR>[<A 
+            href="http://www.webring.org/cgi-bin/webring?ring=ru_rk_ring;id=10;prev5" 
+            target=_top>Предыдущие 5 сайтов</A> | <A 
+            href="http://www.webring.org/cgi-bin/webring?ring=ru_rk_ring;id=10;prev" 
+            target=_top>Предыдуший</A> | <A 
+            href="http://www.webring.org/cgi-bin/webring?ring=ru_rk_ring;id=10;next" 
+            target=_top>Следующий</A> | <A 
+            href="http://www.webring.org/cgi-bin/webring?ring=ru_rk_ring;id=10;next5" 
+            target=_top>Следующие 5 сайтов</A> | <A 
+            href="http://www.webring.org/cgi-bin/webring?ring=ru_rk_ring;random" 
+            target=_top>Выбрать сайт случайным образом</A> <A 
+            href="http://www.webring.org/cgi-bin/webring?ring=ru_rk_ring;list" 
+            target=_top>Список всех сайтов</A> ] 
+      </FONT></TD></TR></TBODY></TABLE></DIV></TD></TR></TBODY></TABLE><BR>
+<TABLE bgColor=#f8f1e4 border=1 borderColor=#800000 cellPadding=0 cellSpacing=5 
+width=700>
+  <TBODY>
+  <TR>
+    <TD height=40>
+      <DIV align=center>
+      <TABLE border=0 cellPadding=0 cellSpacing=10 width="37%">
+        <TBODY>
+        <TR>
+          <TD width="16%"></TD></TR></TBODY></TABLE></DIV></TD></TR></TBODY></TABLE></DIV>
+<P>
+<CENTER>
+<DIV class=base2 style="COLOR: black">Copyright © 1999 C++ Programmers Club 
+</DIV>
+<DIV class=base2 style="COLOR: black">Author: <A 
+href="mailto:vnews@mail.ru">Kuklin Alexey</A> All Rights Reserved 
+</DIV></CENTER>
+<P> </P></BODY></HTML>

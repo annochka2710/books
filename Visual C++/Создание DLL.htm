@@ -1,0 +1,435 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0054)http://www.sources.ru/cpp/cpp_mfc_dll_tutorial_1.shtml -->
+<HTML><HEAD><TITLE>Информационный сервер для программистов - исходники со всего света.</TITLE>
+<STYLE type=text/css>A.black:link {
+	COLOR: #000000; FONT-FAMILY: Arial,Verdana,Tahoma,sans-serif; FONT-SIZE: 9pt; TEXT-DECORATION: none
+}
+A.black:visited {
+	COLOR: #000000; FONT-FAMILY: Arial,Verdana,Tahoma,sans-serif; FONT-SIZE: 9pt; TEXT-DECORATION: none
+}
+A.black:hover {
+	COLOR: #ffffff; FONT-FAMILY: Arial,Verdana,Tahoma,sans-serif; FONT-SIZE: 9pt; TEXT-DECORATION: none
+}
+A.blue:link {
+	COLOR: #0441a6; FONT-FAMILY: Arial,Verdana,Tahoma,sans-serif; FONT-SIZE: 9pt; TEXT-DECORATION: none
+}
+A.blue:visited {
+	COLOR: #0441a6; FONT-FAMILY: Arial,Verdana,Tahoma,sans-serif; FONT-SIZE: 9pt; TEXT-DECORATION: none
+}
+A.blue:hover {
+	COLOR: #2776fa; FONT-FAMILY: Arial,Verdana,Tahoma,sans-serif; FONT-SIZE: 9pt; TEXT-DECORATION: none
+}
+.b {
+	COLOR: #ff0000; TEXT-DECORATION: none
+}
+.b:hover {
+	COLOR: #7785ff
+}
+.c {
+	COLOR: #000000; TEXT-DECORATION: none
+}
+.c:hover {
+	COLOR: #ffffff
+}
+PRE {
+	COLOR: blue
+}
+PRE.a {
+	COLOR: black
+}
+TD.colon {
+	COLOR: #000000; FONT-FAMILY: "MS Sans Serif", sans-serif; FONT-SIZE: 9pt
+}
+</STYLE>
+
+<META content="text/html; charset=windows-1251" http-equiv=Content-Type>
+<META 
+content="программирование на Visual Basic, документация, документы, delphi, pascal, cpp, hardware, web, веб-мастер, советы, описания, доки, manual, Java, C, C++, обучение, исходники, odbc, jdbc, programm, protocols, протоколы, общение, форумapplet, java, design, апплет, дизайн, ява, Free, counters, Trackers, Guestbooks, Access Logs, Banners, Graphics, Banner ads, Fonts, Form Mailer, form mailers, graphics, icons, games, freeware, shareware, forms, guestbooks, Java, Javascript, contests, puzzles, fonts, font resources, E-mail programs, reminder services, product samples, samples, Email services, E-mail services, advertising, graphics, free banner ads, free World Wide Web resources, counters, Trackers, Guestbooks, Access Logs, Banners, Graphics, Banner ads, Fonts, Form Mailer, form mailers, graphics, icons, games, freeware, shareware, forms, guestbooks, Java, Javascript, contests, puzzles, fonts, font resources, E-mail programs, reminder services, product samples, samples, Email services, E-mail services, advertising, graphics, free banner ads, free World Wide Web resources" 
+name=keywords>
+<META 
+content="pop hypertext sources hypermedia server scripting shtml phtml html developer code base tools open source web site browser free software webmaster cgi dhtml dynamic content netscape explorer shareware download website construction free tutorial news design maintenance page hit cvs mailing list projects httpd mod_perl mod www htdig xml perl scripts script server-side-include apache database MySQL mysql msql postres postresql module linux online cpp Visual Basic JavaScript delphi wap job informer java opengl directx" 
+name=RESOURCE-TYPE>
+<META content="MSHTML 5.00.3103.1000" name=GENERATOR></HEAD>
+<BODY bgColor=white leftMargin=0 topMargin=0 marginheigth="0" marginwidth="0">
+<FORM action=/cgi-bin/sources/search/search.cgi method=get align="left"><INPUT 
+name=stpos type=hidden value=0> 
+<TABLE border=0 cellPadding=0 cellSpacing=0 width=750>
+  <TBODY>
+  <TR>
+    <TD rowSpan=2 vAlign=top>
+      <TABLE border=0 cellPadding=0 cellSpacing=0 width=287>
+        <TBODY>
+        <TR>
+          <TD align=middle bgColor=#a5e4a7 colSpan=2 
+            vAlign=center><B>WWW.ИСХОДНИКИ.РУ</B> </TD>
+          <TD align=middle bgColor=#000080 vAlign=center><B><FONT 
+            color=#ffffff face=Tahoma size=-1 
+            style="FONT-SIZE: 8pt">cpp.sources.ru</FONT> </B></TD></TR>
+        <TR>
+          <TD align=middle bgColor=#000080 vAlign=center><B><FONT 
+            color=#ffffff face=Tahoma size=-1 
+            style="FONT-SIZE: 8pt">java.sources.ru</FONT> </B></TD>
+          <TD align=middle bgColor=#c0c0c0 vAlign=center><FONT face=Tahoma 
+            size=-1 style="FONT-SIZE: 8pt"><B>web.sources.ru</B> </FONT></TD>
+          <TD align=middle bgColor=#a5e4a7 vAlign=center><FONT face=Tahoma 
+            size=-1 style="FONT-SIZE: 8pt"><B>soft.sources.ru</B> </FONT></TD></TR>
+        <TR>
+          <TD align=middle bgColor=#c0c0c0 vAlign=center><FONT face=Tahoma 
+            size=-1 style="FONT-SIZE: 8pt"><B>jdbc.sources.ru</B> </FONT></TD>
+          <TD align=middle bgColor=#a5e4a7 vAlign=center><FONT face=Tahoma 
+            size=-1 style="FONT-SIZE: 8pt"><B>asp.sources.ru</B> </FONT></TD>
+          <TD align=middle bgColor=#000080 vAlign=center><B><FONT 
+            color=#ffffff face=Tahoma size=-1 
+            style="FONT-SIZE: 8pt">api.sources.ru</FONT> 
+</B></TD></TR></TBODY></TABLE>
+      <TABLE border=0 cellPadding=0 cellSpacing=0 width="100%">
+        <TBODY>
+        <TR>
+          <TD><FONT face=Tahoma size=2 style="FONT-SIZE: 8pt">&nbsp; Поиск по 
+            программированию :<BR></FONT>&nbsp; <INPUT name=query size=13> <INPUT type=submit value=Поиск> <FONT size=1><INPUT CHECKED 
+            name=stype type=radio value=AND> "AND" <INPUT name=stype type=radio 
+            value=OR> "OR"</FONT> <!--TopList COUNTER--><A 
+            href="http://top.list.ru/jump?from=89876" target=_top>
+            <SCRIPT language=JavaScript><!--
+d=document;a='';a+=';r='+escape(d.referrer)
+js=10//--></SCRIPT>
+
+            <SCRIPT language=JavaScript1.1><!--
+a+=';j='+navigator.javaEnabled()
+js=11//--></SCRIPT>
+
+            <SCRIPT language=JavaScript1.2><!--
+s=screen;a+=';s='+s.width+'*'+s.height
+a+=';d='+(s.colorDepth?s.colorDepth:s.pixelDepth)
+js=12//--></SCRIPT>
+
+            <SCRIPT language=JavaScript1.3><!--
+js=13//--></SCRIPT>
+
+            <SCRIPT language=JavaScript><!--
+d.write('<img src="http://top.list.ru/counter'+
+'?id=89876;t=57;js='+js+a+';rand='+Math.random()+
+'" alt="TopList" '+ 'border=0 height=1 width=1>')
+if(js>11)d.write('<'+'!-- ')//--></SCRIPT>
+            <NOSCRIPT><IMG alt=TopList border=0 height=1 
+            src="http://top.list.ru/counter?js=na;id=89876;t=57" 
+            width=1></NOSCRIPT>
+            <SCRIPT 
+            language=JavaScript><!--
+if(js>11)d.write('--'+'>')//--></SCRIPT>
+            </A><!--TopList COUNTER--> <A 
+            href="http://counter.rambler.ru/top100/"><IMG alt="Rambler's Top100" 
+            border=0 height=1 src="http://counter.rambler.ru/top100.cnt?163871" 
+            width=1></A> <!-- SpyLOG f:0211 -->
+            <SCRIPT language=javascript><!--
+u="u1624.10.spylog.com";d=document;nv=navigator;na=nv.appName;p=1; 
+bv=Math.round(parseFloat(nv.appVersion)*100); 
+n=(na.substring(0,2)=="Mi")?0:1;rn=Math.random();z="p="+p+"&rn="+rn;y=""; 
+y+="<a href='http://"+u+"/cnt?f=3&p="+p+"&rn="+rn+"' target=_blank>"; 
+y+="<img src='http://"+u+"/cnt?"+z+ 
+"&r="+escape(d.referrer)+"&pg="+escape(window.location.href)+"' border=0 width=1 height=1 alt='SpyLOG'>"; 
+y+="</a>"; d.write(y);if(!n) { d.write("<"+"!--"); }//--></SCRIPT>
+            <NOSCRIPT><A href="http://u1624.10.spylog.com/cnt?f=3&amp;p=1" 
+            target=_blank><IMG alt=SpyLOG border=0 height=1 
+            src="http://u1624.10.spylog.com/cnt?p=1" width=1> </A></NOSCRIPT>
+            <SCRIPT language=javascript1.2><!-- 
+if(!n) { d.write("--"+">"); }//--></SCRIPT>
+<!-- SpyLOG --><!-- HotLog -->
+            <SCRIPT language=javascript><!--
+hotlog_js="1.0";hotlog_d=document; hotlog_n=navigator;hotlog_rn=Math.random();
+hotlog_n_n=(hotlog_n.appName.substring(0,3)=="Mic")?0:1;
+hotlog_r=""+hotlog_rn+"&s=14399&r="+escape(hotlog_d.referrer)+"&pg="+
+escape(window.location.href);
+hotlog_d.cookie="hotlog=1"; hotlog_r+="&c="+(hotlog_d.cookie?"Y":"N");
+hotlog_d.cookie="hotlog=1; expires=Thu, 01-Jan-70 00:00:01 GMT"//--></SCRIPT>
+
+            <SCRIPT language=javascript1.1><!--
+hotlog_js="1.1";hotlog_r+="&j="+(navigator.javaEnabled()?"Y":"N")//--></SCRIPT>
+
+            <SCRIPT language=javascript1.2><!--
+hotlog_js="1.2";hotlog_s=screen;
+hotlog_r+="&wh="+hotlog_s.width+'x'+hotlog_s.height+"&px="+((hotlog_n_n==0)?
+hotlog_s.colorDepth:hotlog_s.pixelDepth)//--></SCRIPT>
+
+            <SCRIPT language=javascript1.3><!-- hotlog_js="1.3"//--></SCRIPT>
+
+            <SCRIPT language=javascript><!-- hotlog_r+="&js="+hotlog_js;
+hotlog_d.write("<img src=\"http://hit2.hotlog.ru/cgi-bin/hotlog/count?"+
+hotlog_r+"&\" border=0 width=1 height=1>")//--></SCRIPT>
+            <NOSCRIPT><IMG border=0 height=1 
+            src="http://hit2.hotlog.ru/cgi-bin/hotlog/count?s=14399" 
+            width=1></NOSCRIPT> <!-- /HotLog --></TD></TR></TBODY></TABLE></TD>
+    <TD align=middle><A class=blue 
+      href="http://pascal.sources.ru/cd/index.htm"><IMG border=0 height=14 
+      src="/img/cd0.gif" width=14> <B>Все исходники с сайта на 
+      компакт-диске!</B> <!-- <font style="font-size: 15pt" color="#4904B1" size="4" face="Times New Roman">
+             Информационный сервер</FONT>
+	     --></A></TD></TR>
+  <TR>
+    <TD><!-- SCALA
+<OBJECT classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" ID=fobos WIDTH=468 HEIGHT=60>
+<PARAM NAME=movie VALUE="/epicor_sources.swf">
+<PARAM NAME=quality VALUE=high>
+<PARAM NAME=bgcolor VALUE=#FFFFFF>
+<PARAM NAME=menu VALUE=false>
+<PARAM NAME=scale VALUE=exactfit>
+<EMBED src="/epicor_sources.swf" quality=high bgcolor=#FFFFFF WIDTH=468 HEIGHT=60 TYPE="application/x-shockwave-flash">
+</EMBED>
+</OBJECT>
+     SCALA --><!-- БАННЕР IMHO 
+
+<SCRIPT LANGUAGE="JavaScript">
+
+var cache_rnd = Math.round(Math.random() * 1000000000);
+document.write('<a href="http://santa.imho.ru/click.ng/impt=imp&place=sources468x60&id=241104&rnd='+cache_rnd+'" target=_blank><img src="http://santa.imho.ru/image.ng/impt=imp&place=sources468x60&id=241104&rnd='+cache_rnd+'" border=0 width=468 height=60></a>');
+
+</SCRIPT>
+<NOSCRIPT>
+<a href="http://santa.imho.ru/click.ng/impt=imp&place=sources468x60&id=241104" target=_blank><img src="http://santa.imho.ru/image.ng/impt=imp&place=sources468x60&id=241104" border=0 width=468 height=60></a>
+</NOSCRIPT>
+
+    БАННЕР IMHO --><!-- БАННЕР TBN -->
+      <CENTER>
+      <SCRIPT language=JavaScript>
+ var loc = ''; </SCRIPT>
+
+      <SCRIPT language=JavaScript1.4>
+try{ var loc = escape(top.location.href); }catch(e){;}</SCRIPT>
+
+      <SCRIPT language=JavaScript>
+  document.write("<SC"+"RIPT language='JavaScript' src='http://ad.tbn.ru/bb.cgi?cmd=ad&hreftarget=_blank&pubid=2845047&pg=2&r=js&ssi=nofillers&vbn=188&num=1&w=468&h=60&&ref="+escape(document.referrer)+"&loc="+loc+"&nocache="+Math.round(Math.random()*999111)+"'>\n</SC"+"RIPT>"); </SCRIPT>
+      </CENTER>
+      <CENTER><FONT size=1><A href="http://www.tbn.ru/" target=_top>TBN.ru - 
+      СЕТЬ, ЖИВУЩАЯ ПО ПРАВИЛАМ</A> </FONT></CENTER><!-- БАННЕР TBN--></TD></TR>
+  <TR>
+    <TD colSpan=2>
+      <TABLE border=0 cellPadding=0 cellSpacing=1 width="100%">
+        <TBODY>
+        <TR>
+          <TD align=middle bgColor=#e0e0c6 width="11%"><A 
+            href="http://www.sources.ru/index.html"><FONT color=#000000 
+            size=2>На главную</FONT> </A></TD>
+          <TD align=middle bgColor=#e0e0c6 width="9%"><A 
+            href="http://www.sources.ru/magazine/"><FONT color=#000000 
+            size=2>Журнал</FONT> </A></TD>
+          <TD align=middle bgColor=#e0e0c6 width="20%"><A 
+            href="http://www.sources.ru/subscribe.shtml"><FONT color=#000000 
+            size=2>Подписаться на новости</FONT> </A></TD>
+          <TD align=middle bgColor=#e0e0c6 width="11%"><A 
+            href="http://forum.sources.ru/"><FONT color=#000000 
+            size=2>Форум</FONT> </A></TD>
+          <TD align=middle bgColor=#e0e0c6 noWrap width="9%">&nbsp;<A 
+            href="http://www.sources.ru/"><FONT color=#000000 
+            size=2>Ваша&nbsp;ссылка</FONT></A>&nbsp; </TD>
+          <TD align=middle bgColor=#e0e0c6 width="13%"><A 
+            href="http://www.countries.ru/"><FONT color=#000000 size=2>Страны 
+            мира</FONT> </A></TD>
+          <TD align=middle bgColor=#e0e0c6 noWrap width="29%"><!--//#INCLUDE virtual="/cgi-bin/sources/times/numberuser.cgi"-->179 
+            users online </TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE></FORM>
+<TABLE>
+  <TBODY>
+  <TR>
+    <TD vAlign=top>
+      <DIV align=center>
+      <CENTER>
+      <TABLE cellPadding=0 cellSpacing=0 width=680>
+        <TBODY>
+        <TR>
+          <TD>
+            <HR>
+
+            <H3 align=center><FONT color=#a0a099>Создание DLL в MFC для 
+            начинающих, Часть 1</FONT></H3>
+            <HR>
+
+            <P>Автор: <A href="mailto:afenster@core.com">Andrew Fenster</A>. <!-- For which environment is this code specific? --></P>
+            <P>На сегодняшний день существует множество оснований для 
+            использования .DLL. Самое важное из них, это возможность быстро и 
+            без лишних затруднений обновлять приложение в процессе его 
+            использования, ведь достаточно поместить часть кода, который 
+            предполагается совершенствовать, в .DLL, а дальше просто предлагать 
+            пользователям скачивать эту .DLL не переустанавливая при этом 
+            приложение.</P>
+            <P>В отличие от COM или ATL, использование DLL намного проще и не 
+            требует значительных затрат и времени на изучение. К тому же вносить 
+            изменения в DLL не вызывает особых затруднений. Если Вам знаком C++ 
+            и MFC, то, надеюсь материал окажется полезным для Вас.</P>
+            <P>В данной статье мы постараемся рассмотреть различные типы .DLL, 
+            которые можно создавать в MFC, включая различные способы применения 
+            и создания. В следующей статье будут рассмотрены различные 
+            ограничения для .DLL, и как их можно обойти.</P>
+            <H3>Различные типы .DLL</H3>
+            <P>При помощи MFC можно создать два два вида DLL: DLL как расширение 
+            MFC или регулярную DLL. Регулярные DLL подразделяются в свою очередь 
+            на две разновидности: динамически загружаемые и статически 
+            загружаемые. Visual C++ так же позволяет создавать и универсальные 
+            Win32 DLL, но в данной статье мы остановимся только на DLL, 
+            основанных на MFC.</P>
+            <P><U><B>MFC extension .DLL</B></U></P>
+            <P>Каждая DLL имеет свой интерфейс. Интерфейс - это набор 
+            переменных, указателей, функций или классов, которые содержит в себе 
+            данная DLL и к которым приложение будет иметь доступ. DLL такого 
+            типа позволют хранить в себе весь набор типов данных, используемых в 
+            MFC. Соответственно, что приложение может легко может создавать 
+            новые объекты классов из такой DLL.</P>
+            <P>Данный тип DLL использует динамически загружаемую библиотеку MFC. 
+            С годами объём библиотеки MFC увеличился и, соответственно сама 
+            библиотека изменилась. Поэтому если Вы соберётесь использовать DLL 
+            как расширение MFC, то Вам необходимо позаботиться о том, чтобы DLL 
+            той версии компилятора, в которой создавалось приложение, 
+            присутствовали на конечном компьютере.</P>
+            <P>MFC extension .DLL обычно маленькие по размерам и очень быстро 
+            загружаются.</P>
+            <P><U><B>Regular DLL</B></U></P>
+            <P>Как уже упоминалось выше, MFC extension .DLL может использоваться 
+            приложениями созданными в MFC. Поэтому, если Вы хотите, чтобы Ваша 
+            DLL могла использоваться широким кругом приложений Win32, то 
+            необходимо создать регулярную DLL. Недостаток такой DLL заключается 
+            в том, что можно экспортировать только функции C-style. Т.е. не 
+            получится экспортировать классы, функции C++, а так же 
+            перезагруженные функции. Ваши функции не смогут использовать типы 
+            данных MFC, как в параметрах, так и в возвращаемых значениях. 
+            Конечно же в такую DLL можно запихнуть функции C++ и MFC, но внешние 
+            приложения смогут использовать только C-style функции.</P>
+            <P>По желанию, Вы можете прилинковать библиотеку MFC динамически 
+            либо статически. Естевственно, что если прилинковать необходимые 
+            библиотеки MFC динамически, то DLL получится маленькой, как и в 
+            случае с MFC extension .DLL (потому что код MFC не будет включён в 
+            неё), но тогда Вам прийдётся позаботиться, чтобы на компьютере 
+            пользователя они присутствали и, к тому же были нужной версии. Иначе 
+            Ваша DLL напрочь откажется работать. Напротив, если Вы прилинкуете к 
+            DLL необходимые библиотеки MFC статически, то естевственно её объём 
+            будет больше (так как библиотеки будут включены в DLL), но зато она 
+            не будет зависеть от компьютера, на котором будет использоваться. 
+            Данный способ предпочтителен при создании DLL, так как устраняет 
+            лишние проблемы предыдущего способа.</P>
+            <H3>Создание DLL</H3>
+            <P>Создать DLL на основе MFC можно при помощи Визарда (App Wizard). 
+            Выберите в меню "File | New". На закладке "Projects" выберите "MFC 
+            AppWizard (.DLL)." Наберите имя Вашего проекта и нажмите "OK". На 
+            следующем окошке будет предложено выбрать&nbsp;различные типы DLL. 
+            Выберите необходимы Вам тип и нажмите "Finish".</P>
+            <P>После этого визард создаст пустую DLL, которая естевственно не 
+            будет ничего делать. Теперь Вам необходимо проделать следующее: 
+            <OL>
+              <LI>добавить необходимые функции в DLL; 
+              <LI>изменить Ваше приложение так, чтобы оно могло работать с DLL. 
+              </LI></OL>
+            <P><U><B>Экспорт класса</B></U></P>
+            <P>Как упоминалось выше, только MFC extension .DLL может 
+            экспортировать MFC / C++ класс. Итак, для того, чтобы добавить класс 
+            в проект достаточно подключить уже готовые файлы .cpp и .h либо 
+            создать класс заново. Для экспорта класса необходимо добавить к 
+            объявлению класса макрокоманду "AFX_EXT_CLASS", например так:</P><PRE>     class AFX_EXT_CLASS CMyClass
+     {
+          //здесь идёт объявление класса
+     };</PRE>
+            <P>Конечно же существуют и другие способы экспортирования класса, но 
+            данный самый простой. Далее мы рассмотрим, что нужно сделать в 
+            приложении, чтобы оно могло использовать экспортированный класс.</P>
+            <P><U><B>Экспортирование объектов и переменных</B></U></P>
+            <P>Вместо экспорта целого класса, иногда достаточно создать объект 
+            класса и экспортировать его. При этом приложение сможет вызывать все 
+            public функции экспортированного объекта, а так же иметь доступ к 
+            переменным, объявленным как public.</P>
+            <P>Для начала необходимо создать файл .h, в котором объявляется Ваш 
+            класс, затем создать файл .cpp, который будет содержать методы и 
+            переменные класса. В конце файла .cpp создаётся экземпляр самого 
+            класса:</P><PRE>     _declspec(dllexport) CMyClass myObject;</PRE>
+            <P>Обратите, что каждое приложение загружает собственную копию 
+            объекта. Т.е., если два различных приложения будут использовать одну 
+            и ту же DLL, то изменения сделанные одним приложением не коснутся 
+            другого. </P>
+            <P>Этот же принцип можно использовать и для экспорта переменных: 
+</P><PRE>     _declspec(dllexport) int x;</PRE>
+            <P>Важно помнить, что экспортировать объекты и переменные необходимо 
+            с глобальной видимостью. Например, следующий код не будет 
+            работать:</P><PRE>     MyFunction( )
+     {
+          _declspec(dllexport) CMyClass myObject;
+          _declspec(dllexport) int x;
+     }</PRE>
+            <P>Так как объект и переменная прекращают своё существование за 
+            пределами функции.</P>
+            <P><U><B>Экспорт функции</B></U></P>
+            <P>Экспорт функций подобен экспорту объектов и переменных. Опять же 
+            достаточно добавить макрокоманду "_declspec(dllexport)" в начало 
+            прототипа Вашей функции:</P><PRE>     _declspec(dllexport) int MyExportedFunction(int);</PRE>
+            <P>Не забывайте, что только MFC extension .DLL могут экспортировать 
+            функции C++ или функции с типами данных MFC в качестве параметров 
+            или в качестве возвращаемых величин. Regular .DLLs могут 
+            экспортировать функции только C-style.</P>
+            <H3>Использование .DLL в приложении</H3>
+            <P>Как извесно, .DLL не может запускаться сама по себе. Необходимо 
+            приложение, которое будет загружать и использовать её интерфейс. Так 
+            или иначе, создание такого приложения для Вас не составит труда.</P>
+            <P>При компиляции .DLL, создаётся два важных файла - .DLL и .lib. 
+            Вашему приложению необходимы оба этих файла. Вы должны скопировать 
+            их в директорию, содержащую Ваш проект. Обратите внимание, что файлы 
+            .DLL и .lib, созданные в отладочной версии (Debug) отличаются от 
+            тех, которые будут скомпилированы в релизовой версии (Release). Это 
+            значит, что если Вы компилируете приложение в Debug, то и файлы .DLL 
+            и .lib должны быть созданы в Debug. Это утвержение справедливо и для 
+            Release версии. Простой способ избежать путаницы в данном случае - 
+            это поместить отладочные файлы .DLL и .lib в папку Debug, а релизные 
+            в папку Release.</P>
+            <P>Итак, в заголовочном файле Вашего приложения необходимо будет 
+            объявить импортирование классов, функций, объектов и переменных. При 
+            создании DLL мы пользовались макрокомандой "_declspec(dllexport)", 
+            теперь же нам прийдётся воспользоваться командой 
+            "_declspec(dllimport)". Вот как будет выглядеть объявления для 
+            класса, переменной и функции:</P><PRE>     _declspec(dllimport) CMyClass myObject;
+     _declspec(dllimport) int x;
+     _declspec(dllimport) int MyExportedFunction(int);</PRE>
+            <P>Чтобы часто не набирать эту макрокоманду, можно воспользоваться 
+            макросом:</P><PRE>     #define DLLIMPORT _declspec(dllimport)
+     
+     DLLIMPORT CMyClass myObject;
+     DLLIMPORT int x;
+     DLLIMPORT int MyExportedFunction(int);</PRE>
+            <P>После того, как объект, переменная и функция объявлены в 
+            заголовочном файле Вашего приложения, они готовы к 
+использованию.</P>
+            <P>Для импорта всего класса, необходимо скопировать весь 
+            заголовочный файл .h. При этом .DLL и приложение будут иметь 
+            идентичные заголовочные файлы для экспортированного класса. Не 
+            забудьте при объявлении класса добавить макрос AFX_EXT_CLASS.</P>
+            <P>После того, как Вы создали приложение, то конечному пользователю 
+            можно отдать исполняемый файл Release версии и .DLL тоже Release 
+            версии. При этом необходимость в файле .lib отпадает. DLL может 
+            располагаться в одной директории с исполняемым файлом приложения 
+            либо в системной директории Windows.</P>
+            <H3>Недостатки DLL.</H3>
+            <P>Появление на свет COM и ATL говорит о двух серьёзных недостатках 
+            DLL. Во первых, .DLL, созданная в одной версии компилятора не может 
+            использоваться приложением, созданным в другой версии компилятора. 
+            Во вторых, когда Вы изменяете .DLL, то существует вероятность, что 
+            прийдётся перекомпилировать и приложение использующее эту DLL, даже 
+            если в приложение не вносилось никаких изменений.</P>
+            <P>Конечно же существуют способы избежать данных недостатков, о 
+            которых мы поговорим в следующей статье.<BR><BR></P>
+            <P>&nbsp;</P></TD></TR></TBODY></TABLE></CENTER></DIV></TD>
+    <TD vAlign=top><BR><BR><!-- БАННЕР IMHO -->
+      <SCRIPT language=JavaScript>
+<!--
+ var cache_rnd = Math.round(Math.random() * 1000000000);
+ document.write('<a href="http://body.imho.ru/click.ng/impt=imp&place=sources120x300&id=260805&transactionID='+cache_rnd+'" target=_blank>');
+ document.write('<img src="http://body.imho.ru/image.ng/impt=imp&place=sources120x300&id=260805&transactionID='+cache_rnd+'" border=0 width=120 height=300></a>');
+//-->
+</SCRIPT>
+      <NOSCRIPT><A 
+      href="http://body.imho.ru/click.ng/impt=imp&amp;place=sources120x300&amp;id=260805" 
+      target=_blank><IMG border=0 height=300 
+      src="http://body.imho.ru/image.ng/impt=imp&amp;place=sources120x300&amp;id=260805" 
+      width=120></A> </NOSCRIPT><!-- БАННЕР IMHO --></TD></TR></TBODY></TABLE>
+<DIV align=center>
+<HR width=700>
+
+<SCRIPT language=JavaScript> var loc = ''; </SCRIPT>
+
+<SCRIPT language=JavaScript1.4>try{ var loc = escape(top.location.href); }catch(e){;}</SCRIPT>
+
+<SCRIPT language=JavaScript>
+ document.write("<SC"+"RIPT language='JavaScript' src='http://ad.strict.tbn.ru/bb.cgi?cmd=ad&hreftarget=_blank&pubid=2850676&pg=3&r=js&ssi=nofillers&vbn=353&num=1&w=468&h=60&&ref="+escape(document.referrer)+"&loc="+loc+"&nocache="+Math.round(Math.random()*999111)+"'>\n</SC"+"RIPT>");
+</SCRIPT>
+</DIV></BODY></HTML>

@@ -1,0 +1,482 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0046)http://vnews.uka.ru/html/Lessons/lesson078.htm -->
+<HTML><HEAD><TITLE>Програмирование на Visual C++</TITLE>
+<META content="text/html; charset=windows-1251" http-equiv=Content-Type>
+<META content="Kuklin Alexey Email: vnews@mail.ru" name=author>
+<META 
+content="programming, программирование, soft, helps, web webdizain, photo, photoshop, internet, examples, conference, конференция, софт, примеры программ, исходники, source, codes, MFC, MTL, vc, visual, c , c++, с++,с, документация, documentation" 
+name=keywords>
+<META 
+content="Документация C, C++ , Visual C , Object C, Quick C, Turbo C, ActiveX. Школа MFC, софт, примеры программ и исходники к ним, справочные книги и конференция." 
+name=description><LINK href="Програмирование на Visual C++88.files/styles.css" 
+rel=STYLESHEET title=Style type=text/css>
+<META content="MSHTML 5.00.2614.3500" name=GENERATOR></HEAD>
+<BODY bgColor=#e9d7b1 leftMargin=0 text=black topMargin=0>
+<DIV align=center><BR>
+<TABLE bgColor=#f8f1e4 border=1 borderColor=#800000 borderColorDark=#f8f1e4 
+borderColorLight=#f8f1e4 cellPadding=0 cellSpacing=4 height=250 width=700>
+  <TBODY>
+  <TR>
+    <TD borderColorDark=#800000 borderColorLight=#800000 colSpan=2 height=80>
+      <DIV align=center>
+      <SCRIPT>
+// <!--
+var default_user_id = 65561;
+var userid = default_user_id;
+get_user_id();
+if (userid == 123456) {userid=default_user_id;}
+var page = 1;
+var rndnum = Math.round(Math.random() * 10000);
+document.write('<A HREF="http://ad.tbn.ru/bb.cgi?cmd=go&pubid=' + userid + '&pg=' + page + '&vbn=189&num=1&w=468&h=60&nocache=' + rndnum + '" target="_blank">');
+document.write('<IMG SRC="http://ad.tbn.ru/bb.cgi?cmd=ad&pubid=' + userid + '&pg=' + page + '&vbn=189&num=1&w=468&h=60&nocache=' + rndnum + '" width=468 height=60 Alt="TBN.ru" border=1></A>');
+
+function get_user_id(){
+        var tmp = window.parent.location.href;
+        var user_id = tmp.replace(/.+user_id=/,"");
+        if(user_id.search(/^[0123456789]+.*$/g)!=-1)
+                       userid = user_id;                       
+                                else
+                                  userid = default_user_id;
+}
+
+// -->
+</SCRIPT>
+
+      <SCRIPT>
+// <!--
+var ie4 = (document.all) ? true : false;
+if (ie4) { document.write('<img src="/ad/counter" WIDTH=1 HEIGHT=0 border=0>'); }
+// -->
+</SCRIPT>
+      <BR><B><FONT face=tahoma size=2><A href="http://www.sudba.ru/" 
+      target=_blank>Е-ЛЮБОВЬ</A> | <A href="http://love.uka.ru/" 
+      target=_blank>ЗНАКОМСТВА</A> | <A href="http://chat.uka.ru/" 
+      target=_blank><FONT color=red>взрывЧАТка</FONT></A> <!--
+| <a href="http://www.anekdots.ru" target='_blank'>АНЕКДОТЫ</a>
+| <a href="http://www.anekdots.ru" target='_blank'>ИГРЫ</a>
+| <a href="http://www.anekdots.ru" target='_blank'>MУЗЫКА</a>
+--></FONT></B></DIV></TD></TR>
+  <TR>
+    <TD borderColorDark=#800000 borderColorLight=#800000 width="29%">
+      <CENTER>
+      <DIV class=base style="COLOR: #000080"><B>Меню</B></DIV></CENTER><BR><FONT 
+      size=1><IMG border=0 hspace=3 
+      src="Програмирование на Visual C++88.files/uk.gif"><A 
+      href="http://vnews.uka.ru/html/about.htm"><B class=base2>О Проекте</B>
+      <P></A><IMG border=0 hspace=3 
+      src="Програмирование на Visual C++88.files/uk.gif"><A 
+      href="http://vnews.uka.ru/index.html"><B class=base2> Новости</B>
+      <P></A><IMG border=0 hspace=3 
+      src="Програмирование на Visual C++88.files/uk.gif"><A 
+      href="http://vnews.uka.ru/html/pclub.htm"><B class=base2> Клуб 
+      Программеров С++</B>
+      <P></A><IMG border=0 hspace=3 
+      src="Програмирование на Visual C++88.files/uk.gif"><A 
+      href="http://vnews.uka.ru/html/docs.htm"><B class=base2> Документация</B>
+      <P></A><IMG border=0 hspace=3 
+      src="Програмирование на Visual C++88.files/uk.gif"><A 
+      href="http://vnews.uka.ru/html/components.htm"><B class=base2> 
+      Инструментарий</B>
+      <P></A><IMG border=0 hspace=3 
+      src="Програмирование на Visual C++88.files/uk.gif"><A 
+      href="http://vnews.uka.ru/html/school.htm"><B class=base2> Школа C++</B>
+      <P></A><IMG border=0 hspace=3 
+      src="Програмирование на Visual C++88.files/uk.gif"><A 
+      href="http://vnews.uka.ru/html/Examples/sources.htm"><B class=base2> 
+      Исходники</B>
+      <P></A><IMG border=0 hspace=3 
+      src="Програмирование на Visual C++88.files/uk.gif"><A 
+      href="http://www.fido7.com/cgi-fido7/forumi.pl?user=vnews"><B 
+      class=base2>Форум С++</B>
+      <P></A><IMG border=0 hspace=3 
+      src="Програмирование на Visual C++88.files/uk.gif"><A 
+      href="http://vnews.uka.ru/html/links.htm"><B class=base2> Ссылки</B>
+      <P></A><IMG border=0 hspace=3 
+      src="Програмирование на Visual C++88.files/uk.gif"><A 
+      href="http://www.guestbook.ru/book.cgi?user=cppmfc&amp;action=show"><B 
+      class=base2> Отзывы и предложения</B>
+      <P></A><IMG border=0 hspace=3 
+      src="Програмирование на Visual C++88.files/uk.gif"><A 
+      href="http://vnews.uka.ru/html/map.htm"><B class=base2> Карта сайта</B>
+      <P></A>
+      <HR width="90%">
+
+      <DIV align=center>
+      <SCRIPT language=javascript>
+<!-- 
+an=navigator.appName;d=document;function 
+pr(){d.write("<A HREF=\"http://count.ru/cgi-bin/href.cgi?", 
+"id=9203\"><img src=\"http://count.ru/cgi-bin/", 
+"count.cgi?id=9203&j=y&w="+srw+"&c="+srb+"&", 
+"ref="+escape(d.referrer)+"\" height=31 border=0", 
+" width=88></A>");}srb="na";srw="na";//--> 
+</SCRIPT>
+
+      <SCRIPT language=javascript1.2><!-- 
+s=screen;srw=s.width;an!="Netscape"? 
+srb=s.colorDepth:srb=s.pixelDepth;//--> 
+</SCRIPT>
+
+      <SCRIPT language=javascript><!-- 
+pr();//--> 
+</SCRIPT>
+      <NOSCRIPT><BR><A href="http://count.ru/cgi-bin/href.cgi?id=9203"><IMG 
+      border=0 height=31 src="Програмирование на Visual C++88.files/count.html" 
+      vspace=3 width=88></A> </NOSCRIPT><BR><!--LIST100 COUNTER--><A 
+      href="http://counter.list.ru/cgi-bin/jump?from=12813" target=_top>
+      <SCRIPT>
+<!--
+d=document;js=10;a='&pageref='+escape(d.referrer)
+//--></SCRIPT>
+
+      <SCRIPT language=JavaScript1.1><!--
+js=11;a+='&jsbool='+navigator.javaEnabled()
+//--></SCRIPT>
+
+      <SCRIPT language=JavaScript1.2><!--
+js=12;s=screen;a+='&res='+s.width+'*'+s.height
+a+='&depth='+(s.colorDepth?s.colorDepth:s.pixelDepth)
+//--></SCRIPT>
+
+      <SCRIPT language=JavaScript1.3><!--
+js=13//--></SCRIPT>
+
+      <SCRIPT><!--
+d.write('<img src="http://counter.list.ru/cgi-bin/counter.dll'+
+'?id=12813&type=1&cd=1&bt=0&jsver='+js+a+
+'" alt="LIST100 Counter" border="0" height="40" width="88">')
+if(js>11)d.write('<'+'!-- ')//--></SCRIPT>
+      <NOSCRIPT><IMG alt="LIST100 Counter" border=0 height=32 
+      src="Програмирование на Visual C++88.files/counter.gif" vspace=3 
+      width=80></NOSCRIPT>
+      <SCRIPT><!--
+if(js>11)d.write('--'+'>')
+//-->
+</SCRIPT>
+      </A> <!--LIST100 COUNTER--><BR><A href="http://www.index99.kiev.ua/" 
+      target=_blank><IMG alt="Index'99" border=0 height=31 
+      src="Програмирование на Visual C++88.files/count1.gif" vspace=3 
+      width=88></A><BR><!--NUMBER ONE COUNTER--><A href="http://www.one.ru/" 
+      target=_top>
+      <SCRIPT language=javascript><!--
+document.write("<img src=\"http://www.one.ru/cgi-bin/cnt.cgi?id=4201&t=1",
+"&r="+escape(parent.document.referrer),"\" width=88 height=31 ",
+"border=0 alt=\"become number one\">");//--></SCRIPT>
+      <NOSCRIPT><IMG alt="be number one" border=0 height=31 
+      src="Програмирование на Visual C++88.files/cnt.gif" 
+      width=88></NOSCRIPT></A> <!--NUMBER ONE COUNTER--><BR><!--3P COUNTER--><A 
+      href="http://www.3p.com/" target=_top>
+      <SCRIPT language=javascript><!--
+document.write("<img src=\"http://www.3p.com/cgi-bin/cnt.cgi?id=620&t=1",
+"&r="+escape(parent.document.referrer),"\" width=88 height=31 ",
+"border=0 alt=\"3P.RU\">");//--></SCRIPT>
+      <NOSCRIPT><IMG alt=3P.COM border=0 height=31 
+      src="C:\users\max\work\VISUAL\KNIGA2\Програмирование на Visual C++88.files\cnt(1).gif" 
+      width=88></NOSCRIPT></A> <!--3P COUNTER--><BR><A 
+      href="http://www.stars.ru/" target=_top><IMG border=0 height=30 
+      src="Програмирование на Visual C++88.files/1000.gif" width=50></A><BR>
+      <P> </P></DIV>
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> </P></FONT></TD>
+    <TD borderColorDark=#800000 borderColorLight=#800000><FONT color=green 
+      face=TAHOMA size=5>
+      <CENTER><B>Урок VIII</B></CENTER></FONT>
+      <P>
+      <P align=center><FONT color=black face=ARIAL size=4>Проектирование 
+      диалоговой панели</FONT></P>
+      <DIV align=center>
+      <TABLE width="95%">
+        <TBODY>
+        <TR>
+          <TD><FONT color=black face=TAHOMA size=2>Когда же это кончится?! 
+            <UL type=square>
+              <LI>Осталась завершающая стадия, необходимо добавить код 
+              перерисовки окна. 
+              <LI>В предыдущих уроках мы уже познакомились с событием 
+              <B>WM_PAINT</B>, оно происходит, когда участки окна программы, 
+              именно участки, так как та часть которая не требует перерисовки не 
+              будет перерисовываться. 
+              <LI>Возникнет вопрос естественно, как это сделать? Ответ прост, 
+              существуют такие классы, как метафайлы, в них мы будем записывать 
+              всеь набор графических команд, которые мы будем применять, и потом 
+              когда необходимо будет перерисовать окно мы просто воспроизведем 
+              их из метафайла. Вот все так просто, теперь будем действовать 
+              попорядку. 
+              <LI>Первым делом добавим переменную-указатель класса 
+              <B>CMetaFileDC</B>. Добавьте в класс <B>CPaintORamaDlg</B> 
+              переменную <B>m_pMF</B> с типом <B>CMetaFileDC*</B>. 
+              <LI>Потом в конец функции <B>OnInitDialog</B> перед оператором 
+              <B>return</B> вставьте следующие две строчки: 
+              <P><B>//Разместить в памяти объект метафайла<BR>m_pMF = new 
+              CMetaFileDC;<BR>//Создать МетаФайл<BR>m_pMF-&gt;Create();<BR></B>
+              <P></P>
+              <LI>Вначале вы разместили объект метафайла в динамической памяти. 
+              <LI>Потом создали сам метафайл. 
+              <LI>Теперь модифицируем код в функции <B>OnClearbtn</B> 
+              <LI>Красным выделено то, что надо добавить. 
+              <P><B>void CPaintORamaDlg::OnClearbtn() <BR>{<BR>CClientDC 
+              dc(this);<BR><FONT color=red>//Закрыть метафайл<BR>HMETAFILE 
+              hmf=m_pMF-&gt;Close();<BR>//Удалить данные о 
+              метафайле<BR>::DeleteMetaFile(hmf);<BR>delete hmf;
+              <P>//Cоздать новый метафайл<BR>m_pMF=new 
+              CMetaFileDC;<BR>m_pMF-&gt;Create();<BR>m_pMF-&gt;SetAttribDC(dc);<BR></FONT>//Закрасить 
+              область рисования белым 
+              цветом<BR>dc.SelectStockObject(NULL_PEN);<BR>dc.Rectangle(m_Canvas);
+              <P><FONT color=red>//Записать команды в 
+              метафайл<BR>m_pMF-&gt;SelectStockObject(NULL_PEN);<BR>m_pMF-&gt;Rectangle(m_Canvas.left,m_Canvas.top,<BR>m_Canvas.right+1,m_Canvas.bottom+1);<BR></FONT>}<BR></B></P>
+              <LI>Добавленный код удаляет метафайл, так как при нажатии на 
+              кнопку <B>Clear</B> вы очищаете окно и оно не требует перерисовки, 
+              потом вы создаете новый метафайл, вообщем понятно почему. Затем вы 
+              очищаете экран, и записываете эти команды в метафайл. 
+              <LI>Пойдем дальше. Теперь модифицируем функцию <B>DrawShape</B> 
+              следующим образом:
+              <P><B>void CPaintORamaDlg::DrawShape(bool 
+              stretch)<BR>{<BR>//Получить объект контекста 
+              устройства<BR>CClientDC dc(this);
+              <P>//Установить атрибуты 
+              DC<BR>dc.SetAttribDC(dc);<BR>dc.SelectObject(&amp;m_Brush);<BR><FONT 
+              color=red>m_pMF-&gt;SetAttribDC(dc);</FONT><BR>dc.IntersectClipRect(m_Canvas);<BR><FONT 
+              color=red>m_pMF-&gt;IntersectClipRect(m_Canvas);
+              <P></FONT>//Получить номер позиции из спика названий фигур<BR>int 
+              drawmode=m_ShapesCombo.GetCurSel();
+              <P>//Выбрать 
+              перо<BR>dc.SelectObject(&amp;m_Pen);<BR>dc.SelectObject(&amp;m_Brush);<BR><FONT 
+              color=red>//Записать операторы в 
+              метафайл<BR>m_pMF-&gt;SelectObject(&amp;m_Pen);<BR>m_pMF-&gt;SelectObject(&amp;m_Brush);
+              <P></FONT>//Метод резиновой нити<BR>if(stretch &amp;&amp; 
+              drawmode!=0)<BR>{<BR>//Установить метод резиновой 
+              нити<BR>dc.SetROP2(R2_NOT);<BR>}
+              <P>//Конструкция выбора 
+              фигуры<BR>switch(drawmode)<BR>{<BR>//Свободное рисование<BR>case 
+              0:<BR>dc.MoveTo(m_LineStart);<BR>dc.LineTo(m_LineEnd);<BR><FONT 
+              color=red>//Записать операторы в 
+              метафайл<BR>m_pMF-&gt;MoveTo(m_LineStart);<BR>m_pMF-&gt;LineTo(m_LineEnd);<BR></FONT>m_LineStart=m_LineEnd;<BR>break;<BR>
+              <P>//Рисование линий<BR>case 
+              1:<BR>dc.MoveTo(m_LineStart);<BR>dc.LineTo(m_LineEnd);<BR><FONT 
+              color=red>/*Записать операторы в метафайл, если не выбран режим 
+              резиновой 
+              нити*/<BR>if(!stretch)<BR>{<BR>m_pMF-&gt;MoveTo(m_LineStart);<BR>m_pMF-&gt;LineTo(m_LineEnd);<BR>}<BR></FONT>break;<BR>
+              <P>//Рисование элипсов<BR>case 
+              2:<BR>dc.Ellipse(CRect(m_LineStart,m_LineEnd));<BR><FONT 
+              color=red>//Записать операторы в 
+              метафайл<BR>if(!stretch)<BR>{<BR>m_pMF-&gt;Ellipse(CRect(m_LineStart,m_LineEnd));<BR>}<BR></FONT>break;<BR>
+              <P>//Рисование прямоугольника<BR>case 
+              3:<BR>dc.Rectangle(CRect(m_LineStart,m_LineEnd));<BR><FONT 
+              color=red>//Записать операторы в 
+              метафайл<BR>if(!stretch)<BR>{<BR>m_pMF-&gt;Rectangle(CRect(m_LineStart,m_LineEnd));<BR>}<BR></FONT>break;<BR>}<BR><BR>}<BR></B></P>
+              <LI>Здесь каждый оператор, который непосредственно связан с 
+              рисованием записывается в метафайл. 
+              <LI>Вы, наверное, обратили внимание на конструкцию оператора 
+              <B>IF</B>. При записи в метафайл, он проверяет не включен ли режим 
+              резиновой нити, так как нам нужны только конечные фигуры, а не те, 
+              которые нарисованы методом резиновой нити. 
+              <LI>Теперь добавим код непосредственно в функцию <B>OnPaint</B>, 
+              который и будет все перерисовывать окно программы. 
+              <LI>Откройте окно функцию <B>OnPaint</B> и удалите весь код из нее 
+              и добавьте следующий:
+              <P><B>void CPaintORamaDlg::OnPaint() <BR>{<BR>CPaintDC dc(this);
+              <P>//Закрытие метафайла<BR>HMETAFILE 
+              hmf=m_pMF-&gt;Close();<BR>//Воспроизведение 
+              метафайла<BR>dc.PlayMetaFile(hmf);
+              <P>//Присваивание указателя на старый объект переменной 
+              temp<BR>CMetaFileDC* temp=new CMetaFileDC;<BR>//Закрытие 
+              объекта<BR>temp-&gt;Create();<BR>//Проигрование 
+              метафайла<BR>temp-&gt;PlayMetaFile(hmf);<BR><BR>//Удаление 
+              метаструктуры и метафайла<BR>DeleteMetaFile(hmf);<BR>delete 
+              hmf;<BR><BR>//Присваивание временного указателя 
+              постоянному<BR>m_pMF=temp; <BR>/*Если первый раз была вызвана 
+              функия OnPaint, то вызавать очистку экрана*/<BR>static 
+              firstTime=TRUE;<BR>if(firstTime)<BR>{<BR>OnClearbtn();<BR>firstTime=FALSE;<BR>}<BR><BR>}<BR></B></P>
+              <LI>Разберемся с этой чушью. Чтобы метафайл воспроизвести его надо 
+              закрыть, но чтобы все команды сохранить, мы пользуемся временной 
+              переменной <B>temp</B>, в которую записываем весь набор команд, 
+              потом мы удаляем метафайл и метаструктуру, и присваиваем указатель 
+              временной переменной постоянной, таким образом мы получили весь 
+              набор команд. 
+              <LI>Если функция <B>OnPaint</B> запускается первый раз, то нам 
+              необходимо запомнить команды очистки экрана. 
+              <LI>И на последок хотелось бы удалить постоянный метафайл. 
+              <LI>Для этого вам необходимо с помощью <B>Class Wizard</B> связать 
+              код с событием <B>WM_DESTROY</B>, которое происходит при 
+              завершении программы. 
+              <LI>Свяжите код с событием, убедитесь, что при этом был выбран 
+              класс <B>CPaintORamaDlg</B>. И Добавьте следующий код:
+              <P><B>void CPaintORamaDlg::OnDestroy() 
+              <BR>{<BR>CDialog::OnDestroy();<BR>////-Ваш код начинается 
+              здесь-////
+              <P>//Закрыть и удалить метафайл<BR>m_pMF-&gt;Close();<BR>delete 
+              m_pMF;
+              <P>////-Ваш код начинается здесь-////
+              <P>}<BR></B>
+              <P></P>
+              <LI>Откомпилируйте и запустите программу, надеюсь она не выдаст 
+              ошибок:) Перетащите большую чать области рисования за экран и 
+              верните потом обратно, если все перерисовалось, то вы молодец, 
+              если нет, то я плохой, а вам придется сидеть и парить все с 
+              начала:) 
+              <LI>Вот на этом мы и закончим нашу программу. Конечно, можно было 
+              бы сделать открытие BMP файлов и их редактирование, и потом 
+              запись, но думаю вам пока этого хватит! 
+              <LI>Если хотите вспомнить, что вы узнали из этого урока, и что это 
+              вам дало, или может ничего не дало, то прочитайте резюме. 
+            </LI></UL><BR><BR>Резюме!Прочитай!<BR>
+            <CENTER><A href="http://vnews.uka.ru/html/Lessons/lesson068.htm"><B 
+            class=base2>&lt;-Назад</B></A> || <A 
+            href="http://vnews.uka.ru/html/Lessons/lesson088.htm"><B 
+            class=base2>Дальше -&gt;</B></A>
+            <P></CENTER>
+            <P>
+            <CENTER><B><FONT color=green><A 
+            href="http://vnews.uka.ru/html/Lessons/lesson008.htm">[1]</A><A 
+            href="http://vnews.uka.ru/html/Lessons/lesson018.htm"> [2]</A> <A 
+            href="http://vnews.uka.ru/html/Lessons/lesson028.htm">[3]</A><A 
+            href="http://vnews.uka.ru/html/Lessons/lesson038.htm"> [4]</A><A 
+            href="http://vnews.uka.ru/html/Lessons/lesson048.htm"> [5] </A><A 
+            href="http://vnews.uka.ru/html/Lessons/lesson058.htm">[6]</A><A 
+            href="http://vnews.uka.ru/html/Lessons/lesson068.htm"> [7]<A> [8] <A 
+            href="http://vnews.uka.ru/html/Lessons/lesson088.htm">[9]</A></B></FONT></CENTER></FONT></TD></TR></TBODY></TABLE></DIV></TD></TR>
+  <TR>
+    <TD borderColorDark=#800000 borderColorLight=#800000 colSpan=2>
+      <DIV align=center>
+      <TABLE border=0 cellPadding=0 cellSpacing=0 width="70%">
+        <TBODY>
+        <TR>
+          <TD><FONT color=black face="MS SANS SERIF" size=1><A 
+            href="http://algo.da.ru/" target=_top><B>Algorithm project</A>:</B> 
+            Кольцо сайтов, посвященных программированию (<A 
+            href="http://webring.da.ru/" style="COLOR: black" 
+            target=_top>подробнее о проекте WebRing...</A>)<BR>[<A 
+            href="http://www.webring.org/cgi-bin/webring?ring=ru_rk_ring;id=10;prev5" 
+            target=_top>Предыдущие 5 сайтов</A> | <A 
+            href="http://www.webring.org/cgi-bin/webring?ring=ru_rk_ring;id=10;prev" 
+            target=_top>Предыдуший</A> | <A 
+            href="http://www.webring.org/cgi-bin/webring?ring=ru_rk_ring;id=10;next" 
+            target=_top>Следующий</A> | <A 
+            href="http://www.webring.org/cgi-bin/webring?ring=ru_rk_ring;id=10;next5" 
+            target=_top>Следующие 5 сайтов</A> | <A 
+            href="http://www.webring.org/cgi-bin/webring?ring=ru_rk_ring;random" 
+            target=_top>Выбрать сайт случайным образом</A> <A 
+            href="http://www.webring.org/cgi-bin/webring?ring=ru_rk_ring;list" 
+            target=_top>Список всех сайтов</A> ] 
+      </FONT></TD></TR></TBODY></TABLE></DIV></TD></TR></TBODY></TABLE><BR>
+<TABLE bgColor=#f8f1e4 border=1 borderColor=#800000 cellPadding=0 cellSpacing=5 
+width=700>
+  <TBODY>
+  <TR>
+    <TD height=40>
+      <DIV align=center>
+      <TABLE border=0 cellPadding=0 cellSpacing=10 width="37%">
+        <TBODY>
+        <TR>
+          <TD width="16%"></TD></TR></TBODY></TABLE></DIV></TD></TR></TBODY></TABLE></DIV>
+<P>
+<CENTER>
+<DIV class=base2 style="COLOR: black">Copyright © 1999 C++ Programmers Club 
+</DIV>
+<DIV class=base2 style="COLOR: black">Author: <A 
+href="mailto:vnews@mail.ru">Kuklin Alexey</A> All Rights Reserved 
+</DIV></CENTER>
+<P> </P></BODY></HTML>

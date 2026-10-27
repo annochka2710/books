@@ -1,0 +1,76 @@
+<HTML><HEAD><TITLE>Глава 17</TITLE></HEAD> 
+<body background="../../../bgrwhite.gif">
+<p><div align="center"><b><font size="+1" face="Arial">17. Простая программа, использующая MDI интерфейс </font></b></div></p><p>
+ <ul> В этом разделе рассматривается программа использующая MDI (  интерфейс многих документов )<br> Мы создадим программу, в которой документом является графическое изображение - круг. В ToolBar будет создана иконка, при нажатие на которою будет вызываться диалоговое окно, позволяющее изменять координаты круга. Местоположение круга можно будет согранять в файл с расширением CIR.<br><br> <center><b><h4>Создание проекта программы</b><br><br></center></h4> 1. Создайте новый проект( у меня MDI ),  использующая MDI интерфейс с поддержкой MFC. Все шесть шагов в MFC AppWizard оставте без изменения.<br><br> 2. Если вы сделали всё правильно, то создадутся пять классов : <b>CMDIApp, CMainFrame, CChildFrame, CMDIDoc и CMDIView. </b>В классе документов <b>CMDIDoc</b>  вы пишите код для поддержки данных программы, а в классе представления <b>CMDIView</b> - код, отвечающий за то, что вы видите на экране. Вы будете писать код в функциях-элементах только этих двух классов.<br><br> 3. Объявляем элементы данных класса документа. Их будет два : координаты круга по <b>X</b>  и по <b>Y</b>. Для этого открываем файл <b>CMDIDoc.h</b>  и изменяем объявление класса <b>CMDIDoc</b> следующим образом: <br><br> <PRE><h5> class CMDIDoc : public CDocument { protected: 
+// create from serialization only 	CMDIDoc(); 	
+DECLARE_DYNCREATE(CMDIDoc)  // Attributes public:  
+int m_X; //  координаты круга по x 	int m_Y;  
+//  координаты круга по y    
+// Operations ... ... </h5></PRE> 4. Объявляем элементы данных класса представления. Их будет тоже два : координаты круга  по <b>X</b> и по <b>Y</b>. Для этого открываем файл <b>CMDIView.h</b>  и изменяем объявление  класса <b>CMDIView</b> следующим образом: <br><br> 
+<PRE><h5>  class CMDIView : public CView { protected: 
+// create from serialization only 	CMDIView(); 	
+DECLARE_DYNCREATE(CMDIView)  // Attributes public: 	
+CMDIDoc* GetDocument();  	int m_X; 
+//  координаты круга по x 	int m_Y;  
+//  координаты круга по y  // Operations ... ... </h5></PRE> Как вы видите, имена переменных могут совпадать( обычно так и делается ).<br><br>  5. Инициализируем элементы данных класса документа. Для этого откройте файл <b>MDIDoc.cpp</b>, найдите в нём функцию <b>OnNewDocument()</b> и напишите в ней следующий код:<br><br>  <PRE><h5>  BOOL CMDIDoc::OnNewDocument() { 	if 
+(!CDocument::OnNewDocument()) 		return FALSE;  
+m_X = 100; // начальное положение по X=100 
+                        	m_Y = 100;  
+// начальное положение по Y=100    	
+// TODO: add reinitialization code here 	
+// (SDI documents will reuse this document)  	
+             return TRUE; } </h5></PRE>  6. Инициализируем элементы данных класса представления. Для этого нужно создать функцию-элемент <b>OnInitialUpdate()</b> класса представления: <br><br>  Выберите <b>ClassWizard</b> в меню <b>View</b>. На странице <b>Message Maps</b> выберите следующие события:<br><br> 
+ <PRE><h5>       Class neme : CMDIView       Object ID   :
+  CMDIView       Message      : OnInitialUpdate </h5></PRE>  и нажмите на кнопку <b>Add Function</b><br> Напишите следующий код в функцию <b>OnInitialUpdate():</b><br><br>  
+<PRE><h5> void CMDIView::OnInitialUpdate()  { 	
+CView::OnInitialUpdate(); 	 	
+// TODO: Add your specialized code here and/or 
+call the base class  	
+CMDIDoc* pDoc = GetDocument(); 
+// получить указатель на документ 
+// обновить элементы данных представления 
+// соответствующими значениями документа. 	
+m_X = pDoc->m_X; 	m_Y = pDoc->m_Y;                   
+pDoc->SetTitle("ANDY"); 
+// всем документам даётся название ANDY } </h5></PRE>  7. Теперь напишем код для вывода круга на экран.<br> Функция <b>OnDraw()</b> класса представления автоматически выполняется всякий раз, когда нужно вывести окно документа.<br><br> Напишите следующий код в функции <b>OnDraw() :</b><br><br> 
+<PRE><h5>  void CMDIView::OnDraw(CDC* pDC) { 	
+CMDIDoc* pDoc = GetDocument(); 	
+                    ASSERT_VALID(pDoc); 	
+// TODO: add draw code for native data here  	
+pDC->Ellipse(m_X - 20, m_Y - 20,
+                   m_X + 20, m_Y + 20); 
+// рисуем круг диаметром 20   } </h5></PRE>  8. Напишем код для сохранения и считывания данных из файла.<br><br> Откройте файл <b>MDIDoc.cpp</b>, найдите в нём функцию <b>Serialize()</b> и измените её:<br><br> 
+ <PRE><h5> void CMDIDoc::Serialize(CArchive& ar) { 
+ if (ar.IsStoring()) 	{ 		
+// TODO: add storing code here( это выполняется,
+  если выбрать SAVE ) 		ar&lt;&lt;m_X; 
+// записываем m_X в выбранный файл 		ar&lt;&lt;m_Y; 
+//  записываем m_Y в выбранный файл 	} 	else 	{ 		
+// TODO: add loading code here ( это выполняется,
+если выбрать OPEN ) 	    	ar>>m_X; 
+// считываем значение из выбранного файла в m_X 	
+    	ar>>m_Y;  
+// считываем значение из выбранного файла в m_Y 	
+                                  } } </h5></PRE>  9. Часто бывает нужно изменить некоторые параметры программы, такие как заголовок  главного окна или тип файла по умолчанию, который выводится в диалоговых панелях <b>SAVE</b> и <b>OPEN</b>. Для этого нужно выбрать закладку <b>ResourceView</b> и открыть пункт <b>String Table</b>. Вы увидите список переменных проекта( три колонки : ID, Value и Caption ).<br><br> <ul>       <b>IDR_MAINFRAME</b> - заголовок главного окна (изменяется в поле <b>Caption</b>)<br>       <b>IDR_MCIRCLTYPE</b> - тип файла по умолчанию, вы увидите 6 подстрок разделёнными знаком <b>\n</b>. Третья и четвёртая подстроки определяют тип документа по умолчанию. У меня <b>CIR FILES( *.cir )</b> и <b>.cir</b> соответственно. Вы можете поставить свои значения.  </ul><br><br>  10. Теперь создадим кнопку в панеле инструментов.  Для этого нужно выбрать закладку <b>ResourceView</b> и открыть пункт <b>Toolbar</b>. Вы увидите панель инструментов в режиме редактирования. Нажмите на самую правую кнопку( пунктирный квадрат ), ниже нарисуйте кнопку по вашему усмотрению. Теперь дважды нажмете на вашу кнопку и введите ID: <b>ID_MYBUTTON</b>  и Prompt: <b>Изменение координат круга\nИзменение  координат круга</b>. Ну вот и всё, кнопка готова. Теперь нужно создать функцию, которая будет выполняться при нажатии на вашу кнопку :<br><br> Выберите пункт меню <b>View</b> далее <b>ClassWizard</b>, выберите закладку <b>Message Maps</b>, <b>Project: MDI, Class name: CMDIView, Object IDs: ID_MYBUTTON, Message: COMMAND</b> и нажмите на кнопку <b>Add Function</b>. В ответ создастся функция <b>void CMDIView::OnMybutton()</b>. <br><br>  11. Теперь по аналогии с главой 15 создадим собственное диалоговое окно с <b>ID: IDD_MY_DIALOG</b> и классом <b>CMyDialog</b> и разместим в нём четыре <b>Edit Box</b> с переменными типа <b>INT</b>: <b>m_DX</b> - текущая позиция по X, <b>m_DY</b> - текущая позиция по Y, <b>m_DXN</b> - новая позииция по X,    <b>m_DYN</b> - новая позииция по Y. Не забудте написать <b>#include "MyDialog.h"</b> в  файлах <b>MDIDoc.cpp</b> и <b>MDIView.cpp</b>.<br><br>  12. Теперь напишем код в функцие <b>OnMybutton()</b>.<br><br> 
+<PRE><h5> void CMDIView::OnMybutton()  { 	
+// TODO: Add your command handler code here 	
+CMDIDoc* pDoc = GetDocument(); 
+// получаем указатель на документ  	
+               CMyDialog MyD; 
+// создаём переменную класса CMyDialog 	
+MyD.m_DX = MyD.m_DXN = pDoc->m_X; 
+// инициализмруем переменные диалога 	
+MyD.m_DY = MyD.m_DYN = pDoc->m_Y; .
+//   	MyD.DoModal(); 
+// создаём новый диалог  	
+         pDoc->m_X = MyD.m_DXN; 
+// получаем новые значения 	
+       pDoc->m_Y = MyD.m_DYN; 
+//  	OnInitialUpdate(); 
+// синхронизируем данные                
+               Invalidate( TRUE ); 
+// перерисовываем экран( вызов OnDraw() ) 	
+pDoc->SetModifiedFlag(); 
+// ставим флаг изменения документа }   </h5></PRE><br>  13. Ну вот и всё, программа готова. <a href = "MDI.zip">Отсюда</a> можно взять рабочую  программу, использующую MDI,  в которой используется собственное диалоговое окно.<br><br> </font>
+<p><div align="center"><a href="../index.html">	<img src="../../../soder-yel.gif" width=159 height=38 border=0 alt=""></a></div></p>
+</BODY></HTML> 

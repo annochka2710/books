@@ -1,0 +1,1258 @@
+<HTML>
+<TITLE>Клуб русских программистов!</TITLE>
+<META NAME="author" CONTENT="Kuklin Alexey Email: vnews@mail.ru">
+<META NAME="keywords" CONTENT="programming, программирование, soft, helps, web webdizain, photo, photoshop, internet, examples, conference, конференция, софт, примеры программ, исходники, source, codes, MFC, MTL, vc, visual, c , c++, с++,с, документация, documentation"> 
+<META NAME="description" CONTENT="Документация C, C++ , Visual C , Object C, Quick C, Turbo C, ActiveX. Школа MFC, софт, примеры программ и исходники к ним, справочные книги и конференция.">
+
+<HEAD>
+<LINK REL=STYLESHEET TYPE="text/css" HREF="../../styles.css" TITLE="Style">
+</HEAD>
+
+
+<BODY BGCOLOR="#E9D7B1"  TEXT="black" topmargin="0" leftmargin="0" > 
+<DIV ALIGN="CENTER">
+<br>
+
+<TABLE  border=1 bgcolor=#F8F1E4 cellpadding=0 cellspacing=4  bordercolor="#800000" width=700 height=250 bordercolorlight="#F8F1E4"
+bordercolordark="#F8F1E4">  
+
+<TR>
+<TD colspan=2 height=80 bordercolorlight="#800000"
+bordercolordark="#800000">
+<DIV ALIGN="center">
+<script>
+// <!--
+var default_user_id = 65561;
+var userid = default_user_id;
+get_user_id();
+if (userid == 123456) {userid=default_user_id;}
+var page = 1;
+var rndnum = Math.round(Math.random() * 10000);
+document.write('<A HREF="http://ad.tbn.ru/bb.cgi?cmd=go&pubid=' + userid + '&pg=' + page + '&vbn=189&num=1&w=468&h=60&nocache=' + rndnum + '" target="_blank">');
+document.write('<IMG SRC="http://ad.tbn.ru/bb.cgi?cmd=ad&pubid=' + userid + '&pg=' + page + '&vbn=189&num=1&w=468&h=60&nocache=' + rndnum + '" width=468 height=60 Alt="TBN.ru" border=1></A>');
+
+function get_user_id(){
+        var tmp = window.parent.location.href;
+        var user_id = tmp.replace(/.+user_id=/,"");
+        if(user_id.search(/^[0123456789]+.*$/g)!=-1)
+                       userid = user_id;                       
+                                else
+                                  userid = default_user_id;
+}
+
+// -->
+</script>
+
+<script>
+// <!--
+var ie4 = (document.all) ? true : false;
+if (ie4) { document.write('<img src="/ad/counter" WIDTH=1 HEIGHT=0 border=0>'); }
+// -->
+</script>
+<br><b><font size=2 face=tahoma><a href="http://www.sudba.ru/" target='_blank'>Е-ЛЮБОВЬ</a>
+| <a href='http://love.uka.ru' target=_blank>ЗНАКОМСТВА</a>
+| <a href="http://chat.uka.ru/" target='_blank'><font color=red>взрывЧАТка</font></a>
+<!--
+| <a href="http://www.anekdots.ru" target='_blank'>АНЕКДОТЫ</a>
+| <a href="http://www.anekdots.ru" target='_blank'>ИГРЫ</a>
+| <a href="http://www.anekdots.ru" target='_blank'>MУЗЫКА</a>
+-->
+</font></b>
+
+</DIV>
+</TD>
+</TR>
+
+
+<TR>
+<TD bordercolorlight="#800000" bordercolordark="#800000" width=29% >
+
+<CENTER><div  style="color:#000080" class="base"><b>Меню</b></div></CENTER>
+<br>
+<font size=1>
+
+
+<IMG SRC="../../../Picture/Main/uk.gif" HSPACE=3 border=0><A HREF="../../../html/about.htm"><b class="base2">О Проекте</b><p></A>
+<IMG SRC="../../../Picture/Main/uk.gif" HSPACE=3 border=0><A HREF="../../../index.html"><b class="base2"> Новости</b><p></A>
+<IMG SRC="../../../Picture/Main/uk.gif" HSPACE=3 border=0><A HREF="../../../html/pclub.htm"><b class="base2"> Клуб Программеров С++</b><p></A>
+<IMG SRC="../../../Picture/Main/uk.gif" HSPACE=3 border=0><A HREF="../../../html/docs.htm"><b class="base2"> Документация</b><p></A>
+<IMG SRC="../../../Picture/Main/uk.gif" HSPACE=3 border=0><A HREF="../../../html/components.htm"><b class="base2"> Инструментарий</b><p></A>
+<IMG SRC="../../../Picture/Main/uk.gif" HSPACE=3 border=0><A HREF="../../../html/lesson.htm"><b class="base2"> Школа MFC</b><p></A>
+<IMG SRC="../../../Picture/Main/uk.gif" HSPACE=3 border=0><A HREF="../../../html/Examples/sources.htm"><b class="base2"> Исходники</b><p></A>
+<IMG SRC="../../../Picture/Main/uk.gif" HSPACE=3 border=0><A HREF="http://www.fido7.com/cgi-fido7/forumi.pl?user=vnews"><b class="base2">Форум С++</b><p></A>
+<IMG SRC="../../../Picture/Main/uk.gif" HSPACE=3 border=0><A HREF="../../../html/links.htm"><b class="base2"> Ссылки</b><p></A>
+<IMG SRC="../../../Picture/Main/uk.gif" HSPACE=3 border=0><A href="http://www.guestbook.ru/book.cgi?user=cppmfc&action=show"><b class="base2"> Отзывы и предложения</b><p></A>
+<IMG SRC="../../../Picture/Main/uk.gif" HSPACE=3 border=0><A HREF="../../../html/map.htm"><b class="base2"> Карта сайта</b><p></A>
+
+ <hr width="90%">
+<div align=center>
+<script language="javascript">
+<!-- 
+an=navigator.appName;d=document;function 
+pr(){d.write("<A HREF=\"http://count.ru/cgi-bin/href.cgi?", 
+"id=9203\"><img src=\"http://count.ru/cgi-bin/", 
+"count.cgi?id=9203&j=y&w="+srw+"&c="+srb+"&", 
+"ref="+escape(d.referrer)+"\" height=31 border=0", 
+" width=88></A>");}srb="na";srw="na";//--> 
+</script><script language="javascript1.2"><!-- 
+s=screen;srw=s.width;an!="Netscape"? 
+srb=s.colorDepth:srb=s.pixelDepth;//--> 
+</script><script
+     language="javascript"><!-- 
+pr();//--> 
+</script>
+<noscript></br>
+<a HREF="http://count.ru/cgi-bin/href.cgi?id=9203">
+<img height="31" width="88" border="0" src="http://count.ru/cgi-bin/count.cgi?id=9203&amp;j=n&amp;ref=" vspace="3"></a> 
+</noscript><br>
+<!--LIST100 COUNTER-->
+<A TARGET="_top" HREF="http://counter.list.ru/cgi-bin/jump?from=12813">
+<SCRIPT>
+<!--
+d=document;js=10;a='&pageref='+escape(d.referrer)
+//--></script><script
+language="JavaScript1.1"><!--
+js=11;a+='&jsbool='+navigator.javaEnabled()
+//--></script><script language="JavaScript1.2"><!--
+js=12;s=screen;a+='&res='+s.width+'*'+s.height
+a+='&depth='+(s.colorDepth?s.colorDepth:s.pixelDepth)
+//--></script><script
+language="JavaScript1.3"><!--
+js=13//--></script><script><!--
+d.write('<img src="http://counter.list.ru/cgi-bin/counter.dll'+
+'?id=12813&type=1&cd=1&bt=0&jsver='+js+a+
+'" alt="LIST100 Counter" border="0" height="40" width="88">')
+if(js>11)d.write('<'+'!-- ')//--></script><noscript> <img
+src="http://counter.list.ru/cgi-bin/counter.dll?jsver=na&amp;cd=1&amp;bt=0&amp;id=12813&amp;type=1"
+border="0" height="32" width="80" alt="LIST100 Counter" vspace="3"></noscript><script><!--
+if(js>11)d.write('--'+'>')
+//-->
+</SCRIPT></A>
+<!--LIST100 COUNTER--><br>
+
+
+<a href="http://www.index99.kiev.ua" target="_blank">
+<img src="http://www.index99.kiev.ua/cgi-bin/count1.cgi?vnews" 
+border="0" width="88" height="31" alt="Index'99" vspace="3"></a><BR>
+
+
+<!--NUMBER ONE COUNTER--><a target=_top 
+href="http://www.one.ru"><script language="javascript"><!--
+document.write("<img src=\"http://www.one.ru/cgi-bin/cnt.cgi?id=4201&t=1",
+"&r="+escape(parent.document.referrer),"\" width=88 height=31 ",
+"border=0 alt=\"become number one\">");//--></script><noscript>
+<img src="http://www.one.ru/cgi-bin/cnt.cgi?id=4201&t=1"
+width=88 height=31 alt="be number one" border=0></noscript></a>
+<!--NUMBER ONE COUNTER--><br>
+
+ <!--3P COUNTER--><a target=_top 
+href="http://www.3p.com"><script language="javascript"><!--
+document.write("<img src=\"http://www.3p.com/cgi-bin/cnt.cgi?id=620&t=1",
+"&r="+escape(parent.document.referrer),"\" width=88 height=31 ",
+"border=0 alt=\"3P.RU\">");//--></script><noscript>
+<img src="http://www.3p.com/cgi-bin/cnt.cgi?id=620&t=1"
+width=88 height=31 alt="3P.COM" border=0></noscript></a>
+<!--3P COUNTER-->
+ </br>
+ 
+
+
+<a href="http://www.stars.ru" target=_top><img src="http://1000.stars.ru/cgi-bin/1000.cgi?vckuklinsite" WIDTH=50 HEIGHT=30 BORDER=0></a><BR><P>&nbsp;
+
+</div>
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+
+
+
+
+
+</TD>
+
+<TD  bordercolorlight="#800000" bordercolordark="#800000" >  
+
+<FONT FACE="TAHOMA" SIZE=3 COLOR="RED"><CENTER><B> Работа с WinSocket</B></CENTER></FONT>
+<P>
+<DIV ALIGN="CENTER">
+<TABLE WIDTH="95%">
+<TR>
+<TD><FONT FACE="TAHOMA" SIZE=2 COLOR="BLACK">
+<P>Socket (гнездо, разъем) - абстрактное программное понятие, используемое
+для обозначения в прикладной программе конечной точки канала связи с коммуникационной
+средой, образованной вычислительной сетью. При использовании протоколов
+TCP/IP можно говорить, что socket является средством подключения прикладной
+программы к порту (см. выше) локального узла сети. </P>
+
+<P>Socket-интерфейс представляет собой просто набор системных вызовов и/или
+библиотечных функций языка программирования СИ, разделенных на четыре группы:
+</P>
+
+<br><b><ul>
+<a href="#1">1. Локального управления </a><br>
+<a href="#2">2. Установления связи</a> <br>
+<a href="#3">3. Обмена данными (ввода/вывода)</a> <br>
+<a href="#4">4. Закрытия связи </a><br>
+<a href="#5">5. Пример использования WinSocket </a><br>
+</b></ul><br><br>
+
+<P>Ниже рассматривается подмножество функций socket-интерфейса, достаточное
+для написания сетевых приложений, реализующих модель &quot;клиент-сервер&quot;
+в режиме с установлением соединения. </P>
+
+<a name="1"><H3 ALIGN=CENTER>1. Функции локального управления </H3></a>
+
+<P>Функции локального управления используются, главным образом, для выполнения
+подготовительных действий, необходимых для организации взаимодействия двух
+программ-партнеров. Функции носят такое название, поскольку их выполнение
+носит локальный для программы характер.</P>
+
+<H4 ALIGN=CENTER>1.1 Создание socket'а </H4>
+
+<P>Создание socket'а осуществляется следующим системным вызовом </P>
+
+<PRE><h5>    
+    #include &lt;sys/socket.h&gt;
+    int socket (domain, type, protocol)
+        int domain;
+        int type;
+        int protocol;
+</h5></PRE>
+
+<P>Аргумент <I>domain</I> задает используемый для взаимодействия набор
+протоколов (вид коммуникационной области), для стека протоколов TCP/IP
+он должен иметь символьное значение AF_INET (определено в sys/socket.h).</P>
+
+<P>Аргумент <I>type</I> задает режим взаимодействия:</P>
+
+<UL>
+<LI>SOCK_STREAM - с установлением соединения; </LI>
+
+<LI>SOCK_DGRAM - без установления соединения. </LI>
+</UL>
+
+<P>Аргумент <I>protocol</I>задает конкретный протокол транспортного уровня
+(из нескольких возможных в стеке протоколов). Если этот аргумент задан
+равным 0, то будет использован протокол &quot;по умолчанию&quot; (TCP для
+SOCK_STREAM и UDP для SOCK_DGRAM при использовании комплекта протоколов
+TCP/IP).</P>
+
+<P>При удачном завершении своей работы данная функция возвращает дескриптор
+socket'а - целое неотрицательное число, однозначно его идентифицирующее.
+Дескриптор socket'а аналогичен дескриптору файла ОС UNIX.</P>
+
+<P>При обнаружении ошибки в ходе своей работы функция возвращает число
+&quot;-1&quot;.</P>
+
+<H4 ALIGN=CENTER>1.2. Связывание socket'а </H4>
+
+<P>Для подключения socket'а к коммуникационной среде, образованной вычислительной
+сетью, необходимо выполнить системный вызов <B>bind</B>, определяющий в
+принятом для сети формате локальный адрес канала связи со средой. В сетях
+TCP/IP socket связывается с локальным портом. Системный вызов bind имеет
+следующий синтаксис:</P>
+
+<PRE><h5>   
+    #include &lt;sys/types.h&gt;
+    #include &lt;sys/socket.h&gt;
+    #include &lt;netinet/in.h&gt;
+    int bind (s, addr, addrlen)
+        int s;
+        struct sockaddr *addr;
+        int addrlen;
+</h5></PRE>
+
+<P>Аргумент <I>s</I> задает дескриптор связываемого socket'а.</P>
+
+<P>Аргумент <I>addr</I> в общем случае должен указывать на структуру данных,
+содержащую локальный адрес, приписываемый socket'у. Для сетей TCP/IP такой
+структурой является sockaddr_in.</P>
+
+<P>Аргумент <I>addrlen</I> задает размер (в байтах) структуры данных, указываемой
+аргументом addr.</P>
+
+<P>Структура sockaddr_in используется несколькими системными вызовами и
+функциями socket-интерфейса и определена в include-файле in.h следующим
+образом:</P>
+
+<PRE><h5>   
+ struct sockaddr_in {
+        short sin_family;
+        u_short sin_port;
+        struct in_addr sin_addr;
+        char sin_zero[8];
+        };
+</h5></PRE>
+
+<P>Поле sin_family определяет используемый формат адреса (набор протоколов),
+в нашем случае (для TCP/IP) оно должно иметь значение AF_INET.</P>
+
+<P>Поле sin_addr содержит адрес (номер) узла сети.</P>
+
+<P>Поле sin_port содержит номер порта на узле сети.</P>
+
+<P>Поле sin_zero не используется.</P>
+
+<P>Определение структуры in_addr (из того же include-файла) таково:</P>
+
+<PRE><h5>    
+struct in_addr {
+        union {
+            u_long S_addr;
+            /*
+            другие (не интересующие нас)
+            члены объединения
+            */
+            } S_un;
+    #define s_addr S_un.S_addr
+        };
+</h5></PRE>
+
+<P>Структура sockaddr_in должна быть полностью заполнена перед выдачей
+системного вызова <B>bind</B>. При этом, если поле sin_addr.s_addr имеет
+значение INADDR_ANY, то системный вызов будет привязывать к socket'у номер
+(адрес) локального узла сети.</P>
+
+<P>В случае успеха bind возвращает 0, в противном случае - &quot;-1&quot;.</P>
+
+<a name="2"><H3 ALIGN=CENTER>2. Функции установления связи</H3></a>
+
+<P>Для установления связи &quot;клиент-сервер&quot; используются системные
+вызовы <B>listen</B> и <B>accept </B>(на стороне сервера), а также <B>connect</B>
+(на стороне клиента). Для заполнения полей структуры socaddr_in, используемой
+в вызове <B>connect</B>, обычно используется библиотечная функция <b>gethostbyname</b>,
+транслирующая символическое имя узла сети в его номер (адрес).</P>
+
+<H4 ALIGN=CENTER>2.1. Ожидание установления связи</H4>
+
+<P>Системный вызов <B>listen</B> выражает желание выдавшей его программы-сервера
+ожидать запросы к ней от программ-клиентов и имеет следующий вид:</P>
+
+<PRE><h5>    
+#include &lt;sys/socket.h&gt;
+    int listen (s, n)
+        int s;
+        int n;
+</h5></PRE>
+
+<P>Аргумент <I>s</I> задает дескриптор socket'а, через который программа
+будет ожидать запросы к ней от клиентов. Socket должен быть предварительно
+создан системным вызовом <B>socket</B>и обеспечен
+адресом с помощью системного вызова <B>bind</B>.</P>
+
+<P>Аргумент <I>n</I> определяет максимальную длину очереди входящих запросов
+на установление связи. Если какой-либо клиент выдаст запрос на установление
+связи при полной очереди, то этот запрос будет отвергнут.</P>
+
+<P>Признаком удачного завершения системного вызова <B>listen</B> служит
+нулевой код возврата.</P>
+
+<H4 ALIGN=CENTER>2.2. Запрос на установление соединения</H4>
+
+<P>Для обращения программы-клиента к серверу с запросом на установление
+логической соединения используется системный вызов <B>connect</B>, имеющий
+следующий вид</P>
+
+<PRE><h5>   
+    #include &lt;sys/types.h&gt;
+    #include &lt;sys/socket.h&gt;
+    #include &lt;netinet/in.h&gt;
+    int connect (s, addr, addrlen)
+        int s;
+        struct sockaddr_in *addr;
+        int addrlen;
+</h5></PRE>
+
+<P>Аргумент <I>s</I> задает дескриптор socket'а, через который программа
+обращается к серверу с запросом на соединение. Socket должен быть предварительно
+создан системным вызовом <B>socket</B>и обеспечен
+адресом с помощью системного вызова <B>bind</B>.</P>
+
+<P>Аргумент <I>addr</I> должен указывать на структуру данных, содержащую
+адрес, приписанный socket'у программы-сервера, к которой делается запрос
+на соединение. Для сетей TCP/IP такой структурой является sockaddr_in.
+Для формирования значений полей структуры sockaddr_in удобно использовать
+функцию <B>gethostbyname</B>.</P>
+
+<P>Аргумент <I>addrlen</I> задает размер (в байтах) структуры данных, указываемой
+аргументом addr.</P>
+
+<P>Для того, чтобы запрос на соединение был успешным, необходимо, по крайней
+мере, чтобы программа-сервер выполнила к этому моменту системный вызов
+
+<B>listen</B> для socket'а с указанным адресом.</P>
+
+<P>При успешном выполнении запроса системный вызов <B>connect</B> возвращает
+0, в противном случае - &quot;-1&quot; (устанавливая код причины неуспеха
+в глобальной переменной errno).</P>
+
+<P><I><B>Примечание. </B>Если к моменту выполнения connect используемый
+им socket не был привязан к адресу посредством <B>bind ,</B>то такая привязка
+будет выполнена автоматически.</I></P>
+
+<P><I><B>Примечание.</B> В режиме взаимодействия без установления соединения
+необходимости в выполнении системного вызова <B>connect </B>нет. Однако,
+его выполнение в таком режиме не является ошибкой - просто меняется смысл
+выполняемых при этом действий: устанавливается адрес &quot;по умолчанию&quot;
+для всех последующих посылок дейтаграмм.</I></P>
+
+<H4 ALIGN=CENTER>2.3. Прием запроса на установление связи</H4>
+
+<P>Для приема запросов от программ-клиентов на установление связи в программах-серверах
+используется системный вызов <B>accept</B>, имеющий следующий вид:</P>
+
+<PRE><h5>   
+    #include &lt;sys/socket.h&gt;
+    #include &lt;netinet/in.h&gt;
+    int accept (s, addr, p_addrlen)
+        int s;
+        struct sockaddr_in *addr;
+        int *p_addrlen;
+</h5></PRE>
+
+<P>Аргумент <I>s</I> задает дескриптор socket'а, через который программа-сервер
+получила запрос на соединение (посредством системного запроса <B>listen</B>
+).</P>
+
+<P>Аргумент <I>addr</I> должен указывать на область памяти, размер которой
+позволял бы разместить в ней структуру данных, содержащую адрес socket'а
+программы-клиента, сделавшей запрос на соединение. Никакой инициализации
+этой области не требуется.</P>
+
+<P>Аргумент <I>p_addrlen</I> должен указывать на область памяти в виде
+целого числа, задающего размер (в байтах) области памяти, указываемой аргументом
+addr.</P>
+
+<P>Системный вызов <B>accept</B> извлекает из очереди, организованной системным
+вызовом <B>listen</B>, первый запрос на соединение и возвращает дескриптор
+нового (автоматически созданного) socket'а с теми же свойствами, что и
+socket, задаваемый аргументом s. Этот новый дескриптор необходимо использовать
+во всех последующих операциях обмена данными.</P>
+
+<P>Кроме того после удачного завершения <B>accept</B>: </P>
+
+<OL>
+<LI>область памяти, указываемая аргументом addr, будет содержать структуру
+данных (для сетей TCP/IP это sockaddr_in), описывающую адрес socket'а программы-клиента,
+через который она сделала свой запрос на соединение; </LI>
+
+<LI>целое число, на которое указывает аргумент p_addrlen, будет равно размеру
+этой структуры данных.</LI>
+</OL>
+
+<P>Если очередь запросов на момент выполнения <B>accept</B> пуста, то программа
+переходит в состояние ожидания поступления запросов от клиентов на неопределенное
+время (хотя такое поведение <B>accept</B> можно и изменить).</P>
+
+<P>Признаком неудачного завершения <B>accept</B> служит отрицательное возвращенное
+значение (дескриптор socket'а отрицательным быть не может).</P>
+
+<P><I><B>Примечание. </B>Системный вызов <B>accept </B>используется в программах-серверах,
+функционирующих только в режиме с установлением соединения.</I></P>
+
+<H4 ALIGN=CENTER>2.4. Формирование адреса узла сети</H4>
+
+<P>Для получения адреса узла сети TCP/IP по его символическому имени используется
+библиотечная функция</P>
+
+<PRE><h5>    
+    #include &lt;netinet/in.h&gt;
+    #include &lt;netdb.h&gt;
+    struct hostent *gethostbyname (name)
+        char *name;
+</h5></PRE>
+
+<P>Аргумент <I>name</I> задает адрес последовательности литер, образующих
+символическое имя узла сети.</P>
+
+<P>При успешном завершении функция возвращает указатель на структуру hostent,
+определенную в include-файле netdb.h и имеющую следующий вид</P>
+
+<PRE><h5>    
+    struct hostent {
+        char *h_name;
+        char **h_aliases;
+        int h_addrtype;
+        int h_lenght;
+        char *h_addr;
+        };
+</h5></PRE>
+
+<P>Поле h_name указывает на официальное (основное) имя узла.</P>
+
+<P>Поле h_aliases указывает на список дополнительных имен узла (синонимов),
+если они есть.</P>
+
+<P>Поле h_addrtype содержит идентификатор используемого набора протоколов,
+для сетей TCP/IP это поле будет иметь значение AF_INET.</P>
+
+<P>Поле h_lenght содержит длину адреса узла.</P>
+
+<P>Поле h_addr указывает на область памяти, содержащую адрес узла в том
+виде, в котором его используют системные вызовы и функции socket-интерфейса.</P>
+
+<P>Пример обращения к функции <B>gethostbyname</B> для получения адреса
+удаленного узла в программе-клиенте, использующей системный вызов <B>connect</B>
+для формирования запроса на установления соединения с программой-сервером
+на этом узле, рассматривается ниже.</P>
+
+<a name="3"><H3 ALIGN=CENTER>3. Функции обмена данными</H3></a>
+
+<P>В режиме с установлением логического соединения после удачного выполнения
+пары взаимосвязанных системных вызовов <B>connect</B> (в клиенте) и <B>accept</B>
+(в сервере) становится возможным обмен данными.</P>
+
+<P>Этот обмен может быть реализован обычными системными вызовами <B>read</B>
+и <B>write</B>, используемыми для работы с файлами (при этом вместо дескрипторов
+файлов в них задаются дескрипторы socket'ов).</P>
+
+<P>Кроме того могут быть дополнительно использованы системные вызовы <B>send</B>
+и <B>recv</B>, ориентированные специально на работу с socket'ами.</P>
+
+<P><I><B>Примечание. </B>Для обмена данными в режиме без установления логического
+соединения используются, как правило, системные вызовы <B>sendto</B>и <B>recvfrom</B>.
+<B>Sendto </B>позволяет специфицировать вместе с передаваемыми данными
+(составляющими дейтаграмму) адрес их получателя. <B>Recvfrom </B>одновременно
+с доставкой данных получателю информирует его и об адресе отправителя.</I></P>
+
+<H4 ALIGN=CENTER>3.1. Посылка данных</H4>
+
+<P>Для посылки данных партнеру по сетевому взаимодействию используется
+системный вызов <B>send</B>, имеющий следующий вид</P>
+
+<PRE><h5>    
+    #include &lt;sys/types.h&gt;
+    #include &lt;sys/socket.h&gt;
+    int send (s, buf, len, flags)
+        int s;
+        char *buf;
+        int len;
+        int flags;
+</h5></PRE>
+
+<P>Аргумент <I>s</I> задает дескриптор socket'а, через который посылаются
+данные.</P>
+
+<P>Аргумент <I>buf</I> указывает на область памяти, содержащую передаваемые
+данные.</P>
+
+<P>Аргумент <I>len</I> задает длину (в байтах) передаваемых данных.</P>
+
+<P>Аргумент <I>flags</I> модифицирует исполнение системного вызова <B>send</B>.
+При нулевом значении этого аргумента вызов <B>send</B> полностью аналогичен
+системному вызову <B>write</B>.</P>
+
+<P>При успешном завершении <B>send</B> возвращает количество переданных
+из области, указанной аргументом buf, байт данных. Если канал данных, определяемый
+дескриптором s, оказывается &quot;переполненным&quot;, то <B>send</B> переводит
+программу в состояние ожидания до момента его освобождения.</P>
+
+<H4 ALIGN=CENTER>3.2. Получение данных</H4>
+
+<P>Для получения данных от партнера по сетевому взаимодействию используется
+системный вызов <B>recv</B>, имеющий следующий вид</P>
+
+<PRE><h5>    
+    #include &lt;sys/types.h&gt;
+    #include &lt;sys/socket.h&gt;
+    int recv (s, buf, len, flags)
+        int s;
+        char *buf;
+        int len;
+        int flags;
+</h5></PRE>
+
+<P>Аргумент <I>s</I> задает дескриптор socket'а, через который принимаются
+данные.</P>
+
+<P>Аргумент <I>buf</I> указывает на область памяти, предназначенную для
+размещения принимаемых данных.</P>
+
+<P>Аргумент <I>len</I> задает длину (в байтах) этой области.</P>
+
+<P>Аргумент <I>flags</I> модифицирует исполнение системного вызова <B>recv</B>.
+При нулевом значении этого аргумента вызов <B>recv</B> полностью аналогичен
+системному вызову <B>read</B>.</P>
+
+<P>При успешном завершении recv возвращает количество принятых в область,
+указанную аргументом <I>buf</I>, байт данных. Если канал данных, определяемый
+дескриптором s, оказывается &quot;пустым&quot;, то <B>recv</B> переводит
+программу в состояние ожидания до момента появления в нем данных.</P>
+
+<a name="4"><H3 ALIGN=CENTER>4. Функции закрытия связи</H3></a>
+
+<P>Для закрытия связи с партнером по сетевому взаимодействию используются
+системные вызовы <B>close </B>и <B>shutdown</B>.</P>
+
+<H4 ALIGN=CENTER>4.1. Системный вызов close</H4>
+
+<P>Для закрытия ранее созданного socket'а используется обычный системный
+вызов <B>close</B>, применяемый в ОС UNIX для закрытия ранее открытых файлов
+и имеющий следующий вид</P>
+
+<PRE><h5>    
+        int close (s)
+        int s;
+</h5></PRE>
+
+<P>Аргумент <I>s</I> задает дескриптор ранее созданного socket'а.</P>
+
+<P>Однако в режиме с установлением логического соединения (обеспечивающем,
+как правило, надежную доставку данных) внутрисистемные механизмы обмена
+будут пытаться передать/принять данные, оставшиеся в канале передачи на
+момент закрытия socket'а. На это может потребоваться значительный интервал
+времени, неприемлемый для некоторых приложений. В такой ситуации необходимо
+использовать описываемый далее системный вызов <B>shutdown</B>.</P>
+
+<H4 ALIGN=CENTER>4.2. Сброс буферизованных данных</H4>
+
+<P>Для &quot;экстренного&quot; закрытия связи с партнером (путем &quot;сброса&quot;
+еще не переданных данных) используется системный вызов <B>shutdown</B>,
+выполняемый перед <B>close</B> и имеющий следующий вид</P>
+
+<PRE><h5>   
+        int shutdown (s, how)
+        int s;
+        int how;
+</h5></PRE>
+
+<P>Аргумент <I>s</I> задает дескриптор ранее созданного socket'а.</P>
+
+<P>Аргумент <I>how</I> задает действия, выполняемые при очистке системных
+буферов socket'а: </P>
+
+<UL>
+<LI>0 - сбросить и далее не принимать данные для чтения из socket'а; </LI>
+
+<LI>1 - сбросить и далее не отправлять данные для посылки через socket;
+</LI>
+
+<LI>2 - сбросить все данные, передаваемые через socket в любом направлении.</LI>
+</UL>
+
+<a name="5"><H3 ALIGN=CENTER>5. Пример использования socket-интерфейса</H3></a>
+
+<P>В данном разделе рассматривается использование socket-интерфейса в режиме
+взаимодействия с установлением логического соединения на очень простом
+примере взаимодействия двух программ (сервера и клиента), функционирующих
+на разных узлах сети TCP/IP.</P>
+
+<P>Содержательная часть программ примитивна: </P>
+
+<OL>
+<LI>сервер, приняв запрос на соединение, передает клиенту вопрос &quot;Who
+are you?&quot;; </LI>
+
+<LI>клиент, получив вопрос, выводит его в стандартный вывод и направляет
+серверу ответ &quot;I am your client&quot; и завершает на этом свою работу;
+</LI>
+
+<LI>сервер выводит в стандартный вывод ответ клиента, закрывает с ним связь
+и переходит в состояние ожидания следующего запроса к нему.</LI>
+</OL>
+
+<P><I><B>Примечание. </B>Предлагаемые ниже тексты программ предназначены
+только для иллюстрации логики взаимодействия программ через сеть, поэтому
+в них отсутствуют такие атрибуты программ, предназначенных для практического
+применения, как обработка кодов возврата системных вызовов и функций, анализ
+кодов ошибок в глобальной переменной errno, реакция на асинхронные события
+и т.п.</I></P>
+
+<H4 ALIGN=CENTER>5.1. Программа-сервер</H4>
+
+<P>Текст программы-сервера на языке программирования СИ выглядит следующим
+образом</P>
+
+<PRE><h5> 
+ 1  #include &lt;sys/types.h&gt;
+ 2  #include &lt;sys/socket.h&gt;
+ 3  #include &lt;netinet/in.h&gt;
+ 4  #include &lt;netdb.h&gt;
+ 5  #include &lt;memory.h&gt;
+
+ 6  #define SRV_PORT 1234
+ 7  #define BUF_SIZE 64
+ 8  #define TXT_QUEST &quot;Who are you?\n&quot;
+
+ 9  main () {
+10    int s, s_new;
+11    int from_len;
+12    char buf[BUF_SIZE];
+13    struct sockaddr_in sin, from_sin;
+
+14    s = socket (AF_INET, SOCK_STREAM, 0);
+15    memset ((char *)&amp;sin, '\0', sizeof(sin));
+16    sin.sin_family = AF_INET;
+17    sin.sin_addr.s_addr = INADDR_ANY;
+18    sin.sin_port = SRV_PORT;
+19    bind (s, (struct sockaddr *)&amp;sin, sizeof(sin));
+20    listen (s, 3);
+21    while (1) {
+22      from_len = sizeof(from_sin);
+23      s_new = accept (s, &amp;from_sin, &amp;from_len);
+24      write (s_new, TXT_QUEST, sizeof(TXT_QUEST));
+25      from_len = read (s_new, buf, BUF_SIZE);
+26      write (1, buf, from_len);
+27      shutdown (s_new, 0);
+28      close (s_new);
+29      };
+30    }
+</h5></PRE>
+
+<P>Строки 1...5 описывают включаемые файлы, содержащие определения для
+всех необходимых структур данных и символических констант.</P>
+
+<P>Строка 6 приписывает целочисленной константе 1234 символическое имя
+SRV_PORT. В дальнейшем эта константа будет использована в качестве номера
+порта сервера. Значение этой константы должно быть известно и программе-клиенту.</P>
+
+<P>Строка 7 приписывает целочисленной константе 64 символическое имя BUF_SIZE.
+Эта константа будет определять размер буфера, используемого для размещения
+принимаемых от клиента данных.</P>
+
+<P>Строка 8 приписывает последовательности символов, составляющих текст
+вопроса клиенту, символическое имя TXT_QUEST. Последним символом в последовательности
+является символ перехода на новую строку '\n'. Сделано это для упрощения
+вывода текста вопроса на стороне клиента.</P>
+
+<P>В строке 14 создается (открывается) socket для организации режима взаимодействия
+с установлением логического соединения (SOCK_STREAM) в сети TCP/IP (AF_INET),
+при выборе протокола транспортного уровня используется протокол &quot;по
+умолчанию&quot; (0).</P>
+
+<P>В строках 15...18 сначала обнуляется структура данных sin, а затем заполняются
+ее отдельные поля. Использование константы INADDR_ANY упрощает текст программы,
+избавляя от необходимости использовать функцию <B>gethostbyname</B> для
+получения адреса локального узла, на котором запускается сервер.</P>
+
+<P>Строка 19 посредством системного вызова <B>bind</B> привязывает socket,
+задаваемый дескриптором s, к порту с номером SRV_PORT на локальном узле.
+<B>Bind </B>завершится успешно при условии, что в момент его выполнения
+на том же узле уже не функционирует программа, использующая этот номер
+порта.</P>
+
+<P>Строка 20 посредством системного вызова <B>listen</B> организует очередь
+на три входящих к серверу запроса на соединение.</P>
+
+<P>Строка 21 служит заголовком бесконечного цикла обслуживания запросов
+от клиентов.</P>
+
+<P>На строке 23, содержащей системный вызов <B>accept</B>, выполнение программы
+приостанавливается на неопределенное время, если очередь запросов к серверу
+на установление связи оказывается пуста. При появлении такого запроса <B>accept</B>
+успешно завершается, возвращая в переменной s_new дескриптор socket'а для
+обмена информацией с клиентом.</P>
+
+<P>В строке 24 сервер с помощью системного вызова <B>write </B>отправляет
+клиенту вопрос.</P>
+
+<P>В строке 25 с помощью системного вызова <B>read</B> читается ответ клиента.</P>
+
+<P>В строке 26 ответ направляется в стандартный вывод, имеющий дескриптор
+файла номер 1. Так как строка ответа содержит в себе символ перехода на
+новую строку, то текст ответа будет размещен на отдельной строке дисплея.</P>
+
+<P>Строка 27 содержит системный вывод <B>shutdown</B>, обеспечивающий очистку
+системных буферов socket'а, содержащих данные для чтения (&quot;лишние&quot;
+данные могут там оказаться в результате неверной работы клиента).</P>
+
+<P>В строке 28 закрывается (удаляется) socket, использованный для обмена
+данными с очередным клиентом.</P>
+
+<P><I><B>Примечание. </B>Данная программа (как и большинство реальных программ-серверов)
+самостоятельно своей работы не завершает, находясь в бесконечном цикле
+обработки запросов клиентов. Ее выполнение может быть прервано только извне
+путем посылки ей сигналов (прерываний) завершения. Правильно разработанная
+программа-сервер должна обрабатывать такие сигналы, корректно завершая
+работу (закрывая, в частности, посредством close socket с дескриптором
+s).</I></P>
+
+<H4 ALIGN=CENTER>5.2. Программа-клиент</H4>
+
+<P>Текст программы-клиента на языке программирования СИ выглядит следующим
+образом</P>
+
+<PRE><h5> 
+ 1  #include &lt;sys/types.h&gt;
+ 2  #include &lt;sys/socket.h&gt;
+ 3  #include &lt;netinet/in.h&gt;
+ 4  #include &lt;netdb.h&gt;
+ 5  #include &lt;memory.h&gt;
+
+ 6  #define SRV_HOST &quot;delta&quot;
+ 7  #define SRV_PORT 1234
+ 8  #define CLNT_PORT 1235
+ 9  #define BUF_SIZE 64
+10  #define TXT_ANSW &quot;I am your client\n&quot;
+
+11  main () {
+12    int s;
+13    int from_len;
+14    char buf[BUF_SIZE];
+15    struct hostent *hp;
+16    struct sockaddr_in clnt_sin, srv_sin;
+
+17    s = socket (AF_INET, SOCK_STREAM, 0);
+18    memset ((char *)&amp;clnt_sin, '\0', sizeof(clnt_sin));
+19    clnt_sin.sin_family = AF_INET;
+20    clnt_sin.sin_addr.s_addr = INADDR_ANY;
+21    clnt_sin.sin_port = CLNT_PORT;
+22    bind (s, (struct sockaddr *)&amp;clnt_sin, 
+				sizeof(clnt_sin));
+
+23    memset ((char *)&amp;srv_sin, '\0',
+			 sizeof(srv_sin));
+24    hp = gethostbyname (SRV_HOST);
+25    srv_sin.sin_family = AF_INET;
+26    memcpy ((char *)&amp;srv_sin.sin_addr,
+			hp-&gt;h_addr,hp-&gt;h_length);
+27    srv_sin.sin_port = SRV_PORT;
+28    connect (s, &amp;srv_sin, sizeof(srv_sin));
+29    from_len = recv (s, buf, BUF_SIZE, 0);
+30    write (1, buf, from_len);
+31    send (s, TXT_ANSW, sizeof(TXT_ANSW), 0);
+32    close (s);
+33    exit (0);
+34    }
+</h5></PRE>
+
+<P>В строках 6 и 7 описываются константы SRV_HOST и SRV_PORT, определяющие
+имя удаленного узла, на котором функционирует программа-сервер, и номер
+порта, к которому привязан socket сервера.</P>
+
+<P>Строка 8 приписывает целочисленной константе 1235 символическое имя
+CLNT_PORT. В дальнейшем эта константа будет использована в качестве номера
+порта клиента.</P>
+
+<P>В строках 17...22 создается привязанный к порту на локальном узле socket.</P>
+
+<P>В строке 24 посредством библиотечной функции <B>gethostbyname</B> транслируется
+символическое имя удаленного узла (в данном случае &quot;delta&quot;),
+на котором должен функционировать сервер, в адрес этого узла, размещенный
+в структуре типа hostent.</P>
+
+<P>В строке 26 адрес удаленного узла копируется из структуры типа hostent
+в соответствующее поле структуры srv_sin, которая позже (в строке 28) используется
+в системном вызове connect для идентификации программы-сервера.</P>
+
+<P>В строках 29...31 осуществляется обмен данными с сервером и вывод вопроса,
+поступившего от сервера, в стандартный вывод.</P>
+
+<P>Строка 32 посредством системного вызова <B>close</B> закрывает (удаляет)
+socket.</P>
+Автор статьи: Андрей Уваров
+
+</TD>
+</TR>
+</TABLE>
+</DIV>
+
+</TD>
+</TR>
+<TR>
+<TD colspan=2  bordercolorlight="#800000"
+bordercolordark="#800000">
+<DIV ALIGN="CENTER">
+<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 WIDTH=70%> 
+<TR>
+<TD>
+
+<FONT FACE="MS SANS SERIF" SIZE=1 COLOR="BLACK">
+<a href="http://algo.da.ru"   target="_top" ><b>Algorithm project</a>:</B> Кольцо сайтов, посвященных
+    программированию 
+    (<a href="http://webring.da.ru" target="_top" style="COLOR: BLACK">подробнее о проекте
+    WebRing...</a>)<br>
+    [<a href="http://www.webring.org/cgi-bin/webring?ring=ru_rk_ring;id=10;prev5"
+    target="_top">Предыдущие 5 сайтов</a> | <a
+    href="http://www.webring.org/cgi-bin/webring?ring=ru_rk_ring;id=10;prev" target="_top" >Предыдуший</a>
+    |  <a href="http://www.webring.org/cgi-bin/webring?ring=ru_rk_ring;id=10;next"
+    target="_top" >Следующий</a> |  <a
+    href="http://www.webring.org/cgi-bin/webring?ring=ru_rk_ring;id=10;next5" target="_top">Следующие
+    5 сайтов</a> |   <a  
+    href="http://www.webring.org/cgi-bin/webring?ring=ru_rk_ring;random" target="_top" >Выбрать
+    сайт случайным образом</a>   <a
+    href="http://www.webring.org/cgi-bin/webring?ring=ru_rk_ring;list" target="_top" >Список
+    всех сайтов</a> ]
+</FONT>
+</TD>
+</TR>
+</TABLE>
+</DIV>
+
+
+</TD>
+
+</TR>
+
+
+</TABLE>
+<br>
+<TABLE  border=1 bgcolor=#F8F1E4 cellpadding=0 cellspacing=5  bordercolor="#800000" width=700>  
+
+<TR>
+<TD  height=40 >
+<DIV ALIGN=CENTER>
+<table border="0" cellpadding="0"
+    cellspacing="10" width="37%">
+      <tr>
+        <td width="16%"> </td>
+      </tr>
+    </table>
+</div>
+
+</TD>
+
+</TR>
+</TABLE>
+</DIV>
+<P>
+<CENTER>
+
+<DIV CLASS="base2" style="color:black"> Copyright © 1999 C++ Programmers Club </DIV>
+<DIV CLASS="base2" style="color:black">Author:  <a href="mailto:vnews@mail.ru">Kuklin Alexey</a>  All Rights Reserved </DIV>
+</CENTER>
+<P>&nbsp;
+
+</BODY>
+</HTML>

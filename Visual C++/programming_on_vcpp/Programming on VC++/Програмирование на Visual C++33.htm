@@ -1,0 +1,609 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0046)http://vnews.uka.ru/html/Lessons/lesson023.htm --><HTML><HEAD><TITLE>Програмирование на Visual C++</TITLE>
+<META content="text/html; charset=windows-1251" http-equiv=Content-Type>
+<META content="Kuklin Alexey Email: vnews@mail.ru" name=author>
+<META 
+content="programming, программирование, soft, helps, web webdizain, photo, photoshop, internet, examples, conference, конференция, софт, примеры программ, исходники, source, codes, MFC, MTL, vc, visual, c , c++, с++,с, документация, documentation" 
+name=keywords>
+<META 
+content="Документация C, C++ , Visual C , Object C, Quick C, Turbo C, ActiveX. Школа MFC, софт, примеры программ и исходники к ним, справочные книги и конференция." 
+name=description><LINK href="Програмирование на Visual C++33.files/styles.css" 
+rel=STYLESHEET title=Style type=text/css>
+<META content="MSHTML 5.00.2614.3500" name=GENERATOR></HEAD>
+<BODY bgColor=#e9d7b1 leftMargin=0 text=black topMargin=0>
+<DIV align=center><BR>
+<TABLE bgColor=#f8f1e4 border=1 borderColor=#800000 borderColorDark=#f8f1e4 
+borderColorLight=#f8f1e4 cellPadding=0 cellSpacing=4 height=250 width=700>
+  <TBODY>
+  <TR>
+    <TD borderColorDark=#800000 borderColorLight=#800000 colSpan=2 height=80>
+      <DIV align=center>
+      <SCRIPT>
+// <!--
+var default_user_id = 65561;
+var userid = default_user_id;
+get_user_id();
+if (userid == 123456) {userid=default_user_id;}
+var page = 1;
+var rndnum = Math.round(Math.random() * 10000);
+document.write('<A HREF="http://ad.tbn.ru/bb.cgi?cmd=go&pubid=' + userid + '&pg=' + page + '&vbn=189&num=1&w=468&h=60&nocache=' + rndnum + '" target="_blank">');
+document.write('<IMG SRC="http://ad.tbn.ru/bb.cgi?cmd=ad&pubid=' + userid + '&pg=' + page + '&vbn=189&num=1&w=468&h=60&nocache=' + rndnum + '" width=468 height=60 Alt="TBN.ru" border=1></A>');
+
+function get_user_id(){
+        var tmp = window.parent.location.href;
+        var user_id = tmp.replace(/.+user_id=/,"");
+        if(user_id.search(/^[0123456789]+.*$/g)!=-1)
+                       userid = user_id;                       
+                                else
+                                  userid = default_user_id;
+}
+
+// -->
+</SCRIPT>
+
+      <SCRIPT>
+// <!--
+var ie4 = (document.all) ? true : false;
+if (ie4) { document.write('<img src="/ad/counter" WIDTH=1 HEIGHT=0 border=0>'); }
+// -->
+</SCRIPT>
+      <BR><B><FONT face=tahoma size=2><A href="http://www.sudba.ru/" 
+      target=_blank>Е-ЛЮБОВЬ</A> | <A href="http://love.uka.ru/" 
+      target=_blank>ЗНАКОМСТВА</A> | <A href="http://chat.uka.ru/" 
+      target=_blank><FONT color=red>взрывЧАТка</FONT></A> <!--
+| <a href="http://www.anekdots.ru" target='_blank'>АНЕКДОТЫ</a>
+| <a href="http://www.anekdots.ru" target='_blank'>ИГРЫ</a>
+| <a href="http://www.anekdots.ru" target='_blank'>MУЗЫКА</a>
+--></FONT></B></DIV></TD></TR>
+  <TR>
+    <TD borderColorDark=#800000 borderColorLight=#800000 width="29%">
+      <CENTER>
+      <DIV class=base style="COLOR: #000080"><B>Меню</B></DIV></CENTER><BR><FONT 
+      size=1><IMG border=0 hspace=3 
+      src="Програмирование на Visual C++33.files/uk.gif"><A 
+      href="http://vnews.uka.ru/html/about.htm"><B class=base2>О Проекте</B> 
+      <P></A><IMG border=0 hspace=3 
+      src="Програмирование на Visual C++33.files/uk.gif"><A 
+      href="http://vnews.uka.ru/index.html"><B class=base2> Новости</B> 
+      <P></A><IMG border=0 hspace=3 
+      src="Програмирование на Visual C++33.files/uk.gif"><A 
+      href="http://vnews.uka.ru/html/pclub.htm"><B class=base2> Клуб 
+      Программеров С++</B> 
+      <P></A><IMG border=0 hspace=3 
+      src="Програмирование на Visual C++33.files/uk.gif"><A 
+      href="http://vnews.uka.ru/html/docs.htm"><B class=base2> Документация</B> 
+      <P></A><IMG border=0 hspace=3 
+      src="Програмирование на Visual C++33.files/uk.gif"><A 
+      href="http://vnews.uka.ru/html/components.htm"><B class=base2> 
+      Инструментарий</B> 
+      <P></A><IMG border=0 hspace=3 
+      src="Програмирование на Visual C++33.files/uk.gif"><A 
+      href="http://vnews.uka.ru/html/school.htm"><B class=base2> Школа C++</B> 
+      <P></A><IMG border=0 hspace=3 
+      src="Програмирование на Visual C++33.files/uk.gif"><A 
+      href="http://vnews.uka.ru/html/Examples/sources.htm"><B class=base2> 
+      Исходники</B> 
+      <P></A><IMG border=0 hspace=3 
+      src="Програмирование на Visual C++33.files/uk.gif"><A 
+      href="http://www.fido7.com/cgi-fido7/forumi.pl?user=vnews"><B 
+      class=base2>Форум С++</B> 
+      <P></A><IMG border=0 hspace=3 
+      src="Програмирование на Visual C++33.files/uk.gif"><A 
+      href="http://vnews.uka.ru/html/links.htm"><B class=base2> Ссылки</B> 
+      <P></A><IMG border=0 hspace=3 
+      src="Програмирование на Visual C++33.files/uk.gif"><A 
+      href="http://www.guestbook.ru/book.cgi?user=cppmfc&amp;action=show"><B 
+      class=base2> Отзывы и предложения</B> 
+      <P></A><IMG border=0 hspace=3 
+      src="Програмирование на Visual C++33.files/uk.gif"><A 
+      href="http://vnews.uka.ru/html/map.htm"><B class=base2> Карта сайта</B> 
+      <P></A>
+      <HR width="90%">
+
+      <DIV align=center>
+      <SCRIPT language=javascript>
+<!-- 
+an=navigator.appName;d=document;function 
+pr(){d.write("<A HREF=\"http://count.ru/cgi-bin/href.cgi?", 
+"id=9203\"><img src=\"http://count.ru/cgi-bin/", 
+"count.cgi?id=9203&j=y&w="+srw+"&c="+srb+"&", 
+"ref="+escape(d.referrer)+"\" height=31 border=0", 
+" width=88></A>");}srb="na";srw="na";//--> 
+</SCRIPT>
+
+      <SCRIPT language=javascript1.2><!-- 
+s=screen;srw=s.width;an!="Netscape"? 
+srb=s.colorDepth:srb=s.pixelDepth;//--> 
+</SCRIPT>
+
+      <SCRIPT language=javascript><!-- 
+pr();//--> 
+</SCRIPT>
+      <NOSCRIPT><BR><A href="http://count.ru/cgi-bin/href.cgi?id=9203"><IMG 
+      border=0 height=31 src="Програмирование на Visual C++33.files/count.html" 
+      vspace=3 width=88></A> </NOSCRIPT><BR><!--LIST100 COUNTER--><A 
+      href="http://counter.list.ru/cgi-bin/jump?from=12813" target=_top>
+      <SCRIPT>
+<!--
+d=document;js=10;a='&pageref='+escape(d.referrer)
+//--></SCRIPT>
+
+      <SCRIPT language=JavaScript1.1><!--
+js=11;a+='&jsbool='+navigator.javaEnabled()
+//--></SCRIPT>
+
+      <SCRIPT language=JavaScript1.2><!--
+js=12;s=screen;a+='&res='+s.width+'*'+s.height
+a+='&depth='+(s.colorDepth?s.colorDepth:s.pixelDepth)
+//--></SCRIPT>
+
+      <SCRIPT language=JavaScript1.3><!--
+js=13//--></SCRIPT>
+
+      <SCRIPT><!--
+d.write('<img src="http://counter.list.ru/cgi-bin/counter.dll'+
+'?id=12813&type=1&cd=1&bt=0&jsver='+js+a+
+'" alt="LIST100 Counter" border="0" height="40" width="88">')
+if(js>11)d.write('<'+'!-- ')//--></SCRIPT>
+      <NOSCRIPT><IMG alt="LIST100 Counter" border=0 height=32 
+      src="Програмирование на Visual C++33.files/counter.gif" vspace=3 
+      width=80></NOSCRIPT>
+      <SCRIPT><!--
+if(js>11)d.write('--'+'>')
+//-->
+</SCRIPT>
+       </A><!--LIST100 COUNTER--><BR><A href="http://www.index99.kiev.ua/" 
+      target=_blank><IMG alt="Index'99" border=0 height=31 
+      src="Програмирование на Visual C++33.files/count1.gif" vspace=3 
+      width=88></A><BR><!--NUMBER ONE COUNTER--><A href="http://www.one.ru/" 
+      target=_top>
+      <SCRIPT language=javascript><!--
+document.write("<img src=\"http://www.one.ru/cgi-bin/cnt.cgi?id=4201&t=1",
+"&r="+escape(parent.document.referrer),"\" width=88 height=31 ",
+"border=0 alt=\"become number one\">");//--></SCRIPT>
+      <NOSCRIPT><IMG alt="be number one" border=0 height=31 
+      src="Програмирование на Visual C++33.files/cnt.gif" 
+      width=88></NOSCRIPT></A> <!--NUMBER ONE COUNTER--><BR><!--3P COUNTER--><A 
+      href="http://www.3p.com/" target=_top>
+      <SCRIPT language=javascript><!--
+document.write("<img src=\"http://www.3p.com/cgi-bin/cnt.cgi?id=620&t=1",
+"&r="+escape(parent.document.referrer),"\" width=88 height=31 ",
+"border=0 alt=\"3P.RU\">");//--></SCRIPT>
+      <NOSCRIPT><IMG alt=3P.COM border=0 height=31 
+      src="Програмирование на Visual C++33.files/cnt(1).gif" 
+      width=88></NOSCRIPT></A> <!--3P COUNTER--><BR><A 
+      href="http://www.stars.ru/" target=_top><IMG border=0 height=30 
+      src="Програмирование на Visual C++33.files/1000.gif" width=50></A><BR>
+      <P></P></DIV>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P></P></FONT></TD>
+    <TD borderColorDark=#800000 borderColorLight=#800000><FONT color=green 
+      face=TAHOMA size=5>
+      <CENTER><B>Урок III</B></CENTER></FONT>
+      <P>
+      <P align=center><FONT color=black face=ARIAL size=4>Связывание событий с 
+      элементами управления</FONT></P>
+      <DIV align=center>
+      <TABLE width="95%">
+        <TBODY>
+        <TR>
+          <TD><FONT color=black face=TAHOMA size=2>
+            <UL type=square>
+              <P><FONT color=black size=3><B>Связывание кода с событием 
+              BN_CLICKED кнопки Exit</B></FONT></P>При нажатии на кнопку 
+              <B>Exit</B> программа <B>Draw.Exe</B> завершится. 
+              <LI>Чтобы связать код с событием <B>BN_CLICKED</B> кнопки 
+              <B>EXIT</B>, выполните следующие действия: </LI></UL>
+            <UL type=round>
+              <LI>Выберете <B>ClassWizard</B> в меню <B>View</B> 
+              <LI>Выберете закладку <B>Message Maps</B> в панели 
+              <B>ClassWizard</B> 
+              <LI>Используйте диалоговую панель <B>ClassWizard</B> для выбора 
+              следующего события:<BR><LEFT><B>Class Name: CDrawDlg<BR>Object ID: 
+              IDC_EXIT_BUTTON<BR>Messages: BN_CLICKED<BR></B></LEFT>
+              <LI>Щелкните на кнопку <B>Add Fucntion</B> и в раскрывшемся окне 
+              нажмите кнопку <B>OK</B>. 
+              <LI>Сейчас ваша панель <B>MFC ClassWizard</B> должна будет 
+              выглядеть так: 
+              <P align=center><IMG 
+              src="Програмирование на Visual C++33.files/vc_clwiz_exit_stat.gif" 
+              width=450></P></LI></UL>
+            <UL type=square>
+              <LI>Нажмите кнопку <B>Edit Code</B> и напишите следующий код в 
+              функции <B>OnExitButton()</B>: 
+              <P><B>void CDrawDlg::OnExitButton()<BR>{<BR>// TODO: Add your 
+              control notification handler code here 
+              <P>////////Мой код начинается здесь/////////// 
+              <P>OnOK(); 
+              <P>////////Мой код заканчивается здесь/////////// 
+              <P>}<BR></B></P>
+              <LI>Функция <B>OnOK()</B>, которую вы ввели завершает программу, 
+              при нажатии на кнопку <B>Exit</B>. </LI></UL>
+            <P><FONT color=black size=3><B>Связывание кода с событием 
+            WM_MOUSEMOVE диалоговой панели</B></FONT></P>
+            <UL type=square>Сечас мы свяжем код с событием 
+              <B>WM_MOUSEMOVE</B>, которое будет автоматически выполняться при 
+              передвижении мыши. 
+              <LI>Чтобы связать код с событием <B>WM_MOUSEMOVE</B> диалоговой 
+              панели, выполните следующие действия: </LI></UL>
+            <UL type=round>
+              <LI>Выберете <B>ClassWizard</B> в меню <B>View</B> 
+              <LI>Выберете закладку <B>Message Maps</B> в панели 
+              <B>ClassWizard</B> 
+              <LI>Используйте диалоговую панель <B>ClassWizard</B> для выбора 
+              следующего события:<BR><LEFT><B>Class Name: CDrawDlg<BR>Object ID: 
+              CDrawDlg<BR>Messages: WM_MOUSEMOVE<BR></B></LEFT>
+              <LI>Щелкните на кнопку <B>Add Fucntion</B>. </LI></UL>
+            <UL type=square>
+              <LI>Нажмите кнопку <B>Edit Code</B> и напишите следующий код в 
+              функции <B>OnMouseMove()</B>: 
+              <P><B>void CDrawDlg::OnMouseMove(UINT nFlags, CPoint point) 
+              <BR>{<BR>// TODO: Add your message handler code here and/or call 
+              default<BR>////////Мой код начинается здесь/////////// 
+              <P>if( (nFlags &amp; MK_LBUTTON)==MK_LBUTTON )<BR>{<BR>CClientDC 
+              dc(this);<BR>dc.SetPixel(point.x, point.y, 
+              RGB(0,0,0));<BR>}<BR>//конец структуры <B>IF</B> 
+              <P>////////Мой код заканчивается здесь/////////// 
+              <P>///....<BR></B></P>
+              <LI>Код который вы ввели содержит единственный оператор <B>IF</B>: 
+              </LI></UL>
+            <UL type=round>
+              <LI>Оператор <B>IF</B> содержит в себе функции, которые будут 
+              выполняться, если условие оператора <B>IF</B> верно. Условие 
+              таково, если левая кнопка мыши нажата и произошло перемещение, то 
+              функции внутри оператора <B>IF</B> выполняются. 
+              <LI>Функция <B>OnMouseMove</B> выполняется при любом передвижении 
+              мыши, ее параметр <B>nFlags</B> показывает была ли нажата 
+              какая-нибудь клавиша клавиатуры( типа <B>ALT</B> или <B>Shift</B>) 
+              и кнопка мыши. Операция <B>&amp;</B> проверяет прижата ли левая 
+              кнопка мыши при ее перемещении. Если это так, то выполняется код 
+              ниже оператора <B>IF</B>. 
+              <LI>Код в блоке оператора <B>IF</B> <B>CClientDC dc(this);</B> 
+              создает объект контексного устройства, c помощью него вы сможете 
+              рисовать, его можно назвать воображаемым экраном в памяти 
+              компьютера. Научно говоря, <B>dc(this)</B> - это экземпляр класса 
+              <B>CClientDC</B> c параметром конструктора <B>this</B>, с помощью 
+              экземпляра класса вы можете обращаться к функциям этого класса. 
+              <LI>Следующий оператор, который вы напечатали рисует точку в 
+              заданном месте (место щелчка мыши), используя параметры 
+              <B>point.x</B> и <B>point.y</B>, которые ему передает функция 
+              <B>OnMouseMove</B>, и заданного цвета, с помощью функции 
+              <B>RGB();</B>.<BR>Сейчас у нас установлен черный цвет, чтобы 
+              установить красный, синий или зеленый, надо заменить параметры 
+              функции <B>RGB()</B> соответственно на <B>255,0,0</B>, 
+              <B>0,255,0</B>, <B>0,0,255</B>. </LI></UL>
+            <P><FONT color=black size=3><B>Рисование изображения точка за 
+            точкой</B></FONT></P>
+            <UL type=square>Чтобы увидеть в действии свой код, выполните 
+              следующие действия: 
+              <LI>Скомпонуйте и скомпилируйте программу. 
+              <LI>Запустите ее. 
+              <LI>Удерживая нажатой левую кнопку мыши, претащите ее в сторону. 
+              <BR></LI></UL>
+            <UL type=round>
+              <LI>Вы видите, что точки рисуются не слитно друг с другом, это 
+              происходит по тому, что <B>WINDOWS</B> должен выполнять и другие 
+              задачи и не может полностью следить за <B>Draw</B>. Поэтому мы 
+              модифицируем нашу программу, так чтобы эти точки соединялись 
+              линиями. 
+              <LI>При выполнении функции <B>OnMouseMove</B> параметр 
+              <B>point</B> передает положение курсора во время последней 
+              проверки его положения. </LI></UL>
+            <P><FONT color=black size=3><B>Расширение возможностей программы 
+            DRAW</B></FONT></P>
+            <UL type=square>Сейчас вы расширите возможности программы 
+              <B>Draw</B>. Вы сделаете так, чтобы при передвижении мыши, 
+              рисовалась сплошная линия. 
+              <LI>Модифицируем программу следующим образом. </LI></UL>
+            <UL type=round>
+              <LI>Чтобы соединить точки линией функция <B>OnMouseMove</B> должна 
+              знать предыдущие координаты мыши, для этого нам нужно объявить две 
+              переменные <B>m_PrevX</B> и <B>m_PrevY</B>, для хранения координат 
+              по <B>X</B> и <B>Y</B>. 
+              <LI>Выведем на экран файл <B>DrawDlg.h</B>, для этого откроем 
+              <B>Project Workspace</B>, щеклнем на закладке <B>File View</B> и 
+              выполним двойной щелчек на пункте <B>DrawDlg.h</B>. 
+              <LI>Включите объявления переменных <B>m_PrevX</B> и <B>m_PrevY</B> 
+              следующим образом: 
+              <P><B>// DrawDlg.h : header 
+              file<BR>//<BR>////////////////////////////////////////////////////<BR>// 
+              CDrawDlg dialog<BR><BR>class CDrawDlg : public CDialog<BR>{<BR>// 
+              Construction<BR>public:<BR>CDrawDlg(CWnd* pParent = NULL); // 
+              standard constructor 
+              <P>////////Мой код начинается здесь/////////// 
+              <P>int m_PrevX;<BR>int m_PrevY; 
+              <P>////////Мой код заканчивается здесь/////////// 
+              <P>//....<BR>//....<BR>}<BR></B><BR></P>
+              <LI>Вы объявили две переменные целого типа для хранения предыдущих 
+              координат мыши. Заметьте, что вы их включили после слова 
+              <B>public:</B> - это означает, что эти переменные доступны всем 
+              функциям класса. </LI></UL>
+            <P>
+            <UL type=square>
+              <LI>Теперь модифицируем функцию <B>OnMouseMove</B> в файле 
+              <B>DrawDlg.cpp</B> 
+              <P><B>void CDrawDlg::OnMouseMove(UINT nFlags, CPoint 
+              point)<BR>{<BR>// TODO: Add your message handler code here and/or 
+              call default<BR><BR>////////Мой код начинается здесь/////////// 
+              <P>if((nFlags &amp; MK_LBUTTON)==MK_LBUTTON)<BR>{<BR>CClientDC 
+              dc(this);<BR><BR>// dc.SetPixel(point.x, point.y, 
+              RGB(123,211,98)); 
+              <P>CPen NewPen(PS_SOLID, 10, RGB(255,0,0) 
+              ;<BR>dc.SelectObject(&amp;NewPen); 
+              <P>dc.MoveTo(m_PrevX, m_PrevY);<BR>dc.LineTo(point.x, 
+              point.y);<BR>m_PrevX=point.x;<BR>m_PrevY=point.y;<BR>} 
+              <P>////////Мой код заканчивается здесь/////////// 
+              <P>CDialog::OnMouseMove(nFlags, point);<BR>}<BR></B></P></LI></UL>
+            <P>
+            <UL type=square>
+              <LI>Рассмотрим код приведенный выше: </LI></UL>
+            <UL type=round>
+              <LI>Код вызова функции <B>SetPixel()</B>, помещен в коментарий, 
+              так как он нам больше не понадобиться. 
+              <LI>Следующий код <B>CPen NewPen(PS_SOLID, 10, RGB(255,0,0) )</B> 
+              создает новое перо с именем <B>NewPen</B> класса <B>CPen</B> c 
+              заданным размером шрифта 10 пикселов и красным цветом. Параметр 
+              <B>PC_SOLID</B> говорит, что будет рисоваться сплошная линия. 
+              <LI>После этого выполняется функция <B>SelectObject</B>, 
+              выбирающая новое перо: 
+              <P>
+              <CENTER><B>dc.SelectObject(&amp;NewPen);</B> 
+              <P></CENTER>Этой функцией вы включаете перо в работу. </P>
+              <LI>Следующие два оператора: 
+              <P><B>
+              <CENTER>dc.MoveTo(m_PrevX, m_PrevY);<BR>dc.LineTo(point.x, 
+              point.y); 
+              <P></CENTER></B>рисуют линию, используя координаты начала(это 
+              определяет функция <B>MoveTo()</B>) и координат конца 
+              (<B>LineTo</B>). </P>
+              <LI>И последнии два оператора: <B>
+              <CENTER>
+              <P>m_PrevX=point.x;<BR>m_PrevY=point.y; 
+              <P></CENTER></B>сохраняют в переменных <B>m_PrevX</B> и 
+              <B>m_PrevY</B>, текущие координаты, которые в следующий раз будут 
+              использоваться, как предыдущие(начальная позиция). </P></LI></UL>
+            <P>
+            <UL type=square>
+              <LI>Теперь запустите программу и проверьте правильность ее работы. 
+
+              <LI>Вы должны заметить, что при первом нажатии на кнопку мышки в 
+              любой области диалоговой панели, есть лишняя линия, которая 
+              выходит из краев окна. Дело в том, что вы при первом рисовании 
+              линии, т.е после первого щелчка мыши и ее передвижении, начальные 
+              координаты не определены, а будут известны только текущие. 
+              <LI>Это выглядит примерно так: 
+              <P>
+              <P align=center><IMG 
+              src="Програмирование на Visual C++33.files/vc_draw_program_error.gif" 
+              width=450></P>
+              <LI>Для решения этой проблемы, вы должны связать код событием 
+              <B>WM_LBUTTONDOWN</B>, которое происходит при нажатии на левую 
+              кнопку мыши. </LI></UL><BR>
+            <UL type=round>
+              <LI>Выберете <B>ClassWizard</B> в меню <B>View</B> 
+              <LI>Выберете закладку <B>Message Maps</B> в панели 
+              <B>ClassWizard</B> 
+              <LI>Используйте диалоговую панель <B>ClassWizard</B> для выбора 
+              следующего события:<BR><LEFT><B>Class Name: CDrawDlg<BR>Object ID: 
+              CDrawDlg<BR>Messages: WM_LBUTTONDOWN<BR></B></LEFT>
+              <LI>Щелкните на кнопку <B>Add Fucntion</B>. 
+              <LI>Нажмите кнопку <B>Edit Code</B> и напишите следующий код в 
+              функции <B>OnLButtonDown()</B>: 
+              <P><B>void CDrawDlg::OnLButtonDown(UINT nFlags, CPoint point) 
+              <BR>{<BR>// TODO: Add your message handler code here and/or call 
+              default 
+              <P>////////Мой код начинается здесь/////////// 
+              <P>m_PrevX=point.x;<BR>m_PrevY=point.y; 
+              <P>////////Мой код заканчивается здесь/////////// 
+              <P>....<BR>}<BR></B>
+              <P></P>
+              <LI>Код, который вы напечатали, обновляет значения переменных 
+              <B>m_PrevX</B> и <B>m_PrevY</B>, тем местоположением мыши, где был 
+              совершен щелчек по ее левой кнопке, соответственно при первом и 
+              последующих нажатиях кнопки, линия будет начинаться из данной 
+              точки нажатия. 
+              <P></P>
+              <LI>Поэксперементируйте с программой <B>Draw</B> и щелкните на 
+              кнопку <B>Exit</B> для ее прекращения. </LI></UL>
+            <P>Вы закончили связывание событий с элементами управления 
+            <P>Резюме и упражнение <A 
+            href="http://vnews.uka.ru/html/Lessons/lesson013.htm"><B 
+            class=base2>&lt;-Назад</B></A> || <A 
+            href="http://vnews.uka.ru/html/Lessons/lesson033.htm"><B 
+            class=base2>Дальше -&gt;</B></A> 
+            <P>
+            <CENTER><B><FONT color=green><A 
+            href="http://vnews.uka.ru/html/Lessons/lesson003.htm">[1]</A><A 
+            href="http://vnews.uka.ru/html/Lessons/lesson013.htm"> [2]</A> [3]<A 
+            href="http://vnews.uka.ru/html/Lessons/lesson033.htm"> 
+            [4]</A></B></FONT></CENTER></FONT></TD></TR></TBODY></TABLE></DIV></TD></TR>
+  <TR>
+    <TD borderColorDark=#800000 borderColorLight=#800000 colSpan=2>
+      <DIV align=center>
+      <TABLE border=0 cellPadding=0 cellSpacing=0 width="70%">
+        <TBODY>
+        <TR>
+          <TD><FONT color=black face="MS SANS SERIF" size=1><A 
+            href="http://algo.da.ru/" target=_top><B>Algorithm project</A>:</B> 
+            Кольцо сайтов, посвященных программированию (<A 
+            href="http://webring.da.ru/" style="COLOR: black" 
+            target=_top>подробнее о проекте WebRing...</A>)<BR>[<A 
+            href="http://www.webring.org/cgi-bin/webring?ring=ru_rk_ring;id=10;prev5" 
+            target=_top>Предыдущие 5 сайтов</A> | <A 
+            href="http://www.webring.org/cgi-bin/webring?ring=ru_rk_ring;id=10;prev" 
+            target=_top>Предыдуший</A> | <A 
+            href="http://www.webring.org/cgi-bin/webring?ring=ru_rk_ring;id=10;next" 
+            target=_top>Следующий</A> | <A 
+            href="http://www.webring.org/cgi-bin/webring?ring=ru_rk_ring;id=10;next5" 
+            target=_top>Следующие 5 сайтов</A> | <A 
+            href="http://www.webring.org/cgi-bin/webring?ring=ru_rk_ring;random" 
+            target=_top>Выбрать сайт случайным образом</A> <A 
+            href="http://www.webring.org/cgi-bin/webring?ring=ru_rk_ring;list" 
+            target=_top>Список всех сайтов</A> ] 
+      </FONT></TD></TR></TBODY></TABLE></DIV></TD></TR></TBODY></TABLE><BR>
+<TABLE bgColor=#f8f1e4 border=1 borderColor=#800000 cellPadding=0 cellSpacing=5 
+width=700>
+  <TBODY>
+  <TR>
+    <TD height=40>
+      <DIV align=center>
+      <TABLE border=0 cellPadding=0 cellSpacing=10 width="37%">
+        <TBODY>
+        <TR>
+          <TD width="16%"></TD></TR></TBODY></TABLE></DIV></TD></TR></TBODY></TABLE></DIV>
+<P>
+<CENTER>
+<DIV class=base2 style="COLOR: black">Copyright © 1999 C++ Programmers Club 
+</DIV>
+<DIV class=base2 style="COLOR: black">Author: <A 
+href="mailto:vnews@mail.ru">Kuklin Alexey</A> All Rights Reserved 
+</DIV></CENTER>
+<P></P></BODY></HTML>

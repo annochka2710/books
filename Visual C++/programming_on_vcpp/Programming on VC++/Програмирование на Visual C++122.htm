@@ -1,0 +1,451 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0055)http://vnews.uka.ru/html/Lessons/Lesson20/lesson011.htm -->
+<HTML><HEAD><TITLE>Клуб русских программистов!</TITLE>
+<META content="text/html; charset=windows-1251" http-equiv=Content-Type>
+<META content="Kuklin Alexey Email: vnews@mail.ru" name=author>
+<META 
+content="programming, программирование, soft, helps, web webdizain, photo, photoshop, internet, examples, conference, конференция, софт, примеры программ, исходники, source, codes, MFC, MTL, vc, visual, c , c++, с++,с, документация, documentation" 
+name=keywords>
+<META 
+content="Документация C, C++ , Visual C , Object C, Quick C, Turbo C, ActiveX. Школа MFC, софт, примеры программ и исходники к ним, справочные книги и конференция." 
+name=description><LINK href="Програмирование на Visual C++122.files/styles.css" 
+rel=STYLESHEET title=Style type=text/css>
+<META content="MSHTML 5.00.2614.3500" name=GENERATOR></HEAD>
+<BODY bgColor=#e9d7b1 leftMargin=0 text=black topMargin=0>
+<DIV align=center><BR>
+<TABLE bgColor=#f8f1e4 border=1 borderColor=#800000 borderColorDark=#f8f1e4 
+borderColorLight=#f8f1e4 cellPadding=0 cellSpacing=4 height=250 width=700>
+  <TBODY>
+  <TR>
+    <TD borderColorDark=#800000 borderColorLight=#800000 colSpan=2 height=80>
+      <DIV align=center>
+      <SCRIPT>
+// <!--
+var default_user_id = 65561;
+var userid = default_user_id;
+get_user_id();
+if (userid == 123456) {userid=default_user_id;}
+var page = 1;
+var rndnum = Math.round(Math.random() * 10000);
+document.write('<A HREF="http://ad.tbn.ru/bb.cgi?cmd=go&pubid=' + userid + '&pg=' + page + '&vbn=189&num=1&w=468&h=60&nocache=' + rndnum + '" target="_blank">');
+document.write('<IMG SRC="http://ad.tbn.ru/bb.cgi?cmd=ad&pubid=' + userid + '&pg=' + page + '&vbn=189&num=1&w=468&h=60&nocache=' + rndnum + '" width=468 height=60 Alt="TBN.ru" border=1></A>');
+
+function get_user_id(){
+        var tmp = window.parent.location.href;
+        var user_id = tmp.replace(/.+user_id=/,"");
+        if(user_id.search(/^[0123456789]+.*$/g)!=-1)
+                       userid = user_id;                       
+                                else
+                                  userid = default_user_id;
+}
+
+// -->
+</SCRIPT>
+
+      <SCRIPT>
+// <!--
+var ie4 = (document.all) ? true : false;
+if (ie4) { document.write('<img src="/ad/counter" WIDTH=1 HEIGHT=0 border=0>'); }
+// -->
+</SCRIPT>
+      <BR><B><FONT face=tahoma size=2><A href="http://www.sudba.ru/" 
+      target=_blank>Е-ЛЮБОВЬ</A> | <A href="http://love.uka.ru/" 
+      target=_blank>ЗНАКОМСТВА</A> | <A href="http://chat.uka.ru/" 
+      target=_blank><FONT color=red>взрывЧАТка</FONT></A> <!--
+| <a href="http://www.anekdots.ru" target='_blank'>АНЕКДОТЫ</a>
+| <a href="http://www.anekdots.ru" target='_blank'>ИГРЫ</a>
+| <a href="http://www.anekdots.ru" target='_blank'>MУЗЫКА</a>
+--></FONT></B></DIV></TD></TR>
+  <TR>
+    <TD borderColorDark=#800000 borderColorLight=#800000 width="29%">
+      <CENTER>
+      <DIV class=base style="COLOR: #000080"><B>Меню</B></DIV></CENTER><BR><FONT 
+      size=1><IMG border=0 hspace=3 
+      src="Програмирование на Visual C++122.files/uk.gif"><A 
+      href="http://vnews.uka.ru/html/about.htm"><B class=base2>О Проекте</B>
+      <P></A><IMG border=0 hspace=3 
+      src="Програмирование на Visual C++122.files/uk.gif"><A 
+      href="http://vnews.uka.ru/index.html"><B class=base2> Новости</B>
+      <P></A><IMG border=0 hspace=3 
+      src="Програмирование на Visual C++122.files/uk.gif"><A 
+      href="http://vnews.uka.ru/html/pclub.htm"><B class=base2> Клуб 
+      Программеров С++</B>
+      <P></A><IMG border=0 hspace=3 
+      src="Програмирование на Visual C++122.files/uk.gif"><A 
+      href="http://vnews.uka.ru/html/docs.htm"><B class=base2> Документация</B>
+      <P></A><IMG border=0 hspace=3 
+      src="Програмирование на Visual C++122.files/uk.gif"><A 
+      href="http://vnews.uka.ru/html/components.htm"><B class=base2> 
+      Инструментарий</B>
+      <P></A><IMG border=0 hspace=3 
+      src="Програмирование на Visual C++122.files/uk.gif"><A 
+      href="http://vnews.uka.ru/html/lesson.htm"><B class=base2> Школа MFC</B>
+      <P></A><IMG border=0 hspace=3 
+      src="Програмирование на Visual C++122.files/uk.gif"><A 
+      href="http://vnews.uka.ru/html/Examples/sources.htm"><B class=base2> 
+      Исходники</B>
+      <P></A><IMG border=0 hspace=3 
+      src="Програмирование на Visual C++122.files/uk.gif"><A 
+      href="http://www.fido7.com/cgi-fido7/forumi.pl?user=vnews"><B 
+      class=base2>Форум С++</B>
+      <P></A><IMG border=0 hspace=3 
+      src="Програмирование на Visual C++122.files/uk.gif"><A 
+      href="http://vnews.uka.ru/html/links.htm"><B class=base2> Ссылки</B>
+      <P></A><IMG border=0 hspace=3 
+      src="Програмирование на Visual C++122.files/uk.gif"><A 
+      href="http://www.guestbook.ru/book.cgi?user=cppmfc&amp;action=show"><B 
+      class=base2> Отзывы и предложения</B>
+      <P></A><IMG border=0 hspace=3 
+      src="Програмирование на Visual C++122.files/uk.gif"><A 
+      href="http://vnews.uka.ru/html/map.htm"><B class=base2> Карта сайта</B>
+      <P></A>
+      <HR width="90%">
+
+      <DIV align=center>
+      <SCRIPT language=javascript>
+<!-- 
+an=navigator.appName;d=document;function 
+pr(){d.write("<A HREF=\"http://count.ru/cgi-bin/href.cgi?", 
+"id=9203\"><img src=\"http://count.ru/cgi-bin/", 
+"count.cgi?id=9203&j=y&w="+srw+"&c="+srb+"&", 
+"ref="+escape(d.referrer)+"\" height=31 border=0", 
+" width=88></A>");}srb="na";srw="na";//--> 
+</SCRIPT>
+
+      <SCRIPT language=javascript1.2><!-- 
+s=screen;srw=s.width;an!="Netscape"? 
+srb=s.colorDepth:srb=s.pixelDepth;//--> 
+</SCRIPT>
+
+      <SCRIPT language=javascript><!-- 
+pr();//--> 
+</SCRIPT>
+      <NOSCRIPT><BR><A href="http://count.ru/cgi-bin/href.cgi?id=9203"><IMG 
+      border=0 height=31 src="Програмирование на Visual C++122.files/count.html" 
+      vspace=3 width=88></A> </NOSCRIPT><BR><!--LIST100 COUNTER--><A 
+      href="http://counter.list.ru/cgi-bin/jump?from=12813" target=_top>
+      <SCRIPT>
+<!--
+d=document;js=10;a='&pageref='+escape(d.referrer)
+//--></SCRIPT>
+
+      <SCRIPT language=JavaScript1.1><!--
+js=11;a+='&jsbool='+navigator.javaEnabled()
+//--></SCRIPT>
+
+      <SCRIPT language=JavaScript1.2><!--
+js=12;s=screen;a+='&res='+s.width+'*'+s.height
+a+='&depth='+(s.colorDepth?s.colorDepth:s.pixelDepth)
+//--></SCRIPT>
+
+      <SCRIPT language=JavaScript1.3><!--
+js=13//--></SCRIPT>
+
+      <SCRIPT><!--
+d.write('<img src="http://counter.list.ru/cgi-bin/counter.dll'+
+'?id=12813&type=1&cd=1&bt=0&jsver='+js+a+
+'" alt="LIST100 Counter" border="0" height="40" width="88">')
+if(js>11)d.write('<'+'!-- ')//--></SCRIPT>
+      <NOSCRIPT><IMG alt="LIST100 Counter" border=0 height=32 
+      src="Програмирование на Visual C++122.files/counter.gif" vspace=3 
+      width=80></NOSCRIPT>
+      <SCRIPT><!--
+if(js>11)d.write('--'+'>')
+//-->
+</SCRIPT>
+      </A> <!--LIST100 COUNTER--><BR><A href="http://www.index99.kiev.ua/" 
+      target=_blank><IMG alt="Index'99" border=0 height=31 
+      src="Програмирование на Visual C++122.files/count1.gif" vspace=3 
+      width=88></A><BR><!--NUMBER ONE COUNTER--><A href="http://www.one.ru/" 
+      target=_top>
+      <SCRIPT language=javascript><!--
+document.write("<img src=\"http://www.one.ru/cgi-bin/cnt.cgi?id=4201&t=1",
+"&r="+escape(parent.document.referrer),"\" width=88 height=31 ",
+"border=0 alt=\"become number one\">");//--></SCRIPT>
+      <NOSCRIPT><IMG alt="be number one" border=0 height=31 
+      src="Програмирование на Visual C++122.files/cnt.gif" 
+      width=88></NOSCRIPT></A> <!--NUMBER ONE COUNTER--><BR><!--3P COUNTER--><A 
+      href="http://www.3p.com/" target=_top>
+      <SCRIPT language=javascript><!--
+document.write("<img src=\"http://www.3p.com/cgi-bin/cnt.cgi?id=620&t=1",
+"&r="+escape(parent.document.referrer),"\" width=88 height=31 ",
+"border=0 alt=\"3P.RU\">");//--></SCRIPT>
+      <NOSCRIPT><IMG alt=3P.COM border=0 height=31 
+      src="C:\users\max\work\VISUAL\KNIGA2\Програмирование на Visual C++122.files\cnt(1).gif" 
+      width=88></NOSCRIPT></A> <!--3P COUNTER--><BR><A 
+      href="http://www.stars.ru/" target=_top><IMG border=0 height=30 
+      src="Програмирование на Visual C++122.files/1000.gif" width=50></A><BR>
+      <P> </P></DIV>
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> </P></FONT></TD>
+    <TD borderColorDark=#800000 borderColorLight=#800000><FONT color=green 
+      face=TAHOMA size=5>
+      <CENTER><B>Урок XII</B></CENTER></FONT>
+      <P>
+      <DIV align=center>
+      <TABLE width="95%">
+        <TBODY>
+        <TR>
+          <TD><FONT color=black face=TAHOMA size=2>
+            <P><FONT color=red size=3><B>Создание начальной 
+            страницы</B></FONT></P>Сейчас мы создадим ресурс HTML страницы, 
+            которая будет появляться каждый раз при запуске программы. 
+            <LI>Добавьте в ресурсы ресурс HTML, переменуйте его в 
+            <B>IDR_HOME</B>. Вставьте следующий код в этот ресурс: 
+            <H5>&lt;HTML&gt;<BR>&lt;HEAD&gt;<BR>&lt;META NAME="GENERATOR" 
+            Content="Microsoft Developer Studio"&gt;<BR>&lt;META 
+            HTTP-EQUIV="Content-Type" content="text/html; 
+            charset=windows-1251"&gt;<BR>&lt;TITLE&gt;Document 
+            Title&lt;/TITLE&gt;<BR>&lt;/HEAD&gt;<BR>&lt;BODY&gt;<BR>&lt;!-- 
+            Insert HTML here --&gt;<BR>&lt;CENTER&gt;<BR>&lt;H2&gt;INTERNET 
+            LINKS&lt;/H2&gt;<BR>&lt;P&gt;<BR>&lt;A 
+            HREF="http://www.aks.com"&gt;Yhe 
+            American!&lt;/A&gt;<BR>&lt;P&gt;<BR>&lt;A 
+            HREF="http://www.uka.ru"&gt;UKA 
+            Ru&lt;/A&gt;<BR>&lt;/CENTER&gt;<BR><BR>&lt;/BODY&gt;<BR>&lt;/HTML&gt; 
+            </H5>
+            <P>Теперь откройте функцию <B>OnInitalUpdate()</B> модифицируйте ее 
+            следующим образом: <PRE><H5>
+void CBView::OnInitialUpdate()
+{
+	CHtmlView::OnInitialUpdate();
+
+	//--- Ваш код ---//
+	LoadFromResource(IDR_HOME);
+	//--- Ваш код ---//
+
+}
+</H5>
+</PRE>
+            <P><FONT color=red size=3><B>Использование навигации</B></FONT></P>
+            <LI>Теперь мы добавим панель инструментов, с помощью которой, мы 
+            сможем перемещаться по ссылкам вперед и назад, останавливать 
+            загрузку страницы, вызывать поиск. 
+            <LI>Откройте панель инструментов.Удалите кнопки New,Cut, Copy, 
+            Paste, оставив только Open, Save,Print и Help. Затем вызовите пункт 
+            меню <B>File-&gt;Open</B>. Найдите каталог: <B>Visual 
+            Studio\Common\Graphics\Icons</B>. В выпадающем списке типов файлов 
+            выбирете <B>Image Files</B>. Откройте подкаталог <B>Arrows</B>, 
+            выделите два файла <B>Arw04lt.ico, Arw04rt.ico</B>, в подкаталоге 
+            <B>Computer</B> - файл <B>W95mbx01.ico</B>(белый крестик в красном 
+            кругу). Откройтк <B>Earth.ico</B> из подкаталога <B>Elements</B> и 
+            <B>Binoculr.ico</B> из подкаталога <B>Misc</B>. 
+            <P><FONT color=red size=3><B>Создание кнопок панели 
+            инструментов</B></FONT></P>
+            <LI>Теперь скопируйте первое изображение стрелки влево в буфер, 
+            перейдите на панель инструментов и на пустом месте вставьте это 
+            изображение. Так же проделайте с остальными иконками. Настройте 
+            панель инструментов, используя следующую таблицу: 
+            <P>
+            <DIV align=center>
+            <TABLE bgColor=#ffffbb border=1 cellPadding=0 cellSpacing=0 
+            width="90%">
+              <TBODY>
+              <TR>
+                <TD><FONT face=ARIAL size=2><B>Изображение</B></FONT></TD>
+                <TD><FONT face=ARIAL size=2><B>Идентификатор</B></FONT></TD>
+                <TD><FONT face=ARIAL size=2><B>Строка 
+              подсказки</B></FONT></TD></TR>
+              <TR>
+                <TD><FONT face=ARIAL size=2>Arw04lt.ico</FONT></TD>
+                <TD><FONT face=ARIAL size=2>ID_WEB_BACK</FONT></TD>
+                <TD><FONT face=ARIAL size=2>Вернуться к предыдущей 
+                  WEB-странице\nНазад</FONT></TD></TR>
+              <TR>
+                <TD><FONT face=ARIAL size=2>Arw04rt.ico</FONT></TD>
+                <TD><FONT face=ARIAL size=2>ID_WEB_FORWARD</FONT></TD>
+                <TD><FONT face=ARIAL size=2>Перейти к следующей 
+                  WEB-странице\nВперед</FONT></TD></TR>
+              <TR>
+                <TD><FONT face=ARIAL size=2>W95mbx01.ico</FONT></TD>
+                <TD><FONT face=ARIAL size=2>ID_WEB_STOP</FONT></TD>
+                <TD><FONT face=ARIAL size=2>Остановить загрузку текущей 
+                  страницы\nСтоп</FONT></TD></TR>
+              <TR>
+                <TD><FONT face=ARIAL size=2>Earth.ico</FONT></TD>
+                <TD><FONT face=ARIAL size=2>ID_WEB_OPEN</FONT></TD>
+                <TD><FONT face=ARIAL size=2>Открыть WEB-сайт\nОткрыть 
+                  сайт</FONT></TD></TR>
+              <TR>
+                <TD><FONT face=ARIAL size=2>Binoculr.ico</FONT></TD>
+                <TD><FONT face=ARIAL size=2>ID_WEB_SEARCH</FONT></TD>
+                <TD><FONT face=ARIAL size=2>Искать в Web\n 
+              Поиск</FONT></TD></TR></TBODY></TABLE></DIV>
+            <P><FONT color=red size=3><B>Создание пунктов меню</B></FONT></P>
+            <LI>Добавьте в меню <B>File</B> пункт <B>Open Web Site</B> сразу 
+            после пункта <B>Open</B>, установив идентификатор ресурса в 
+            <B>ID_WEB_OPEN</B>. 
+            <LI>Удалите меню <B>Edit</B>. 
+            <LI>Добавьте новое меню <B>Navigate</B> и поместите в него пункты 
+            <B>Back, Forward и Stop</B>. Убедитесь, что для них используются те 
+            же идентификаторы ресурса, что и для кнопок панели инструментов. 
+            <LI>В меню <B>Help</B> добавьте команду <B>ID_WEB_SAERCH</B>, сразу 
+            за пунктом <B>About</B> и установите ее заголовок как <B>&amp;Search 
+            the Web</B>. 
+            <LI>Откройте таблицу акселераторов, а затем при помощи возможности 
+            <B>Use Next Key Typed</B> добавьте новые акселераторные возможности 
+            для трех пунктов меню <B>Navigate</B>. Для кнопки <B>Forward</B> - 
+            нажмите <B>Ctrl + стрелка вправо</B>, для <B>Back</B> - <BCTRL B 
+            влево< стрелка +>, а для кнопки <B>Stop</B> - <B>Esc</B>. 
+            <P><FONT color=red size=3><B>Добавление кода</B></FONT></P>
+            <LI>Вместо обычных маленьких кнопок, давайте сделаем кнопки 
+            побольше, добавив текст. Это можно сделать с помощью функции 
+            <B>CToolBar::SetTextButton()</B>. 
+            <LI>Вот код, который необходимо вставить в функцию <B>OnCreate</B> 
+            класса <B>CMainFrame</B> сразу перед закреплением панели 
+            инструментов: <BR><PRE><H5>
+	m_wndToolBar.SetButtonText(0,"Back");
+	m_wndToolBar.SetButtonText(1,"Forvard");
+	m_wndToolBar.SetButtonText(3,"Stop");
+	m_wndToolBar.SetButtonText(5,"Web");
+	m_wndToolBar.SetButtonText(6,"Search");
+	m_wndToolBar.SetButtonText(8,"Save");
+	m_wndToolBar.SetButtonText(10,"Open");
+	m_wndToolBar.SetButtonText(12,"Search");
+	m_wndToolBar.SetButtonText(13,"About");
+</H5>
+</PRE>
+            <LI>C помощь функции <B>SetSizes()</B> необходимо изменить размеры 
+            кнопки. 
+            <LI>Добавьте следующую строчку за предыдущим 
+            кодом.<BR><B>m_wndToolBar.SetSizes(CSize(56,40), CSize(16,16));</B>
+            <P></P>
+            <LI>Перый параметр полный размер кнопки, второй размер в ней 
+            изображения. 
+            <P><FONT color=red size=3><B>Обработка CBView</B></FONT></P>
+            <LI>Давайте теперь подключим код для кнопок. 
+            <LI>С помощью <B>Class Wizard</B> добавьте обработчик сообщения для 
+            идентификаторов ресурсов <B>ID_WEB</B> класса <B>CBView</B>. 
+            <LI>В <B>ClassWizard'e</B> выбирете из списка <B>Object IDs</B> 
+            класс <B>CBView</B>, а из списка <B>Messages</B> - 
+            <B>OnDocumentComplete</B>. Щелкните <B>Add Function</B> для 
+            перекрытия этой виртуальной функции. 
+            <LI>Добавьте код из листинга 1 в функции, сгенерированные 
+            <B>ClassWizard</B>. <PRE><H5>
+void CBView::OnWebBack() {GoBack();}
+void CBView::OnWebForward() {GoForward();}
+void CBView::OnWebSearch() { GoSearch();}
+void CBView::OnWebStop() {Stop();}
+void CBView::OnDocumentComplete(LPCTSTR lpszURL) 
+{
+	CHtmlView::OnDocumentComplete(lpszURL);
+	//Установка заголовка главного окна
+	AfxGetMainWnd()-&gt;SetWindowText(GetLocationName());
+}
+</H5>
+</PRE>
+            <LI>Каждая функция <B>CBView</B> обращается к функции класса 
+            <B>CHtmlView</B>, вот и весь фокус. <BR><BR>Связывание элементов 
+            управления с событиями <BR><A 
+            href="http://vnews.uka.ru/html/Lessons/Lesson20/lesson001.htm"><B 
+            class=base2>&lt;-Назад</B></A> | <A 
+            href="http://vnews.uka.ru/html/Lessons/Lesson20/lesson021.htm"><B 
+            class=base2>Дальше-&gt;</B></A>
+            <P>
+            <CENTER><B><FONT color=green><A 
+            href="http://vnews.uka.ru/html/Lessons/Lesson20/lesson001.htm">[1]</A> 
+            [2] <A 
+            href="http://vnews.uka.ru/html/Lessons/Lesson20/lesson021.htm">[3]</A></B></FONT></CENTER></LI></FONT></TD></TR></TBODY></TABLE></DIV></TD></TR>
+  <TR>
+    <TD borderColorDark=#800000 borderColorLight=#800000 colSpan=2>
+      <DIV align=center>
+      <TABLE border=0 cellPadding=0 cellSpacing=0 width="70%">
+        <TBODY>
+        <TR>
+          <TD><FONT color=black face="MS SANS SERIF" size=1><A 
+            href="http://algo.da.ru/" target=_top><B>Algorithm project</A>:</B> 
+            Кольцо сайтов, посвященных программированию (<A 
+            href="http://webring.da.ru/" style="COLOR: black" 
+            target=_top>подробнее о проекте WebRing...</A>)<BR>[<A 
+            href="http://www.webring.org/cgi-bin/webring?ring=ru_rk_ring;id=10;prev5" 
+            target=_top>Предыдущие 5 сайтов</A> | <A 
+            href="http://www.webring.org/cgi-bin/webring?ring=ru_rk_ring;id=10;prev" 
+            target=_top>Предыдуший</A> | <A 
+            href="http://www.webring.org/cgi-bin/webring?ring=ru_rk_ring;id=10;next" 
+            target=_top>Следующий</A> | <A 
+            href="http://www.webring.org/cgi-bin/webring?ring=ru_rk_ring;id=10;next5" 
+            target=_top>Следующие 5 сайтов</A> | <A 
+            href="http://www.webring.org/cgi-bin/webring?ring=ru_rk_ring;random" 
+            target=_top>Выбрать сайт случайным образом</A> <A 
+            href="http://www.webring.org/cgi-bin/webring?ring=ru_rk_ring;list" 
+            target=_top>Список всех сайтов</A> ] 
+      </FONT></TD></TR></TBODY></TABLE></DIV></TD></TR></TBODY></TABLE><BR>
+<TABLE bgColor=#f8f1e4 border=1 borderColor=#800000 cellPadding=0 cellSpacing=5 
+width=700>
+  <TBODY>
+  <TR>
+    <TD height=40>
+      <DIV align=center>
+      <TABLE border=0 cellPadding=0 cellSpacing=10 width="37%">
+        <TBODY>
+        <TR>
+          <TD width="16%"></TD></TR></TBODY></TABLE></DIV></TD></TR></TBODY></TABLE></DIV>
+<P>
+<CENTER>
+<DIV class=base2 style="COLOR: black">Copyright © 1999 C++ Programmers Club 
+</DIV>
+<DIV class=base2 style="COLOR: black">Author: <A 
+href="mailto:vnews@mail.ru">Kuklin Alexey</A> All Rights Reserved 
+</DIV></CENTER>
+<P> </P></BODY></HTML>

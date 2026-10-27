@@ -1,0 +1,53 @@
+<HTML><HEAD><TITLE>Глава 18</TITLE></HEAD> 
+<body background="../../../bgrwhite.gif">
+<p><div align="center"><b><font size="+1" face="Arial">18. Проигрывание Wave-файлов под MFC </font></b></div></p><p>
+<ul><b> <a href="#1">1. Введение</a><br> <a href="#2">2. Проигрывание Wave-файла в виде ресурса</a><br> <a href="#3">3. Проигрывание Wave-файла с диска</a><br> <a href="#4">4. Пример проекта</a><br> </b></ul><br>  <a name="1"></a><center><h3>1. Введение</h3></center>  В этой главе мы создадим программу, проигрывающую WAVE-файлы. Для начала создадим проект <b>mysound</b> в диалоговом режиме с использованием MFC. В начало файла <b>mysoundDlg.cpp</b> надо написать <b>#include &lt;mmsystem.h></b>, но это не всё, а теперь самое главное( если это не сделать, то будет ошибка при линковании ) :<br><br>  <ul> 1.  Выберите <b>Project  -> Settings... --> C/C++ --> Code Generation</b> и поставте  <b>Multithreaded DLL</b><br> 2.  Выберите <b>Project  -> Settings... --> Link --> General</b> и поставте в поле <b>Object/Library modules</b> библиотеку <b>winmm.lib</b>( это очень важно, проверте !!! )<br></ul><br>  <a name="2"></a><center><h3>2. Проигрывание Wave-файла в виде ресурса</h3></center> Первым делом надо создать ресурс, для этого в файле <b>mysound.rc2</b> надо вписать строчку <b>IDSOUND_CORRECT     sound       res\correct.wav</b>, где <b>IDSOUND_CORRECT</b> - индефикатор ресурса, <b>sound</b> - тип ресурса( название можно менять ), <b>res\correct.wav</b> - файл ресурса. После этого в файле <b>Resource.h</b> надо зарегистрировать ресурс: <b>#define IDSOUND_CORRECT 130</b>. Число <b>130</b> не должно совпадать с другими числами.<br><br> Как только ресурс зарегистрирован можно написать в файле <b>mysoundDlg.cpp</b> функции проигрывания этого ресурса : <br><br>  <PRE><h5> static void PlayResource(LPCTSTR lpszSound) { 	
+HRSRC hRes; // resource handle to wave file 	
+HGLOBAL hData; 	BOOL bOk = FALSE; 	if 
+((hRes = ::FindResource(AfxGetResourceHandle(),
+ lpszSound, 	  _T("sound"))) != NULL && 	  
+ (hData = ::LoadResource
+ (AfxGetResourceHandle(), hRes)) != NULL) 	{ 
+// found the resource, play it 		bOk = 
+sndPlaySound((LPCTSTR)::LockResource(hData), 			
+SND_MEMORY|SND_SYNC|SND_NODEFAULT); 		
+FreeResource(hData); 	} 	if (!bOk) 	{ 	
+ AfxMessageBox("ERROR !!! Can not play the sound. 
+ \nNot find sound board !!!");	 	} }  
+inline static void PlayResource(UINT nIDS) 	{ 
+PlayResource(MAKEINTRESOURCE(nIDS)); }  </h5></PRE> В фунции <b> ::FindResource(AfxGetResourceHandle(), lpszSound, _T("sound"))</b> третий параметр - тип ресурса, который был описан выше.<br><br>  Теперь можно проиграть ресурс : <b>PlayResource( IDSOUND_CORRECT  );</b><br>   <a name="3"></a><center><h3>3. Проигрывание Wave-файла с диска</h3></center> Для проигрывания WAVE-файла с диска можно использовать функцию : <br><br>  
+<PRE><font size="2">    <b>BOOL sndPlaySound(    	 LPCTSTR  lpszSoundName;     	
+ UINT  fuOptions;    );	</b>  Параметры функции:  
+ <b>lpszSoundName</b>  Имя файла. Если этот параметр  NULL,
+то проигрывание файла останавливается.   <b>fuOptions</b>
+Специальные опции для проигрывания музыки. 
+Они могут быть следующими:  
+<b>Значение	                    Описание </b> 
+SND_SYNC	Музыка играется синхронно, и функция 
+не возвращает указатель 		пока не будет конца файла.
+SND_ASYNC	Музыка играется асинхронно, и функция
+возвращает указатель 		сразу после начала 
+проигрывания файла. Чтобы остановить проигрывание, 
+надо вызвать функцию SndPlaySound с параметром 
+lpszSoundName  		установленным в NULL. 
+SND_NODEFAULT	Если файл не найден, то функция 
+возвращает указатель 		сразу и не 
+проигрывает стандартный звуковой эффект Windows. 
+SND_MEMORY	Этот параметр нужен для проигрывания  
+Wave-файла в виде ресурса( из памяти ). 
+SND_LOOP	Этот параметр нужен для проигрывания 
+ Wave-файла в циклическом режиме. 		Также 
+ при этом вы должны использовать влаг SND_ASYNC. 		
+ Чтобы остановить проигрывание, надо вызвать 
+ функцию SndPlaySound 		с параметром
+lpszSoundName установленным в NULL. 
+SND_NOSTOP	Если музыка уже проигрывается,
+ то функция возврвщает FALSE.  
+ <b>Возвращаемое значение:</b>  Если музыка проигрывается 
+ правильно, то функция возврвщает TRUE, иначе FALSE. 
+  <b>Пример использования:  	B
+  OOL bOk = sndPlaySound( "test.wav", SND_SYNC); 	  	
+  if (!bOk) 	{ 	    AfxMessageBox
+  ("Error ! Can not play the sound. !!!");	 	}  </b> </font></PRE>  <a name="4"></a><center><h3>4. Пример проекта</h3></center>  <ul> <a href = "mysound.zip">Отсюда</a> можно взять рабочую  программу под MFC,  в которой проигрываются Wave-файлы.
+<p><div align="center"><a href="../index.html">	<img src="../../../soder-yel.gif" width=159 height=38 border=0 alt=""></a></div></p>
+ </BODY></HTML> 

@@ -1,0 +1,69 @@
+<HTML><HEAD><TITLE>Глава 19</TITLE></HEAD> 
+<body background="../../../bgrwhite.gif">
+<p><div align="center"><b><font size="+1" face="Arial">19. Создание собственных ActiveX элементов </font></b></div></p><p>
+ <ul><b> <a href="#1">1. Введение</a><br> <a href="#2">2. Создание проекта</a><br> <a href="#3">3. Настройка значка инструмента MyClock</a><br> <a href="#4">4. Рисование в элементе управления MyClock</a><br> <a href="#5">5. Вывод текущего времени в непрерывном режиме</a><br> <a href="#6">6. Включение базовых свойств в ActiveX MyClock</a><br> <a href="#7">7. Включение специального свойства в ActiveX MyClock</a><br> </b></ul><br>   <a name="1"></a><center><b>1. Введение</b></center><br>  Элементов управления ActveX — это файл с расширением ОСХ (например, MyButton.OCX), который вы можете использовать в своем приложении Visual C++. Visual C++ и другие визуальные языки программирования дают вам возможность включить элемент управления ActiveX в свою  программу и пользоваться им так же, как и стандартным элементом управления Visual C++. Вы помещаете элемент управления ActiveX в диалоговую панель, задаете его свойства и связываете код с его событиями. После того как ы создали собственный элемент управления ActiveX, вы ожете передавать его другим программистам, которые могут вводить его в свои программы.<br><br> Поскольку расширением файла элемента управления ActiveX является .ОСХ, то иногда элементы управления ActiveX называют элементами ОСХ.<br><br>  В этой главе вы разработаете свой собственный элемент управления ActiveX — MyClock.ОСХ, который выполняет задачу вывода текущего времени. Когда программист помещает элемент управления MyClock.ОСХ в форму или в диалоговую панель, MyClock. ОСХ будет непрерывно отображать текущее время.<br><br>   <a name="2"></a><center><b>2. Создание проекта</b></center><br> Чтобы создать проект элемента управления MyClock.OCX : <ul> 1) Выберите New в меню File.<br>  В ответ Visual C++ выведет диалоговую панель New.<br> 2)  Выберите закладку Projects диалоговой панели New.<br> 3) Выберите MFC ActiveX ControlWizard из списка типов проектов<br> 4)  Напечатайте MyClock в окне Project Name.<br> 5) Щелкните на кнопке, которая расположена с правой стороны окна Location, и выберите каталог для проекта.<br> 6)  Щелкните на кнопке ОК.<br>  В ответ Visual C++ выведет окно MFC ActiveX ControlWizard Step 1 of 2<br> В окне ActiveX ControlWizard Step 1 оставьте все установки в состоянии по умолчанию и щелкните на кнопке Next.<br> В окне ActiveX ControlWizard Step 2 оставьте все установки в состоянии по умолчанию и щелкните на кнопке Finish.<br> В ответ Visual C++ выведет диалоговую панель New Project Information.<br>  Щелкните на кнопке ОК в диалоговой панели New Project Information и выберите Set Active Configuration в меню Build.<br> В ответ Visual C++ выведет диалоговую панель Set Active Project Configuration.<br> Выберите MyClock - Win32 Release в диалоговом окне Set Active Project Configuration и щелкните на кнопке ОК.<br><br> Это все! Вы завершили создание файла проекта и каркасов файлов элемента управления ActiveX MyClock.ОСХ.<br> </ul>  <a name="3"></a><center><b>3. Настройка значка инструмента MyClock</b></center><br>  Значок инструмента MyClock отображает буквы ОСХ. Вам нужно настроить элемент управления MyClock таким образом, чтобы значок его инструмента представлял собой рисунок часов. Для настройки значка инструмента MyClock вы должны отредактировать растровое изображение IDB_MYCLOCK. Это изображение было создано Visual C++.<br> Чтобы вывести растровое изображение IDB_MYCLOCK в режиме проектирования, сделайте следующее:<br><br> <ul> 1) Выберите закладку ResourceView в окне Project Workspace, раскройте пункт MyClock resources, раскройте пункт Bitmap и дважды щелкните на пункте IDB_MYCLOCK.<br> В ответ Visual C++ выведет растровое изображение IDB_MYCLOCK в режиме проектирования.<br> 2)  Используя визуальные инструменты Visual C++, замените растровое изображение IDB_MYCLOCK букв ОСХ на рисунок простейших часов (окружность и две линии в качестве стрелок).<br> </ul><br>  <a name="4"></a><center><b>4. Рисование в элементе управления MyClock</b></center><br>  Пока элемент управления MyClock выводит эллипс. Вам нужно, чтобы MyClock отображал текущее время, так что вы должны написать соответствующий код:<br><br>  Откройте файл MyClockCtl.cpp.<br><br>  Файл MyClockCtl.cpp — это файл реализации элемента управления МуСlock, созданный для вас Visual C++; в этом файле вы будете писать свой код для настройки MyClock.<br><br>     Найдите функцию OnDraw() в файле MyClockCtl.cpp и напишите следующий код:<br><br>  <pre><b><h5> void CMyClockCtrl::OnDraw(     CDC* pdc, 
+const CRect& rcBounds, const CRect& rcInvalid) {     
+// TODO: Replace the following code with your own
+                                  drawing    
+ //       code.     
+ // Залить элемент управления выбранным цветом.    
+ pdc->FillRect(rcBounds,         
+CBrush::FromHandle((HBRUSH)GetStockObject
+                       (WHITE_BRUSH))) ; 
+ char CurrentTime[30] ;    struct tm *newtime;    
+long lTime;     // Получить текущее время    
+                           time(&lTime) ;     
+newtime=localtime(&lTime);    
+// Преобразовать время в строку.    
+strcpy(CurrentTime, asctime(newtime));     
+// Дополнить строку одним символом пробела.    
+                       CurrentTime[24]=' ';     
+// Дополнить строку ограничивающи символом.    
+               CurrentTime[25] = 0;     
+// Вывести текущее время    
+pdc->ExtTextOut(rcBounds.left,rcBounds.top,   
+ ETO_CLIPPED,    rcBounds,    CurrentTime,    
+ strlen(CurrentTime),    NULL) ; } </b></h5></pre>  <a name="5"></a><center><b>5. Вывод текущего времени в непрерывном режиме</b></center><br>  Чтобы отображать время непрерывно, вам нужно сделать следующее:<br><br> 1) Написать код, который устанавливает таймер с 1000-миллисекундным периодом для элемента управления MyClock.<br> 2) Связать код с событием WM_TIMER элемента управления MyClock.<br><br>  После установки таймера каждые 1000 миллисекунд (каждую секунду) Windows будет посылать сообщение WM_TIMER элементу управления MyClock, в ответ на которое будет выполняться код, который вы свяжете с этим событием элемента управления. Этот код будет просто выводить текущее время, так что значение времени будет непрерывно обновляться.<br><br> Таймер необходимо установить сразу после создания элемента управления, так что вам нужно связать код, устанавливающий таймер, с событием WM_CREATE элемента управления:<br><br>  Выведите диалоговую панель ClassWizard, выбрав ClassWizard в меню View. На странице Message Maps выберите следующее событие:<br><br> <ul> Class Name:   CMyClockCtrl<br> Object ID:  CMyClockCtrl<br> Message:   WM_CREATE<br><br></ul>  Щелкните на кнопке Add Function.<br> В ответ Visual C++ добавит в класс CMyClockCtrl функцию-элемент ОпСreate().<br> Щелкните на кнопке Edit Code в ClassWizard.<br> В ответ Visual C++ откроет файл MyClockCtrl.cpp с функцией OnCreate() в режиме редактирования.<br><br> Напишите следующий код в функции OnCreate():<br><br>  
+<pre><b><h5> int CMyClockCtrl::OnCreate(LPCREATESTRUCT 
+lpCreateStruct) { 	
+if (COleControl::OnCreate(lpCreateStruct) == -1)
+	return -1;  
+// TODO: Add your specialized creation code here  	
+// Установить таймер. 	SetTimer(1, 1000, NULL);  	
+return 0; } </b></h5></pre><br>  Введенный вами код состоит из одного оператора, который вызывает функцию SetTimer() для установки таймера с 1000-миллисекундным периодом:<br><br>  <ul><b>SetTiltier (1, 1000, NULL);</b></ul><br>  Начиная с этого момента, каждые 1000 миллисекунд Windows будет посылать  элементу управления сообщение WM_TIMER.<br> Теперь вам нужно связать код с событием WM_TIMER:<br><br>  Выберите ClassWizard в меню View. На странице Message Maps выберите следующее событие:<br><br>  <ul> Class Name:  CMyClockCtrl<br> Object ID:   CMyClockCtrl<br> Message:  WM_TIMER<br> </ul><br>  Щелкните на кнопке Add Function.<br> В ответ Visual C++ добавит в класс CMyClockCtrl функцию-элемент OnTimer().<br> Щелкните на кнопке Edit Code в ClassWizard.<br> В ответ Visual C++ откроет файл MyClockCtrl.cpp с функцией OnTimer() в режиме редактирования.<br> Напишите следующий код в функции OnTimerO:<br><br>  
+<pre><b><h5> void CMyClockCtrl::OnTimer(UINT nIDEvent) {  
+// TODO: Add your message handler code here 
+and/or call 
+// default  
+// Переключить вызов на функцию OnDraw(). 	
+                          InvalidateControl() ;  	
+COleControl::OnTimer(nIDEvent) ; } </b></h5></pre><br>   <a name="6"></a><center><b>6. Включение базовых свойств в ActiveX MyClock</b></center><br>  Базовые свойства( Stock properties ) - преопределены.<br> Ниже приведён список базовых свойств:<br><br> <ul><b> Appearance - Внешний вид( 3-х мерный или плоский )<br> BackColor - Цвет фона<br> BorderStyle - Стиль рамки<br> Caption - Заголовок<br> Enabled - Состояние доступен/недоступен<br> Font - Шрифт<br> ForeColor - Цвет переднего плана<br> hWnd - Маркер окна<br> ReadyState - Состояние готовности<br> Text - Текст<br> </b></ul><br>   Для практики включим два базовых свойства в ActiveX MyClock: BackColor и ForeColor.<br> Выполните следующие действия:<br><br> <ul> View -> ClassWizard -> Automation( проверте, чтобы в окне Class name установлен класс CMyClockCtrl )<br> Нажмите на кнопку Add Property<br> Выберите из списка BackColor и нажмите OK<br> Также добавьте и свойство ForeColor.<br> </ul><br>  Элемент управления MyClock имеет сейчас свойства BackColor и ForeColor, но пока не использует значения, хранящиеся в этих свойствах. Вам надо написать код в функции OnDraw(), который выполняет эту задачу:<br><br> 
+ <pre><b><h5> void CMyClockCtrl::OnDraw(     
+CDC* pdc, const CRect& rcBounds, const CRect&
+                                        rcInvalid) {    
+// TODO: Replace the following code with your 
+                                  own drawing   
+//       code.     
+// Задать цвет переднего плана( цвет текста )   
+ pdc->SetTextColor( TranslateColor(GetForeColor()));     
+// Установить режим прозрачного фона    
+pdc->SetBkMode(TRANSPARENT);	 	   
+// Создать кисть на основе значения BackColor    
+CBrush bkBrush( TranslateColor(GetBackColor()));     
+// Закрасить фон    pdc->FillRect(rcBounds,
+ &bkBrush);  char CurrentTime[30] ;   
+  struct tm *newtime;   long lTime;    
+// Получить текущее время    time(&lTime) ;    
+ newtime=localtime(&lTime);    
+// Преобразовать время в строку.    
+strcpy(CurrentTime, asctime(newtime));     
+// Дополнить строку одним символом пробела.    
+CurrentTime[24]=' ';     
+// Дополнить строку ограничивающи символом.    
+CurrentTime[25] = 0;     
+// Вывести текущее время    
+pdc->ExtTextOut(rcBounds.left,rcBounds.top,    
+ETO_CLIPPED,    rcBounds,    CurrentTime,    
+strlen(CurrentTime),    NULL) ; } </b></h5></pre> Ну вот и всё, теперь элемент управления MyClock  имеет свойства BackColor и ForeColor.<br><br>   <a name="7"></a><center><b>7. Включение специального свойства в ActiveX MyClock</b></center><br>  Во многих случаях вам понадобится включить в свой элемент управления такие свойства, которые не входят в список стандартных. Эти свойства называются специальными.<br> Для примера включем в MyClock специальное свойство UpdateInterval - период обновления:<br><br>  <ul><b> View -> ClassWizard -> Automation( проверте, чтобы в окне Class name установлен класс CMyClockCtrl )<br> Нажмите на кнопку Add Property<br> В окне External name наберите UpdateInterval<br> В окне Type выберите Long<br> В окне Variable name должно быть m_updateinterval<br> В окне Notification function поставьте OnUpdateIntervalChanged<br> Проверте, что в камке Implementation выбрана кнопка Member variable и нажмите OK<br> </b></ul>  Тем самым мы определили, что со свойством UpdateInterval будет связана переменная m_updateinterval и всякий раз, когда значение свойства UpdateInterval будет именяться, автоматически выполнится функция OnUpdateIntervalChanged.<br><br>  Теперь надо проинициализировать свойство UpdateInterval:<br><br> <ul><b> Откройте файл MyClockCtl.cpp<br> Найдите функцию DoPropExchange() и напишиет в ней следующее:<br><br> // Инициализация свойства UpdateInterval значением 1000<br> PX_Long( pPX, _T("UpdateInterval"), m_updateinterval, 1000 );<br><br> </b></ul><br>  Теперь надо модернизировать функции OnUpdateIntervalChanged:<br><br> <ul><b> // проверка на отризательность<br> if( m_updateinterval < 0 )<br> {<br> MessageBox( "This property cannot be negative !!!" );<br> m_updateinterval = 1000;<br> }<br> // Установка таймера<br> SetTimer( 1, (UINT)m_updateinterval, NULL );<br> </b></ul><br>   и OnCreate: <ul><b> // Установка таймера<br> SetTimer( 1, (UINT)m_updateinterval, NULL );<br> </b></ul>  <center><h3>Ну вот и всё ActiveX MyClock полностью готов !!!</h3>
+<p><div align="center"><a href="../index.html">	<img src="../../../soder-yel.gif" width=159 height=38 border=0 alt=""></a></div></p>
+ </body></html>  

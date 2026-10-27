@@ -1,0 +1,622 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0046)http://vnews.uka.ru/html/Lessons/lesson048.htm -->
+<HTML><HEAD><TITLE>Програмирование на Visual C++</TITLE>
+<META content="text/html; charset=windows-1251" http-equiv=Content-Type>
+<META content="Kuklin Alexey Email: vnews@mail.ru" name=author>
+<META 
+content="programming, программирование, soft, helps, web webdizain, photo, photoshop, internet, examples, conference, конференция, софт, примеры программ, исходники, source, codes, MFC, MTL, vc, visual, c , c++, с++,с, документация, documentation" 
+name=keywords>
+<META 
+content="Документация C, C++ , Visual C , Object C, Quick C, Turbo C, ActiveX. Школа MFC, софт, примеры программ и исходники к ним, справочные книги и конференция." 
+name=description><LINK href="Програмирование на Visual C++85.files/styles.css" 
+rel=STYLESHEET title=Style type=text/css>
+<META content="MSHTML 5.00.2614.3500" name=GENERATOR></HEAD>
+<BODY bgColor=#e9d7b1 leftMargin=0 text=black topMargin=0>
+<DIV align=center><BR>
+<TABLE bgColor=#f8f1e4 border=1 borderColor=#800000 borderColorDark=#f8f1e4 
+borderColorLight=#f8f1e4 cellPadding=0 cellSpacing=4 height=250 width=700>
+  <TBODY>
+  <TR>
+    <TD borderColorDark=#800000 borderColorLight=#800000 colSpan=2 height=80>
+      <DIV align=center>
+      <SCRIPT>
+// <!--
+var default_user_id = 65561;
+var userid = default_user_id;
+get_user_id();
+if (userid == 123456) {userid=default_user_id;}
+var page = 1;
+var rndnum = Math.round(Math.random() * 10000);
+document.write('<A HREF="http://ad.tbn.ru/bb.cgi?cmd=go&pubid=' + userid + '&pg=' + page + '&vbn=189&num=1&w=468&h=60&nocache=' + rndnum + '" target="_blank">');
+document.write('<IMG SRC="http://ad.tbn.ru/bb.cgi?cmd=ad&pubid=' + userid + '&pg=' + page + '&vbn=189&num=1&w=468&h=60&nocache=' + rndnum + '" width=468 height=60 Alt="TBN.ru" border=1></A>');
+
+function get_user_id(){
+        var tmp = window.parent.location.href;
+        var user_id = tmp.replace(/.+user_id=/,"");
+        if(user_id.search(/^[0123456789]+.*$/g)!=-1)
+                       userid = user_id;                       
+                                else
+                                  userid = default_user_id;
+}
+
+// -->
+</SCRIPT>
+
+      <SCRIPT>
+// <!--
+var ie4 = (document.all) ? true : false;
+if (ie4) { document.write('<img src="/ad/counter" WIDTH=1 HEIGHT=0 border=0>'); }
+// -->
+</SCRIPT>
+      <BR><B><FONT face=tahoma size=2><A href="http://www.sudba.ru/" 
+      target=_blank>Е-ЛЮБОВЬ</A> | <A href="http://love.uka.ru/" 
+      target=_blank>ЗНАКОМСТВА</A> | <A href="http://chat.uka.ru/" 
+      target=_blank><FONT color=red>взрывЧАТка</FONT></A> <!--
+| <a href="http://www.anekdots.ru" target='_blank'>АНЕКДОТЫ</a>
+| <a href="http://www.anekdots.ru" target='_blank'>ИГРЫ</a>
+| <a href="http://www.anekdots.ru" target='_blank'>MУЗЫКА</a>
+--></FONT></B></DIV></TD></TR>
+  <TR>
+    <TD borderColorDark=#800000 borderColorLight=#800000 width="29%">
+      <CENTER>
+      <DIV class=base style="COLOR: #000080"><B>Меню</B></DIV></CENTER><BR><FONT 
+      size=1><IMG border=0 hspace=3 
+      src="Програмирование на Visual C++85.files/uk.gif"><A 
+      href="http://vnews.uka.ru/html/about.htm"><B class=base2>О Проекте</B>
+      <P></A><IMG border=0 hspace=3 
+      src="Програмирование на Visual C++85.files/uk.gif"><A 
+      href="http://vnews.uka.ru/index.html"><B class=base2> Новости</B>
+      <P></A><IMG border=0 hspace=3 
+      src="Програмирование на Visual C++85.files/uk.gif"><A 
+      href="http://vnews.uka.ru/html/pclub.htm"><B class=base2> Клуб 
+      Программеров С++</B>
+      <P></A><IMG border=0 hspace=3 
+      src="Програмирование на Visual C++85.files/uk.gif"><A 
+      href="http://vnews.uka.ru/html/docs.htm"><B class=base2> Документация</B>
+      <P></A><IMG border=0 hspace=3 
+      src="Програмирование на Visual C++85.files/uk.gif"><A 
+      href="http://vnews.uka.ru/html/components.htm"><B class=base2> 
+      Инструментарий</B>
+      <P></A><IMG border=0 hspace=3 
+      src="Програмирование на Visual C++85.files/uk.gif"><A 
+      href="http://vnews.uka.ru/html/school.htm"><B class=base2> Школа C++</B>
+      <P></A><IMG border=0 hspace=3 
+      src="Програмирование на Visual C++85.files/uk.gif"><A 
+      href="http://vnews.uka.ru/html/Examples/sources.htm"><B class=base2> 
+      Исходники</B>
+      <P></A><IMG border=0 hspace=3 
+      src="Програмирование на Visual C++85.files/uk.gif"><A 
+      href="http://www.fido7.com/cgi-fido7/forumi.pl?user=vnews"><B 
+      class=base2>Форум С++</B>
+      <P></A><IMG border=0 hspace=3 
+      src="Програмирование на Visual C++85.files/uk.gif"><A 
+      href="http://vnews.uka.ru/html/links.htm"><B class=base2> Ссылки</B>
+      <P></A><IMG border=0 hspace=3 
+      src="Програмирование на Visual C++85.files/uk.gif"><A 
+      href="http://www.guestbook.ru/book.cgi?user=cppmfc&amp;action=show"><B 
+      class=base2> Отзывы и предложения</B>
+      <P></A><IMG border=0 hspace=3 
+      src="Програмирование на Visual C++85.files/uk.gif"><A 
+      href="http://vnews.uka.ru/html/map.htm"><B class=base2> Карта сайта</B>
+      <P></A>
+      <HR width="90%">
+
+      <DIV align=center>
+      <SCRIPT language=javascript>
+<!-- 
+an=navigator.appName;d=document;function 
+pr(){d.write("<A HREF=\"http://count.ru/cgi-bin/href.cgi?", 
+"id=9203\"><img src=\"http://count.ru/cgi-bin/", 
+"count.cgi?id=9203&j=y&w="+srw+"&c="+srb+"&", 
+"ref="+escape(d.referrer)+"\" height=31 border=0", 
+" width=88></A>");}srb="na";srw="na";//--> 
+</SCRIPT>
+
+      <SCRIPT language=javascript1.2><!-- 
+s=screen;srw=s.width;an!="Netscape"? 
+srb=s.colorDepth:srb=s.pixelDepth;//--> 
+</SCRIPT>
+
+      <SCRIPT language=javascript><!-- 
+pr();//--> 
+</SCRIPT>
+      <NOSCRIPT><BR><A href="http://count.ru/cgi-bin/href.cgi?id=9203"><IMG 
+      border=0 height=31 src="Програмирование на Visual C++85.files/count.html" 
+      vspace=3 width=88></A> </NOSCRIPT><BR><!--LIST100 COUNTER--><A 
+      href="http://counter.list.ru/cgi-bin/jump?from=12813" target=_top>
+      <SCRIPT>
+<!--
+d=document;js=10;a='&pageref='+escape(d.referrer)
+//--></SCRIPT>
+
+      <SCRIPT language=JavaScript1.1><!--
+js=11;a+='&jsbool='+navigator.javaEnabled()
+//--></SCRIPT>
+
+      <SCRIPT language=JavaScript1.2><!--
+js=12;s=screen;a+='&res='+s.width+'*'+s.height
+a+='&depth='+(s.colorDepth?s.colorDepth:s.pixelDepth)
+//--></SCRIPT>
+
+      <SCRIPT language=JavaScript1.3><!--
+js=13//--></SCRIPT>
+
+      <SCRIPT><!--
+d.write('<img src="http://counter.list.ru/cgi-bin/counter.dll'+
+'?id=12813&type=1&cd=1&bt=0&jsver='+js+a+
+'" alt="LIST100 Counter" border="0" height="40" width="88">')
+if(js>11)d.write('<'+'!-- ')//--></SCRIPT>
+      <NOSCRIPT><IMG alt="LIST100 Counter" border=0 height=32 
+      src="Програмирование на Visual C++85.files/counter.gif" vspace=3 
+      width=80></NOSCRIPT>
+      <SCRIPT><!--
+if(js>11)d.write('--'+'>')
+//-->
+</SCRIPT>
+      </A> <!--LIST100 COUNTER--><BR><A href="http://www.index99.kiev.ua/" 
+      target=_blank><IMG alt="Index'99" border=0 height=31 
+      src="Програмирование на Visual C++85.files/count1.gif" vspace=3 
+      width=88></A><BR><!--NUMBER ONE COUNTER--><A href="http://www.one.ru/" 
+      target=_top>
+      <SCRIPT language=javascript><!--
+document.write("<img src=\"http://www.one.ru/cgi-bin/cnt.cgi?id=4201&t=1",
+"&r="+escape(parent.document.referrer),"\" width=88 height=31 ",
+"border=0 alt=\"become number one\">");//--></SCRIPT>
+      <NOSCRIPT><IMG alt="be number one" border=0 height=31 
+      src="Програмирование на Visual C++85.files/cnt.gif" 
+      width=88></NOSCRIPT></A> <!--NUMBER ONE COUNTER--><BR><!--3P COUNTER--><A 
+      href="http://www.3p.com/" target=_top>
+      <SCRIPT language=javascript><!--
+document.write("<img src=\"http://www.3p.com/cgi-bin/cnt.cgi?id=620&t=1",
+"&r="+escape(parent.document.referrer),"\" width=88 height=31 ",
+"border=0 alt=\"3P.RU\">");//--></SCRIPT>
+      <NOSCRIPT><IMG alt=3P.COM border=0 height=31 
+      src="C:\users\max\work\VISUAL\KNIGA2\Програмирование на Visual C++85.files\cnt(1).gif" 
+      width=88></NOSCRIPT></A> <!--3P COUNTER--><BR><A 
+      href="http://www.stars.ru/" target=_top><IMG border=0 height=30 
+      src="Програмирование на Visual C++85.files/1000.gif" width=50></A><BR>
+      <P> </P></DIV>
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> </P></FONT></TD>
+    <TD borderColorDark=#800000 borderColorLight=#800000><FONT color=green 
+      face=TAHOMA size=5>
+      <CENTER><B>Урок VIII</B></CENTER></FONT>
+      <P>
+      <P align=center><FONT color=black face=ARIAL size=4>Проектирование 
+      диалоговой панели</FONT></P>
+      <DIV align=center>
+      <TABLE width="95%">
+        <TBODY>
+        <TR>
+          <TD><FONT color=black face=TAHOMA size=2>Ну что, за работу! 
+            <UL type=square>
+              <LI>Сейчас нам необходимо добавить код выбора размера кисти! 
+              <LI>Сначала спроектируем диалоговую панель, добавим ресурс 
+              <B>Spin</B>, который будет изменять толщину пера, окно 
+              редактирования для отображения размера и переменную для хранения 
+              значения толщины! </LI></UL><FONT color=black face=TAHOMA size=2>
+            <UL type=square>
+              <LI>Добавьте элемент управления <B>Edit Box</B> , затем 
+              <B>Spin</B>, сделайте это именно в такой последовательности, так 
+              как элемент <B>Spin</B> будет искать "собеседника" по предыдущему 
+              интендификатору, а "соседом" у нас будет <B>Edit Box</B>, в нем 
+              будет отоброжаться значение толщины, которую будет менять 
+              <B>Spin</B>. 
+              <LI>Установите элементы согласно рисунку и таблице: 
+              <P align=center><IMG 
+              src="Програмирование на Visual C++85.files/vc_resource_dlg_proekt4.gif"></P>
+              <P align=center><FONT color=red><B>Таблица 2.0</B></FONT></P>
+              <DIV align=center>
+              <TABLE bgColor=#ffffbb border=1 cellPadding=0 cellSpacing=0 
+              width="80%">
+                <TBODY>
+                <TR>
+                  <TD><FONT face=ARIAL size=2><B>Объект</B></FONT></TD>
+                  <TD><FONT face=ARIAL size=2><B>Свойство</B></FONT></TD>
+                  <TD><FONT face=ARIAL size=2><B>Установка</B></FONT></TD></TR>
+                <TR>
+                  <TD colSpan=3>&nbsp;</TD></TR>
+                <TR>
+                  <TD><FONT face=ARIAL size=2><B>Edit Box</B></FONT></TD>
+                  <TD><FONT face=ARIAL size=2><B>ID</B></FONT></TD>
+                  <TD><FONT face=ARIAL size=2><B>IDC_PENWIDTH</B></FONT></TD></TR>
+                <TR>
+                  <TD><FONT face=ARIAL size=2><B>Spin</B></FONT></TD>
+                  <TD><FONT face=ARIAL size=2><B>ID</B></FONT></TD>
+                  <TD><FONT face=ARIAL size=2><B>IDC_SPIN1</B></FONT></TD></TR>
+                <TR>
+                  <TD></TD>
+                  <TD><FONT face=ARIAL size=2>Auto Buddy</FONT></TD>
+                  <TD><FONT face=ARIAL size=2>Отмечен, страница 
+                  Styles</FONT></TD></TR>
+                <TR>
+                  <TD></TD>
+                  <TD><FONT face=ARIAL size=2>Set Buddy Integer</FONT></TD>
+                  <TD><FONT face=ARIAL size=2>Отмечен, страница 
+                  Styles</FONT></TD></TR>
+                <TR>
+                  <TD></TD>
+                  <TD><FONT face=ARIAL size=2>Aligment</FONT></TD>
+                  <TD><FONT face=ARIAL size=2>Right, страница 
+                Styles</FONT></TD></TR></TR>
+                <TR>
+                  <TD></TD>
+                  <TD><FONT face=ARIAL size=2>Orientation</FONT></TD>
+                  <TD><FONT face=ARIAL size=2>Vertical, страница 
+                  Styles</FONT></TD></TR>
+                <TR>
+                  <TD><FONT face=ARIAL size=2><B>Static Text</B></FONT></TD>
+                  <TD><FONT face=ARIAL size=2><B>ID<B></FONT></B></B></TD>
+                  <TD><FONT face=ARIAL size=2><B>IDC_STATIC</B></FONT></TD></TR>
+                <TR>
+                  <TD></TD>
+                  <TD><FONT face=ARIAL size=2>Caption</FONT></TD>
+                  <TD><FONT face=ARIAL 
+                size=2>&amp;Width</FONT></TD></TR></TR></TBODY></TABLE></DIV>
+              <P><BR>
+              <P></P>
+              <LI>Рассмотрим элемент <B>Spin</B>, первая установка <B>Auto 
+              Buddy</B> означает, что он <B>Spin</B> будет автоматически искать 
+              "соседа", в котором будет изменяться значение толщины. 
+              <LI><B>Set Buddy to Integer</B> - говорит, что изменяемое значение 
+              в "соседе" будет целое число. 
+              <LI><B>Aligment</B> - устанавливает направление изменения величины 
+              в сторону увеличения, в данном случае будет справа, значит, если 
+              развернуть на 90 градусов , то вверх - это увеличение, а вниз - 
+              уменьшение, или слева на право! 
+              <LI><B>Orientation</B> - устанавливает положение элемента 
+              <B>Spin</B> вертикально или горизонтально. 
+              <P></P></LI></UL>
+            <UL type=square>
+              <LI>Сейчас откройте <B>Class Wizard</B>, а там закладку <B>Member 
+              Variables</B>. 
+              <LI>Отметьте мышкой индетификатор <B>IDC_PENWIDTH</B> и нажмите на 
+              кнопку <B>Add Variable</B> 
+              <LI>Появится такая диалоговая панель: 
+              <P align=center><IMG 
+              src="Програмирование на Visual C++85.files/vc_add_var_edit.gif"></P>
+              <LI>Введите название переменной <B>m_PenWidth</B>, <B>Category</B> 
+              - <B>Value</B>, <B>Variable Type</B> - <B>int</B>. 
+              <LI>Нажмите <B>OK</B>. 
+              <LI>Установите максимальное и минимальное значение 1 и 32 
+              соответственно. 
+              <LI>Закройте ClassWizard. 
+              <LI>Откройте функцию <B>OnInitDialog</B> и в конец(перед 
+              оператором return) добавьте следующий код: <BR>
+              <P><B>////-Ваш код начинается здесь -////
+              <P>//Получить указатель на элемент управления<BR>CSpinButtonCtrl* 
+              pSpin = (CSpinButtonCtrl*)GetDlgItem(IDC_SPIN1);
+              <P>/*Установить диапазон значений непосредственно для 
+              IDC_SPIN1*/<BR>pSpin-&gt;SetRange(1,32);
+              <P>//Установить начальное значение счетчика в 
+              1;<BR>pSpin-&gt;SetPos(1);
+              <P>////-Ваш код заканчивается здесь -////
+              <P></B></P>
+              <LI>Вначале вы получили указатель на элемент управления, потом 
+              установили диапазон значений непосредственно для счетчика и 
+              установили начальное значение его в 1. 
+              <LI>Откройте конструктор класса <B>CPaintORamaDlg</B> и добавьте в 
+              конец такую строку:<BR><B>m_PenWidth=1;</B> 
+              <LI>Этим оператором вы установили начальное значение толшины пера. 
+
+              <LI>Теперь вам необходимо изменить функцию <B>OnLButtonDown</B>, 
+              таким образом, чтобы при создавании новой кисти, учитывался нужный 
+              размер. 
+              <P></P>
+              <LI>Измените функцию <B>OnLButtonDown</B> следующим образом:
+              <P><B>BOOL CPaintORamaDlg::OnLButtonDown(UINT nFlags, CPoint 
+              point) <BR>{<BR><BR>.....<BR>
+              <P>//Проверить было ли нажатие внутри области 
+              рисования.<BR>if(m_Canvas.PtInRect(point))<BR>{<BR>//Присвоить 
+              координаты начала двум переменным<BR>m_LineStart= 
+              point;<BR>m_LineEnd=point;
+              <P>m_Pen.DeleteObject();
+              <P>/////-Ваш код начинается здесь-///
+              <P>//Обновить переменные значениями в окне 
+              прграммы<BR>UpdateData(TRUE);
+              <P>//Создать новую кисть с учетом 
+              размера<BR>m_Pen.CreatePen(PS_SOLID,<FONT color=red> 
+              m_PenWidth</FONT>, m_PenColor);
+              <P>/////-Ваш код заканчивается здесь-/////
+              <P>//Захватить мышь<BR>SetCapture();<BR>}
+              <P>}<BR></B></P>
+              <LI><B>UpdateData(true)</B> - обновляет значение переменных 
+              элементов управлений теrущими значениями в окне программы. 
+              <LI>Потом создается новая кисть с учетом толщины.<BR>Запустите 
+              программу и попробуйте выбирать любой цвет и нарисовать 
+              что-нибудь. 
+              <P>
+              <P><FONT color=red size=3><B>Добавление выбора стилей 
+              перьев</B></FONT></P>
+              <LI>Вначале вам необходимо добавить пару радиокнопок, а точнее 
+              семь штук строго друг за другом , с помощью которых мы будем 
+              выбирать стиль пера. 
+              <LI>Расставьте радиокнопки (!соблюдая строгий порядок прямо 
+              так,как написано в таблице ), как показано на рис. 2.0 и согласно 
+              таблице 2.0. 
+              <P align=center><IMG 
+              src="Програмирование на Visual C++85.files/vc_resource_dlg_proekt5.gif"></P>
+              <P align=center><FONT color=red><B>Таблица 2.0</B></FONT></P>
+              <DIV align=center>
+              <TABLE bgColor=#ffffbb border=1 cellPadding=0 cellSpacing=0 
+              width="80%">
+                <TBODY>
+                <TR>
+                  <TD><FONT face=ARIAL size=2><B>Объект</B></FONT></TD>
+                  <TD><FONT face=ARIAL size=2><B>Свойство</B></FONT></TD>
+                  <TD><FONT face=ARIAL size=2><B>Установка</B></FONT></TD></TR>
+                <TR>
+                  <TD><FONT face=ARIAL size=2><B>Radio Button</B></FONT></TD>
+                  <TD><FONT face=ARIAL size=2><B>ID</B></FONT></TD>
+                  <TD><FONT face=ARIAL 
+size=2><B>IDC_SOLID_PEN</B></FONT></TD></TR>
+                <TR>
+                  <TD></TD>
+                  <TD><FONT face=ARIAL size=2>Caption</FONT></TD>
+                  <TD><FONT face=ARIAL size=2>&amp;Solid Pen</FONT></TD></TR>
+                <TR>
+                  <TD></TD>
+                  <TD><FONT face=ARIAL size=2>Group</FONT></TD>
+                  <TD><FONT face=ARIAL size=2>Отмечен, General</FONT></TD></TR>
+                <TR>
+                  <TD><FONT face=ARIAL size=2><B>Radio Button</B></FONT></TD>
+                  <TD><FONT face=ARIAL size=2><B>ID</B></FONT></TD>
+                  <TD><FONT face=ARIAL size=2><B>IDC_RADIO2</B></FONT></TD></TR>
+                <TR>
+                  <TD></TD>
+                  <TD><FONT face=ARIAL size=2>Caption</FONT></TD>
+                  <TD><FONT face=ARIAL size=2>&amp;Dash Pen</FONT></TD></TR>
+                <TR>
+                  <TD><FONT face=ARIAL size=2><B>Radio Button</B></FONT></TD>
+                  <TD><FONT face=ARIAL size=2><B>ID</B></FONT></TD>
+                  <TD><FONT face=ARIAL size=2><B>IDC_RADIO3</B></FONT></TD></TR>
+                <TR>
+                  <TD></TD>
+                  <TD><FONT face=ARIAL size=2>Caption</FONT></TD>
+                  <TD><FONT face=ARIAL size=2>&amp;Dot Pen</FONT></TD></TR>
+                <TR>
+                  <TD><FONT face=ARIAL size=2><B>Radio Button</B></FONT></TD>
+                  <TD><FONT face=ARIAL size=2><B>ID</B></FONT></TD>
+                  <TD><FONT face=ARIAL size=2><B>IDC_RADIO4</B></FONT></TD></TR>
+                <TR>
+                  <TD></TD>
+                  <TD><FONT face=ARIAL size=2>Caption</FONT></TD>
+                  <TD><FONT face=ARIAL size=2>&amp;Dash-Dot Pen</FONT></TD></TR>
+                <TR>
+                  <TD><FONT face=ARIAL size=2><B>Radio Button</B></FONT></TD>
+                  <TD><FONT face=ARIAL size=2><B>ID</B></FONT></TD>
+                  <TD><FONT face=ARIAL size=2><B>IDC_RADIO5</B></FONT></TD></TR>
+                <TR>
+                  <TD></TD>
+                  <TD><FONT face=ARIAL size=2>Caption</FONT></TD>
+                  <TD><FONT face=ARIAL size=2>&amp;Dash-Dot-Dot 
+                Pen</FONT></TD></TR>
+                <TR>
+                  <TD><FONT face=ARIAL size=2><B>Radio Button</B></FONT></TD>
+                  <TD><FONT face=ARIAL size=2><B>ID</B></FONT></TD>
+                  <TD><FONT face=ARIAL size=2><B>IDC_RADIO6</B></FONT></TD></TR>
+                <TR>
+                  <TD></TD>
+                  <TD><FONT face=ARIAL size=2>Caption</FONT></TD>
+                  <TD><FONT face=ARIAL size=2>&amp;Null Pen</FONT></TD></TR>
+                <TR>
+                  <TD><FONT face=ARIAL size=2><B>Radio Button</B></FONT></TD>
+                  <TD><FONT face=ARIAL size=2><B>ID</B></FONT></TD>
+                  <TD><FONT face=ARIAL size=2><B>IDC_RADIO7</B></FONT></TD></TR>
+                <TR>
+                  <TD></TD>
+                  <TD><FONT face=ARIAL size=2>Caption</FONT></TD>
+                  <TD><FONT face=ARIAL size=2>&amp;Insaide 
+                Frame</FONT></TD></TR></TBODY></TABLE></DIV>
+              <P><BR>
+              <P></P>
+              <LI>Вы должны обязательно добавить кнопки в именно таком порядке, 
+              это необходимо для того, чтобы индетификаторы кнопок были 
+              последовательны. 
+              <LI>Первая радиокнопка имеет свой индетификатор и у нее установлен 
+              такой параметр, как <B>Group</B> -это означает, что все кнопки 
+              добавленые после него будут сгруппированы, т.е. при выборе 
+              какой-либо кнопки значок "отмечено" будет переходить. Это может 
+              быть не удобным в ряде случаев, когда на странице несколько групп, 
+              тогда такой способ не подойдет и придется все писать в ручную. 
+              <LI>Теперь, после добавления кнопок, надо как-то получать номер 
+              выбранной кнопки, номера будут представлены в виде 
+              последовательности <B>0,1,2 ..6 </B>, вся фишка в том, что стили 
+              перьев тоже соответствуют числам от 0 до 6, получается нам просто 
+              необходимо определить номер выбранной кнопки и подставить его в 
+              функцию создания пера.. 
+              <LI>Добавьте с помощью <B>Class Wizard</B> переменную 
+              <B>m_PenStyle</B> с типом <B>int</B> и категорией <B>Value</B>, на 
+              странице <B>Member Variables</B>, выбрав индетификатор 
+              <B>IDC_SOLID_PEN</B> нажать кнопку <B>Add Variable</B> и указать 
+              все параметры(см.выше). 
+              <LI>Наверное, возникнет вопрос почему добавили переменную только 
+              для первой кнопки, а все дело в том, что если выбрана кнопка 
+              другая, то эта переменная будет менять свое значение на номер 
+              текущей кнопки, получается, что просто надо считывать только 
+              значение одной переменной . 
+              <LI>Теперь необходимо модифицировать функцию 
+              <B>OnLButtonDown()</B> следующим образом, просто измените 
+              строку<BR><B>m_Pen.CreatePen(PS_SOLID, m_PenWidth, 
+              m_PenColor);</B> на :
+              <P><B>m_Pen.CreatePen(<FONT color=red>m_PenStyle</FONT>, 
+              m_PenWidth, m_PenColor);</B>.
+              <P></P>
+              <LI>Теперь, когда вы изменили константу стиля на переменную, можно 
+              будет изменять стиль пера. 
+              <LI>Оператор <B>UpdateData(TRUE)</B> обновляет переменные 
+              значениями на экране, т.е. в нашем случае записывает номер 
+              выбранной кнопки в переменную <B>m_PenStyle</B>, которая потом 
+              используется для создания нового пера. </LI></UL><BR><BR>Приступим к 
+            самому веселому, добавим возможность рисовать различные фигуры! <A 
+            href="http://vnews.uka.ru/html/Lessons/lesson038.htm"><B 
+            class=base2>&lt;-Назад</B></A> || <A 
+            href="http://vnews.uka.ru/html/Lessons/lesson058.htm"><B 
+            class=base2>Дальше -&gt;</B></A> 
+            <P>
+            <CENTER><B><FONT color=green><A 
+            href="http://vnews.uka.ru/html/Lessons/lesson008.htm">[1]</A><A 
+            href="http://vnews.uka.ru/html/Lessons/lesson018.htm"> [2]</A> <A 
+            href="http://vnews.uka.ru/html/Lessons/lesson028.htm">[3]</A><A 
+            href="http://vnews.uka.ru/html/Lessons/lesson038.htm"> [4]</A> [5] 
+            <A href="http://vnews.uka.ru/html/Lessons/lesson058.htm">[6]</A><A 
+            href="http://vnews.uka.ru/html/Lessons/lesson068.htm"> [7]<A> <A 
+            href="http://vnews.uka.ru/html/Lessons/lesson078.htm">[8]</A> <A 
+            href="http://vnews.uka.ru/html/Lessons/lesson088.htm">[9]</A></B></FONT></CENTER></FONT></FONT></TD></TR></TBODY></TABLE></DIV></TD></TR>
+  <TR>
+    <TD borderColorDark=#800000 borderColorLight=#800000 colSpan=2>
+      <DIV align=center>
+      <TABLE border=0 cellPadding=0 cellSpacing=0 width="70%">
+        <TBODY>
+        <TR>
+          <TD><FONT color=black face="MS SANS SERIF" size=1><A 
+            href="http://algo.da.ru/" target=_top><B>Algorithm project</A>:</B> 
+            Кольцо сайтов, посвященных программированию (<A 
+            href="http://webring.da.ru/" style="COLOR: black" 
+            target=_top>подробнее о проекте WebRing...</A>)<BR>[<A 
+            href="http://www.webring.org/cgi-bin/webring?ring=ru_rk_ring;id=10;prev5" 
+            target=_top>Предыдущие 5 сайтов</A> | <A 
+            href="http://www.webring.org/cgi-bin/webring?ring=ru_rk_ring;id=10;prev" 
+            target=_top>Предыдуший</A> | <A 
+            href="http://www.webring.org/cgi-bin/webring?ring=ru_rk_ring;id=10;next" 
+            target=_top>Следующий</A> | <A 
+            href="http://www.webring.org/cgi-bin/webring?ring=ru_rk_ring;id=10;next5" 
+            target=_top>Следующие 5 сайтов</A> | <A 
+            href="http://www.webring.org/cgi-bin/webring?ring=ru_rk_ring;random" 
+            target=_top>Выбрать сайт случайным образом</A> <A 
+            href="http://www.webring.org/cgi-bin/webring?ring=ru_rk_ring;list" 
+            target=_top>Список всех сайтов</A> ] 
+      </FONT></TD></TR></TBODY></TABLE></DIV></TD></TR></TBODY></TABLE><BR>
+<TABLE bgColor=#f8f1e4 border=1 borderColor=#800000 cellPadding=0 cellSpacing=5 
+width=700>
+  <TBODY>
+  <TR>
+    <TD height=40>
+      <DIV align=center>
+      <TABLE border=0 cellPadding=0 cellSpacing=10 width="37%">
+        <TBODY>
+        <TR>
+          <TD width="16%"></TD></TR></TBODY></TABLE></DIV></TD></TR></TBODY></TABLE></DIV>
+<P>
+<CENTER>
+<DIV class=base2 style="COLOR: black">Copyright © 1999 C++ Programmers Club 
+</DIV>
+<DIV class=base2 style="COLOR: black">Author: <A 
+href="mailto:vnews@mail.ru">Kuklin Alexey</A> All Rights Reserved 
+</DIV></CENTER>
+<P> </P></BODY></HTML>

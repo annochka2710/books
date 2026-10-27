@@ -1,0 +1,394 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0035)http://vnews.uka.ru/html/lesson.htm -->
+<HTML><HEAD><TITLE>Програмирование на Visual C++</TITLE>
+<META content="text/html; charset=windows-1251" http-equiv=Content-Type>
+<META content="Kuklin Alexey Email: vnews@mail.ru" name=author>
+<META 
+content="programming, программирование, soft, helps, web webdizain, photo, photoshop, internet, examples, conference, конференция, софт, примеры программ, исходники, source, codes, MFC, MTL, vc, visual, c , c++, с++,с, документация, documentation" 
+name=keywords>
+<META 
+content="софт,клуб, программистов, компоненты,Документация C, C++ , Visual C , Object C, Quick C, Turbo C, ActiveX. Школа MFC, софт, примеры программ и исходники к ним, справочные книги и конференция." 
+name=description><LINK 
+href="Програмирование на Visual C++!index.files/styles.css" rel=STYLESHEET 
+title=Style type=text/css>
+<META content="MSHTML 5.00.2614.3500" name=GENERATOR></HEAD>
+<BODY bgColor=#e9d7b1 leftMargin=0 text=black topMargin=0>
+<DIV align=center><BR>
+<TABLE bgColor=#f8f1e4 border=1 borderColor=#800000 borderColorDark=#f8f1e4 
+borderColorLight=#f8f1e4 cellPadding=0 cellSpacing=4 height=250 width=700>
+  <TBODY>
+  <TR>
+    <TD borderColorDark=#800000 borderColorLight=#800000 colSpan=2 height=80>
+      <DIV align=center>
+      <SCRIPT>
+// <!--
+var default_user_id = 65561;
+var userid = default_user_id;
+get_user_id();
+if (userid == 123456) {userid=default_user_id;}
+var page = 1;
+var rndnum = Math.round(Math.random() * 10000);
+document.write('<A HREF="http://ad.tbn.ru/bb.cgi?cmd=go&pubid=' + userid + '&pg=' + page + '&vbn=189&num=1&w=468&h=60&nocache=' + rndnum + '" target="_blank">');
+document.write('<IMG SRC="http://ad.tbn.ru/bb.cgi?cmd=ad&pubid=' + userid + '&pg=' + page + '&vbn=189&num=1&w=468&h=60&nocache=' + rndnum + '" width=468 height=60 Alt="TBN.ru" border=1></A>');
+
+function get_user_id(){
+        var tmp = window.parent.location.href;
+        var user_id = tmp.replace(/.+user_id=/,"");
+        if(user_id.search(/^[0123456789]+.*$/g)!=-1)
+                       userid = user_id;                       
+                                else
+                                  userid = default_user_id;
+}
+
+// -->
+</SCRIPT>
+
+      <SCRIPT>
+// <!--
+var ie4 = (document.all) ? true : false;
+if (ie4) { document.write('<img src="/ad/counter" WIDTH=1 HEIGHT=0 border=0>'); }
+// -->
+</SCRIPT>
+      <BR><B><FONT face=tahoma size=2><A href="http://www.sudba.ru/" 
+      target=_blank>Е-ЛЮБОВЬ</A> | <A href="http://love.uka.ru/" 
+      target=_blank>ЗНАКОМСТВА</A> | <A href="http://chat.uka.ru/" 
+      target=_blank><FONT color=red>взрывЧАТка</FONT></A> <!--
+| <a href="http://www.anekdots.ru" target='_blank'>АНЕКДОТЫ</a>
+| <a href="http://www.anekdots.ru" target='_blank'>ИГРЫ</a>
+| <a href="http://www.anekdots.ru" target='_blank'>MУЗЫКА</a>
+--></FONT></B></DIV></TD></TR>
+  <TR>
+    <TD borderColorDark=#800000 borderColorLight=#800000 width="29%">
+      <DIV align=center class=base 
+      style="COLOR: #000080"><B>Меню</B></DIV><BR><A 
+      href="http://vnews.uka.ru/html/about.htm">
+      <DIV align=left class=base2><B><IMG border=0 hspace=3 
+      src="Програмирование на Visual C++!index.files/uk.gif">О Проекте</B>
+      <P></P></DIV></A><A href="http://vnews.uka.ru/index.html">
+      <DIV align=left class=base2><B><IMG border=0 hspace=3 
+      src="Програмирование на Visual C++!index.files/uk.gif"> Новости</B>
+      <P></P></DIV></A><A href="http://vnews.uka.ru/html/pclub.htm">
+      <DIV align=left class=base2><B><IMG border=0 hspace=3 
+      src="Програмирование на Visual C++!index.files/uk.gif"> Клуб Программеров 
+      С++</B>
+      <P></P></DIV></A><A href="http://vnews.uka.ru/html/docs.htm">
+      <DIV align=left class=base2><B><IMG border=0 hspace=3 
+      src="Програмирование на Visual C++!index.files/uk.gif"> Документация</B>
+      <P></P></DIV></A><A href="http://vnews.uka.ru/html/components.htm">
+      <DIV align=left class=base2><B><IMG border=0 hspace=3 
+      src="Програмирование на Visual C++!index.files/uk.gif"> Инструментарий</B>
+      <P></P></DIV></A><A href="http://vnews.uka.ru/html/school.htm">
+      <DIV align=left class=base2><B><IMG border=0 hspace=3 
+      src="Програмирование на Visual C++!index.files/uk.gif"> Школа C++</B>
+      <P></P></DIV></A><A href="http://vnews.uka.ru/html/Examples/sources.htm">
+      <DIV align=left class=base2><B><IMG border=0 hspace=3 
+      src="Програмирование на Visual C++!index.files/uk.gif"> Исходники</B>
+      <P></P></DIV></A><A 
+      href="http://www.fido7.com/cgi-fido7/forumi.pl?user=vnews">
+      <DIV align=left class=base2><B><IMG border=0 hspace=3 
+      src="Програмирование на Visual C++!index.files/uk.gif">Форум С++</B>
+      <P></P></DIV></A><A href="http://vnews.uka.ru/html/links.htm">
+      <DIV align=left class=base2><B><IMG border=0 hspace=3 
+      src="Програмирование на Visual C++!index.files/uk.gif"> Ссылки</B>
+      <P></P></DIV></A><A 
+      href="http://www.guestbook.ru/book.cgi?user=cppmfc&amp;action=show">
+      <DIV align=left class=base2><B><IMG border=0 hspace=3 
+      src="Програмирование на Visual C++!index.files/uk.gif"> Отзывы и 
+      предложения</B>
+      <P></P></DIV></A><A href="http://vnews.uka.ru/html/map.htm">
+      <DIV align=left class=base2><B><IMG border=0 hspace=3 
+      src="Програмирование на Visual C++!index.files/uk.gif"> Карта сайта</B>
+      <P></P></DIV></A>
+      <HR width="90%">
+
+      <DIV align=center>
+      <SCRIPT language=javascript>
+<!-- 
+an=navigator.appName;d=document;function 
+pr(){d.write("<A HREF=\"http://count.ru/cgi-bin/href.cgi?", 
+"id=9203\"><img src=\"http://count.ru/cgi-bin/", 
+"count.cgi?id=9203&j=y&w="+srw+"&c="+srb+"&", 
+"ref="+escape(d.referrer)+"\" height=31 border=0", 
+" width=88></A>");}srb="na";srw="na";//--> 
+</SCRIPT>
+
+      <SCRIPT language=javascript1.2><!-- 
+s=screen;srw=s.width;an!="Netscape"? 
+srb=s.colorDepth:srb=s.pixelDepth;//--> 
+</SCRIPT>
+
+      <SCRIPT language=javascript><!-- 
+pr();//--> 
+</SCRIPT>
+      <NOSCRIPT><BR><A href="http://count.ru/cgi-bin/href.cgi?id=9203"><IMG 
+      border=0 height=31 
+      src="Програмирование на Visual C++!index.files/count.html" vspace=3 
+      width=88></A> </NOSCRIPT><BR><!--LIST100 COUNTER--><A 
+      href="http://counter.list.ru/cgi-bin/jump?from=12813" target=_top>
+      <SCRIPT>
+<!--
+d=document;js=10;a='&pageref='+escape(d.referrer)
+//--></SCRIPT>
+
+      <SCRIPT language=JavaScript1.1><!--
+js=11;a+='&jsbool='+navigator.javaEnabled()
+//--></SCRIPT>
+
+      <SCRIPT language=JavaScript1.2><!--
+js=12;s=screen;a+='&res='+s.width+'*'+s.height
+a+='&depth='+(s.colorDepth?s.colorDepth:s.pixelDepth)
+//--></SCRIPT>
+
+      <SCRIPT language=JavaScript1.3><!--
+js=13//--></SCRIPT>
+
+      <SCRIPT><!--
+d.write('<img src="http://counter.list.ru/cgi-bin/counter.dll'+
+'?id=12813&type=1&cd=1&bt=0&jsver='+js+a+
+'" alt="LIST100 Counter" border="0" height="40" width="88">')
+if(js>11)d.write('<'+'!-- ')//--></SCRIPT>
+      <NOSCRIPT><IMG alt="LIST100 Counter" border=0 height=32 
+      src="Програмирование на Visual C++!index.files/counter.gif" vspace=3 
+      width=80></NOSCRIPT>
+      <SCRIPT><!--
+if(js>11)d.write('--'+'>')
+//-->
+</SCRIPT>
+      </A> <!--LIST100 COUNTER--><BR><A href="http://www.index99.kiev.ua/" 
+      target=_blank><IMG alt="Index'99" border=0 height=31 
+      src="Програмирование на Visual C++!index.files/count1.gif" vspace=3 
+      width=88></A><BR><!--NUMBER ONE COUNTER--><A href="http://www.one.ru/" 
+      target=_top>
+      <SCRIPT language=javascript><!--
+document.write("<img src=\"http://www.one.ru/cgi-bin/cnt.cgi?id=4201&t=1",
+"&r="+escape(parent.document.referrer),"\" width=88 height=31 ",
+"border=0 alt=\"become number one\">");//--></SCRIPT>
+      <NOSCRIPT><IMG alt="be number one" border=0 height=31 
+      src="Програмирование на Visual C++!index.files/cnt.gif" 
+      width=88></NOSCRIPT></A> <!--NUMBER ONE COUNTER--><BR><!--3P COUNTER--><A 
+      href="http://www.3p.com/" target=_top>
+      <SCRIPT language=javascript><!--
+document.write("<img src=\"http://www.3p.com/cgi-bin/cnt.cgi?id=620&t=1",
+"&r="+escape(parent.document.referrer),"\" width=88 height=31 ",
+"border=0 alt=\"3P.RU\">");//--></SCRIPT>
+      <NOSCRIPT><IMG alt=3P.COM border=0 height=31 
+      src="C:\users\max\work\VISUAL\KNIGA2\Програмирование на Visual C++!index.files\cnt(1).gif" 
+      width=88></NOSCRIPT></A> <!--3P COUNTER--><BR><A 
+      href="http://www.stars.ru/" target=_top><IMG border=0 height=30 
+      src="Програмирование на Visual C++!index.files/1000.gif" width=50></A><BR>
+      <P> </P></DIV>
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> </P></TD>
+    <TD borderColorDark=#800000 borderColorLight=#800000 width=450>
+      <CENTER><FONT color=#800000 face=ARIAL size=5><B>Школа MFC</B></FONT><BR>
+      <HR width=300>
+
+      <P></CENTER>
+      <DIV align=center>
+      <TABLE border=0 cellPadding=0 cellSpacing=0 width="89%">
+        <TBODY>
+        <TR>
+          <TD><FONT color=blue face="MS SANS SERIF" size=2><B>Этот раздел 
+            создан в помощь начинающим в программировании на Visual C++. </B>
+            <P>&nbsp; <FONT color=black>В данной главе будут рассматриваться 
+            самые эффективные способы написания кода с помощью классов 
+            MFC(Microsoft Foundation Class Library).<BR>&nbsp; Вы пройдете весь 
+            курс за пару дней. Примеры несложные, наглядные, но с 
+            изюминкой.<BR>Каждая программа отличается новыми возможностями. 
+            <BR>&nbsp; Вы научитесь без проблем работать с диалоговыми окнами, 
+            связывать элементы управления, выводить графику, работать с меню, 
+            обробатывать мышь и клавиатуру.<BR>&nbsp; Разрабатывать 
+            профессиональные приложения, используя DirectX &amp; Sound, включать 
+            ActiveX элементы и создавать собственные DLL библиотеки. 
+            </FONT></P></FONT></TD></TR></TBODY></TABLE>
+      <P>
+      <TABLE border=0 width="90%">
+        <TBODY>
+        <TR bgColor=#d5b171>
+          <TD colSpan=2><FONT color=white face="MS SANS SERIF" 
+            size=2>&nbsp;&nbsp;&nbsp;Уроки программирования на Visual C++ с 
+            помощью MFC</FONT> </TD></TR>
+        <TR bgColor=#f4f4f4>
+          <TD width=55><FONT face="MS SANS SERIF" size=2><A 
+            href="http://vnews.uka.ru/html/Lessons/lesson001.htm">&nbsp;&nbsp;Урок 
+            I</A></FONT> </TD>
+          <TD><FONT color=black face="MS SANS SERIF" size=2>Ваше первое 
+            приложение на Visual C++. </FONT></TD></TR>
+        <TR bgColor=white>
+          <TD><FONT face="MS SANS SERIF" size=2><A 
+            href="http://vnews.uka.ru/html/Lessons/lesson002.htm">&nbsp;&nbsp;Урок 
+            II</A></FONT> </TD>
+          <TD><FONT color=black face="MS SANS SERIF" size=2>Элементы 
+            управления, свойства и события. </FONT></TD></TR>
+        <TR bgColor=#f4f4f4>
+          <TD><FONT face="MS SANS SERIF" size=2><A 
+            href="http://vnews.uka.ru/html/Lessons/lesson003.htm">&nbsp;&nbsp;Урок 
+            III</A></FONT> </TD>
+          <TD><FONT color=black face="MS SANS SERIF" size=2>Работа с мышью. 
+            </FONT></TD></TR>
+        <TR bgColor=white>
+          <TD><FONT face="MS SANS SERIF" size=2><A 
+            href="http://vnews.uka.ru/html/Lessons/lesson004.htm">&nbsp;&nbsp;Урок 
+            IV</A></FONT> </TD>
+          <TD><FONT color=black face="MS SANS SERIF" size=2>Работа с 
+            клавиатурой. </FONT></TD></TR>
+        <TR bgColor=#f4f4f4>
+          <TD><FONT face="MS SANS SERIF" size=2><A 
+            href="http://vnews.uka.ru/html/Lessons/lesson005.htm">&nbsp;&nbsp;Урок 
+            V</A></FONT> </TD>
+          <TD><FONT color=black face="MS SANS SERIF" size=2>Работа с меню. 
+            </FONT></TD></TR>
+        <TR bgColor=white>
+          <TD><FONT face="MS SANS SERIF" size=2><A 
+            href="http://vnews.uka.ru/html/Lessons/lesson006.htm">&nbsp;&nbsp;Урок 
+            VI</A></FONT> </TD>
+          <TD><FONT color=black face="MS SANS SERIF" size=2>Предопределенные 
+            диалоговые панели. </FONT></TD></TR>
+        <TR bgColor=#f4f4f4>
+          <TD><FONT face="MS SANS SERIF" size=2><A 
+            href="http://vnews.uka.ru/html/Lessons/lesson007.htm">&nbsp;&nbsp;Урок 
+            VII</A></FONT> </TD>
+          <TD><FONT color=black face=TAHOMA size=2>Рисование фигур. 
+        </FONT></TD></TR>
+        <TR bgColor=white>
+          <TD><FONT face="MS SANS SERIF" size=2><A 
+            href="http://vnews.uka.ru/html/Lessons/lesson008.htm">&nbsp;&nbsp;Урок 
+            VIII</A></FONT> </TD>
+          <TD><FONT color=black face="MS SANS SERIF" size=2>Графический 
+            редактор. </FONT></TD></TR>
+        <TR bgColor=#f4f4f4>
+          <TD><FONT face="MS SANS SERIF" size=2><A 
+            href="http://vnews.uka.ru/html/Lessons/lesson009.htm">&nbsp;&nbsp;Урок 
+            IX</A></FONT> </TD>
+          <TD><FONT color=black face="MS SANS SERIF" size=2>Игра "Deal Cards". 
+            </FONT></TD></TR>
+        <TR bgColor=white>
+          <TD><FONT face="MS SANS SERIF" size=2><A 
+            href="http://vnews.uka.ru/html/Lessons/lesson000.htm">&nbsp;&nbsp;Урок 
+            X</A></FONT> </TD>
+          <TD><FONT color=black face="MS SANS SERIF" size=2>Открытие BMP 
+            файлов. </FONT></TD></TR>
+        <TR bgColor=#f4f4f4>
+          <TD><FONT face="MS SANS SERIF" size=2><A 
+            href="http://vnews.uka.ru/html/Lessons/Lesson20/lesson000.htm">&nbsp;&nbsp;Урок 
+            XI</A></FONT> </TD>
+          <TD><FONT color=black face="MS SANS SERIF" size=2>Работа программы в 
+            фоновом режиме. </FONT></TD></TR>
+        <TR bgColor=white>
+          <TD><FONT face="MS SANS SERIF" size=2><A 
+            href="http://vnews.uka.ru/html/Lessons/Lesson20/lesson001.htm">&nbsp;&nbsp;Урок 
+            XII</A></FONT> </TD>
+          <TD><FONT color=black face="MS SANS SERIF" size=2>Создание Internet 
+            браузера. </FONT></TD></TR>
+        <TR bgColor=#f4f4f4>
+          <TD><FONT face="MS SANS SERIF" size=2><A 
+            href="http://vnews.uka.ru/html/Lessons/Lesson20/lesson002.htm">&nbsp;&nbsp;Урок 
+            XIII</A></FONT> </TD>
+          <TD><FONT color=black face="MS SANS SERIF" size=2>Чтение клавиш 
+            обработчиком WM_CHAR. </FONT></TD></TR></TBODY></TABLE>
+      <P>&nbsp; 
+      <TABLE border=0 width="90%">
+        <TBODY>
+        <TR bgColor=#d5b171>
+          <TD colSpan=2><FONT color=white face="MS SANS SERIF" 
+            size=2>&nbsp;&nbsp;&nbsp;Статейки для умников</FONT> </TD></TR>
+        <TR bgColor=white>
+          <TD><FONT face="MS SANS SERIF" size=2><A 
+            href="http://vnews.uka.ru/html/Lessons/Aticles/aticle01.htm">&nbsp;&nbsp;Создание 
+            диалогового окна с ярлычками(диалогами)</A></FONT> </TD></TR>
+        <TR bgColor=white>
+          <TD><FONT face="MS SANS SERIF" size=2><A 
+            href="http://vnews.uka.ru/html/Lessons/Aticles/aticle02.htm">&nbsp;&nbsp;Изменение 
+            стандартного курсора</A></FONT> </TD></TR>
+        <TR bgColor=white>
+          <TD><FONT face="MS SANS SERIF" size=2><A 
+            href="http://vnews.uka.ru/html/Lessons/Aticles/aticle03.htm">&nbsp;&nbsp;Использование 
+            класса CTabCtrl</A></FONT> </TD></TR>
+        <TR bgColor=white>
+          <TD><FONT face="MS SANS SERIF" size=2><A 
+            href="http://vnews.uka.ru/html/Lessons/Aticles/aticle04.htm">&nbsp;&nbsp;Работа 
+            с WinSocket</A></FONT> </TD></TR>
+        <TR bgColor=white>
+          <TD><FONT face="MS SANS SERIF" size=2><A 
+            href="http://vnews.uka.ru/html/Lessons/Aticles/aticle05.htm">&nbsp;&nbsp;Проигрывание 
+            Wave файлов c использованием MFC</A></FONT> 
+      </TD></TR></TBODY></TABLE></P></DIV></TD></TR>
+  <TR>
+    <TD borderColorDark=#800000 borderColorLight=#800000 colSpan=2>
+      <DIV align=center>
+      <TABLE border=0 cellPadding=0 cellSpacing=0 width="70%">
+        <TBODY>
+        <TR>
+          <TD><FONT color=black face="MS SANS SERIF" size=1><A 
+            href="http://algo.da.ru/" target=_top><B>Algorithm project</A>:</B> 
+            Кольцо сайтов, посвященных программированию (<A 
+            href="http://webring.da.ru/" style="COLOR: black" 
+            target=_top>подробнее о проекте WebRing...</A>)<BR>[<A 
+            href="http://www.webring.org/cgi-bin/webring?ring=ru_rk_ring;id=10;prev5" 
+            target=_top>Предыдущие 5 сайтов</A> | <A 
+            href="http://www.webring.org/cgi-bin/webring?ring=ru_rk_ring;id=10;prev" 
+            target=_top>Предыдуший</A> | <A 
+            href="http://www.webring.org/cgi-bin/webring?ring=ru_rk_ring;id=10;next" 
+            target=_top>Следующий</A> | <A 
+            href="http://www.webring.org/cgi-bin/webring?ring=ru_rk_ring;id=10;next5" 
+            target=_top>Следующие 5 сайтов</A> | <A 
+            href="http://www.webring.org/cgi-bin/webring?ring=ru_rk_ring;random" 
+            target=_top>Выбрать сайт случайным образом</A> <A 
+            href="http://www.webring.org/cgi-bin/webring?ring=ru_rk_ring;list" 
+            target=_top>Список всех сайтов</A> ] 
+      </FONT></TD></TR></TBODY></TABLE></DIV></TD></TR></TBODY></TABLE><BR>
+<TABLE bgColor=#f8f1e4 border=1 borderColor=#800000 cellPadding=0 cellSpacing=5 
+width=700>
+  <TBODY>
+  <TR>
+    <TD height=40>
+      <DIV align=center>
+      <TABLE border=0 cellPadding=0 cellSpacing=10 width="37%">
+        <TBODY>
+        <TR>
+          <TD width="16%">
+            <P align=center>
+            <SCRIPT>
+// <!--
+
+var rndnum = Math.round(Math.random() * 10000);
+if (rndnum < 3) {
+
+document.write('<a href=http://www.linkexchange.ru/users/051294/goto.map target=_blank>');
+document.write('<img src=http://www.linkexchange.ru/cgi-bin/rle.cgi?51294?' + rndnum + ' ');
+document.write('alt="RLE Banner Network" border=0 height=60 width=468></a>');
+
+} else {
+document.write('<a href="http://m2k.ru/cgi-bin/t2-click//T2RB//533/' + rndnum + '/1/" target=_blank><img src="http://m2k.ru/cgi-bin/t2-requester?account=533&network=1&format=468|60&dumb=&magic=' + rndnum + '&keywords=" alt="M2K Network" width=468 height=60 border=0></a>');
+//document.write('<a href="http://m2k.ru/cgi-bin/t2-click//T2RB//anekdots/' + rndnum + '/" target=_blank><img src="http://m2k.ru/cgi-bin/t2-requester?account=anekdots&dumb=&magic=' + rndnum + '" alt="M2K Network" width=468 height=60 border=0></a>');
+}
+// -->
+</SCRIPT>
+
+            <SCRIPT>
+// <!--
+var ie4 = (document.all) ? true : false;
+if (ie4) { document.write('<img src="/ad/counter" WIDTH=1 HEIGHT=0 border=0>'); }
+// -->
+</SCRIPT>
+            <BR><B><FONT face=tahoma size=2><A href="http://www.sudba.ru/" 
+            target=_blank>Е-ЛЮБОВЬ</A> | <A href="http://love.uka.ru/" 
+            target=_blank>ЗНАКОМСТВА</A> | <A href="http://chat.uka.ru/" 
+            target=_blank><FONT color=red>взрывЧАТка</FONT></A> <!--
+| <a href="http://www.anekdots.ru" target='_blank'>АНЕКДОТЫ</a>
+| <a href="http://www.anekdots.ru" target='_blank'>ИГРЫ</a>
+--></FONT></B></P></TD></TR></TBODY></TABLE></DIV></TD></TR></TBODY></TABLE></DIV>
+<P>
+<CENTER>
+<DIV class=base2 style="COLOR: black">Copyright © 1999 C++ Programmers Club 
+</DIV>
+<DIV class=base2 style="COLOR: black">Author: <A 
+href="mailto:vnews@mail.ru">Kuklin Alexey</A> All Rights Reserved 
+</DIV></CENTER>
+<P> </P></BODY></HTML>

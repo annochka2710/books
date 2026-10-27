@@ -1,0 +1,522 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0046)http://vnews.uka.ru/html/Lessons/lesson018.htm -->
+<HTML><HEAD><TITLE>Програмирование на Visual C++</TITLE>
+<META content="text/html; charset=windows-1251" http-equiv=Content-Type>
+<META content="Kuklin Alexey Email: vnews@mail.ru" name=author>
+<META 
+content="programming, программирование, soft, helps, web webdizain, photo, photoshop, internet, examples, conference, конференция, софт, примеры программ, исходники, source, codes, MFC, MTL, vc, visual, c , c++, с++,с, документация, documentation" 
+name=keywords>
+<META 
+content="Документация C, C++ , Visual C , Object C, Quick C, Turbo C, ActiveX. Школа MFC, софт, примеры программ и исходники к ним, справочные книги и конференция." 
+name=description><LINK href="Програмирование на Visual C++82.files/styles.css" 
+rel=STYLESHEET title=Style type=text/css>
+<META content="MSHTML 5.00.2614.3500" name=GENERATOR></HEAD>
+<BODY bgColor=#e9d7b1 leftMargin=0 text=black topMargin=0>
+<DIV align=center><BR>
+<TABLE bgColor=#f8f1e4 border=1 borderColor=#800000 borderColorDark=#f8f1e4 
+borderColorLight=#f8f1e4 cellPadding=0 cellSpacing=4 height=250 width=700>
+  <TBODY>
+  <TR>
+    <TD borderColorDark=#800000 borderColorLight=#800000 colSpan=2 height=80>
+      <DIV align=center>
+      <SCRIPT>
+// <!--
+var default_user_id = 65561;
+var userid = default_user_id;
+get_user_id();
+if (userid == 123456) {userid=default_user_id;}
+var page = 1;
+var rndnum = Math.round(Math.random() * 10000);
+document.write('<A HREF="http://ad.tbn.ru/bb.cgi?cmd=go&pubid=' + userid + '&pg=' + page + '&vbn=189&num=1&w=468&h=60&nocache=' + rndnum + '" target="_blank">');
+document.write('<IMG SRC="http://ad.tbn.ru/bb.cgi?cmd=ad&pubid=' + userid + '&pg=' + page + '&vbn=189&num=1&w=468&h=60&nocache=' + rndnum + '" width=468 height=60 Alt="TBN.ru" border=1></A>');
+
+function get_user_id(){
+        var tmp = window.parent.location.href;
+        var user_id = tmp.replace(/.+user_id=/,"");
+        if(user_id.search(/^[0123456789]+.*$/g)!=-1)
+                       userid = user_id;                       
+                                else
+                                  userid = default_user_id;
+}
+
+// -->
+</SCRIPT>
+
+      <SCRIPT>
+// <!--
+var ie4 = (document.all) ? true : false;
+if (ie4) { document.write('<img src="/ad/counter" WIDTH=1 HEIGHT=0 border=0>'); }
+// -->
+</SCRIPT>
+      <BR><B><FONT face=tahoma size=2><A href="http://www.sudba.ru/" 
+      target=_blank>Е-ЛЮБОВЬ</A> | <A href="http://love.uka.ru/" 
+      target=_blank>ЗНАКОМСТВА</A> | <A href="http://chat.uka.ru/" 
+      target=_blank><FONT color=red>взрывЧАТка</FONT></A> <!--
+| <a href="http://www.anekdots.ru" target='_blank'>АНЕКДОТЫ</a>
+| <a href="http://www.anekdots.ru" target='_blank'>ИГРЫ</a>
+| <a href="http://www.anekdots.ru" target='_blank'>MУЗЫКА</a>
+--></FONT></B></DIV></TD></TR>
+  <TR>
+    <TD borderColorDark=#800000 borderColorLight=#800000 width="29%">
+      <CENTER>
+      <DIV class=base style="COLOR: #000080"><B>Меню</B></DIV></CENTER><BR><FONT 
+      size=1><IMG border=0 hspace=3 
+      src="Програмирование на Visual C++82.files/uk.gif"><A 
+      href="http://vnews.uka.ru/html/about.htm"><B class=base2>О Проекте</B>
+      <P></A><IMG border=0 hspace=3 
+      src="Програмирование на Visual C++82.files/uk.gif"><A 
+      href="http://vnews.uka.ru/index.html"><B class=base2> Новости</B>
+      <P></A><IMG border=0 hspace=3 
+      src="Програмирование на Visual C++82.files/uk.gif"><A 
+      href="http://vnews.uka.ru/html/pclub.htm"><B class=base2> Клуб 
+      Программеров С++</B>
+      <P></A><IMG border=0 hspace=3 
+      src="Програмирование на Visual C++82.files/uk.gif"><A 
+      href="http://vnews.uka.ru/html/docs.htm"><B class=base2> Документация</B>
+      <P></A><IMG border=0 hspace=3 
+      src="Програмирование на Visual C++82.files/uk.gif"><A 
+      href="http://vnews.uka.ru/html/components.htm"><B class=base2> 
+      Инструментарий</B>
+      <P></A><IMG border=0 hspace=3 
+      src="Програмирование на Visual C++82.files/uk.gif"><A 
+      href="http://vnews.uka.ru/html/school.htm"><B class=base2> Школа C++</B>
+      <P></A><IMG border=0 hspace=3 
+      src="Програмирование на Visual C++82.files/uk.gif"><A 
+      href="http://vnews.uka.ru/html/Examples/sources.htm"><B class=base2> 
+      Исходники</B>
+      <P></A><IMG border=0 hspace=3 
+      src="Програмирование на Visual C++82.files/uk.gif"><A 
+      href="http://www.fido7.com/cgi-fido7/forumi.pl?user=vnews"><B 
+      class=base2>Форум С++</B>
+      <P></A><IMG border=0 hspace=3 
+      src="Програмирование на Visual C++82.files/uk.gif"><A 
+      href="http://vnews.uka.ru/html/links.htm"><B class=base2> Ссылки</B>
+      <P></A><IMG border=0 hspace=3 
+      src="Програмирование на Visual C++82.files/uk.gif"><A 
+      href="http://www.guestbook.ru/book.cgi?user=cppmfc&amp;action=show"><B 
+      class=base2> Отзывы и предложения</B>
+      <P></A><IMG border=0 hspace=3 
+      src="Програмирование на Visual C++82.files/uk.gif"><A 
+      href="http://vnews.uka.ru/html/map.htm"><B class=base2> Карта сайта</B>
+      <P></A>
+      <HR width="90%">
+
+      <DIV align=center>
+      <SCRIPT language=javascript>
+<!-- 
+an=navigator.appName;d=document;function 
+pr(){d.write("<A HREF=\"http://count.ru/cgi-bin/href.cgi?", 
+"id=9203\"><img src=\"http://count.ru/cgi-bin/", 
+"count.cgi?id=9203&j=y&w="+srw+"&c="+srb+"&", 
+"ref="+escape(d.referrer)+"\" height=31 border=0", 
+" width=88></A>");}srb="na";srw="na";//--> 
+</SCRIPT>
+
+      <SCRIPT language=javascript1.2><!-- 
+s=screen;srw=s.width;an!="Netscape"? 
+srb=s.colorDepth:srb=s.pixelDepth;//--> 
+</SCRIPT>
+
+      <SCRIPT language=javascript><!-- 
+pr();//--> 
+</SCRIPT>
+      <NOSCRIPT><BR><A href="http://count.ru/cgi-bin/href.cgi?id=9203"><IMG 
+      border=0 height=31 src="Програмирование на Visual C++82.files/count.html" 
+      vspace=3 width=88></A> </NOSCRIPT><BR><!--LIST100 COUNTER--><A 
+      href="http://counter.list.ru/cgi-bin/jump?from=12813" target=_top>
+      <SCRIPT>
+<!--
+d=document;js=10;a='&pageref='+escape(d.referrer)
+//--></SCRIPT>
+
+      <SCRIPT language=JavaScript1.1><!--
+js=11;a+='&jsbool='+navigator.javaEnabled()
+//--></SCRIPT>
+
+      <SCRIPT language=JavaScript1.2><!--
+js=12;s=screen;a+='&res='+s.width+'*'+s.height
+a+='&depth='+(s.colorDepth?s.colorDepth:s.pixelDepth)
+//--></SCRIPT>
+
+      <SCRIPT language=JavaScript1.3><!--
+js=13//--></SCRIPT>
+
+      <SCRIPT><!--
+d.write('<img src="http://counter.list.ru/cgi-bin/counter.dll'+
+'?id=12813&type=1&cd=1&bt=0&jsver='+js+a+
+'" alt="LIST100 Counter" border="0" height="40" width="88">')
+if(js>11)d.write('<'+'!-- ')//--></SCRIPT>
+      <NOSCRIPT><IMG alt="LIST100 Counter" border=0 height=32 
+      src="Програмирование на Visual C++82.files/counter.gif" vspace=3 
+      width=80></NOSCRIPT>
+      <SCRIPT><!--
+if(js>11)d.write('--'+'>')
+//-->
+</SCRIPT>
+      </A> <!--LIST100 COUNTER--><BR><A href="http://www.index99.kiev.ua/" 
+      target=_blank><IMG alt="Index'99" border=0 height=31 
+      src="Програмирование на Visual C++82.files/count1.gif" vspace=3 
+      width=88></A><BR><!--NUMBER ONE COUNTER--><A href="http://www.one.ru/" 
+      target=_top>
+      <SCRIPT language=javascript><!--
+document.write("<img src=\"http://www.one.ru/cgi-bin/cnt.cgi?id=4201&t=1",
+"&r="+escape(parent.document.referrer),"\" width=88 height=31 ",
+"border=0 alt=\"become number one\">");//--></SCRIPT>
+      <NOSCRIPT><IMG alt="be number one" border=0 height=31 
+      src="Програмирование на Visual C++82.files/cnt.gif" 
+      width=88></NOSCRIPT></A> <!--NUMBER ONE COUNTER--><BR><!--3P COUNTER--><A 
+      href="http://www.3p.com/" target=_top>
+      <SCRIPT language=javascript><!--
+document.write("<img src=\"http://www.3p.com/cgi-bin/cnt.cgi?id=620&t=1",
+"&r="+escape(parent.document.referrer),"\" width=88 height=31 ",
+"border=0 alt=\"3P.RU\">");//--></SCRIPT>
+      <NOSCRIPT><IMG alt=3P.COM border=0 height=31 
+      src="C:\users\max\work\VISUAL\KNIGA2\Програмирование на Visual C++82.files\cnt(1).gif" 
+      width=88></NOSCRIPT></A> <!--3P COUNTER--><BR><A 
+      href="http://www.stars.ru/" target=_top><IMG border=0 height=30 
+      src="Програмирование на Visual C++82.files/1000.gif" width=50></A><BR>
+      <P> </P></DIV>
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> </P></FONT></TD>
+    <TD borderColorDark=#800000 borderColorLight=#800000><FONT color=green 
+      face=TAHOMA size=5>
+      <CENTER><B>Урок VIII</B></CENTER></FONT>
+      <P>
+      <P align=center><FONT color=black face=ARIAL size=4>Проектирование 
+      диалоговой панели</FONT></P>
+      <DIV align=center>
+      <TABLE width="95%">
+        <TBODY>
+        <TR>
+          <TD><FONT color=black face=TAHOMA size=2>Сейчас мы визуально 
+            спроектируем диалоговую панель. Для этого вначале выбирете закладку 
+            <B>"Resourse View"</B> и раскройте пункт <B>PointORama Resource</B>, 
+            как показано на рис. 1.5. 
+            <P align=center><IMG 
+            src="Програмирование на Visual C++82.files/vc_resourceview_point_dlg.gif"></P>Выполните 
+            слдеующие действия <BR>
+            <UL type=square>
+              <LI>Щелкните два раза по надписи <B>IDD_PAINTORAMA_DIALOG</B>. 
+              Справа появится окно проектирования диалоговой панели. 
+              <LI>
+              <LI>С помощью панели <B>Controls</B> расставьте элементы, 
+              управления как показано на рис. 2.0 и согласно таблице 2.0. 
+              <P align=center><IMG 
+              src="Програмирование на Visual C++82.files/vc_resource_dlg_proekt2.gif"></P>
+              <P align=center><FONT color=red><B>Таблица 2.0</B></FONT></P>
+              <DIV align=center>
+              <TABLE bgColor=#ffffbb border=1 cellPadding=0 cellSpacing=0 
+              width="80%">
+                <TBODY>
+                <TR>
+                  <TD><FONT face=ARIAL size=2><B>Объект</B></FONT></TD>
+                  <TD><FONT face=ARIAL size=2><B>Свойство</B></FONT></TD>
+                  <TD><FONT face=ARIAL size=2><B>Установка</B></FONT></TD></TR>
+                <TR>
+                  <TD><FONT face=ARIAL size=2><B>Dialog Box</B></FONT></TD>
+                  <TD><FONT face=ARIAL size=2><B>ID</B></FONT></TD>
+                  <TD><FONT face=ARIAL 
+                    size=2><B>IDD_PAINTORAMA_DIALOG</B></FONT></TD></TR>
+                <TR>
+                  <TD></TD>
+                  <TD><FONT face=ARIAL size=2>Caption</FONT></TD>
+                  <TD><FONT face=ARIAL size=2>The PaintORama 
+                Program</FONT></TD></TR>
+                <TR>
+                  <TD></TD>
+                  <TD><FONT face=ARIAL size=2>Font</FONT></TD>
+                  <TD><FONT face=ARIAL size=2>System, Size 10, страница 
+                    Styles</FONT></TD></TR>
+                <TR>
+                  <TD><FONT face=ARIAL size=2><B>Picture</B></FONT></TD>
+                  <TD><FONT face=ARIAL size=2><B>ID</B></FONT></TD>
+                  <TD><FONT face=ARIAL size=2><B>IDC_CANVAS</B></FONT></TD></TR>
+                <TR>
+                  <TD></TD>
+                  <TD><FONT face=ARIAL size=2>Type</FONT></TD>
+                  <TD><FONT face=ARIAL size=2>Frame</FONT></TD></TR>
+                <TR>
+                  <TD></TD>
+                  <TD><FONT face=ARIAL size=2>Color</FONT></TD>
+                  <TD><FONT face=ARIAL size=2>Gray, страница 
+                Styles</FONT></TD></TR>
+                <TR>
+                  <TD></TD>
+                  <TD><FONT face=ARIAL size=2>Sunken</FONT></TD>
+                  <TD><FONT face=ARIAL size=2>Отмечен, страница 
+                  Styles</FONT></TD></TR></TR>
+                <TR>
+                  <TD></TD>
+                  <TD><FONT face=ARIAL size=2>Client edge</FONT></TD>
+                  <TD><FONT face=ARIAL size=2>отмечен, страница Extended 
+                    Styles</FONT></TD></TR>
+                <TR>
+                  <TD><FONT face=ARIAL size=2><B>Push Button</B></FONT></TD>
+                  <TD><FONT face=ARIAL size=2><B>ID<B></FONT></B></B></TD>
+                  <TD><FONT face=ARIAL size=2><B>IDC_CLEARBTN</B></FONT></TD></TR>
+                <TR>
+                  <TD></TD>
+                  <TD><FONT face=ARIAL size=2>Caption</FONT></TD>
+                  <TD><FONT face=ARIAL 
+              size=2>&amp;Clear</FONT></TD></TR></TBODY></TABLE></DIV>
+              <P><BR>
+              <P></P>
+              <LI>Думаю здесь все должно быть понятно. Только хотелось пояснить, 
+              для чего мы установили флажок на <B>Notify</B> 
+              <LI>В объекте <B>Dialog Box</B> вы задаете следующие 
+              данные:<BR><B>Caption</B> - название диалогового 
+              окна.<BR><B>Font</B> - здесь вы уcтановили шрифт -<B>System</B> и 
+              его размер <B>10</B><BR>
+              <LI>Когда будете раставлять элемент <B>Picture</B>, задайте ему 
+              размер <B>251x258</B>, который можно посмотреть в строке 
+              состояния, справа. 
+              <LI>Тип элемента <B>Picture</B> - <B>Frame</B> указывает на то, 
+              что внутри него будет распологаться пустой экран, в котором мы 
+              будем рисовать. 
+              <LI>Начальное значение цвета заливки области нашего 
+              рисавания(клиентской области) устанвливается в <B>Gray</B>. 
+              <LI>Остальные параметры устанавливают вид области. 
+              <LI>Кнопка <B>Clear</B> предназначена для очитки рабочей области. 
+              <P></P></LI></UL><FONT color=black face=TAHOMA size=2>
+            <UL type=square>
+              <P><FONT color=red size=3><B>Связывание кода с событием BN_CLICKED 
+              кнопки Clear</B></FONT></P>При нажатии на кнопку <B>Clear</B> 
+              программа <B>PaintORama</B> должна очистить экран(область 
+              рисования). 
+              <LI>Для этого нам необходимо определить размеры этого окна и 
+              сохранить их в перемнной <B>m_Canvas</B>. 
+              <LI>Выполните следующие шаги:<BR><B>1)</B> Откройте в 
+              <B>Workspace</B> закладку <B>Class View</B>, откройте класс 
+              <B>CPaintORamaDlg</B>. Вызовите контексное меню правой кнопкой 
+              мыши, выбирите там <B>Add Member Variable</B>, появится такое 
+              диалоговое окно: 
+              <P align=center><IMG 
+              src="Програмирование на Visual C++82.files/vc_res_point_addvar1.gif"></P>
+              <LI>В нем вы указываете тип переменной(<B>Variable Type</B>) : 
+              <B>CRect</B>, название (<B>variable Name</B>) : <B>m_Canvas</B> и 
+              права доступа к ней <B>Private</B>. 
+              <LI>Нажмите <B>OK</B>. 
+              <LI>Переменные типа CRect, это объекты класса четырехугольников, 
+              вы можете хранить в ней координаты окна, закрашивать его и многое 
+              другое.
+              <P><B>2)</B> После добавления переменной вам необходимо ее 
+              инициализировать координатми окна. </P>
+              <LI>Это нужно сделать перед выводом самого диалогового окна. Для 
+              этого вам необходимо добавить следующий код в функцию 
+              <B>OnInitDialog</B>. В ней вы можете инициализировать начальные 
+              данные.<BR>
+              <LI>Добавьте следующий код: 
+              <P><B>BOOL 
+              CPaintORamaDlg::OnInitDialog()<BR>{<BR>CDialog::OnInitDialog();<BR><BR>.....<BR>
+              <P>///-Ваш код начинается здесь
+              <P>//Получить указатель на элемент управления 
+              <B>Picture</B><BR>CWnd* p_Canvas=GetDlgItem(IDC_CANVAS);
+              <P>//Записать координаты окна в переменную 
+              <B>m_Canvas</B><BR>p_Canvas-&gt;GetWindowRect(&amp;m_Canvas);
+              <P>//Сопоставить координаты для клиентской 
+              области<BR>ScreenToClient(&amp;m_Canvas);
+              <P>//Изменить координаты окна<BR>m_Canvas.DeflateRect(2,2,1,1);
+              <P>}<BR></B></P>
+              <LI>Вначале вы получаете указатель на элемент управления, чтобы с 
+              помощью него получать или изменять информацию о нем. 
+              <LI>Затем вы записываете координаты в переменную <B>m_Canvas</B>. 
+              <LI>Переменная <B>m_Canvas</B> содержит координаты элемента 
+              <B>Picture</B> относительно экрана, а не главного окна, а в 
+              программе нам необходимы координаты именно относительно клиентской 
+              области, что и выполняет функция <B>ScreenToClient</B>. 
+              <LI>Последний оператор нужен для того, чтобы изменить значение 
+              <B>m_Canvas</B> по 2 пиксела слева и сверху, и по одному справа и 
+              снизу - это то место, которое занимает рамка,иммитирующая 
+              вдавленость окна, а на ней мы не должны рисовать. 
+              <P></P>
+              <LI>Теперь, когда координаты окна у нас получены, нам необходимо 
+              связать код с кнопкой <B>Clear</B>. 
+              <LI>Чтобы связать код с событием <B>BN_CLICKED</B> кнопки 
+              <B>Clear</B>, выполните следующие действия: </LI></UL>
+            <UL type=round>
+              <LI>Выберете <B>ClassWizard</B> в меню <B>View</B> 
+              <LI>Выберете закладку <B>Message Maps</B> в панели 
+              <B>ClassWizard</B> 
+              <LI>Используйте диалоговую панель <B>ClassWizard</B> для выбора 
+              следующего события:<BR><LEFT><B>Class Name: 
+              CPaintORamaDlg<BR>Object ID: IDC_CLEARBTN<BR>Messages: 
+              BN_CLICKED<BR></B></LEFT>
+              <LI>Щелкните на кнопку <B>Add Fucntion</B> и в раскрывшемся окне, 
+              введите название функции: <B>Clearbtn</B> нажмите кнопку 
+              <B>OK</B>. </LI></UL>
+            <UL type=square>
+              <LI>Нажмите кнопку <B>Edit Code</B> и напишите следующий код в 
+              функции <B>OnClearbtn()</B>: 
+              <P><B>void CPaintORamaDlg::OnClearbtn()<BR>{<BR>// TODO: Add your 
+              control notification handler code here
+              <P>////////Мой код начинается здесь///////////
+              <P>//Получить указатель на контекст устройства<BR>CClientDC 
+              dc(this);
+              <P>//Выбрать нулевое перо<BR>dc.SelectStockObject(NULL_PEN);
+              <P>//Очистить окно<BR>dc.Rectangle(m_Canvas);
+              <P>////////Мой код заканчивается здесь///////////
+              <P>}<BR></B></P>
+              <LI>Функция <B>Clearbtn</B>, которую вы ввели очищает экран. 
+              <LI>Вначале вы получили указатель на DC, теперь можно рисовать. 
+              <LI>Затем вы выбираете перо, которым будете рисовать, оно нулевое 
+              значит будет использоваться для закраски белый цвет. 
+              <LI>Последний оператор закрашивает окно(область рисования). 
+            </LI></UL>Мы связали код с кнопкой <B>Clear</B> Запустите и 
+            откомпилируйте программу, убедитесь, что при нажатии на кнопку 
+            <B>Clear</B> область рисования очищается.
+            <P>Теперь нам необходимо добавить код выбора цвета для рисования и 
+            добавить саму возможность рисовать.<BR>
+            <P><BR><BR>Связывание элементов управления с событиями <A 
+            href="http://vnews.uka.ru/html/Lessons/lesson008.htm"><B 
+            class=base2>&lt;-Назад</B></A> || <A 
+            href="http://vnews.uka.ru/html/Lessons/lesson028.htm"><B 
+            class=base2>Дальше -&gt;</B></A> 
+            <P>
+            <CENTER><B><FONT color=green><A 
+            href="http://vnews.uka.ru/html/Lessons/lesson008.htm">[1]</A> [2] <A 
+            href="http://vnews.uka.ru/html/Lessons/lesson028.htm">[3]</A><A 
+            href="http://vnews.uka.ru/html/Lessons/lesson038.htm"> [4]</A><A 
+            href="http://vnews.uka.ru/html/Lessons/lesson048.htm"> [5] </A><A 
+            href="http://vnews.uka.ru/html/Lessons/lesson058.htm">[6]</A><A 
+            href="http://vnews.uka.ru/html/Lessons/lesson068.htm"> [7]<A> <A 
+            href="http://vnews.uka.ru/html/Lessons/lesson078.htm">[8]</A> <A 
+            href="http://vnews.uka.ru/html/Lessons/lesson088.htm">[9]</A></B></FONT></CENTER></FONT></FONT></TD></TR></TBODY></TABLE></DIV></TD></TR>
+  <TR>
+    <TD borderColorDark=#800000 borderColorLight=#800000 colSpan=2>
+      <DIV align=center>
+      <TABLE border=0 cellPadding=0 cellSpacing=0 width="70%">
+        <TBODY>
+        <TR>
+          <TD><FONT color=black face="MS SANS SERIF" size=1><A 
+            href="http://algo.da.ru/" target=_top><B>Algorithm project</A>:</B> 
+            Кольцо сайтов, посвященных программированию (<A 
+            href="http://webring.da.ru/" style="COLOR: black" 
+            target=_top>подробнее о проекте WebRing...</A>)<BR>[<A 
+            href="http://www.webring.org/cgi-bin/webring?ring=ru_rk_ring;id=10;prev5" 
+            target=_top>Предыдущие 5 сайтов</A> | <A 
+            href="http://www.webring.org/cgi-bin/webring?ring=ru_rk_ring;id=10;prev" 
+            target=_top>Предыдуший</A> | <A 
+            href="http://www.webring.org/cgi-bin/webring?ring=ru_rk_ring;id=10;next" 
+            target=_top>Следующий</A> | <A 
+            href="http://www.webring.org/cgi-bin/webring?ring=ru_rk_ring;id=10;next5" 
+            target=_top>Следующие 5 сайтов</A> | <A 
+            href="http://www.webring.org/cgi-bin/webring?ring=ru_rk_ring;random" 
+            target=_top>Выбрать сайт случайным образом</A> <A 
+            href="http://www.webring.org/cgi-bin/webring?ring=ru_rk_ring;list" 
+            target=_top>Список всех сайтов</A> ] 
+      </FONT></TD></TR></TBODY></TABLE></DIV></TD></TR></TBODY></TABLE><BR>
+<TABLE bgColor=#f8f1e4 border=1 borderColor=#800000 cellPadding=0 cellSpacing=5 
+width=700>
+  <TBODY>
+  <TR>
+    <TD height=40>
+      <DIV align=center>
+      <TABLE border=0 cellPadding=0 cellSpacing=10 width="37%">
+        <TBODY>
+        <TR>
+          <TD width="16%"></TD></TR></TBODY></TABLE></DIV></TD></TR></TBODY></TABLE></DIV>
+<P>
+<CENTER>
+<DIV class=base2 style="COLOR: black">Copyright © 1999 C++ Programmers Club 
+</DIV>
+<DIV class=base2 style="COLOR: black">Author: <A 
+href="mailto:vnews@mail.ru">Kuklin Alexey</A> All Rights Reserved 
+</DIV></CENTER>
+<P> </P></BODY></HTML>

@@ -1,0 +1,690 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0046)http://vnews.uka.ru/html/Lessons/lesson068.htm -->
+<HTML><HEAD><TITLE>Програмирование на Visual C++</TITLE>
+<META content="text/html; charset=windows-1251" http-equiv=Content-Type>
+<META content="Kuklin Alexey Email: vnews@mail.ru" name=author>
+<META 
+content="programming, программирование, soft, helps, web webdizain, photo, photoshop, internet, examples, conference, конференция, софт, примеры программ, исходники, source, codes, MFC, MTL, vc, visual, c , c++, с++,с, документация, documentation" 
+name=keywords>
+<META 
+content="Документация C, C++ , Visual C , Object C, Quick C, Turbo C, ActiveX. Школа MFC, софт, примеры программ и исходники к ним, справочные книги и конференция." 
+name=description><LINK href="Програмирование на Visual C++87.files/styles.css" 
+rel=STYLESHEET title=Style type=text/css>
+<META content="MSHTML 5.00.2614.3500" name=GENERATOR></HEAD>
+<BODY bgColor=#e9d7b1 leftMargin=0 text=black topMargin=0>
+<DIV align=center><BR>
+<TABLE bgColor=#f8f1e4 border=1 borderColor=#800000 borderColorDark=#f8f1e4 
+borderColorLight=#f8f1e4 cellPadding=0 cellSpacing=4 height=250 width=700>
+  <TBODY>
+  <TR>
+    <TD borderColorDark=#800000 borderColorLight=#800000 colSpan=2 height=80>
+      <DIV align=center>
+      <SCRIPT>
+// <!--
+var default_user_id = 65561;
+var userid = default_user_id;
+get_user_id();
+if (userid == 123456) {userid=default_user_id;}
+var page = 1;
+var rndnum = Math.round(Math.random() * 10000);
+document.write('<A HREF="http://ad.tbn.ru/bb.cgi?cmd=go&pubid=' + userid + '&pg=' + page + '&vbn=189&num=1&w=468&h=60&nocache=' + rndnum + '" target="_blank">');
+document.write('<IMG SRC="http://ad.tbn.ru/bb.cgi?cmd=ad&pubid=' + userid + '&pg=' + page + '&vbn=189&num=1&w=468&h=60&nocache=' + rndnum + '" width=468 height=60 Alt="TBN.ru" border=1></A>');
+
+function get_user_id(){
+        var tmp = window.parent.location.href;
+        var user_id = tmp.replace(/.+user_id=/,"");
+        if(user_id.search(/^[0123456789]+.*$/g)!=-1)
+                       userid = user_id;                       
+                                else
+                                  userid = default_user_id;
+}
+
+// -->
+</SCRIPT>
+
+      <SCRIPT>
+// <!--
+var ie4 = (document.all) ? true : false;
+if (ie4) { document.write('<img src="/ad/counter" WIDTH=1 HEIGHT=0 border=0>'); }
+// -->
+</SCRIPT>
+      <BR><B><FONT face=tahoma size=2><A href="http://www.sudba.ru/" 
+      target=_blank>Е-ЛЮБОВЬ</A> | <A href="http://love.uka.ru/" 
+      target=_blank>ЗНАКОМСТВА</A> | <A href="http://chat.uka.ru/" 
+      target=_blank><FONT color=red>взрывЧАТка</FONT></A> <!--
+| <a href="http://www.anekdots.ru" target='_blank'>АНЕКДОТЫ</a>
+| <a href="http://www.anekdots.ru" target='_blank'>ИГРЫ</a>
+| <a href="http://www.anekdots.ru" target='_blank'>MУЗЫКА</a>
+--></FONT></B></DIV></TD></TR>
+  <TR>
+    <TD borderColorDark=#800000 borderColorLight=#800000 width="29%">
+      <CENTER>
+      <DIV class=base style="COLOR: #000080"><B>Меню</B></DIV></CENTER><BR><FONT 
+      size=1><IMG border=0 hspace=3 
+      src="Програмирование на Visual C++87.files/uk.gif"><A 
+      href="http://vnews.uka.ru/html/about.htm"><B class=base2>О Проекте</B>
+      <P></A><IMG border=0 hspace=3 
+      src="Програмирование на Visual C++87.files/uk.gif"><A 
+      href="http://vnews.uka.ru/index.html"><B class=base2> Новости</B>
+      <P></A><IMG border=0 hspace=3 
+      src="Програмирование на Visual C++87.files/uk.gif"><A 
+      href="http://vnews.uka.ru/html/pclub.htm"><B class=base2> Клуб 
+      Программеров С++</B>
+      <P></A><IMG border=0 hspace=3 
+      src="Програмирование на Visual C++87.files/uk.gif"><A 
+      href="http://vnews.uka.ru/html/docs.htm"><B class=base2> Документация</B>
+      <P></A><IMG border=0 hspace=3 
+      src="Програмирование на Visual C++87.files/uk.gif"><A 
+      href="http://vnews.uka.ru/html/components.htm"><B class=base2> 
+      Инструментарий</B>
+      <P></A><IMG border=0 hspace=3 
+      src="Програмирование на Visual C++87.files/uk.gif"><A 
+      href="http://vnews.uka.ru/html/school.htm"><B class=base2> Школа C++</B>
+      <P></A><IMG border=0 hspace=3 
+      src="Програмирование на Visual C++87.files/uk.gif"><A 
+      href="http://vnews.uka.ru/html/Examples/sources.htm"><B class=base2> 
+      Исходники</B>
+      <P></A><IMG border=0 hspace=3 
+      src="Програмирование на Visual C++87.files/uk.gif"><A 
+      href="http://www.fido7.com/cgi-fido7/forumi.pl?user=vnews"><B 
+      class=base2>Форум С++</B>
+      <P></A><IMG border=0 hspace=3 
+      src="Програмирование на Visual C++87.files/uk.gif"><A 
+      href="http://vnews.uka.ru/html/links.htm"><B class=base2> Ссылки</B>
+      <P></A><IMG border=0 hspace=3 
+      src="Програмирование на Visual C++87.files/uk.gif"><A 
+      href="http://www.guestbook.ru/book.cgi?user=cppmfc&amp;action=show"><B 
+      class=base2> Отзывы и предложения</B>
+      <P></A><IMG border=0 hspace=3 
+      src="Програмирование на Visual C++87.files/uk.gif"><A 
+      href="http://vnews.uka.ru/html/map.htm"><B class=base2> Карта сайта</B>
+      <P></A>
+      <HR width="90%">
+
+      <DIV align=center>
+      <SCRIPT language=javascript>
+<!-- 
+an=navigator.appName;d=document;function 
+pr(){d.write("<A HREF=\"http://count.ru/cgi-bin/href.cgi?", 
+"id=9203\"><img src=\"http://count.ru/cgi-bin/", 
+"count.cgi?id=9203&j=y&w="+srw+"&c="+srb+"&", 
+"ref="+escape(d.referrer)+"\" height=31 border=0", 
+" width=88></A>");}srb="na";srw="na";//--> 
+</SCRIPT>
+
+      <SCRIPT language=javascript1.2><!-- 
+s=screen;srw=s.width;an!="Netscape"? 
+srb=s.colorDepth:srb=s.pixelDepth;//--> 
+</SCRIPT>
+
+      <SCRIPT language=javascript><!-- 
+pr();//--> 
+</SCRIPT>
+      <NOSCRIPT><BR><A href="http://count.ru/cgi-bin/href.cgi?id=9203"><IMG 
+      border=0 height=31 src="Програмирование на Visual C++87.files/count.html" 
+      vspace=3 width=88></A> </NOSCRIPT><BR><!--LIST100 COUNTER--><A 
+      href="http://counter.list.ru/cgi-bin/jump?from=12813" target=_top>
+      <SCRIPT>
+<!--
+d=document;js=10;a='&pageref='+escape(d.referrer)
+//--></SCRIPT>
+
+      <SCRIPT language=JavaScript1.1><!--
+js=11;a+='&jsbool='+navigator.javaEnabled()
+//--></SCRIPT>
+
+      <SCRIPT language=JavaScript1.2><!--
+js=12;s=screen;a+='&res='+s.width+'*'+s.height
+a+='&depth='+(s.colorDepth?s.colorDepth:s.pixelDepth)
+//--></SCRIPT>
+
+      <SCRIPT language=JavaScript1.3><!--
+js=13//--></SCRIPT>
+
+      <SCRIPT><!--
+d.write('<img src="http://counter.list.ru/cgi-bin/counter.dll'+
+'?id=12813&type=1&cd=1&bt=0&jsver='+js+a+
+'" alt="LIST100 Counter" border="0" height="40" width="88">')
+if(js>11)d.write('<'+'!-- ')//--></SCRIPT>
+      <NOSCRIPT><IMG alt="LIST100 Counter" border=0 height=32 
+      src="Програмирование на Visual C++87.files/counter.gif" vspace=3 
+      width=80></NOSCRIPT>
+      <SCRIPT><!--
+if(js>11)d.write('--'+'>')
+//-->
+</SCRIPT>
+      </A> <!--LIST100 COUNTER--><BR><A href="http://www.index99.kiev.ua/" 
+      target=_blank><IMG alt="Index'99" border=0 height=31 
+      src="Програмирование на Visual C++87.files/count1.gif" vspace=3 
+      width=88></A><BR><!--NUMBER ONE COUNTER--><A href="http://www.one.ru/" 
+      target=_top>
+      <SCRIPT language=javascript><!--
+document.write("<img src=\"http://www.one.ru/cgi-bin/cnt.cgi?id=4201&t=1",
+"&r="+escape(parent.document.referrer),"\" width=88 height=31 ",
+"border=0 alt=\"become number one\">");//--></SCRIPT>
+      <NOSCRIPT><IMG alt="be number one" border=0 height=31 
+      src="Програмирование на Visual C++87.files/cnt.gif" 
+      width=88></NOSCRIPT></A> <!--NUMBER ONE COUNTER--><BR><!--3P COUNTER--><A 
+      href="http://www.3p.com/" target=_top>
+      <SCRIPT language=javascript><!--
+document.write("<img src=\"http://www.3p.com/cgi-bin/cnt.cgi?id=620&t=1",
+"&r="+escape(parent.document.referrer),"\" width=88 height=31 ",
+"border=0 alt=\"3P.RU\">");//--></SCRIPT>
+      <NOSCRIPT><IMG alt=3P.COM border=0 height=31 
+      src="C:\users\max\work\VISUAL\KNIGA2\Програмирование на Visual C++87.files\cnt(1).gif" 
+      width=88></NOSCRIPT></A> <!--3P COUNTER--><BR><A 
+      href="http://www.stars.ru/" target=_top><IMG border=0 height=30 
+      src="Програмирование на Visual C++87.files/1000.gif" width=50></A><BR>
+      <P> </P></DIV>
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> </P></FONT></TD>
+    <TD borderColorDark=#800000 borderColorLight=#800000><FONT color=green 
+      face=TAHOMA size=5>
+      <CENTER><B>Урок VIII</B></CENTER></FONT>
+      <P>
+      <P align=center><FONT color=black face=ARIAL size=4>Проектирование 
+      диалоговой панели</FONT></P>
+      <DIV align=center>
+      <TABLE width="95%">
+        <TBODY>
+        <TR>
+          <TD><FONT color=black face=TAHOMA size=2>Когда же это кончится?! 
+            <UL type=square>
+              <LI>Сейчас нам надо добавить код выбора стиля и цвета закраски. 
+              <LI>Вначале необходимо спроектировать диалоговую панель, нам нужно 
+              добавить элемент списка <B>List Box</B>, индикатор цвета (элемент 
+              Picture), и окошко <B>PreView</B> (элемент Picture), где будет 
+              отображаться стиль закраски фигур. 
+              <LI>Добавьте элементы управления на диалоговую панель, согласно 
+              таблице 2.0 и рисунку 2.0. </LI></UL><FONT color=black face=TAHOMA 
+            size=2>
+            <UL type=square>
+              <P align=center><IMG 
+              src="Програмирование на Visual C++87.files/vc_resource_dlg_proekt7.gif"></P>
+              <P align=center><FONT color=red><B>Таблица 2.0</B></FONT></P>
+              <DIV align=center>
+              <TABLE bgColor=#ffffbb border=1 cellPadding=0 cellSpacing=0 
+              width="80%">
+                <TBODY>
+                <TR>
+                  <TD><FONT face=ARIAL size=2><B>Объект</B></FONT></TD>
+                  <TD><FONT face=ARIAL size=2><B>Свойство</B></FONT></TD>
+                  <TD><FONT face=ARIAL size=2><B>Установка</B></FONT></TD></TR>
+                <TR>
+                  <TD colSpan=3>&nbsp;</TD></TR>
+                <TR>
+                  <TD><FONT face=ARIAL size=2><B>List Box</B></FONT></TD>
+                  <TD><FONT face=ARIAL size=2><B>ID</B></FONT></TD>
+                  <TD><FONT face=ARIAL 
+                size=2><B>IDC_BRUSHSTYLE</B></FONT></TD></TR>
+                <TR>
+                  <TD></TD>
+                  <TD><FONT face=ARIAL size=2>Sort</FONT></TD>
+                  <TD><FONT face=ARIAL size=2>Отключено, стрница 
+                  Styles</FONT></TD></TR>
+                <TR>
+                  <TD><FONT face=ARIAL size=2><B>Static Text</B></FONT></TD>
+                  <TD><FONT face=ARIAL size=2><B>ID<B></FONT></B></B></TD>
+                  <TD><FONT face=ARIAL size=2><B>IDC_STATIC</B></FONT></TD></TR>
+                <TR>
+                  <TD></TD>
+                  <TD><FONT face=ARIAL size=2>Caption</FONT></TD>
+                  <TD><FONT face=ARIAL size=2>&amp;Styles</FONT></TD></TR>
+                <TR>
+                  <TD><FONT face=ARIAL size=2><B>Group Box</B></FONT></TD>
+                  <TD><FONT face=ARIAL size=2><B>ID</B></FONT></TD>
+                  <TD><FONT face=ARIAL size=2><B>IDC_STATIC</B></FONT></TD></TR>
+                <TR>
+                  <TD></TD>
+                  <TD><FONT face=ARIAL size=2>Caption</FONT></TD>
+                  <TD><FONT face=ARIAL size=2>&amp;Brush Styles</FONT></TD></TR>
+                <TR>
+                  <TD><FONT face=ARIAL size=2><B>Picture</B></FONT></TD>
+                  <TD><FONT face=ARIAL size=2><B>ID</B></FONT></TD>
+                  <TD><FONT face=ARIAL 
+                size=2><B>IDC_BRUSHCOLOR</B></FONT></TD></TR>
+                <TR>
+                  <TD></TD>
+                  <TD><FONT face=ARIAL size=2>Type</FONT></TD>
+                  <TD><FONT face=ARIAL size=2>Rectangle</FONT></TD></TR>
+                <TR>
+                  <TD></TD>
+                  <TD><FONT face=ARIAL size=2>Color</FONT></TD>
+                  <TD><FONT face=ARIAL size=2>Black</FONT></TD></TR>
+                <TR>
+                  <TD></TD>
+                  <TD><FONT face=ARIAL size=2>Sunken</FONT></TD>
+                  <TD><FONT face=ARIAL size=2>Отмечен, страница 
+                  Styles</FONT></TD></TR></TR>
+                <TR>
+                  <TD></TD>
+                  <TD><FONT face=ARIAL size=2>Notify</FONT></TD>
+                  <TD><FONT face=ARIAL size=2>отмечен, страница 
+                  Styles</FONT></TD></TR>
+                <TR>
+                  <TD><FONT face=ARIAL size=2><B>Static Text</B></FONT></TD>
+                  <TD><FONT face=ARIAL size=2><B>ID<B></FONT></B></B></TD>
+                  <TD><FONT face=ARIAL size=2><B>IDC_STATIC</B></FONT></TD></TR>
+                <TR>
+                  <TD></TD>
+                  <TD><FONT face=ARIAL size=2>Caption</FONT></TD>
+                  <TD><FONT face=ARIAL size=2>&amp;Color</FONT></TD></TR>
+                <TR>
+                  <TD><FONT face=ARIAL size=2><B>Picture</B></FONT></TD>
+                  <TD><FONT face=ARIAL size=2><B>ID</B></FONT></TD>
+                  <TD><FONT face=ARIAL 
+                size=2><B>IDC_BRUSHPREVIEW</B></FONT></TD></TR>
+                <TR>
+                  <TD></TD>
+                  <TD><FONT face=ARIAL size=2>Type</FONT></TD>
+                  <TD><FONT face=ARIAL size=2>Rectangle</FONT></TD></TR>
+                <TR>
+                  <TD></TD>
+                  <TD><FONT face=ARIAL size=2>Color</FONT></TD>
+                  <TD><FONT face=ARIAL size=2>Black</FONT></TD></TR>
+                <TR>
+                  <TD></TD>
+                  <TD><FONT face=ARIAL size=2>Sunken</FONT></TD>
+                  <TD><FONT face=ARIAL size=2>Отмечен, страница 
+                  Styles</FONT></TD></TR></TR>
+                <TR>
+                  <TD></TD>
+                  <TD><FONT face=ARIAL size=2>Notify</FONT></TD>
+                  <TD><FONT face=ARIAL size=2>отмечен, страница 
+                  Styles</FONT></TD></TR>
+                <TR>
+                  <TD><FONT face=ARIAL size=2><B>Static Text</B></FONT></TD>
+                  <TD><FONT face=ARIAL size=2><B>ID<B></FONT></B></B></TD>
+                  <TD><FONT face=ARIAL size=2><B>IDC_STATIC</B></FONT></TD></TR>
+                <TR>
+                  <TD></TD>
+                  <TD><FONT face=ARIAL size=2>Caption</FONT></TD>
+                  <TD><FONT face=ARIAL 
+              size=2>&amp;PreView</FONT></TD></TR></TBODY></TABLE></DIV>
+              <P><BR>
+              <P>
+              <LI>Вы добавили элемент управления <B>List Box</B> и отключили там 
+              свойство <B>Sort</B>, это означает, что элементы этого листа будут 
+              отображаться в том порядке в котором, мы их добавили, иначе они 
+              будут сортироваться по имени. 
+              <LI>Вы добавили два элемента <B>Picture</B>, они будут выполнять 
+              ту же роль, что и индикатор цвета пера, но только элемент 
+              <B>Preview</B> будет показывать, как будет выглядеть закраска. 
+              <LI>Теперь разберемся, как все будет работать, когда вы выбираете 
+              цвет закраски или стиль, то после этого должно закраситься окно 
+              <B>Preview</B>, тем стилем и цветом, который вы выбрали из списка. 
+
+              <LI>Сначала нам необходимо добавить несколько переменных, которые 
+              будут хранит цвет окна, стиль, размеры рамок. 
+              <LI>Добавьте переменные согласно таблице, используя для этого 
+              <B>Workspace</B>.
+              <P>
+              <DIV align=center>
+              <TABLE bgColor=#ffffbb border=1 cellPadding=0 cellSpacing=0 
+              width="80%">
+                <TBODY>
+                <TR>
+                  <TD><FONT face=ARIAL size=2><B>Тип</B></FONT></TD>
+                  <TD><FONT face=ARIAL size=2><B>Название</B></FONT></TD>
+                  <TD><FONT face=ARIAL size=2><B>Описание</B></FONT></TD></TR>
+                <TR>
+                  <TD><FONT face=ARIAL size=2>CBrush</FONT></TD>
+                  <TD><FONT face=ARIAL size=2>m_Brush</FONT></TD>
+                  <TD><FONT face=ARIAL size=2>Объект кисти</FONT></TD></TR>
+                <TR>
+                  <TD><FONT face=ARIAL size=2>COLORREF</FONT></TD>
+                  <TD><FONT face=ARIAL size=2>m_BrushColor</FONT></TD>
+                  <TD><FONT face=ARIAL size=2>Цвет заливки</FONT></TD></TR>
+                <TR>
+                  <TD><FONT face=ARIAL size=2>CRect</FONT></TD>
+                  <TD><FONT face=ARIAL size=2>m_BrushColorSwatch</FONT></TD>
+                  <TD><FONT face=ARIAL size=2>Координаты индикатора 
+                    цвета</FONT></TD></TR>
+                <TR>
+                  <TD><FONT face=ARIAL size=2>CRect</FONT></TD>
+                  <TD><FONT face=ARIAL size=2>m_BrushPreviewSwatch</FONT></TD>
+                  <TD><FONT face=ARIAL size=2>Координаты 
+просмотра</FONT></TD></TR>
+                <TR>
+                  <TD><FONT face=ARIAL size=2>int</FONT></TD>
+                  <TD><FONT face=ARIAL size=2>m_BrushStyle</FONT></TD>
+                  <TD><FONT face=ARIAL size=2>Стиль 
+                закраски</FONT></TD></TR></TBODY></TABLE></DIV>
+              <P></P>
+              <LI>После добаления переменных нужно инициализировать их 
+              начальными значениями, добавить стили закраски в элемент <B>List 
+              Box</B>. 
+              <LI>Добавьте следующий код в конец функции <B>OnInitDialog</B>. 
+              <P><B>//Получить указатель на элемент управления<BR>CWnd* 
+              pBrushColor=GetDlgItem(IDC_BRUSHCOLOR);
+              <P>//Получить координаты элемента 
+              управления<BR>pBrushColor-&gt;GetWindowRect(&amp;m_BrushColorSwatch);
+              <P>//Изменить координаты относительно клиентской 
+              области<BR>ScreenToClient(&amp;m_BrushColorSwatch);
+              <P>//Cузить рамку<BR>m_BrushColorSwatch.DeflateRect(2,2,1,1);
+              <P><BR>
+              <P>//Получить указатель на элемент управления<BR>CWnd* 
+              pPreviewColor=GetDlgItem(IDC_BRUSHPREVIEW);
+              <P>//Получить координаты элемента 
+              управления<BR>pPreviewColor-&gt;GetWindowRect(&amp;m_BrushPreviewSwatch);
+              <P>//Изменить координаты относительно клиентской 
+              области<BR>ScreenToClient(&amp;m_BrushPreviewSwatch);
+              <P>//Cузить рамку<BR>m_BrushPreviewSwatch.DeflateRect(2,2,1,1);
+              <P>//Установить начальный цвет кисти<BR>m_BrusColor=RGB(0,0,0);
+              <P>//Создать белую 
+              кисть<BR>m_Brush.CreateStockObject(WHITE_BRUSH);<BR></B>
+              <P></P>
+              <LI>Думаю этот код уже должен быть понятен, так как мы его не раз 
+              рассматривали прежде. Мы здесь записали координаты индикаторов в 
+              переменные <B>m_BrushColorSwatch</B> и 
+              <B>m_BrushPreviewSwatch</B>. 
+              <LI>Вы установили начальный цвет кисти, как черный, и создали 
+              белую кисть. 
+              <LI>Теперь нужно связать элемент <B>ListBox</B> с переменной 
+              <B>m_BrushStyleList</B>, категорией <B>Control</B>, выполните это 
+              с помощью <B>Class Wizard</B>. 
+              <LI>Добавим код для инициализации элемента <B>List Box</B> 
+              названиями стилей в конец функции <B>OnInitDialog</B> перед 
+              оператором <B>return</B> 
+              <P><B>//Добавить названия стилей в элемент 
+              ListBox<BR>m_BrushStyleList.AddString("(none)");<BR>m_BrushStyleList.AddString("Solid");<BR>m_BrushStyleList.AddString("LL-UR 
+              Diagonal");<BR>m_BrushStyleList.AddString("UL-LR 
+              Diagonal");<BR>m_BrushStyleList.AddString("Grid");<BR>m_BrushStyleList.AddString("Grid 
+              Diagonal");<BR>m_BrushStyleList.AddString("Horizontal");<BR>m_BrushStyleList.AddString("Vertical");<BR>m_BrushStyleList.AddString("White");<BR>m_BrushStyleList.AddString("Light 
+              Gray");<BR>m_BrushStyleList.AddString("Medium 
+              Gray");<BR>m_BrushStyleList.AddString("Dark 
+              Gray");<BR>m_BrushStyleList.AddString("Black");
+              <P>//Установить начальную позицию курсора на 8 
+              элементе<BR>m_BrushStyleList.SetCurSel(8);<BR></B></P>
+              <LI>С помощью переменной управления элементом, вы добавляете 
+              функцией <B>AddString</B> названия стилей. 
+              <LI>Затем устанавливаете начальную позицию курсора на 8 позиции в 
+              списке. 
+              <LI>Теперь свяжем код с событием изменения позиции в списке стилей 
+              заливки. 
+              <LI>Откройте <B>ClassWizard</B> и свяжите элемент 
+              <B>IDC_BRUSHSTYLE</B> с событием <B>LBN_SELCHANGE</B>. 
+              <LI>Щеклните на кнопку <B>Edit Code</B> и добавьте следующий код в 
+              функцию <B>OnSelchangeBrushstyle</B>:
+              <P><B>//Удалить предыдущий объект<BR>m_Brush.DeleteObject();
+              <P>//Получить номер выбранной позиции<BR>int 
+              style=m_BrushStyleList.GetCurSel();
+              <P>//По номеру создать кисть, с выбранным 
+              стилем<BR>switch(style)<BR>{<BR>case 
+              0:<BR>m_Brush.CreateStockObject(NULL_BRUSH);<BR>break;
+              <P>case 1:<BR>m_Brush.CreateSolidBrush(m_BrushColor);<BR>break;
+              <P>case 2:<BR>m_Brush.CreateHatchBrush(HS_BDIAGONAL, 
+              m_BrushColor);<BR>break;
+              <P>case 3:<BR>m_Brush.CreateHatchBrush(HS_FDIAGONAL, 
+              m_BrushColor);<BR>break;
+              <P>case 4:<BR>m_Brush.CreateHatchBrush(HS_CROSS, 
+              m_BrushColor);<BR>break;
+              <P>case 5:<BR>m_Brush.CreateHatchBrush(HS_DIAGCROSS, 
+              m_BrushColor);<BR>break;
+              <P>case 6:<BR>m_Brush.CreateHatchBrush(HS_HORIZONTAL, 
+              m_BrushColor);<BR>break;
+              <P>case 7:<BR>m_Brush.CreateHatchBrush(HS_VERTICAL, 
+              m_BrushColor);<BR>break;
+              <P>case 9:<BR>m_Brush.CreateStockObject(LTGRAY_BRUSH);<BR>break;
+              <P><BR>case 
+10:<BR>m_Brush.CreateStockObject(GRAY_BRUSH);<BR>break;
+              <P>case 11:<BR>m_Brush.CreateStockObject(DKGRAY_BRUSH);<BR>break;
+              <P>case 12:<BR>m_Brush.CreateStockObject(BLACK_BRUSH);<BR>break;
+              <P>//Создать кисть по 
+              умолчанию<BR>default:<BR>m_Brush.CreateStockObject(WHITE_BRUSH);<BR>break;<BR>}
+              <P>//Вызвать функцию зарисовки окна 
+Preview<BR>PaintBrushPreview();
+              <P></B></P>
+              <LI>Код, который вы добавили, вначале удаляет прдедыдущую кисть, 
+              потом получает номер выбранной позиции, затем в зависимости от нее 
+              создает кисть с определенным стилем. 
+              <LI>В конце вызывается функция закраски окна <B>Preview</B> 
+              выбранным стилем и цветом, давайте добавим ее. 
+              <LI>С помощью <B>WorkSpace</B> добаьте функцию 
+              <B>PaintBrushPreview</B> с типом <B>void</B> в класс 
+              <B>CPaintORamaDlg</B> следующий код:
+              <P><B>void CPaintORamaDlg::PaintBrushPreview()<BR>{<BR>
+              <P>////-Ваш код начинается здесь-////
+              <P>CClientDC 
+              dc(this);<BR>dc.FillRect(&amp;m_BrushPreviewSwatch,&amp;m_Brush);
+              <P>////-Ваш код заканчивается здесь-////
+              <P>}
+              <P></B></P>
+              <LI>Теперь добавим функцию выбора цвета закраски. 
+              <LI>Свяжите элемент управления <B>IDC_BRUSHCOLOR</B> с событием 
+              <B>BN_CLICKED</B>, и добавьте туда следующий код:
+              <P><B>void CPaintORamaDlg::OnBrushcolor() <BR>{<BR>////-Ваш код 
+              начинается здесь-////
+              <P>//Создать объект диалогового окна выбор цвета<BR>CColorDialog 
+              dlg(m_BrushColor);
+              <P>/*Если была нажата кнопка ОК, то закрасить индикатор 
+              цвета*/<BR>if(dlg.DoModal()==IDOK)<BR>{<BR>m_BrushColor=dlg.GetColor();<BR>CClientDC 
+              dc(this);<BR>CBrush b(m_BrushColor);
+              <P>//Закрашивание индикатора цвета 
+              кисти<BR>dc.FillRect(&amp;m_BrushColorSwatch,&amp;b);<BR>}
+              <P>/*Запустить функцию создания кисти, выбранным 
+              цветом*/<BR>OnSelchangeBrushstyle();
+              <P>////-Ваш код заканчивается здесь-////
+              <P>} </B></P>
+              <LI>Вначале создается объект диалогового окна выбора цвета, потом, 
+              если была нажата клавиша <B>OK</B>, индикатор зарисовывается 
+              выбранным цветом и в конце запускается функция создания кисти 
+              новым цветом. 
+              <LI>Все отлично, но осталось добавить возможность выбора кисти в 
+              код рисования. 
+              <LI>Откройте функцию <B>DrawShape</B> и сразу же перед или после 
+              оператора <B>SelectObject(&amp;m_Pen)</B>, добавьте 
+              оператор<BR><B><FONT 
+              color=red>SelectObject(&amp;m_Brush);</FONT></B>. 
+              <LI>Этим оператором вы выбираете кисть и применяете ее к 
+              рисованию. 
+              <LI>Теперь можете откомпилировать программу и запустить ее. 
+              Попробуйте нарисовать что-нибудь разными цветами кистей и перьев, 
+              разными стилями и размерами, и фигурами. 
+              <LI>Но это еще не все! Осталось решить небольшую проблему, если к 
+              примеру окно вашей программы перекрыть другой, или просто его 
+              сдвинуть за пределы экрана, то понадобиться перерисовка окна, так 
+              как все что было сотрется. Винда не сохраняет экраны программ :(. 
+              Придется все делать в ручную! 
+              <P></P></LI></UL><BR><BR>Добавим возможность перерисовки экрана.<BR>
+            <CENTER><A href="http://vnews.uka.ru/html/Lessons/lesson058.htm"><B 
+            class=base2>&lt;-Назад</B></A> || <A 
+            href="http://vnews.uka.ru/html/Lessons/lesson078.htm"><B 
+            class=base2>Дальше -&gt;</B></A>
+            <P></CENTER>
+            <P>
+            <CENTER><B><FONT color=green><A 
+            href="http://vnews.uka.ru/html/Lessons/lesson008.htm">[1]</A><A 
+            href="http://vnews.uka.ru/html/Lessons/lesson018.htm"> [2]</A> <A 
+            href="http://vnews.uka.ru/html/Lessons/lesson028.htm">[3]</A><A 
+            href="http://vnews.uka.ru/html/Lessons/lesson038.htm"> [4]</A><A 
+            href="http://vnews.uka.ru/html/Lessons/lesson048.htm"> [5] </A><A 
+            href="http://vnews.uka.ru/html/Lessons/lesson058.htm">[6]</A> [7] <A 
+            href="http://vnews.uka.ru/html/Lessons/lesson078.htm">[8]</A> <A 
+            href="http://vnews.uka.ru/html/Lessons/lesson088.htm">[9]</A></B></FONT></CENTER></FONT></FONT></TD></TR></TBODY></TABLE></DIV></TD></TR>
+  <TR>
+    <TD borderColorDark=#800000 borderColorLight=#800000 colSpan=2>
+      <DIV align=center>
+      <TABLE border=0 cellPadding=0 cellSpacing=0 width="70%">
+        <TBODY>
+        <TR>
+          <TD><FONT color=black face="MS SANS SERIF" size=1><A 
+            href="http://algo.da.ru/" target=_top><B>Algorithm project</A>:</B> 
+            Кольцо сайтов, посвященных программированию (<A 
+            href="http://webring.da.ru/" style="COLOR: black" 
+            target=_top>подробнее о проекте WebRing...</A>)<BR>[<A 
+            href="http://www.webring.org/cgi-bin/webring?ring=ru_rk_ring;id=10;prev5" 
+            target=_top>Предыдущие 5 сайтов</A> | <A 
+            href="http://www.webring.org/cgi-bin/webring?ring=ru_rk_ring;id=10;prev" 
+            target=_top>Предыдуший</A> | <A 
+            href="http://www.webring.org/cgi-bin/webring?ring=ru_rk_ring;id=10;next" 
+            target=_top>Следующий</A> | <A 
+            href="http://www.webring.org/cgi-bin/webring?ring=ru_rk_ring;id=10;next5" 
+            target=_top>Следующие 5 сайтов</A> | <A 
+            href="http://www.webring.org/cgi-bin/webring?ring=ru_rk_ring;random" 
+            target=_top>Выбрать сайт случайным образом</A> <A 
+            href="http://www.webring.org/cgi-bin/webring?ring=ru_rk_ring;list" 
+            target=_top>Список всех сайтов</A> ] 
+      </FONT></TD></TR></TBODY></TABLE></DIV></TD></TR></TBODY></TABLE><BR>
+<TABLE bgColor=#f8f1e4 border=1 borderColor=#800000 cellPadding=0 cellSpacing=5 
+width=700>
+  <TBODY>
+  <TR>
+    <TD height=40>
+      <DIV align=center>
+      <TABLE border=0 cellPadding=0 cellSpacing=10 width="37%">
+        <TBODY>
+        <TR>
+          <TD width="16%"></TD></TR></TBODY></TABLE></DIV></TD></TR></TBODY></TABLE></DIV>
+<P>
+<CENTER>
+<DIV class=base2 style="COLOR: black">Copyright © 1999 C++ Programmers Club 
+</DIV>
+<DIV class=base2 style="COLOR: black">Author: <A 
+href="mailto:vnews@mail.ru">Kuklin Alexey</A> All Rights Reserved 
+</DIV></CENTER>
+<P> </P></BODY></HTML>

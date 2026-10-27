@@ -1,0 +1,497 @@
+<HTML>
+<TITLE>Клуб русских программистов!</TITLE>
+<META NAME="author" CONTENT="Kuklin Alexey Email: vnews@mail.ru">
+<META NAME="keywords" CONTENT="programming, программирование, soft, helps, web webdizain, photo, photoshop, internet, examples, conference, конференция, софт, примеры программ, исходники, source, codes, MFC, MTL, vc, visual, c , c++, с++,с, документация, documentation"> 
+<META NAME="description" CONTENT="Документация C, C++ , Visual C , Object C, Quick C, Turbo C, ActiveX. Школа MFC, софт, примеры программ и исходники к ним, справочные книги и конференция.">
+
+<HEAD>
+<LINK REL=STYLESHEET TYPE="text/css" HREF="../../styles.css" TITLE="Style">
+</HEAD>
+
+
+<BODY BGCOLOR="#E9D7B1"  TEXT="black" topmargin="0" leftmargin="0" > 
+<DIV ALIGN="CENTER">
+<br>
+
+<TABLE  border=1 bgcolor=#F8F1E4 cellpadding=0 cellspacing=4  bordercolor="#800000" width=700 height=250 bordercolorlight="#F8F1E4"
+bordercolordark="#F8F1E4">  
+
+<TR>
+<TD colspan=2 height=80 bordercolorlight="#800000"
+bordercolordark="#800000">
+<DIV ALIGN="center">
+<script>
+// <!--
+var default_user_id = 65561;
+var userid = default_user_id;
+get_user_id();
+if (userid == 123456) {userid=default_user_id;}
+var page = 1;
+var rndnum = Math.round(Math.random() * 10000);
+document.write('<A HREF="http://ad.tbn.ru/bb.cgi?cmd=go&pubid=' + userid + '&pg=' + page + '&vbn=189&num=1&w=468&h=60&nocache=' + rndnum + '" target="_blank">');
+document.write('<IMG SRC="http://ad.tbn.ru/bb.cgi?cmd=ad&pubid=' + userid + '&pg=' + page + '&vbn=189&num=1&w=468&h=60&nocache=' + rndnum + '" width=468 height=60 Alt="TBN.ru" border=1></A>');
+
+function get_user_id(){
+        var tmp = window.parent.location.href;
+        var user_id = tmp.replace(/.+user_id=/,"");
+        if(user_id.search(/^[0123456789]+.*$/g)!=-1)
+                       userid = user_id;                       
+                                else
+                                  userid = default_user_id;
+}
+
+// -->
+</script>
+
+<script>
+// <!--
+var ie4 = (document.all) ? true : false;
+if (ie4) { document.write('<img src="/ad/counter" WIDTH=1 HEIGHT=0 border=0>'); }
+// -->
+</script>
+<br><b><font size=2 face=tahoma><a href="http://www.sudba.ru/" target='_blank'>Е-ЛЮБОВЬ</a>
+| <a href='http://love.uka.ru' target=_blank>ЗНАКОМСТВА</a>
+| <a href="http://chat.uka.ru/" target='_blank'><font color=red>взрывЧАТка</font></a>
+<!--
+| <a href="http://www.anekdots.ru" target='_blank'>АНЕКДОТЫ</a>
+| <a href="http://www.anekdots.ru" target='_blank'>ИГРЫ</a>
+| <a href="http://www.anekdots.ru" target='_blank'>MУЗЫКА</a>
+-->
+</font></b>
+
+</DIV>
+</TD>
+</TR>
+
+
+<TR>
+<TD bordercolorlight="#800000" bordercolordark="#800000" width=29% >
+
+<CENTER><div  style="color:#000080" class="base"><b>Меню</b></div></CENTER>
+<br>
+<font size=1>
+
+
+<IMG SRC="../../../Picture/Main/uk.gif" HSPACE=3 border=0><A HREF="../../../html/about.htm"><b class="base2">О Проекте</b><p></A>
+<IMG SRC="../../../Picture/Main/uk.gif" HSPACE=3 border=0><A HREF="../../../index.html"><b class="base2"> Новости</b><p></A>
+<IMG SRC="../../../Picture/Main/uk.gif" HSPACE=3 border=0><A HREF="../../../html/pclub.htm"><b class="base2"> Клуб Программеров С++</b><p></A>
+<IMG SRC="../../../Picture/Main/uk.gif" HSPACE=3 border=0><A HREF="../../../html/docs.htm"><b class="base2"> Документация</b><p></A>
+<IMG SRC="../../../Picture/Main/uk.gif" HSPACE=3 border=0><A HREF="../../../html/components.htm"><b class="base2"> Инструментарий</b><p></A>
+<IMG SRC="../../../Picture/Main/uk.gif" HSPACE=3 border=0><A HREF="../../../html/lesson.htm"><b class="base2"> Школа MFC</b><p></A>
+<IMG SRC="../../../Picture/Main/uk.gif" HSPACE=3 border=0><A HREF="../../../html/Examples/sources.htm"><b class="base2"> Исходники</b><p></A>
+<IMG SRC="../../../Picture/Main/uk.gif" HSPACE=3 border=0><A HREF="http://www.fido7.com/cgi-fido7/forumi.pl?user=vnews"><b class="base2">Форум С++</b><p></A>
+<IMG SRC="../../../Picture/Main/uk.gif" HSPACE=3 border=0><A HREF="../../../html/links.htm"><b class="base2"> Ссылки</b><p></A>
+<IMG SRC="../../../Picture/Main/uk.gif" HSPACE=3 border=0><A href="http://www.guestbook.ru/book.cgi?user=cppmfc&action=show"><b class="base2"> Отзывы и предложения</b><p></A>
+<IMG SRC="../../../Picture/Main/uk.gif" HSPACE=3 border=0><A HREF="../../../html/map.htm"><b class="base2"> Карта сайта</b><p></A>
+
+ <hr width="90%">
+<div align=center>
+<script language="javascript">
+<!-- 
+an=navigator.appName;d=document;function 
+pr(){d.write("<A HREF=\"http://count.ru/cgi-bin/href.cgi?", 
+"id=9203\"><img src=\"http://count.ru/cgi-bin/", 
+"count.cgi?id=9203&j=y&w="+srw+"&c="+srb+"&", 
+"ref="+escape(d.referrer)+"\" height=31 border=0", 
+" width=88></A>");}srb="na";srw="na";//--> 
+</script><script language="javascript1.2"><!-- 
+s=screen;srw=s.width;an!="Netscape"? 
+srb=s.colorDepth:srb=s.pixelDepth;//--> 
+</script><script
+     language="javascript"><!-- 
+pr();//--> 
+</script>
+<noscript></br>
+<a HREF="http://count.ru/cgi-bin/href.cgi?id=9203">
+<img height="31" width="88" border="0" src="http://count.ru/cgi-bin/count.cgi?id=9203&amp;j=n&amp;ref=" vspace="3"></a> 
+</noscript><br>
+<!--LIST100 COUNTER-->
+<A TARGET="_top" HREF="http://counter.list.ru/cgi-bin/jump?from=12813">
+<SCRIPT>
+<!--
+d=document;js=10;a='&pageref='+escape(d.referrer)
+//--></script><script
+language="JavaScript1.1"><!--
+js=11;a+='&jsbool='+navigator.javaEnabled()
+//--></script><script language="JavaScript1.2"><!--
+js=12;s=screen;a+='&res='+s.width+'*'+s.height
+a+='&depth='+(s.colorDepth?s.colorDepth:s.pixelDepth)
+//--></script><script
+language="JavaScript1.3"><!--
+js=13//--></script><script><!--
+d.write('<img src="http://counter.list.ru/cgi-bin/counter.dll'+
+'?id=12813&type=1&cd=1&bt=0&jsver='+js+a+
+'" alt="LIST100 Counter" border="0" height="40" width="88">')
+if(js>11)d.write('<'+'!-- ')//--></script><noscript> <img
+src="http://counter.list.ru/cgi-bin/counter.dll?jsver=na&amp;cd=1&amp;bt=0&amp;id=12813&amp;type=1"
+border="0" height="32" width="80" alt="LIST100 Counter" vspace="3"></noscript><script><!--
+if(js>11)d.write('--'+'>')
+//-->
+</SCRIPT></A>
+<!--LIST100 COUNTER--><br>
+
+
+<a href="http://www.index99.kiev.ua" target="_blank">
+<img src="http://www.index99.kiev.ua/cgi-bin/count1.cgi?vnews" 
+border="0" width="88" height="31" alt="Index'99" vspace="3"></a><BR>
+
+
+<!--NUMBER ONE COUNTER--><a target=_top 
+href="http://www.one.ru"><script language="javascript"><!--
+document.write("<img src=\"http://www.one.ru/cgi-bin/cnt.cgi?id=4201&t=1",
+"&r="+escape(parent.document.referrer),"\" width=88 height=31 ",
+"border=0 alt=\"become number one\">");//--></script><noscript>
+<img src="http://www.one.ru/cgi-bin/cnt.cgi?id=4201&t=1"
+width=88 height=31 alt="be number one" border=0></noscript></a>
+<!--NUMBER ONE COUNTER--><br>
+
+ <!--3P COUNTER--><a target=_top 
+href="http://www.3p.com"><script language="javascript"><!--
+document.write("<img src=\"http://www.3p.com/cgi-bin/cnt.cgi?id=620&t=1",
+"&r="+escape(parent.document.referrer),"\" width=88 height=31 ",
+"border=0 alt=\"3P.RU\">");//--></script><noscript>
+<img src="http://www.3p.com/cgi-bin/cnt.cgi?id=620&t=1"
+width=88 height=31 alt="3P.COM" border=0></noscript></a>
+<!--3P COUNTER-->
+ </br>
+ 
+
+
+<a href="http://www.stars.ru" target=_top><img src="http://1000.stars.ru/cgi-bin/1000.cgi?vckuklinsite" WIDTH=50 HEIGHT=30 BORDER=0></a><BR><P>&nbsp;
+
+</div>
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp
+
+
+
+
+
+</TD>
+
+<TD  bordercolorlight="#800000" bordercolordark="#800000" >  
+
+<FONT FACE="TAHOMA" SIZE=3 COLOR="RED"><CENTER><B> Использование класса CTabCtrl</B></CENTER></FONT>
+<P>
+<DIV ALIGN="CENTER">
+<TABLE WIDTH="95%">
+<TR>
+<TD><FONT FACE="TAHOMA" SIZE=2 COLOR="BLACK">
+Tab control - это мощное средство для решению многих проблем в интерфейсе приложений.
+Оно позволят существенно увеличить скорость работы вашего приложения, разбить на "части" диалог 
+в удобной для пользователя форме.
+<br><br>
+ В MFC есть встроенный класс по работе с Tab control - класс <b>CTabCtrl.</b>
+<br><br>
+Для практики напишем программу, которая будет использовать класс <b>CTabCtrl</b> и в которой
+будет три "закладки" - диалога.
+<br><br>
+Шаги создания проекта:
+<h5>
+    1) Сначала создадим проект <b>tab_control</b> типа диалог.<br>
+    2) В редакторе ресурсов добавить Tab Control в шаблон диалога и назначим ему ID = IDC_TAB. <br>
+    3) Используя ClassWizard, добавим переменную-член типа CTabCtrl со свойством Control.<br>
+    4) В OnInitDialog проинициализируем  необходимые переменные для CTabCtrl. <br>
+    5) Используя ClassWizard, добавим обработку необходимых  сообщений от Tab control 'я. <br>
+    6) Удалим за собой ненужные переменные.<br>
+</h5><br><br>
+Для начала сделайте первые три пункта, создайте переменную <b>m_ctrTab</b> класса CTabCtrl.
+После этого в функцие <b>BOOL CTab_controlDlg::OnInitDialog()</b> добавте следующее:
+<pre><h5>	
+	...
+
+	TC_ITEM TabItem;
+	TabItem.mask = TCIF_TEXT;
+	TabItem.pszText = "Закладка1";	
+	m_ctrTab.InsertItem( 0, &TabItem );
+	TabItem.pszText = "Закладка2";
+	m_ctrTab.InsertItem( 1, &TabItem );
+	TabItem.pszText = "Закладка3";
+	m_ctrTab.InsertItem( 2, &TabItem );
+
+	...
+</h5></pre><br><br>
+
+Это код инициализации Tab Control, мы создаём три закладки.
+Теперь нам надо, чтобы при нажатие на любую закладку, на экране появлялось то, что нам нужно. 
+Самый простой вариант - это использовать на каждую закладку по диалогу - и потом просто в области 
+Tab Control'а  - выводить нужный диалог, в зависимости от текущей закладки. 
+<br><br>
+Сделаем это.  Добавим три диалога в редакторе ресурсов и создадим  каждому из них по классу - наследнику 
+от CDialog. Назовем эти классы CPage1, CPage2 и CPage3( файлы Page1.cpp(h), Page2.cpp(h),  Page3.cpp(h) ) . 
+<br><br>
+В свойствах этих трёх диалогов поставте Style как "Child" и Border как "none" - <b>это очень важно</b>, а в
+самих диалогах создайте какие либо элементы ( например, типа Static Text ), чтобы было видно отличие.
+<br><br>
+Напишите эти три строчки в начале файла <b>tab_controlDlg.cpp</b>
+<pre><h5>
+	#include "Page1.h"
+	#include "Page2.h"
+	#include "Page3.h"
+</h5></pre><br>
+ Продолжим в OnInitDialog:<br>
+ Надо последовательно создать все страницы, причём указатели на них хранятся в самом m_ctrTab !!! 
+ В этом примере мы ипользовали lParam структуры TCITEM как хранилище указателя.
+ Теперь переменные pPage1, pPage2 и pPage3 больше не нужны - указатели хранятся в надежном месте!
+ Для каждой страницы вызывается метод ShowWindow() - для отображения первой, 
+ и скрытия остальных страниц.
+<br><pre><h5>
+	...
+
+	CPage1* pPage1;
+	pPage1 = new CPage1; 
+	TabItem.mask = TCIF_PARAM;
+	TabItem.lParam = (LPARAM)pPage1; 
+	m_ctrTab.SetItem(0, &TabItem);
+	VERIFY(pPage1->Create(CPage1::IDD, &m_ctrTab));
+	pPage1->SetWindowPos(NULL, 10, 30, 0, 0, SWP_NOSIZE
+		 | SWP_NOZORDER);
+	pPage1->ShowWindow(SW_SHOW); 
+    
+	CPage2* pPage2; 
+	pPage2 = new CPage2;
+	TabItem.mask = TCIF_PARAM; 
+	TabItem.lParam = (LPARAM)pPage2;
+	m_ctrTab.SetItem(1, &TabItem);
+	VERIFY(pPage1->Create(CPage2::IDD, &m_ctrTab));
+	pPage2->SetWindowPos(NULL, 10, 30, 0, 0, SWP_NOSIZE 
+		| SWP_NOZORDER);
+	pPage2->ShowWindow(SW_HIDE); 
+    
+	CPage3* pPage3; 
+	pPage3 = new CPage3;
+	TabItem.mask = TCIF_PARAM; 
+	TabItem.lParam = (LPARAM)pPage3;
+	m_ctrTab.SetItem(2, &TabItem);
+	VERIFY(pPage1->Create(CPage3::IDD, &m_ctrTab));
+	pPage3->SetWindowPos(NULL, 10, 30, 0, 0, SWP_NOSIZE 
+		| SWP_NOZORDER);
+	pPage3->ShowWindow(SW_HIDE);
+
+	...
+</h5></pre><br>
+
+Теперь добавим код по отображению текущей  страницы и сокрытию предыдущей. 
+Для этого добавим обработчики сообщений TCN_SELCHANGE и TCN_SELCHANGING :
+<br><pre><h5>
+void CTab_controlDlg::OnSelchangeTab(NMHDR* pNMHDR,
+		 LRESULT* pResult) 
+{
+	// TODO: Add your control notification handler code here
+	
+	int nTab = m_ctrTab.GetCurSel(); 
+	TC_ITEM tci; 
+	tci.mask = TCIF_PARAM; 
+
+	m_ctrTab.GetItem(nTab, &tci); 
+	ASSERT(tci.lParam); 
+
+	CWnd* pWnd = (CWnd *)tci.lParam; 
+	pWnd->ShowWindow(SW_HIDE); 
+
+
+	*pResult = 0;
+}
+
+void CTab_controlDlg::OnSelchangingTab(NMHDR* pNMHDR, 
+					LRESULT* pResult) 
+{
+    	 int nTab = m_ctrTab.GetCurSel(); 
+    	TC_ITEM tci;
+    	tci.mask = TCIF_PARAM; 
+    
+   	 m_ctrTab.GetItem(nTab, &tci);
+    	ASSERT(tci.lParam); 
+    
+   	 CWnd* pWnd = (CWnd *)tci.lParam;
+    	pWnd->ShowWindow(SW_HIDE); 
+    
+   	 *pResult = 0;
+}
+</h5></pre><br>
+
+ Здесь используются те самые указатели, которые мы спрятали в OnInitDialog
+<br><br>
+Теперь освободим память и разрушим диалоговые окна при выходе из приложения. <br>
+Добавим функцию OnDestroy:
+<br><pre><h5>
+void CTab_controlDlg::OnDestroy()
+{
+
+    CDialog::OnDestroy();
+
+    CWnd* pWnd;
+    TC_ITEM tci;
+    tci.mask = TCIF_PARAM; 
+
+    for (int i = 2; i>=0; i--)
+    {
+        m_ctrTab.GetItem(i, &tci);
+        ASSERT(tci.lParam); 
+
+        pWnd = (CWnd *)tci.lParam;
+        pWnd->DestroyWindow();
+        delete pWnd;
+    }
+}
+</h5></pre><br>
+Ну вот и всё, приложение готово. <br>
+Автор статьи: Андрей Уваров
+
+</TD>
+</TR>
+</TABLE>
+</DIV>
+
+</TD>
+</TR>
+<TR>
+<TD colspan=2  bordercolorlight="#800000"
+bordercolordark="#800000">
+<DIV ALIGN="CENTER">
+<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 WIDTH=70%> 
+<TR>
+<TD>
+
+<FONT FACE="MS SANS SERIF" SIZE=1 COLOR="BLACK">
+<a href="http://algo.da.ru"   target="_top" ><b>Algorithm project</a>:</B> Кольцо сайтов, посвященных
+    программированию 
+    (<a href="http://webring.da.ru" target="_top" style="COLOR: BLACK">подробнее о проекте
+    WebRing...</a>)<br>
+    [<a href="http://www.webring.org/cgi-bin/webring?ring=ru_rk_ring;id=10;prev5"
+    target="_top">Предыдущие 5 сайтов</a> | <a
+    href="http://www.webring.org/cgi-bin/webring?ring=ru_rk_ring;id=10;prev" target="_top" >Предыдуший</a>
+    |  <a href="http://www.webring.org/cgi-bin/webring?ring=ru_rk_ring;id=10;next"
+    target="_top" >Следующий</a> |  <a
+    href="http://www.webring.org/cgi-bin/webring?ring=ru_rk_ring;id=10;next5" target="_top">Следующие
+    5 сайтов</a> |   <a  
+    href="http://www.webring.org/cgi-bin/webring?ring=ru_rk_ring;random" target="_top" >Выбрать
+    сайт случайным образом</a>   <a
+    href="http://www.webring.org/cgi-bin/webring?ring=ru_rk_ring;list" target="_top" >Список
+    всех сайтов</a> ]
+</FONT>
+</TD>
+</TR>
+</TABLE>
+</DIV>
+
+
+</TD>
+
+</TR>
+
+
+</TABLE>
+<br>
+<TABLE  border=1 bgcolor=#F8F1E4 cellpadding=0 cellspacing=5  bordercolor="#800000" width=700>  
+
+<TR>
+<TD  height=40 >
+<DIV ALIGN=CENTER>
+<table border="0" cellpadding="0"
+    cellspacing="10" width="37%">
+      <tr>
+        <td width="16%"> </td>
+      </tr>
+    </table>
+</div>
+
+</TD>
+
+</TR>
+</TABLE>
+</DIV>
+<P>
+<CENTER>
+
+<DIV CLASS="base2" style="color:black"> Copyright © 1999 C++ Programmers Club </DIV>
+<DIV CLASS="base2" style="color:black">Author:  <a href="mailto:vnews@mail.ru">Kuklin Alexey</a>  All Rights Reserved </DIV>
+</CENTER>
+<P>&nbsp;
+
+</BODY>
+</HTML>

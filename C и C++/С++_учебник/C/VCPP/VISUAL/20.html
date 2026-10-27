@@ -1,0 +1,79 @@
+<HTML><HEAD><TITLE>Глава 20</TITLE></HEAD> 
+<body background="../../../bgrwhite.gif">
+<p><div align="center"><b><font size="+1" face="Arial">20. Использование класса CTabCtrl </font></b></div></p><p>
+Tab control - это мощное средство для решению многих проблем в интерфейсе приложений. Оно позволят существенно увеличить скорость работы вашего приложения, разбить на "части" диалог  в удобной для пользователя форме. <br><br>  В MFC есть встроенный класс по работе с Tab control - класс <b>CTabCtrl.</b> <br><br> Для практики напишем программу, которая будет использовать класс <b>CTabCtrl</b> и в которой будет три "закладки" - диалога. <br><br> Шаги создания проекта:
+<pre><h5>     
+1) Сначала создадим проект <b>tab_control</b> типа диалог.
+2) В редакторе ресурсов добавить Tab Control в шаблон 
+диалога и назначим ему ID = IDC_TAB. 
+3) Используя ClassWizard, добавим переменную-член типа 
+CTabCtrl со свойством Control.
+4) В OnInitDialog проинициализируем  необходимые 
+переменные для CTabCtrl. 
+5) Используя ClassWizard, добавим обработку 
+необходимых  сообщений от Tab control 'я.
+6) Удалим за собой ненужные переменные. </h5></pre><br><br> Для начала сделайте первые три пункта, создайте переменную <b>m_ctrTab</b> класса CTabCtrl. После этого в функцие <b>BOOL CTab_controlDlg::OnInitDialog()</b> добавте следующее: 
+<pre><h5>	 	...  	TC_ITEM TabItem; 	TabItem.mask = TCIF_TEXT;
+TabItem.pszText = "Закладка1";
+m_ctrTab.InsertItem( 0, &TabItem );
+TabItem.pszText = "Закладка2"; 
+m_ctrTab.InsertItem( 1, &TabItem );
+TabItem.pszText = "Закладка3"; 
+m_ctrTab.InsertItem( 2, &TabItem );  	... </h5></pre><br><br>  Это код инициализации Tab Control, мы создаём три закладки. Теперь нам надо, чтобы при нажатие на любую закладку, на экране появлялось то, что нам нужно.  Самый простой вариант - это использовать на каждую закладку по диалогу - и потом просто в области  Tab Control'а  - выводить нужный диалог, в зависимости от текущей закладки.  <br><br> Сделаем это.  Добавим три диалога в редакторе ресурсов и создадим  каждому из них по классу - наследнику  от CDialog. Назовем эти классы CPage1, CPage2 и CPage3( файлы Page1.cpp(h), Page2.cpp(h),  Page3.cpp(h) ) .  <br><br> В свойствах этих трёх диалогов поставте Style как "Child" и Border как "none" - <b>это очень важно</b>, а в самих диалогах создайте какие либо элементы ( например, типа Static Text ), чтобы было видно отличие. <br><br> Напишите эти три строчки в начале файла <b>tab_controlDlg.cpp</b> 
+<pre><h5> 	
+#include "Page1.h"
+#include "Page2.h"
+#include "Page3.h" </h5></pre><br>  Продолжим в OnInitDialog:<br>  Надо последовательно создать все страницы, причём указатели на них хранятся в самом m_ctrTab !!!   В этом примере мы ипользовали lParam структуры TCITEM как хранилище указателя.  Теперь переменные pPage1, pPage2 и pPage3 больше не нужны - указатели хранятся в надежном месте!  Для каждой страницы вызывается метод ShowWindow() - для отображения первой, и скрытия остальных страниц. <br>
+<pre><h5> 	
+...  	CPage1* pPage1; 	pPage1 = new CPage1;
+TabItem.mask = TCIF_PARAM; 
+TabItem.lParam = (LPARAM)pPage1; 
+m_ctrTab.SetItem(0, &TabItem);
+VERIFY(pPage1->Create(CPage1::IDD, &m_ctrTab)); 
+pPage1->SetWindowPos(
+    NULL, 10, 30, 0, 0, SWP_NOSIZE | SWP_NOZORDER); 
+pPage1->ShowWindow(SW_SHOW); 
+CPage2* pPage2;  	pPage2 = new CPage2; 
+TabItem.mask = TCIF_PARAM;  	
+TabItem.lParam = (LPARAM)pPage2; 	
+m_ctrTab.SetItem(1, &TabItem); 	
+VERIFY(pPage1->Create(CPage2::IDD, &m_ctrTab)); 
+pPage2->SetWindowPos
+   (NULL, 10, 30, 0, 0, SWP_NOSIZE | SWP_NOZORDER);
+pPage2->ShowWindow(SW_HIDE); 
+CPage3* pPage3;  	pPage3 = new CPage3; 
+TabItem.mask = TCIF_PARAM; 
+TabItem.lParam = (LPARAM)pPage3; 
+m_ctrTab.SetItem(2, &TabItem); 
+VERIFY(pPage1->Create(CPage3::IDD, &m_ctrTab));
+pPage3->SetWindowPos
+   (NULL, 10, 30, 0, 0, SWP_NOSIZE | SWP_NOZORDER);
+pPage3->ShowWindow(SW_HIDE);  	... </h5></pre><br>  Теперь добавим код по отображению текущей  страницы и сокрытию предыдущей.  Для этого добавим обработчики сообщений TCN_SELCHANGE и TCN_SELCHANGING : <br>
+<pre><h5> void CTab_controlDlg::OnSelchangingTab(NMHDR* pNMHDR, 
+LRESULT* pResult)  { 
+// TODO: Add your control notification handler
+                        code here
+int nTab = m_ctrTab.GetCurSel(); 
+TC_ITEM tci;  	tci.mask = TCIF_PARAM; 
+m_ctrTab.GetItem(nTab, &tci); 
+ASSERT(tci.lParam); 
+CWnd* pWnd = (CWnd *)tci.lParam;
+pWnd->ShowWindow(SW_HIDE);   *pResult = 0; }
+void CTab_controlDlg::OnSelchangingTab(NMHDR* pNMHDR,
+LRESULT* pResult)  {  
+int nTab = m_ctrTab.GetCurSel();
+TC_ITEM tci;     	tci.mask = TCIF_PARAM;
+m_ctrTab.GetItem(nTab, &tci);     	ASSERT(tci.lParam);
+CWnd* pWnd = (CWnd *)tci.lParam; 
+pWnd->ShowWindow(SW_HIDE);      *pResult = 0; } </h5></pre><br>   Здесь используются те самые указатели, которые мы спрятали в OnInitDialog <br><br> Теперь освободим память и разрушим диалоговые окна при выходе из приложения. <br> Добавим функцию OnDestroy: <br>
+<pre><h5> void CTab_controlDlg::OnDestroy() { 
+CDialog::OnDestroy();      CWnd* pWnd; 
+TC_ITEM tci;     tci.mask = TCIF_PARAM;
+for (int i = 2; i>=0; i--)     {
+m_ctrTab.GetItem(i, &tci);
+ASSERT(tci.lParam); 
+pWnd = (CWnd *)tci.lParam;
+pWnd->DestroyWindow(); 
+delete pWnd;     } } </h5></pre><br> Ну вот и всё, приложение готово. <br>  <a href = "tab_control.zip">Отсюда</a> можно взять рабочую  программу под MFC,  с использованием CTabCtrl.<br><br></ul>
+<p><div align="center"><a href="../index.html">	<img src="../../../soder-yel.gif" width=159 height=38 border=0 alt=""></a></div></p>
+</body></html>  

@@ -1,0 +1,795 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0046)http://vnews.uka.ru/html/Lessons/lesson032.htm --><HTML><HEAD><TITLE>Програмирование на Visual C++</TITLE>
+<META content="text/html; charset=windows-1251" http-equiv=Content-Type>
+<META content="Kuklin Alexey Email: vnews@mail.ru" name=author>
+<META 
+content="programming, программирование, soft, helps, web webdizain, photo, photoshop, internet, examples, conference, конференция, софт, примеры программ, исходники, source, codes, MFC, MTL, vc, visual, c , c++, с++,с, документация, documentation" 
+name=keywords>
+<META 
+content="Документация C, C++ , Visual C , Object C, Quick C, Turbo C, ActiveX. Школа MFC, софт, примеры программ и исходники к ним, справочные книги и конференция." 
+name=description><LINK href="Програмирование на Visual C++24.files/styles.css" 
+rel=STYLESHEET title=Style type=text/css>
+<META content="MSHTML 5.00.2614.3500" name=GENERATOR></HEAD>
+<BODY bgColor=#e9d7b1 leftMargin=0 text=black topMargin=0>
+<DIV align=center><BR>
+<TABLE bgColor=#f8f1e4 border=1 borderColor=#800000 borderColorDark=#f8f1e4 
+borderColorLight=#f8f1e4 cellPadding=0 cellSpacing=4 height=250 width=700>
+  <TBODY>
+  <TR>
+    <TD borderColorDark=#800000 borderColorLight=#800000 colSpan=2 height=80>
+      <DIV align=center>
+      <SCRIPT>
+// <!--
+var default_user_id = 65561;
+var userid = default_user_id;
+get_user_id();
+if (userid == 123456) {userid=default_user_id;}
+var page = 1;
+var rndnum = Math.round(Math.random() * 10000);
+document.write('<A HREF="http://ad.tbn.ru/bb.cgi?cmd=go&pubid=' + userid + '&pg=' + page + '&vbn=189&num=1&w=468&h=60&nocache=' + rndnum + '" target="_blank">');
+document.write('<IMG SRC="http://ad.tbn.ru/bb.cgi?cmd=ad&pubid=' + userid + '&pg=' + page + '&vbn=189&num=1&w=468&h=60&nocache=' + rndnum + '" width=468 height=60 Alt="TBN.ru" border=1></A>');
+
+function get_user_id(){
+        var tmp = window.parent.location.href;
+        var user_id = tmp.replace(/.+user_id=/,"");
+        if(user_id.search(/^[0123456789]+.*$/g)!=-1)
+                       userid = user_id;                       
+                                else
+                                  userid = default_user_id;
+}
+
+// -->
+</SCRIPT>
+
+      <SCRIPT>
+// <!--
+var ie4 = (document.all) ? true : false;
+if (ie4) { document.write('<img src="/ad/counter" WIDTH=1 HEIGHT=0 border=0>'); }
+// -->
+</SCRIPT>
+      <BR><B><FONT face=tahoma size=2><A href="http://www.sudba.ru/" 
+      target=_blank>Е-ЛЮБОВЬ</A> | <A href="http://love.uka.ru/" 
+      target=_blank>ЗНАКОМСТВА</A> | <A href="http://chat.uka.ru/" 
+      target=_blank><FONT color=red>взрывЧАТка</FONT></A> <!--
+| <a href="http://www.anekdots.ru" target='_blank'>АНЕКДОТЫ</a>
+| <a href="http://www.anekdots.ru" target='_blank'>ИГРЫ</a>
+| <a href="http://www.anekdots.ru" target='_blank'>MУЗЫКА</a>
+--></FONT></B></DIV></TD></TR>
+  <TR>
+    <TD borderColorDark=#800000 borderColorLight=#800000 width="29%">
+      <CENTER>
+      <DIV class=base style="COLOR: #000080"><B>Меню</B></DIV></CENTER><BR><FONT 
+      size=1><IMG border=0 hspace=3 
+      src="Програмирование на Visual C++24.files/uk.gif"><A 
+      href="http://vnews.uka.ru/html/about.htm"><B class=base2>О Проекте</B> 
+      <P></A><IMG border=0 hspace=3 
+      src="Програмирование на Visual C++24.files/uk.gif"><A 
+      href="http://vnews.uka.ru/index.html"><B class=base2> Новости</B> 
+      <P></A><IMG border=0 hspace=3 
+      src="Програмирование на Visual C++24.files/uk.gif"><A 
+      href="http://vnews.uka.ru/html/pclub.htm"><B class=base2> Клуб 
+      Программеров С++</B> 
+      <P></A><IMG border=0 hspace=3 
+      src="Програмирование на Visual C++24.files/uk.gif"><A 
+      href="http://vnews.uka.ru/html/docs.htm"><B class=base2> Документация</B> 
+      <P></A><IMG border=0 hspace=3 
+      src="Програмирование на Visual C++24.files/uk.gif"><A 
+      href="http://vnews.uka.ru/html/components.htm"><B class=base2> 
+      Инструментарий</B> 
+      <P></A><IMG border=0 hspace=3 
+      src="Програмирование на Visual C++24.files/uk.gif"><A 
+      href="http://vnews.uka.ru/html/school.htm"><B class=base2> Школа C++</B> 
+      <P></A><IMG border=0 hspace=3 
+      src="Програмирование на Visual C++24.files/uk.gif"><A 
+      href="http://vnews.uka.ru/html/Examples/sources.htm"><B class=base2> 
+      Исходники</B> 
+      <P></A><IMG border=0 hspace=3 
+      src="Програмирование на Visual C++24.files/uk.gif"><A 
+      href="http://www.fido7.com/cgi-fido7/forumi.pl?user=vnews"><B 
+      class=base2>Форум С++</B> 
+      <P></A><IMG border=0 hspace=3 
+      src="Програмирование на Visual C++24.files/uk.gif"><A 
+      href="http://vnews.uka.ru/html/links.htm"><B class=base2> Ссылки</B> 
+      <P></A><IMG border=0 hspace=3 
+      src="Програмирование на Visual C++24.files/uk.gif"><A 
+      href="http://www.guestbook.ru/book.cgi?user=cppmfc&amp;action=show"><B 
+      class=base2> Отзывы и предложения</B> 
+      <P></A><IMG border=0 hspace=3 
+      src="Програмирование на Visual C++24.files/uk.gif"><A 
+      href="http://vnews.uka.ru/html/map.htm"><B class=base2> Карта сайта</B> 
+      <P></A>
+      <HR width="90%">
+
+      <DIV align=center>
+      <SCRIPT language=javascript>
+<!-- 
+an=navigator.appName;d=document;function 
+pr(){d.write("<A HREF=\"http://count.ru/cgi-bin/href.cgi?", 
+"id=9203\"><img src=\"http://count.ru/cgi-bin/", 
+"count.cgi?id=9203&j=y&w="+srw+"&c="+srb+"&", 
+"ref="+escape(d.referrer)+"\" height=31 border=0", 
+" width=88></A>");}srb="na";srw="na";//--> 
+</SCRIPT>
+
+      <SCRIPT language=javascript1.2><!-- 
+s=screen;srw=s.width;an!="Netscape"? 
+srb=s.colorDepth:srb=s.pixelDepth;//--> 
+</SCRIPT>
+
+      <SCRIPT language=javascript><!-- 
+pr();//--> 
+</SCRIPT>
+      <NOSCRIPT><BR><A href="http://count.ru/cgi-bin/href.cgi?id=9203"><IMG 
+      border=0 height=31 src="Програмирование на Visual C++24.files/count.html" 
+      vspace=3 width=88></A> </NOSCRIPT><BR><!--LIST100 COUNTER--><A 
+      href="http://counter.list.ru/cgi-bin/jump?from=12813" target=_top>
+      <SCRIPT>
+<!--
+d=document;js=10;a='&pageref='+escape(d.referrer)
+//--></SCRIPT>
+
+      <SCRIPT language=JavaScript1.1><!--
+js=11;a+='&jsbool='+navigator.javaEnabled()
+//--></SCRIPT>
+
+      <SCRIPT language=JavaScript1.2><!--
+js=12;s=screen;a+='&res='+s.width+'*'+s.height
+a+='&depth='+(s.colorDepth?s.colorDepth:s.pixelDepth)
+//--></SCRIPT>
+
+      <SCRIPT language=JavaScript1.3><!--
+js=13//--></SCRIPT>
+
+      <SCRIPT><!--
+d.write('<img src="http://counter.list.ru/cgi-bin/counter.dll'+
+'?id=12813&type=1&cd=1&bt=0&jsver='+js+a+
+'" alt="LIST100 Counter" border="0" height="40" width="88">')
+if(js>11)d.write('<'+'!-- ')//--></SCRIPT>
+      <NOSCRIPT><IMG alt="LIST100 Counter" border=0 height=32 
+      src="Програмирование на Visual C++24.files/counter.gif" vspace=3 
+      width=80></NOSCRIPT>
+      <SCRIPT><!--
+if(js>11)d.write('--'+'>')
+//-->
+</SCRIPT>
+       </A><!--LIST100 COUNTER--><BR><A href="http://www.index99.kiev.ua/" 
+      target=_blank><IMG alt="Index'99" border=0 height=31 
+      src="Програмирование на Visual C++24.files/count1.gif" vspace=3 
+      width=88></A><BR><!--NUMBER ONE COUNTER--><A href="http://www.one.ru/" 
+      target=_top>
+      <SCRIPT language=javascript><!--
+document.write("<img src=\"http://www.one.ru/cgi-bin/cnt.cgi?id=4201&t=1",
+"&r="+escape(parent.document.referrer),"\" width=88 height=31 ",
+"border=0 alt=\"become number one\">");//--></SCRIPT>
+      <NOSCRIPT><IMG alt="be number one" border=0 height=31 
+      src="Програмирование на Visual C++24.files/cnt.gif" 
+      width=88></NOSCRIPT></A> <!--NUMBER ONE COUNTER--><BR><!--3P COUNTER--><A 
+      href="http://www.3p.com/" target=_top>
+      <SCRIPT language=javascript><!--
+document.write("<img src=\"http://www.3p.com/cgi-bin/cnt.cgi?id=620&t=1",
+"&r="+escape(parent.document.referrer),"\" width=88 height=31 ",
+"border=0 alt=\"3P.RU\">");//--></SCRIPT>
+      <NOSCRIPT><IMG alt=3P.COM border=0 height=31 
+      src="Програмирование на Visual C++24.files/cnt(1).gif" 
+      width=88></NOSCRIPT></A> <!--3P COUNTER--><BR><A 
+      href="http://www.stars.ru/" target=_top><IMG border=0 height=30 
+      src="Програмирование на Visual C++24.files/1000.gif" width=50></A><BR>
+      <P></P></DIV>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P>
+      <P></P></FONT></TD>
+    <TD borderColorDark=#800000 borderColorLight=#800000><FONT color=green 
+      face=TAHOMA size=5>
+      <CENTER><B>Урок II</B></CENTER></FONT>
+      <P>
+      <DIV align=center>
+      <TABLE width="95%">
+        <TBODY>
+        <TR>
+          <TD><FONT color=black face=TAHOMA size=2>
+            <UL type=square>
+              <P><FONT color=black size=3><B>Код, инициализирующий окно 
+              редактирования </B></FONT></P>
+              <LI>При запуске программы, основанную на диалоге, вам нужно 
+              установить определенные значения некоторых элементов управления. 
+              Вам необходимо, чтобы флажки <B>Visible</B> и <B>Enable</B> были 
+              отмечены, иначе окна редактирования не будет видно. Для этого 
+              выполните следующие действия: </LI></UL>
+            <UL type=round>
+              <LI>Зайдите в <B>View-&gt;ClassWizard</B>,откройте закладку 
+              <B>Message Maps</B>. 
+              <LI>В <B>Message IDs</B> выберете <B>CTestDlg</B>, в 
+              <B>Messages</B> появится список событий, с которыми может быть 
+              связано диалоговое окно. Выберете там событие 
+              <B>WM_INITDIALOG</B>. Оно происходит, когда запускается программа 
+              и инициализируется диалоговое окно. 
+              <LI>Щелкнете на кнопку <B>Add Function</B>, а затем нажмите на 
+              кнопку <B>Edit Code</B>, для редактирования иходного кода. 
+</LI></UL>
+            <UL type=square>
+              <LI>Функция <B>OnInitDialog()</B> уже содержит часть кода 
+              написанного <B>VC++</B> Найдите в нем коментарий <B>// TODO: Add 
+              extra initialization here</B>, который сообщает нам, что после 
+              него мы можем добавить свой код. 
+              <LI>Напишите следующий код в функции <B>OnInitDialog()</B>: 
+              <P><B>BOOL 
+              CTestDlg::OnInitDialog()<BR>{<BR>CDialog::OnInitDialog();<BR>...<BR>...<BR>...<BR><BR>// 
+              TODO: Add extra initialization here<BR>// Добавьте свою 
+              инициализацию<BR>
+              <P>////////Мой код начинается здесь/////////// 
+              <P>//Устаноить переменную флажка VisibleCheck и EnabledCheck в 
+              состояние<BR>//TRUE<BR>m_VisibleCheck=TRUE;<BR>m_EnableCheck=TRUE;<BR>//Обновить 
+              экран<BR>UpdateData(FALSE); 
+              <P>////////Мой код заканчивается здесь/////////// 
+              <P>return TRUE; // Вернуть TRUE, если только вы не установили 
+              фокус на элемент управления <BR>}<BR></B>
+              <P></P>
+              <LI>Рассмотрим код: </LI></UL>
+            <UL type=square>
+              <LI>Первый и второй операторы, который которые вы ввели 
+              присваивают переменным <B>m_VisibleCheck</B> и 
+              <B>m_EnableCheck</B> значение <B>TRUE</B>. Это означает, что при 
+              запуске программы флажки будут отмечены. 
+              <LI>Последний оператор <B>UpdateData(FALSE)</B> обновляет экран, 
+              т.е. он обновляет значения переменных элементов управления на 
+              текущие. В нашем случае, при выполнении этого оператора текущие 
+              содержимое переменных связанных с флажками будет передано к ним. 
+              <LI>Теперь для того, чтобы посмотреть инициализирующий код в 
+              действии выполните программу. <BR>Главное окно вашей программы 
+              должно будет выглядеть так: 
+              <P align=center><IMG 
+              src="Програмирование на Visual C++24.files/vc_test_main_window.gif"></P>Флажки 
+              должны быть отмечены. </LI></UL>
+            <P><FONT color=black size=3><B>Связывание кода с событием BN_CLICKED 
+            кнопки Exit</B></FONT></P>
+            <UL type=square>При нажатии на кнопку <B>Exit</B> программа 
+              <B>Test.Exe</B> завершится. 
+              <LI>Чтобы связать код с событием <B>BN_CLICKED</B> кнопки 
+              <B>EXIT</B>, выполните следующие действия: </LI></UL>
+            <UL type=round>
+              <LI>Выбирете <B>ClassWizard</B> в меню <B>View</B> 
+              <LI>Выберете закладку <B>Message Maps</B> в панели 
+              <B>ClassWizard</B> 
+              <LI>Исползуйте диалоговую панель <B>ClassWizard</B> для выбора 
+              следующего события:<BR><LEFT><B>Class Name: CTestDlg<BR>Object ID: 
+              IDC_EXIT_BUTTON<BR>Messages: BN_CLICKED<BR></B></LEFT>
+              <LI>Щелкните на кнопку <B>Add Fucntion</B> и в раскрывшемся окне 
+              нажмите кнопку <B>OK</B>. 
+              <LI>Сейчас ваша панель <B>MFC ClassWizard</B> должна будет 
+              выглядеть так: 
+              <P align=center><IMG 
+              src="Програмирование на Visual C++24.files/vc_clwiz_exit_stat.gif" 
+              width=450></P></LI></UL>
+            <UL type=square>
+              <LI>Нажмите кнопку <B>Edit Code</B> и напишите следующий код в 
+              функции <B>OnExitButton()</B>: 
+              <P><B>void CTestDlg::OnExitButton()<BR>{<BR>// TODO: Add your 
+              control notification handler code here 
+              <P>////////Мой код начинается здесь/////////// 
+              <P>OnOK(); 
+              <P>////////Мой код заканчивается здесь/////////// 
+              <P>}<BR></B></P>
+              <LI>Функция <B>OnOK()</B>, которую вы ввели завершает программу, 
+              при нажатии на кнопку <B>Exit</B>. </LI></UL>
+            <P><FONT color=black size=3><B>Связывание кода с событием BN_CLICKED 
+            кнопки Test</B></FONT></P>
+            <UL type=square>При нажатии на кнопку <B>Test</B> программа 
+              <B>Test.Exe</B> в окне редактирования напишет текст: <B>This is a 
+              Test</B> 
+              <LI>Чтобы связать код с событием <B>BN_CLICKED</B> кнопки 
+              <B>Test</B>, выполните следующие действия: </LI></UL>
+            <UL type=round>
+              <LI>Выбирете <B>ClassWizard</B> в меню <B>View</B> 
+              <LI>Выберете закладку <B>Message Maps</B> в панели 
+              <B>ClassWizard</B> 
+              <LI>Исползуйте диалоговую панель <B>ClassWizard</B> для выбора 
+              следующего события:<BR><LEFT><B>Class Name: CTestDlg<BR>Object ID: 
+              IDC_TEST_BUTTON<BR>Messages: BN_CLICKED<BR></B></LEFT>
+              <LI>Щелкните на кнопку <B>Add Fucntion</B> и в раскрывшемся окне 
+              нажмите кнопку <B>OK</B>. </LI></UL>
+            <UL type=square>
+              <LI>Нажмите кнопку <B>Edit Code</B> и напишите следующий код в 
+              функции <B>OnTestButton()</B>: 
+              <P><B>void CTestDlg::OnTestButton()<BR>{<BR>// TODO: Add your 
+              control notification handler code here 
+              <P>////////Мой код начинается здесь/////////// 
+              <P>///Присвоить переменной окна редактирования IDC_TEST_EDIT 
+              значение This is a Test. <BR>m_TestEdit="This is a Test";<BR>//// 
+              Обновить экран UpdateData(FALSE); 
+              <P>////////Мой код заканчивается здесь/////////// 
+              <P>} </B></P>
+              <LI>Код, который вы ввели содержит два оператора: </LI></UL>
+            <UL type=round>
+              <LI>Первый присваивает переменной <B>m_TestEdit</B> типа 
+              <B>CString</B> значение <B>This is a Test</B>. 
+              <LI>А второй оператор <B>UpdateData(FALSE);</B> обновляет экран, 
+              т.е. сообщает переменным диалогового окна текущие их значения. 
+              </LI></UL>
+            <P><FONT color=black size=3><B>Связывание кода с событием BN_CLICKED 
+            кнопки Clear</B></FONT></P>
+            <UL type=square>При нажатии на кнопку <B>Clear</B> программа 
+              <B>Test.Exe</B> должна стирать текст из окна редактирования. 
+              <LI>Чтобы связать код с событием <B>BN_CLICKED</B> кнопки 
+              <B>Clear</B>, выполните следующие действия: </LI></UL>
+            <UL type=round>
+              <LI>Выбирете <B>ClassWizard</B> в меню <B>View</B> 
+              <LI>Выберете закладку <B>Message Maps</B> в панели 
+              <B>ClassWizard</B> 
+              <LI>Исползуйте диалоговую панель <B>ClassWizard</B> для выбора 
+              следующего события:<BR><LEFT><B>Class Name: CTestDlg<BR>Object ID: 
+              IDC_CLEAR_BUTTON<BR>Messages: BN_CLICKED<BR></B></LEFT>
+              <LI>Щелкните на кнопку <B>Add Fucntion</B> и в раскрывшемся окне 
+              нажмите кнопку <B>OK</B>. </LI></UL>
+            <UL type=square>
+              <LI>Нажмите кнопку <B>Edit Code</B> и напишите следующий код в 
+              функции <B>OnClearButton()</B>: 
+              <P><B>void CTestDlg::OnClearButton()<BR>{<BR>// TODO: Add your 
+              control notification handler code here 
+              <P>////////Мой код начинается здесь/////////// 
+              <P>///Присвоить переменной окна редактирования IDC_TEST_EDIT 
+              значение NULL. <BR>m_TestEdit=" ";<BR>//// Обновить 
+              экран<BR>UpdateData(FALSE); 
+              <P>////////Мой код заканчивается здесь/////////// 
+              <P>}<BR></B></P>
+              <LI>Код, который вы ввели содержит два оператора: </LI></UL>
+            <UL type=round>
+              <LI>Первый присваивает переменной <B>m_TestEdit</B> типа 
+              <B>CString</B> значение <B>NULL</B>, т.е. окно редактирования не 
+              будет содержать никакого текста. 
+              <LI>А второй оператор <B>UpdateData(FALSE);</B> обновляет экран, 
+              т.е. сообщает переменным диалогового окна текущие их значения. При 
+              выполнении этого оператора весь текст из окна редактирования 
+              удалится. </LI></UL>
+            <UL type=square>
+              <LI>Теперь сохраните свою работу, выбрав <B>Save All</B> в меню 
+              <B>File</B>. 
+              <LI>Чтобы увидеть в действии код программы выполните и запустите 
+              ее. </LI></UL>
+            <UL type=round>
+              <LI>Напишите что-нибудь в окне редактирования. 
+              <LI>Щелкните на кнопку <B>Clear</B>, вы видите что текст 
+              стирается. 
+              <LI>Теперь нажмите на кнопку <B>Test</B> в окне редактирования 
+              появится текст <B>This is a Test</B>. 
+              <LI>Если все это выполняется, значит вы совершенно правильно 
+              связали события с кнопками <B>Test</B> и <B>Clear</B>. </LI></UL>
+            <P><FONT color=black size=3><B>Связывание кода с событием BN_CLICKED 
+            флажка Visible</B></FONT></P>
+            <UL type=square>При включении флажка <B>Visible</B> программа 
+              <B>Test.Exe</B> должна сделать окно редактирования невидимым, а 
+              при выключении - наоборот. 
+              <LI>Чтобы связать код с событием <B>BN_CLICKED</B> флажка 
+              <B>Visible</B>, выполните следующие действия: </LI></UL>
+            <UL type=round>
+              <LI>Выбирете <B>ClassWizard</B> в меню <B>View</B> 
+              <LI>Выберете закладку <B>Message Maps</B> в панели 
+              <B>ClassWizard</B> 
+              <LI>Исползуйте диалоговую панель <B>ClassWizard</B> для выбора 
+              следующего события:<BR><LEFT><B>Class Name: CTestDlg<BR>Object ID: 
+              IDC_VISIBLE_CHECK<BR>Messages: BN_CLICKED<BR></B></LEFT>
+              <LI>Щелкните на кнопку <B>Add Fucntion</B> и в раскрывшемся окне 
+              нажмите кнопку <B>OK</B>. </LI></UL>
+            <UL type=square>
+              <LI>Нажмите кнопку <B>Edit Code</B> и напишите следующий код в 
+              функции <B>OnVisibleButton()</B>: 
+              <P><B>void CTestDlg::OnVsibleCheck() <BR>{<BR>// TODO: Add your 
+              control notification handler code here 
+              <P>////////Мой код начинается здесь/////////// 
+              <P>////Обновить значения переменных элементов 
+              управления,<BR>////(содержимое эрана передается переменным 
+              элементов управления)<BR>UpdateData(TRUE);<BR>///Если отметка 
+              флажка <B>Visible</B> зделать окно редактирования видимым<BR>///А 
+              если нет - то 
+              невидимым<BR>if(m_VisibleCheck==TRUE)<BR>GetDlgItem(IDC_TEST_EDIT)-&gt;ShowWindow(SW_SHOW);<BR>else<BR>GetDlgItem(IDC_TEST_EDIT)-&gt;ShowWindow(SW_HIDE); 
+
+              <P>////////Мой код заканчивается здесь/////////// 
+              <P>}<BR></B></P>
+              <LI>Код который вы ввели содержит следующие операторы: </LI></UL>
+            <UL type=round>
+              <LI><B>UpdateData(TRUE);</B> - этот оператор обновляет значения 
+              переменных элементов управления текущими значениями, которые 
+              содержаться на экране. Т.е. при нажатии на флажок переменная может 
+              принимать два значения <B>TRUE</B> или <B>FALSE</B>, <B>TRUE</B> - 
+              это когда флажок включен, а <B>FALSE</B> - наоборот. Значит при 
+              выполнении этого оператора переменная флажка управления принимаеит 
+              текущее положение флажка и все остальные переменные обновляются 
+              значениями, которые отображаются на экране. 
+              <LI>Следующие оператор проверяет включен или выключен флажок. Если 
+              он включен, то выполняется оператор 
+              <B>GetDlgItem(IDC_TEST_EDIT)-&gt;ShowWindow(SW_SHOW);</B>, где 
+              <B>GetDlgItem(IDC_TEST_EDIT)</B> извлекает указатель на элемент 
+              управления, а функция <B>ShowWindow(SW_SHOW);</B> с параметром 
+              <B>SW_SHOW</B>, делает окно редактирования видимым. 
+              <LI>А если флажок не отмечен, то выполняется таже самая функция 
+              <B>ShowWindow();</B> с параметром <B>SW_HIDE</B>, этот параметр 
+              означает спрятать окно редактирования. </LI></UL>
+            <P><FONT color=black size=3><B>Связывание кода с событием BN_CLICKED 
+            флажка Visible</B></FONT></P>
+            <UL type=square>При включении флажка <B>Enable</B> программа 
+              <B>Test.Exe</B> должна сделать окно редактирования доступным, а 
+              при выключении - недоступным. 
+              <LI>Чтобы связать код с событием <B>BN_CLICKED</B> флажка 
+              <B>Enable</B>, выполните следующие действия: </LI></UL>
+            <UL type=round>
+              <LI>Выбирете <B>ClassWizard</B> в меню <B>View</B> 
+              <LI>Выберете закладку <B>Message Maps</B> в панели 
+              <B>ClassWizard</B> 
+              <LI>Исползуйте диалоговую панель <B>ClassWizard</B> для выбора 
+              следующего события:<BR><LEFT><B>Class Name: CTestDlg<BR>Object ID: 
+              IDC_ENABLE_CHECK<BR>Messages: BN_CLICKED<BR></B></LEFT>
+              <LI>Щелкните на кнопку <B>Add Fucntion</B> и в раскрывшемся окне 
+              нажмите кнопку <B>OK</B>. </LI></UL>
+            <UL type=square>
+              <LI>Нажмите кнопку <B>Edit Code</B> и напишите следующий код в 
+              функции <B>OnEnableButton()</B>: 
+              <P><B>void CTestDlg::OnEnableCheck() <BR>{<BR>// TODO: Add your 
+              control notification handler code here 
+              <P>////////Мой код начинается здесь/////////// 
+              <P>////Обновить значения переменных элементов 
+              управления,<BR>////(содержимое эрана передается переменным 
+              элементов управления)<BR>UpdateData(TRUE);<BR>///Если отметка 
+              флажка <B>Enable</B> зделать окно редактирования видимым<BR>///А 
+              если нет - то 
+              невидимым<BR>if(m_EnableCheck==TRUE)<BR>GetDlgItem(IDC_TEST_EDIT)-&gt;EnableWindow(SW_SHOW);<BR>else<BR>GetDlgItem(IDC_TEST_EDIT)-&gt;EnableWindow(SW_HIDE); 
+
+              <P>////////Мой код заканчивается здесь/////////// 
+              <P>}<BR></B></P>
+              <LI>Код который вы ввели содержит следующие операторы: </LI></UL>
+            <UL type=round>
+              <LI><B>UpdateData(TRUE)</B> - обновляет переменные элементов 
+              управления текущими их значениями на экране. После выполнения 
+              этого оператора перменной <B>m_EnableCheck</B> присваивается 
+              текущее значение флажка <B>Enable</B>. 
+              <LI>Следующие операторы имееют ту же конструкцию, как и у флажка 
+              <B>Visible</B>, но только функция <B>ShowWindow</B> заменена на 
+              <B>EnableWindow()</B>, которая предназначена для того, чтобы 
+              элемент управления был недоступен или доступен. Она имеет те же 
+              параметры, что и функция <B>ShowWindow</B>. </LI></UL>
+            <P><FONT color=black size=3><B>Связывание кода с событием EN_CHANGE 
+            окна редактирования</B></FONT></P>
+            <UL type=square>При вводе текста и его изменении в окне 
+              редактирования, возникает событие <B>EN_CHANGE</B>. В нашей 
+              программе при вводе слова <B>CALCULATOR</B> запускается 
+              калькулятор, а при вводе <B>Paint</B> - графический редактор 
+              <B>Paint</B>. 
+              <LI>Чтобы связать код с событием <B>EN_CHANGE</B> окна 
+              редактирования, выполните следующие действия: </LI></UL>
+            <UL type=round>
+              <LI>Выбирете <B>ClassWizard</B> в меню <B>View</B> 
+              <LI>Выберете закладку <B>Message Maps</B> в панели 
+              <B>ClassWizard</B> 
+              <LI>Исползуйте диалоговую панель <B>ClassWizard</B> для выбора 
+              следующего события:<BR><LEFT><B>Class Name: CTestDlg<BR>Object ID: 
+              IDC_TEST_EDIT<BR>Messages: EN_CHANGE<BR></B></LEFT>
+              <LI>Щелкните на кнопку <B>Add Fucntion</B> и в раскрывшемся окне 
+              нажмите кнопку <B>OK</B>. </LI></UL>
+            <UL type=square>
+              <LI>Нажмите кнопку <B>Edit Code</B> и напишите следующий код в 
+              функции <B>OnChangeTestEdit()</B>: 
+              <P><B>void CTestDlg::OnChangeTestEdit() <BR>{<BR>...<BR>// TODO: 
+              Add your control notification handler code here 
+              <P><BR>////////Мой код начинается здесь/////////// 
+              <P><BR>///Обновить переменные<BR>UpdateData(TRUE);<BR>///Содать 
+              переменную типа CString, присвоить ей значение<BR>///переменной 
+              m_TestEdit и выполнить перевод символов в 
+              верхний<BR>///регистр.<BR>CString 
+              UpperValue;<BR>UpperValue=m_TestEdit;<BR>UpperValue.MakeUpper(); 
+              <P>///Если в окне редактирования напечатано PAINT 
+              <BR>///запускается редактор PAINT и окно редактирования становится 
+              пустым.<BR>if(UpperValue=="PAINT")<BR>{<BR>system("pbrush.exe");<BR>m_TestEdit=" 
+              ";<BR>UpdateData(FALSE);<BR>} 
+              <P>///Если в окне редактирования напечатано CALCULATOR 
+              <BR>///запускается калькулятор и окно редактирования становится 
+              пустым.<BR>if(UpperValue=="CALCULATOR")<BR>{<BR>system("calc.exe");<BR>m_TestEdit=" 
+              ";<BR>UpdateData(FALSE);<BR>} 
+              <P>////////Мой код заканчивается здесь/////////// 
+              <P>}<BR></B></P>
+              <LI>Код который вы ввели содержит следующие операторы: </LI></UL>
+            <UL type=round>
+              <LI><B>UpdateData(TRUE);</B> обновляет переменную 
+              <B>m_TestEdit</B> значением содержимого окна редактирования, при 
+              каждом его изменении, так как окно редактирования связано с 
+              событием <B>EN_CHANGE</B>. 
+              <LI>Следующий оператор <B>CString UpperValue;</B> содает новую 
+              переменную типа <B>CString</B>. 
+              <LI>Затем переменной <B>UpperValue</B> приравнивается значение 
+              переменной <B>m_TestEdit</B>, это можно сделать, так как они имеют 
+              одинаковый тип. 
+              <LI>Оператор <B>UpperValue.MakeUpper();</B> переводит все символы 
+              переменной <B>UpperValue</B> в верхний регистр. 
+              <LI>Оператор <B>if(UpperValue=="PAINT");</B> проверяет, если 
+              введено ли слово <B>PAINT</B>, то выполняются следующие три 
+              оператора: <BR>Первый <B>system("pbrush.exe");</B> запускает 
+              графический редактор, так как не указан явный путь к файлу, то 
+              программа будет искать его в каталоге <B>C:\WINDOWS</B>. 
+              <BR>Второй оператор <B>m_TestEdit="";</B> присваивает переменной 
+              окна редактирования значение <B>NULL</B>, а следующий оператор 
+              <B>UpadteData(FALSE)</B> - обновляет экран. Вследствии этого, весь 
+              текст из окна редактирования удалится. 
+              <LI>Заметьте, что мы перевели символы переменной <B>UpperValue</B> 
+              в верхний регистр - это нужно потому, что в языке <B>С++</B> 
+              символы нижнего и верхнего регистра имеют разные значения, поэтому 
+              при переводе на верхний регистр, мы <B>100%</B> будем уверены, что 
+              написанное нами слово <B>PaInT</B> совпадет с <B>PAINT</B>. 
+              <LI>Следующая конструкция операторов полностью идеинтична 
+              предыдущей, только проверяется равно ли значение переменной 
+              <B>m_TestEdit</B> слову <B>CALCULATOR</B>, если да, то запускается 
+              калькулятор, и окно редактирования очищается. </LI></UL>
+            <P>Вы закончили связывание событий с элементами управления 
+            <P>Резюме и упражнение <A 
+            href="http://vnews.uka.ru/html/Lessons/lesson022.htm"><B 
+            class=base2>&lt;-Назад</B></A> || <A 
+            href="http://vnews.uka.ru/html/Lessons/lesson042.htm"><B 
+            class=base2>Дальше -&gt;</B></A> 
+            <P>
+            <CENTER><B><FONT color=green><A 
+            href="http://vnews.uka.ru/html/Lessons/lesson002.htm">[1]</A><A 
+            href="http://vnews.uka.ru/html/Lessons/lesson012.htm"> [2]</A> <A 
+            href="http://vnews.uka.ru/html/Lessons/lesson022.htm">[3]</A> [4]<A 
+            href="http://vnews.uka.ru/html/Lessons/lesson042.htm"> [5] 
+            </A></B></FONT></CENTER></FONT></TD></TR></TBODY></TABLE></DIV></TD></TR>
+  <TR>
+    <TD borderColorDark=#800000 borderColorLight=#800000 colSpan=2>
+      <DIV align=center>
+      <TABLE border=0 cellPadding=0 cellSpacing=0 width="70%">
+        <TBODY>
+        <TR>
+          <TD><FONT color=black face="MS SANS SERIF" size=1><A 
+            href="http://algo.da.ru/" target=_top><B>Algorithm project</A>:</B> 
+            Кольцо сайтов, посвященных программированию (<A 
+            href="http://webring.da.ru/" style="COLOR: black" 
+            target=_top>подробнее о проекте WebRing...</A>)<BR>[<A 
+            href="http://www.webring.org/cgi-bin/webring?ring=ru_rk_ring;id=10;prev5" 
+            target=_top>Предыдущие 5 сайтов</A> | <A 
+            href="http://www.webring.org/cgi-bin/webring?ring=ru_rk_ring;id=10;prev" 
+            target=_top>Предыдуший</A> | <A 
+            href="http://www.webring.org/cgi-bin/webring?ring=ru_rk_ring;id=10;next" 
+            target=_top>Следующий</A> | <A 
+            href="http://www.webring.org/cgi-bin/webring?ring=ru_rk_ring;id=10;next5" 
+            target=_top>Следующие 5 сайтов</A> | <A 
+            href="http://www.webring.org/cgi-bin/webring?ring=ru_rk_ring;random" 
+            target=_top>Выбрать сайт случайным образом</A> <A 
+            href="http://www.webring.org/cgi-bin/webring?ring=ru_rk_ring;list" 
+            target=_top>Список всех сайтов</A> ] 
+      </FONT></TD></TR></TBODY></TABLE></DIV></TD></TR></TBODY></TABLE><BR>
+<TABLE bgColor=#f8f1e4 border=1 borderColor=#800000 cellPadding=0 cellSpacing=5 
+width=700>
+  <TBODY>
+  <TR>
+    <TD height=40>
+      <DIV align=center>
+      <TABLE border=0 cellPadding=0 cellSpacing=10 width="37%">
+        <TBODY>
+        <TR>
+          <TD width="16%"></TD></TR></TBODY></TABLE></DIV></TD></TR></TBODY></TABLE></DIV>
+<P>
+<CENTER>
+<DIV class=base2 style="COLOR: black">Copyright © 1999 C++ Programmers Club 
+</DIV>
+<DIV class=base2 style="COLOR: black">Author: <A 
+href="mailto:vnews@mail.ru">Kuklin Alexey</A> All Rights Reserved 
+</DIV></CENTER>
+<P></P></BODY></HTML>

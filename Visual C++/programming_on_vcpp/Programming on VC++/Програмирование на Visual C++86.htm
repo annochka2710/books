@@ -1,0 +1,665 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<!-- saved from url=(0046)http://vnews.uka.ru/html/Lessons/lesson058.htm -->
+<HTML><HEAD><TITLE>Програмирование на Visual C++</TITLE>
+<META content="text/html; charset=windows-1251" http-equiv=Content-Type>
+<META content="Kuklin Alexey Email: vnews@mail.ru" name=author>
+<META 
+content="programming, программирование, soft, helps, web webdizain, photo, photoshop, internet, examples, conference, конференция, софт, примеры программ, исходники, source, codes, MFC, MTL, vc, visual, c , c++, с++,с, документация, documentation" 
+name=keywords>
+<META 
+content="Документация C, C++ , Visual C , Object C, Quick C, Turbo C, ActiveX. Школа MFC, софт, примеры программ и исходники к ним, справочные книги и конференция." 
+name=description><LINK href="Програмирование на Visual C++86.files/styles.css" 
+rel=STYLESHEET title=Style type=text/css>
+<META content="MSHTML 5.00.2614.3500" name=GENERATOR></HEAD>
+<BODY bgColor=#e9d7b1 leftMargin=0 text=black topMargin=0>
+<DIV align=center><BR>
+<TABLE bgColor=#f8f1e4 border=1 borderColor=#800000 borderColorDark=#f8f1e4 
+borderColorLight=#f8f1e4 cellPadding=0 cellSpacing=4 height=250 width=700>
+  <TBODY>
+  <TR>
+    <TD borderColorDark=#800000 borderColorLight=#800000 colSpan=2 height=80>
+      <DIV align=center>
+      <SCRIPT>
+// <!--
+var default_user_id = 65561;
+var userid = default_user_id;
+get_user_id();
+if (userid == 123456) {userid=default_user_id;}
+var page = 1;
+var rndnum = Math.round(Math.random() * 10000);
+document.write('<A HREF="http://ad.tbn.ru/bb.cgi?cmd=go&pubid=' + userid + '&pg=' + page + '&vbn=189&num=1&w=468&h=60&nocache=' + rndnum + '" target="_blank">');
+document.write('<IMG SRC="http://ad.tbn.ru/bb.cgi?cmd=ad&pubid=' + userid + '&pg=' + page + '&vbn=189&num=1&w=468&h=60&nocache=' + rndnum + '" width=468 height=60 Alt="TBN.ru" border=1></A>');
+
+function get_user_id(){
+        var tmp = window.parent.location.href;
+        var user_id = tmp.replace(/.+user_id=/,"");
+        if(user_id.search(/^[0123456789]+.*$/g)!=-1)
+                       userid = user_id;                       
+                                else
+                                  userid = default_user_id;
+}
+
+// -->
+</SCRIPT>
+
+      <SCRIPT>
+// <!--
+var ie4 = (document.all) ? true : false;
+if (ie4) { document.write('<img src="/ad/counter" WIDTH=1 HEIGHT=0 border=0>'); }
+// -->
+</SCRIPT>
+      <BR><B><FONT face=tahoma size=2><A href="http://www.sudba.ru/" 
+      target=_blank>Е-ЛЮБОВЬ</A> | <A href="http://love.uka.ru/" 
+      target=_blank>ЗНАКОМСТВА</A> | <A href="http://chat.uka.ru/" 
+      target=_blank><FONT color=red>взрывЧАТка</FONT></A> <!--
+| <a href="http://www.anekdots.ru" target='_blank'>АНЕКДОТЫ</a>
+| <a href="http://www.anekdots.ru" target='_blank'>ИГРЫ</a>
+| <a href="http://www.anekdots.ru" target='_blank'>MУЗЫКА</a>
+--></FONT></B></DIV></TD></TR>
+  <TR>
+    <TD borderColorDark=#800000 borderColorLight=#800000 width="29%">
+      <CENTER>
+      <DIV class=base style="COLOR: #000080"><B>Меню</B></DIV></CENTER><BR><FONT 
+      size=1><IMG border=0 hspace=3 
+      src="Програмирование на Visual C++86.files/uk.gif"><A 
+      href="http://vnews.uka.ru/html/about.htm"><B class=base2>О Проекте</B>
+      <P></A><IMG border=0 hspace=3 
+      src="Програмирование на Visual C++86.files/uk.gif"><A 
+      href="http://vnews.uka.ru/index.html"><B class=base2> Новости</B>
+      <P></A><IMG border=0 hspace=3 
+      src="Програмирование на Visual C++86.files/uk.gif"><A 
+      href="http://vnews.uka.ru/html/pclub.htm"><B class=base2> Клуб 
+      Программеров С++</B>
+      <P></A><IMG border=0 hspace=3 
+      src="Програмирование на Visual C++86.files/uk.gif"><A 
+      href="http://vnews.uka.ru/html/docs.htm"><B class=base2> Документация</B>
+      <P></A><IMG border=0 hspace=3 
+      src="Програмирование на Visual C++86.files/uk.gif"><A 
+      href="http://vnews.uka.ru/html/components.htm"><B class=base2> 
+      Инструментарий</B>
+      <P></A><IMG border=0 hspace=3 
+      src="Програмирование на Visual C++86.files/uk.gif"><A 
+      href="http://vnews.uka.ru/html/school.htm"><B class=base2> Школа C++</B>
+      <P></A><IMG border=0 hspace=3 
+      src="Програмирование на Visual C++86.files/uk.gif"><A 
+      href="http://vnews.uka.ru/html/Examples/sources.htm"><B class=base2> 
+      Исходники</B>
+      <P></A><IMG border=0 hspace=3 
+      src="Програмирование на Visual C++86.files/uk.gif"><A 
+      href="http://www.fido7.com/cgi-fido7/forumi.pl?user=vnews"><B 
+      class=base2>Форум С++</B>
+      <P></A><IMG border=0 hspace=3 
+      src="Програмирование на Visual C++86.files/uk.gif"><A 
+      href="http://vnews.uka.ru/html/links.htm"><B class=base2> Ссылки</B>
+      <P></A><IMG border=0 hspace=3 
+      src="Програмирование на Visual C++86.files/uk.gif"><A 
+      href="http://www.guestbook.ru/book.cgi?user=cppmfc&amp;action=show"><B 
+      class=base2> Отзывы и предложения</B>
+      <P></A><IMG border=0 hspace=3 
+      src="Програмирование на Visual C++86.files/uk.gif"><A 
+      href="http://vnews.uka.ru/html/map.htm"><B class=base2> Карта сайта</B>
+      <P></A>
+      <HR width="90%">
+
+      <DIV align=center>
+      <SCRIPT language=javascript>
+<!-- 
+an=navigator.appName;d=document;function 
+pr(){d.write("<A HREF=\"http://count.ru/cgi-bin/href.cgi?", 
+"id=9203\"><img src=\"http://count.ru/cgi-bin/", 
+"count.cgi?id=9203&j=y&w="+srw+"&c="+srb+"&", 
+"ref="+escape(d.referrer)+"\" height=31 border=0", 
+" width=88></A>");}srb="na";srw="na";//--> 
+</SCRIPT>
+
+      <SCRIPT language=javascript1.2><!-- 
+s=screen;srw=s.width;an!="Netscape"? 
+srb=s.colorDepth:srb=s.pixelDepth;//--> 
+</SCRIPT>
+
+      <SCRIPT language=javascript><!-- 
+pr();//--> 
+</SCRIPT>
+      <NOSCRIPT><BR><A href="http://count.ru/cgi-bin/href.cgi?id=9203"><IMG 
+      border=0 height=31 src="Програмирование на Visual C++86.files/count.html" 
+      vspace=3 width=88></A> </NOSCRIPT><BR><!--LIST100 COUNTER--><A 
+      href="http://counter.list.ru/cgi-bin/jump?from=12813" target=_top>
+      <SCRIPT>
+<!--
+d=document;js=10;a='&pageref='+escape(d.referrer)
+//--></SCRIPT>
+
+      <SCRIPT language=JavaScript1.1><!--
+js=11;a+='&jsbool='+navigator.javaEnabled()
+//--></SCRIPT>
+
+      <SCRIPT language=JavaScript1.2><!--
+js=12;s=screen;a+='&res='+s.width+'*'+s.height
+a+='&depth='+(s.colorDepth?s.colorDepth:s.pixelDepth)
+//--></SCRIPT>
+
+      <SCRIPT language=JavaScript1.3><!--
+js=13//--></SCRIPT>
+
+      <SCRIPT><!--
+d.write('<img src="http://counter.list.ru/cgi-bin/counter.dll'+
+'?id=12813&type=1&cd=1&bt=0&jsver='+js+a+
+'" alt="LIST100 Counter" border="0" height="40" width="88">')
+if(js>11)d.write('<'+'!-- ')//--></SCRIPT>
+      <NOSCRIPT><IMG alt="LIST100 Counter" border=0 height=32 
+      src="Програмирование на Visual C++86.files/counter.gif" vspace=3 
+      width=80></NOSCRIPT>
+      <SCRIPT><!--
+if(js>11)d.write('--'+'>')
+//-->
+</SCRIPT>
+      </A> <!--LIST100 COUNTER--><BR><A href="http://www.index99.kiev.ua/" 
+      target=_blank><IMG alt="Index'99" border=0 height=31 
+      src="Програмирование на Visual C++86.files/count1.gif" vspace=3 
+      width=88></A><BR><!--NUMBER ONE COUNTER--><A href="http://www.one.ru/" 
+      target=_top>
+      <SCRIPT language=javascript><!--
+document.write("<img src=\"http://www.one.ru/cgi-bin/cnt.cgi?id=4201&t=1",
+"&r="+escape(parent.document.referrer),"\" width=88 height=31 ",
+"border=0 alt=\"become number one\">");//--></SCRIPT>
+      <NOSCRIPT><IMG alt="be number one" border=0 height=31 
+      src="Програмирование на Visual C++86.files/cnt.gif" 
+      width=88></NOSCRIPT></A> <!--NUMBER ONE COUNTER--><BR><!--3P COUNTER--><A 
+      href="http://www.3p.com/" target=_top>
+      <SCRIPT language=javascript><!--
+document.write("<img src=\"http://www.3p.com/cgi-bin/cnt.cgi?id=620&t=1",
+"&r="+escape(parent.document.referrer),"\" width=88 height=31 ",
+"border=0 alt=\"3P.RU\">");//--></SCRIPT>
+      <NOSCRIPT><IMG alt=3P.COM border=0 height=31 
+      src="C:\users\max\work\VISUAL\KNIGA2\Програмирование на Visual C++86.files\cnt(1).gif" 
+      width=88></NOSCRIPT></A> <!--3P COUNTER--><BR><A 
+      href="http://www.stars.ru/" target=_top><IMG border=0 height=30 
+      src="Програмирование на Visual C++86.files/1000.gif" width=50></A><BR>
+      <P> </P></DIV>
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> 
+      <P> </P></FONT></TD>
+    <TD borderColorDark=#800000 borderColorLight=#800000><FONT color=green 
+      face=TAHOMA size=5>
+      <CENTER><B>Урок VIII</B></CENTER></FONT>
+      <P>
+      <P align=center><FONT color=black face=ARIAL size=4>Проектирование 
+      диалоговой панели</FONT></P>
+      <DIV align=center>
+      <TABLE width="95%">
+        <TBODY>
+        <TR>
+          <TD><FONT color=black face=TAHOMA size=2>Учения-Мучения! 
+            <UL type=square>
+              <LI>Сейчас нам необходимо добавить код выбора фигур для рисования! 
+
+              <LI>У нас будет три фигуры (прямоугольник, овал, линия) и 
+              свободное рисование, по умолчанию будет устанавливаться свободное 
+              рисование (FREEHAND). 
+              <LI>Мы будем выбирать эти формы из списка, для этого нам 
+              понадобится элемент управления <B>Combo Box</B>, который будет 
+              содержать список фигур для рисования, добавьте элемент управления 
+              согласно рисунку 2, и таблице 2. 
+              <LI>Элементы этого списка, мы должны будем указать прямо в 
+              свойствах элемента на странице <B>Data</B>, чтобы ввести название 
+              следующего элемента, для этого надо нажать не <B>Enter</B>, а 
+              <B>Ctrl+Enter</B>. </LI></UL><FONT color=black face=TAHOMA size=2>
+            <UL type=square>
+              <P align=center><IMG 
+              src="Програмирование на Visual C++86.files/vc_resource_dlg_proekt6.gif"></P>
+              <P align=center><FONT color=red><B>Таблица 2.0</B></FONT></P>
+              <DIV align=center>
+              <TABLE bgColor=#ffffbb border=1 cellPadding=0 cellSpacing=0 
+              width="80%">
+                <TBODY>
+                <TR>
+                  <TD><FONT face=ARIAL size=2><B>Объект</B></FONT></TD>
+                  <TD><FONT face=ARIAL size=2><B>Свойство</B></FONT></TD>
+                  <TD><FONT face=ARIAL size=2><B>Установка</B></FONT></TD></TR>
+                <TR>
+                  <TD colSpan=3>&nbsp;</TD></TR>
+                <TR>
+                  <TD><FONT face=ARIAL size=2><B>Combo Box</B></FONT></TD>
+                  <TD><FONT face=ARIAL size=2><B>ID</B></FONT></TD>
+                  <TD><FONT face=ARIAL size=2><B>IDC_SHAPES</B></FONT></TD></TR>
+                <TR>
+                  <TD></TD>
+                  <TD><FONT face=ARIAL size=2>Type</FONT></TD>
+                  <TD><FONT face=ARIAL size=2>Drop List</FONT></TD></TR>
+                <TR>
+                  <TD></TD>
+                  <TD><FONT face=ARIAL size=2>Элемент1</FONT></TD>
+                  <TD><FONT face=ARIAL size=2>FreeHand, страница 
+                Data</FONT></TD></TR>
+                <TR>
+                  <TD></TD>
+                  <TD><FONT face=ARIAL size=2>Элемент2</FONT></TD>
+                  <TD><FONT face=ARIAL size=2>Lines, страница 
+Data</FONT></TD></TR>
+                <TR>
+                  <TD></TD>
+                  <TD><FONT face=ARIAL size=2>Элемент3</FONT></TD>
+                  <TD><FONT face=ARIAL size=2>Ovals, страница 
+Data</FONT></TD></TR>
+                <TR>
+                  <TD></TD>
+                  <TD><FONT face=ARIAL size=2>Элемент4</FONT></TD>
+                  <TD><FONT face=ARIAL size=2>Rectangle, страница 
+                  Data</FONT></TD></TR>
+                <TR>
+                  <TD><FONT face=ARIAL size=2><B>Group Box</B></FONT></TD>
+                  <TD><FONT face=ARIAL size=2><B>ID<B></FONT></B></B></TD>
+                  <TD><FONT face=ARIAL size=2><B>IDC_STATIC</B></FONT></TD></TR>
+                <TR>
+                  <TD></TD>
+                  <TD><FONT face=ARIAL size=2>Caption</FONT></TD>
+                  <TD><FONT face=ARIAL size=2>&amp;Lines and 
+                Shapes</FONT></TD></TR></TR></TBODY></TABLE></DIV>
+              <P><BR>
+              <P>
+              <LI>Тип элемента указывает на то, что значения будут постоянными и 
+              их нельзя менять, т.е. просто список названий. 
+              <LI>Затем вы добавляете элементы списка, не забывая, что чтобы 
+              добавить следующий элемент, необходимо нажать <B>Ctrl+Enter</B>. 
+              <LI>Теперь нам необходимо связать этот элемент управления с 
+              переменной, с помощью которой мы будем получать значение позиции 
+              выбранного названия фигуры. Потом мы добавим хитренький код, 
+              который будет реализировать рисование фигур. 
+              <P></P></LI></UL>
+            <UL type=square>
+              <LI>Сечас откройте <B>Class Wizard</B>, а там закладку <B>Member 
+              Variables</B>. 
+              <LI>Отметьте мышкой индетификатор <B>IDC_SHAPES</B> и нажмите на 
+              кнопку <B>Add Variable</B> 
+              <LI>Введите название переменной <B>m_ShapesCombo</B>, 
+              <B>Category</B> - <B>Control</B>, <B>Variable Type</B> - 
+              <B>CComboBox</B>. 
+              <LI>Нажмите <B>OK</B>. 
+              <LI>Закройте ClassWizard. 
+              <LI>Откройте функцию <B>OnInitDialog</B> и в конец(перед 
+              оператором return) добавьте следующий код: <BR>
+              <P><B>////-Ваш код начинается здесь -////
+              <P>//Установить начальную позицию 
+              курсора<BR>m_ShapesCombo.SetCurSel(0);
+              <P>////-Ваш код заканчивается здесь -////
+              <P></B></P>
+              <LI>Этим оператором вы устанавливаете начальную позицию курсора, 
+              на первой строчке. 
+              <LI>Теперь пришло время разобраться в теории, для рисования линий 
+              и фигур нам необходимо применять метод резиновой нити, т.е. когда 
+              вы нажали на мышки и хотите нарисовать фигуру, вы же вначале 
+              подбираете ее размер, т.е. при выборе размера, вы тоже рисуете, но 
+              при каждом движении мыши предыдущий объект должен стираться до тех 
+              пор пока, не будет отпущена мышка, когда это произойдет, надо 
+              будет нарисовать окончательный объект. Так вот метод резиновой 
+              нити рисует фигуру, с инвертированием цветов под ним, т.е. мы 
+              можем различать, когда мы выбираем размеры и когда уже 
+              оканчательно нарисовано. Вся изюменка этого метода в том, что при 
+              повторном рисовании фигуры, предыдущая стирается, а когда кнопку 
+              мышки отпускаете, то рисуется все окончательно без всяких 
+              приколов. 
+              <LI>Теперь расскажу, как все организовать. Вначале мы добавим 
+              переменную <B>m_IsDrawing</B> типа <B>bool</B>, которая будет 
+              принимать два значения <B>false</B> и <B>true</B>, эта переменная 
+              будет отвечать за,то чтобы рисовать при движении мыши или нет. 
+              <LI>Необходимо будет написать саму функцию рисования фигур, в 
+              которой и будет релиазоваться метод резиновой нити и само 
+              рисование, она будет использовать переменную <B>stretch</B> для 
+              определения метода рисования. 
+              <LI>Затем нужно будет изменить немного все функции связанные с 
+              событиями мыши. 
+              <LI>Ну что, начнем. 
+              <P><FONT color=red size=3><B>Добавление функции 
+              DrawShape</B></FONT></P>
+              <P></P>
+              <LI>C помощью <B>WorkSpace</B> добавьте функцию с 
+              названием<BR><B>DrawShape(bool stretch=false)</B>, с типом 
+              <B>void</B> и доступом <B>Private</B>. Откроем ее в окне 
+              редактирования. И напишем следующий код, в котором скоро 
+              разберемся: <B>
+              <P>void CPaintORamaDlg::DrawShape(bool stretch)<BR>{<BR>//Получить 
+              объект контекста устройства<BR>CClientDC dc(this);
+              <P>//Установить атрибуты 
+              DC<BR>dc.SetAttribDC(dc);<BR>dc.IntersectClipRect(m_Canvas);
+              <P>//Получить номер позиции из спика названий фигур<BR>int 
+              drawmode=m_ShapesCombo.GetCurSel();
+              <P>//Выбрать перо<BR>dc.SelectObject(&amp;m_Pen);
+              <P>//Метод резиновой нити<BR>if(stretch &amp;&amp; 
+              drawmode!=0)<BR>{<BR>//Установить метод резиновой 
+              нити<BR>dc.SetROP2(R2_NOT);<BR>}
+              <P>//Конструкция выбора 
+              фигуры<BR>switch(drawmode)<BR>{<BR>//Свободное рисование<BR>case 
+              0:<BR>dc.MoveTo(m_LineStart);<BR>dc.LineTo(m_LineEnd);<BR>m_LineStart=m_LineEnd;<BR>break;<BR>
+              <P>//Рисование линий<BR>case 
+              1:<BR>dc.MoveTo(m_LineStart);<BR>dc.LineTo(m_LineEnd);<BR>break;<BR>
+              <P>//Рисование элипсов<BR>case 
+              2:<BR>dc.Ellipse(CRect(m_LineStart,m_LineEnd));<BR>break;<BR>
+              <P>//Рисование прямоугольника<BR>case 
+              3:<BR>dc.Rectangle(CRect(m_LineStart,m_LineEnd));<BR>break;<BR>}<BR><BR>}<BR></B></P>
+              <LI>Вначале по стандарту получаем объект контекста устройства, 
+              потом устанавливаем атрибуты <B>DC</B>. Считываем номер выбранного 
+              элемента в списке фигур и записываем его в переменную 
+              <B>drawmode</B>. 
+              <LI>Переменная <B>stretch</B> отвечает за то, чтобы применять 
+              метод резиновой нити или нет, так например, для рисования в 
+              свободной форме(точка за точкой) не нужно удалять предыдущее 
+              состояние, или когда отпускаете кнопку мыши, тоже не надо 
+              применять метод РН. 
+              <LI>Конструкция оператора <B>IF</B> проверяет, что если режим 
+              рисования и номер выбранной фигуры не равны 0, то применить метод 
+              резиновой нити, т.е. если не выбрано свободное рисование и мы 
+              находитесь в стадии выбора размера фигуры, то применить метод 
+              резиновой нити. 
+              <LI>Потом конструкция оператора <B>switch</B> реализует выбор 
+              фигуры и ее рисование. Например, если вы выбрали фигуру овал, то 
+              <B>drawmode</B> будет равен 2, т.е. оператор <B>switch</B> найдет 
+              метку 2 и нарисует элипс, заданный координатами прямоугольника 
+              класса <B>CRect</B>, вы, наверное, заметили, что координаты заданы 
+              двумя переменными и они инициализируют объект класса, который в 
+              свою очередь возращает значение всех четырех координат. 
+              <LI>Оператор <B>break</B> выходит из конструкции оператора 
+              <B>switch</B>, после того, как что-нибудь будет нарисовано. 
+              <LI>И еще заметьте, что предыдущие координаты для свободного 
+              рисования изменяются сразу.
+              <P></P>
+              <LI>Теперь надо, изменить все функции обработки сообщений мыши. 
+              <LI>Измените функцию <B>OnLButtonDown</B> следующим образом: 
+              <P><B>BOOL CPaintORamaDlg::OnLButtonDown(UINT nFlags, CPoint 
+              point) <BR>{<BR><BR>.....<BR>
+              <P>//Проверить было ли нажатие внутри области 
+              рисования.<BR>if(m_Canvas.PtInRect(point))<BR>{<BR>//Присвоить 
+              координаты начала двум переменным<BR>m_LineStart= 
+              point;<BR>m_LineEnd=point;
+              <P>/////-Ваш код начинается здесь-///
+              <P><FONT color=red>m_IsDrawing=true;</FONT>
+              <P>/////-Ваш код заканчивается здесь-/////
+              <P>m_Pen.DeleteObject();
+              <P>//Обновить переменные значениями в окне 
+              прграммы<BR>UpdateData(TRUE);
+              <P>//Создать новую кисть с учетом 
+              размера<BR>m_Pen.CreatePen(PS_SOLID, m_PenWidth, m_PenColor);
+              <P>//Захватить мышь<BR>SetCapture();<BR>}
+              <P>}<BR></B></P>
+              <LI>Добавленый оператор присваивает значение <B>true</B> 
+              переменной <B>m_IsDrawing</B>, т.е. включается режим рисования, 
+              при отпускании кнопки мыши он будет равен <B>false</B>, т.е. 
+              отключен. 
+              <LI>Теперь нужно в корни изменить код функции <B>OnMouseMove</B>, 
+              удалите весь код внутри оператора <B>IF</B>, т.к. он содержит код 
+              рисования, а он нам не нужен так, как он будет реализован в 
+              функции <B>DrawShape</B>. 
+              <LI>Функция <B>OnMouseMove</B> будет выполнять роль рисования 
+              методом резиновой нити, т.к. пока вы двигаете мышкой, то вы 
+              изменяете размеры фигуры, значит предыдущию фигуру надо стереть, 
+              обновить координаты конца, и опять нарисовать. А окончательно 
+              фигура нарисуется только в том случае, если вы отпускаете кнопку 
+              мыши. 
+              <LI>Откройте функцию <B>OnMouseMove</B>, модифицируйте ее 
+              следующим образом:
+              <P><B>void CPaintORamaDlg::OnMouseMove(UINT nFlags, CPoint 
+              point)<BR>{
+              <P>////-Мой код начинается здесь-///
+              <P>if(<FONT color=red>m_IsDrawing</FONT>&amp;&amp; (nFlags &amp; 
+              MK_LBUTTON) &amp;&amp; m_Canvas.PtInRect(point))<BR>{
+              <P>//Нарисовать фигуру методом резиновой нити<BR>DrawShape(true);
+              <P>/*Поменять координаты конца на текущее положение 
+              курсора<BR>m_LineStart=m_LineEnd;
+              <P>//Стереть предыдущую и нарисовать новую 
+              фигуру<BR>DrawShape(true);
+              <P>////-Мой код заканчивается здесь-///
+              <P>}
+              <P>} </B></P>
+              <LI>Вначале вы рисуете фигуру методом резиновой нити, передавая 
+              для этого значение аргумента функции <B>true</B>. 
+              <LI>Потом меняете координаты конца на текущее положение курсора, а 
+              повтором первого оператора, вы удаляете предыдущую фигуру 
+              нарисованную методом резиновой нити и рисуете новую. 
+              <LI>Вот такой несложный код. 
+              <LI>Теперь осталось только изменить код функции 
+              <B>OnLButtonUp</B>. 
+              <LI>Нам необходимо, проверить была ли отпущена кнопка, внутри окна 
+              рисования, если да то нарисовать фигуру уже окончательно, а если 
+              нет то стереть предыдущюю фигуру, т.к. когда вы за областью окна 
+              рисования отпускаете мышку, то фигура нарисованная методом 
+              резиновой нити не зарисовывается окончательной, а остается. 
+              <LI>Добавьте следующий код в функцию <B>OnLButtonUp</B>: 
+              <P><B>void CPaintORamaDlg::OnLButtonUp(UINT nFlags, CPoint point) 
+              <BR>{
+              <P>////-Ваш код начинается здесь-////
+              <P>//Отключить режим рисования<BR>m_IsDrawing=FALSE;
+              <P>/*Если мышка отпущена внутри области рисования, то нарисовать 
+              фигуру 
+              окончательно*/<BR>if(m_Canvas.PtInRect(point))<BR>{<BR>m_LineEnd=point;<BR>DrawShape();<BR>}<BR>//Если 
+              нет, то 
+              стереть<BR>else<BR>{<BR>DrawShape(true);<BR>}<BR>m_LineStart=point;
+              <P>//Отпустить мышь<BR>ReleaseCapture();
+              <P>////-Ваш код заканчивается здесь-////
+              <P><BR>}
+              <P></B></P>
+              <LI>Оператор присваивания отключает режим рисования. 
+              <LI>Оператором <B>IF</B> вы проверяете была ли отпущена кнопка 
+              внутри области рисования, 
+              <LI>Если да, то рисуете окончательную фигуру, закрашивая фигуру 
+              нарисованную методом резиновай нити. 
+              <LI>Если нет, то стираете предыдущую фигуру, нарисованную методом 
+              резиновай нити. 
+              <LI>Вот и все с рисованием фигур, но нам еще предстоит, добавить 
+              код выбора стиля закраски фигур и цвет самой закраски. Запустите 
+              программу и попробуйте выбирать любую фигуру и нарисовать 
+              что-нибудь. 
+              <P></P></LI></UL><BR><BR>Добавим возможность выбора стиля и цвета 
+            заливки.<BR>
+            <CENTER><A href="http://vnews.uka.ru/html/Lessons/lesson048.htm"><B 
+            class=base2>&lt;-Назад</B></A> || <A 
+            href="http://vnews.uka.ru/html/Lessons/lesson068.htm"><B 
+            class=base2>Дальше -&gt;</B></A>
+            <P></CENTER>
+            <P>
+            <CENTER><B><FONT color=green><A 
+            href="http://vnews.uka.ru/html/Lessons/lesson008.htm">[1]</A><A 
+            href="http://vnews.uka.ru/html/Lessons/lesson018.htm"> [2]</A> <A 
+            href="http://vnews.uka.ru/html/Lessons/lesson028.htm">[3]</A><A 
+            href="http://vnews.uka.ru/html/Lessons/lesson038.htm"> [4]</A><A 
+            href="http://vnews.uka.ru/html/Lessons/lesson048.htm"> [5] </A>[6]<A 
+            href="http://vnews.uka.ru/html/Lessons/lesson068.htm"> [7]<A> <A 
+            href="http://vnews.uka.ru/html/Lessons/lesson078.htm">[8]</A> <A 
+            href="http://vnews.uka.ru/html/Lessons/lesson088.htm">[9]</A></B></FONT></CENTER></FONT></FONT></TD></TR></TBODY></TABLE></DIV></TD></TR>
+  <TR>
+    <TD borderColorDark=#800000 borderColorLight=#800000 colSpan=2>
+      <DIV align=center>
+      <TABLE border=0 cellPadding=0 cellSpacing=0 width="70%">
+        <TBODY>
+        <TR>
+          <TD><FONT color=black face="MS SANS SERIF" size=1><A 
+            href="http://algo.da.ru/" target=_top><B>Algorithm project</A>:</B> 
+            Кольцо сайтов, посвященных программированию (<A 
+            href="http://webring.da.ru/" style="COLOR: black" 
+            target=_top>подробнее о проекте WebRing...</A>)<BR>[<A 
+            href="http://www.webring.org/cgi-bin/webring?ring=ru_rk_ring;id=10;prev5" 
+            target=_top>Предыдущие 5 сайтов</A> | <A 
+            href="http://www.webring.org/cgi-bin/webring?ring=ru_rk_ring;id=10;prev" 
+            target=_top>Предыдуший</A> | <A 
+            href="http://www.webring.org/cgi-bin/webring?ring=ru_rk_ring;id=10;next" 
+            target=_top>Следующий</A> | <A 
+            href="http://www.webring.org/cgi-bin/webring?ring=ru_rk_ring;id=10;next5" 
+            target=_top>Следующие 5 сайтов</A> | <A 
+            href="http://www.webring.org/cgi-bin/webring?ring=ru_rk_ring;random" 
+            target=_top>Выбрать сайт случайным образом</A> <A 
+            href="http://www.webring.org/cgi-bin/webring?ring=ru_rk_ring;list" 
+            target=_top>Список всех сайтов</A> ] 
+      </FONT></TD></TR></TBODY></TABLE></DIV></TD></TR></TBODY></TABLE><BR>
+<TABLE bgColor=#f8f1e4 border=1 borderColor=#800000 cellPadding=0 cellSpacing=5 
+width=700>
+  <TBODY>
+  <TR>
+    <TD height=40>
+      <DIV align=center>
+      <TABLE border=0 cellPadding=0 cellSpacing=10 width="37%">
+        <TBODY>
+        <TR>
+          <TD width="16%"></TD></TR></TBODY></TABLE></DIV></TD></TR></TBODY></TABLE></DIV>
+<P>
+<CENTER>
+<DIV class=base2 style="COLOR: black">Copyright © 1999 C++ Programmers Club 
+</DIV>
+<DIV class=base2 style="COLOR: black">Author: <A 
+href="mailto:vnews@mail.ru">Kuklin Alexey</A> All Rights Reserved 
+</DIV></CENTER>
+<P> </P></BODY></HTML>

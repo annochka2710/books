@@ -1,0 +1,426 @@
+<HTML>
+<TITLE>Клуб русских программистов!</TITLE>
+<META NAME="author" CONTENT="Kuklin Alexey Email: vnews@mail.ru">
+<META NAME="keywords" CONTENT="programming, программирование, soft, helps, web webdizain, photo, photoshop, internet, examples, conference, конференция, софт, примеры программ, исходники, source, codes, MFC, MTL, vc, visual, c , c++, с++,с, документация, documentation"> 
+<META NAME="description" CONTENT="Документация C, C++ , Visual C , Object C, Quick C, Turbo C, ActiveX. Школа MFC, софт, примеры программ и исходники к ним, справочные книги и конференция.">
+
+<HEAD>
+<LINK REL=STYLESHEET TYPE="text/css" HREF="../../styles.css" TITLE="Style">
+</HEAD>
+
+
+<BODY BGCOLOR="#E9D7B1"  TEXT="black" topmargin="0" leftmargin="0" > 
+<DIV ALIGN="CENTER">
+<br>
+
+<TABLE  border=1 bgcolor=#F8F1E4 cellpadding=0 cellspacing=4  bordercolor="#800000" width=700 height=250 bordercolorlight="#F8F1E4"
+bordercolordark="#F8F1E4">  
+
+<TR>
+<TD colspan=2 height=80 bordercolorlight="#800000"
+bordercolordark="#800000">
+<DIV ALIGN="center">
+<script>
+// <!--
+var default_user_id = 65561;
+var userid = default_user_id;
+get_user_id();
+if (userid == 123456) {userid=default_user_id;}
+var page = 1;
+var rndnum = Math.round(Math.random() * 10000);
+document.write('<A HREF="http://ad.tbn.ru/bb.cgi?cmd=go&pubid=' + userid + '&pg=' + page + '&vbn=189&num=1&w=468&h=60&nocache=' + rndnum + '" target="_blank">');
+document.write('<IMG SRC="http://ad.tbn.ru/bb.cgi?cmd=ad&pubid=' + userid + '&pg=' + page + '&vbn=189&num=1&w=468&h=60&nocache=' + rndnum + '" width=468 height=60 Alt="TBN.ru" border=1></A>');
+
+function get_user_id(){
+        var tmp = window.parent.location.href;
+        var user_id = tmp.replace(/.+user_id=/,"");
+        if(user_id.search(/^[0123456789]+.*$/g)!=-1)
+                       userid = user_id;                       
+                                else
+                                  userid = default_user_id;
+}
+
+// -->
+</script>
+
+<script>
+// <!--
+var ie4 = (document.all) ? true : false;
+if (ie4) { document.write('<img src="/ad/counter" WIDTH=1 HEIGHT=0 border=0>'); }
+// -->
+</script>
+<br><b><font size=2 face=tahoma><a href="http://www.sudba.ru/" target='_blank'>Е-ЛЮБОВЬ</a>
+| <a href='http://love.uka.ru' target=_blank>ЗНАКОМСТВА</a>
+| <a href="http://chat.uka.ru/" target='_blank'><font color=red>взрывЧАТка</font></a>
+<!--
+| <a href="http://www.anekdots.ru" target='_blank'>АНЕКДОТЫ</a>
+| <a href="http://www.anekdots.ru" target='_blank'>ИГРЫ</a>
+| <a href="http://www.anekdots.ru" target='_blank'>MУЗЫКА</a>
+-->
+</font></b>
+
+</DIV>
+</TD>
+</TR>
+
+
+<TR>
+<TD bordercolorlight="#800000" bordercolordark="#800000" width=29% >
+
+<CENTER><div  style="color:#000080" class="base"><b>Меню</b></div></CENTER>
+<br>
+<font size=1>
+
+
+<IMG SRC="../../../Picture/Main/uk.gif" HSPACE=3 border=0><A HREF="../../../html/about.htm"><b class="base2">О Проекте</b><p></A>
+<IMG SRC="../../../Picture/Main/uk.gif" HSPACE=3 border=0><A HREF="../../../index.html"><b class="base2"> Новости</b><p></A>
+<IMG SRC="../../../Picture/Main/uk.gif" HSPACE=3 border=0><A HREF="../../../html/pclub.htm"><b class="base2"> Клуб Программеров С++</b><p></A>
+<IMG SRC="../../../Picture/Main/uk.gif" HSPACE=3 border=0><A HREF="../../../html/docs.htm"><b class="base2"> Документация</b><p></A>
+<IMG SRC="../../../Picture/Main/uk.gif" HSPACE=3 border=0><A HREF="../../../html/components.htm"><b class="base2"> Инструментарий</b><p></A>
+<IMG SRC="../../../Picture/Main/uk.gif" HSPACE=3 border=0><A HREF="../../../html/lesson.htm"><b class="base2"> Школа MFC</b><p></A>
+<IMG SRC="../../../Picture/Main/uk.gif" HSPACE=3 border=0><A HREF="../../../html/Examples/sources.htm"><b class="base2"> Исходники</b><p></A>
+<IMG SRC="../../../Picture/Main/uk.gif" HSPACE=3 border=0><A HREF="http://www.fido7.com/cgi-fido7/forumi.pl?user=vnews"><b class="base2">Форум С++</b><p></A>
+<IMG SRC="../../../Picture/Main/uk.gif" HSPACE=3 border=0><A HREF="../../../html/links.htm"><b class="base2"> Ссылки</b><p></A>
+<IMG SRC="../../../Picture/Main/uk.gif" HSPACE=3 border=0><A href="http://www.guestbook.ru/book.cgi?user=cppmfc&action=show"><b class="base2"> Отзывы и предложения</b><p></A>
+<IMG SRC="../../../Picture/Main/uk.gif" HSPACE=3 border=0><A HREF="../../../html/map.htm"><b class="base2"> Карта сайта</b><p></A>
+
+ <hr width="90%">
+<div align=center>
+<script language="javascript">
+<!-- 
+an=navigator.appName;d=document;function 
+pr(){d.write("<A HREF=\"http://count.ru/cgi-bin/href.cgi?", 
+"id=9203\"><img src=\"http://count.ru/cgi-bin/", 
+"count.cgi?id=9203&j=y&w="+srw+"&c="+srb+"&", 
+"ref="+escape(d.referrer)+"\" height=31 border=0", 
+" width=88></A>");}srb="na";srw="na";//--> 
+</script><script language="javascript1.2"><!-- 
+s=screen;srw=s.width;an!="Netscape"? 
+srb=s.colorDepth:srb=s.pixelDepth;//--> 
+</script><script
+     language="javascript"><!-- 
+pr();//--> 
+</script>
+<noscript></br>
+<a HREF="http://count.ru/cgi-bin/href.cgi?id=9203">
+<img height="31" width="88" border="0" src="http://count.ru/cgi-bin/count.cgi?id=9203&amp;j=n&amp;ref=" vspace="3"></a> 
+</noscript><br>
+<!--LIST100 COUNTER-->
+<A TARGET="_top" HREF="http://counter.list.ru/cgi-bin/jump?from=12813">
+<SCRIPT>
+<!--
+d=document;js=10;a='&pageref='+escape(d.referrer)
+//--></script><script
+language="JavaScript1.1"><!--
+js=11;a+='&jsbool='+navigator.javaEnabled()
+//--></script><script language="JavaScript1.2"><!--
+js=12;s=screen;a+='&res='+s.width+'*'+s.height
+a+='&depth='+(s.colorDepth?s.colorDepth:s.pixelDepth)
+//--></script><script
+language="JavaScript1.3"><!--
+js=13//--></script><script><!--
+d.write('<img src="http://counter.list.ru/cgi-bin/counter.dll'+
+'?id=12813&type=1&cd=1&bt=0&jsver='+js+a+
+'" alt="LIST100 Counter" border="0" height="40" width="88">')
+if(js>11)d.write('<'+'!-- ')//--></script><noscript> <img
+src="http://counter.list.ru/cgi-bin/counter.dll?jsver=na&amp;cd=1&amp;bt=0&amp;id=12813&amp;type=1"
+border="0" height="32" width="80" alt="LIST100 Counter" vspace="3"></noscript><script><!--
+if(js>11)d.write('--'+'>')
+//-->
+</SCRIPT></A>
+<!--LIST100 COUNTER--><br>
+
+
+<a href="http://www.index99.kiev.ua" target="_blank">
+<img src="http://www.index99.kiev.ua/cgi-bin/count1.cgi?vnews" 
+border="0" width="88" height="31" alt="Index'99" vspace="3"></a><BR>
+
+
+<!--NUMBER ONE COUNTER--><a target=_top 
+href="http://www.one.ru"><script language="javascript"><!--
+document.write("<img src=\"http://www.one.ru/cgi-bin/cnt.cgi?id=4201&t=1",
+"&r="+escape(parent.document.referrer),"\" width=88 height=31 ",
+"border=0 alt=\"become number one\">");//--></script><noscript>
+<img src="http://www.one.ru/cgi-bin/cnt.cgi?id=4201&t=1"
+width=88 height=31 alt="be number one" border=0></noscript></a>
+<!--NUMBER ONE COUNTER--><br>
+
+ <!--3P COUNTER--><a target=_top 
+href="http://www.3p.com"><script language="javascript"><!--
+document.write("<img src=\"http://www.3p.com/cgi-bin/cnt.cgi?id=620&t=1",
+"&r="+escape(parent.document.referrer),"\" width=88 height=31 ",
+"border=0 alt=\"3P.RU\">");//--></script><noscript>
+<img src="http://www.3p.com/cgi-bin/cnt.cgi?id=620&t=1"
+width=88 height=31 alt="3P.COM" border=0></noscript></a>
+<!--3P COUNTER-->
+ </br>
+ 
+
+
+<a href="http://www.stars.ru" target=_top><img src="http://1000.stars.ru/cgi-bin/1000.cgi?vckuklinsite" WIDTH=50 HEIGHT=30 BORDER=0></a><BR><P>&nbsp;
+
+</div>
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+<P>&nbsp;
+
+
+
+
+
+
+
+</TD>
+
+<TD  bordercolorlight="#800000" bordercolordark="#800000" >  
+
+<FONT FACE="TAHOMA" SIZE=3 COLOR="RED"><CENTER><B>Проигрывание Wave-файлов под MFC</B></CENTER></FONT>
+<P>
+<DIV ALIGN="CENTER">
+<TABLE WIDTH="95%">
+<TR>
+<TD><FONT FACE="TAHOMA" SIZE=2 COLOR="BLACK">
+<ul><b>
+<a href="#1">1. Введение</a><br>
+<a href="#2">2. Проигрывание Wave-файла в виде ресурса</a><br>
+<a href="#3">3. Проигрывание Wave-файла с диска</a><br>
+<a href="#4">4. Пример проекта</a><br>
+</b></ul><br>
+
+<a name="1"></a><center><h3>1. Введение</h3></center>
+
+В этой главе мы создадим программу, проигрывающую WAVE-файлы. Для начала создадим
+проект <b>mysound</b> в диалоговом режиме с использованием MFC. В начало файла
+<b>mysoundDlg.cpp</b> надо написать <b>#include &lt;mmsystem.h></b>, но это не всё, а теперь
+самое главное( если это не сделать, то будет ошибка при линковании ) :<br><br>
+
+<ul>
+1.  Выберите <b>Project  -> Settings... --> C/C++ --> Code Generation</b> и поставте 
+<b>Multithreaded DLL</b><br>
+2.  Выберите <b>Project  -> Settings... --> Link --> General</b> и поставте в поле <b>Object/Library modules</b>
+библиотеку <b>winmm.lib</b>( это очень важно, проверте !!! )<br></ul><br>
+
+<a name="2"></a><center><h3>2. Проигрывание Wave-файла в виде ресурса</h3></center>
+Первым делом надо создать ресурс, для этого в файле <b>mysound.rc2</b> надо вписать строчку
+<b>IDSOUND_CORRECT     sound       res\correct.wav</b>, где <b>IDSOUND_CORRECT</b> - индефикатор
+ресурса, <b>sound</b> - тип ресурса( название можно менять ), <b>res\correct.wav</b> - файл ресурса.
+После этого в файле <b>Resource.h</b> надо зарегистрировать ресурс: <b>#define IDSOUND_CORRECT 130</b>.
+Число <b>130</b> не должно совпадать с другими числами.<br><br>
+Как только ресурс зарегистрирован можно написать в файле <b>mysoundDlg.cpp</b> функции
+проигрывания этого ресурса : <br><br>
+
+<PRE><h5>
+static void PlayResource(LPCTSTR lpszSound)
+{
+	HRSRC hRes; // resource handle to wave file
+	HGLOBAL hData;
+	BOOL bOk = FALSE;
+	if ((hRes = ::FindResource
+			(AfxGetResourceHandle(), lpszSound,
+	  _T("sound"))) != NULL &&
+	  (hData = ::LoadResource
+			(AfxGetResourceHandle(), hRes)) != NULL)
+	{
+		// found the resource, play it
+		bOk = sndPlaySound((LPCTSTR)::LockResource(hData),
+			SND_MEMORY|SND_SYNC|SND_NODEFAULT);
+		FreeResource(hData);
+	}
+	if (!bOk)
+	{
+	     AfxMessageBox("ERROR !!! Can not play the sound. \n
+		Not find sound board !!!");	
+	}
+}
+
+inline static void PlayResource(UINT nIDS)
+	{ PlayResource(MAKEINTRESOURCE(nIDS)); }
+
+</h5></PRE>
+В фунции <b> ::FindResource(AfxGetResourceHandle(), lpszSound, _T("sound"))</b>
+ третий параметр - тип ресурса, который был описан выше.<br><br>
+
+Теперь можно проиграть ресурс : <b>PlayResource( IDSOUND_CORRECT  );</b><br>
+
+
+<a name="3"></a><center><h3>3. Проигрывание Wave-файла с диска</h3></center>
+Для проигрывания WAVE-файла с диска можно использовать функцию : <br><br>
+
+<PRE><font size="2">
+   <b>BOOL sndPlaySound(
+   	 LPCTSTR  lpszSoundName;
+    	 UINT  fuOptions;
+   );	</b>
+
+Параметры функции:
+
+</PRE>
+<B>SND_SYNC</B>&nbsp;&nbsp;Музыка играется синхронно, и функция не возвращает указатель
+		пока не будет конца файла.
+<p>
+<B>SND_ASYNC</B>	&nbsp;&nbsp;Музыка играется асинхронно, и функция возвращает указатель
+		сразу после начала проигрывания файла.
+		 Чтобы остановить проигрывание,  надо 
+		вызвать функцию SndPlaySound с параметром lpszSoundName 
+		установленным в NULL.
+<p>
+<B>SND_NODEFAULT</B> &nbsp;&nbsp;	Если файл не найден, то функция возвращает указатель
+		сразу и не проигрывает стандартный звуковой эффект Windows.<p>
+<B>SND_MEMORY</B>	&nbsp;&nbsp;Этот параметр нужен для проигрывания  Wave-файла 
+		в виде ресурса( из памяти ).
+<p>
+<B>SND_LOOP</B>	&nbsp;&nbsp;Этот параметр нужен для проигрывания  Wave-файла в 
+		циклическом режиме. Также при этом вы должны использовать
+		 влаг SND_ASYNC. Чтобы остановить проигрывание, надо
+		 вызвать функцию SndPlaySound с параметром lpszSoundName
+		 установленным в NULL.
+<p>
+<B>SND_NOSTOP</B>	Если музыка уже проигрывается, то функция возврвщает FALSE.
+<b>lpszSoundName</b>
+
+Имя файла. Если этот параметр  NULL, то проигрывание файла останавливается. 
+
+<b>fuOptions</b>
+
+Специальные опции для проигрывания музыки. Они могут быть следующими:
+
+<b>Значение	                    Описание </b>
+
+
+<b>Возвращаемое значение:</b>
+
+Если музыка проигрывается правильно, то функция возврвщает TRUE, иначе FALSE.
+
+<b><pre><h5>Пример использования:
+	BOOL bOk = sndPlaySound( "test.wav", SND_SYNC);
+	 
+	if (!bOk)
+	{
+	    AfxMessageBox("Error ! Can not play the sound. !!!");	
+	} </h5>
+</pre>
+</b>
+</font>
+<a name="4"></a><center><h3>4. Пример проекта</h3></center>
+
+<ul> <a href = "../../Visual%20Progs/MFC_Source/mysound.zip"><b>Отсюда</b></a> можно взять рабочую 
+программу под MFC,  в которой проигрываются Wave-файлы.<br><br></ul>
+Автор статьи: Андрей Уваров
+
+</TD>
+</TR>
+</TABLE>
+</DIV>
+
+</TD>
+</TR>
+<TR>
+<TD colspan=2  bordercolorlight="#800000"
+bordercolordark="#800000">
+<DIV ALIGN="CENTER">
+<TABLE BORDER=0 CELLPADDING=0 CELLSPACING=0 WIDTH=70%> 
+<TR>
+<TD>
+
+<FONT FACE="MS SANS SERIF" SIZE=1 COLOR="BLACK">
+<a href="http://algo.da.ru"   target="_top" ><b>Algorithm project</a>:</B> Кольцо сайтов, посвященных
+    программированию 
+    (<a href="http://webring.da.ru" target="_top" style="COLOR: BLACK">подробнее о проекте
+    WebRing...</a>)<br>
+    [<a href="http://www.webring.org/cgi-bin/webring?ring=ru_rk_ring;id=10;prev5"
+    target="_top">Предыдущие 5 сайтов</a> | <a
+    href="http://www.webring.org/cgi-bin/webring?ring=ru_rk_ring;id=10;prev" target="_top" >Предыдуший</a>
+    |  <a href="http://www.webring.org/cgi-bin/webring?ring=ru_rk_ring;id=10;next"
+    target="_top" >Следующий</a> |  <a
+    href="http://www.webring.org/cgi-bin/webring?ring=ru_rk_ring;id=10;next5" target="_top">Следующие
+    5 сайтов</a> |   <a  
+    href="http://www.webring.org/cgi-bin/webring?ring=ru_rk_ring;random" target="_top" >Выбрать
+    сайт случайным образом</a>   <a
+    href="http://www.webring.org/cgi-bin/webring?ring=ru_rk_ring;list" target="_top" >Список
+    всех сайтов</a> ]
+</FONT>
+</TD>
+</TR>
+</TABLE>
+</DIV>
+
+
+</TD>
+
+</TR>
+
+
+</TABLE>
+<br>
+<TABLE  border=1 bgcolor=#F8F1E4 cellpadding=0 cellspacing=5  bordercolor="#800000" width=700>  
+
+<TR>
+<TD  height=40 >
+<DIV ALIGN=CENTER>
+<table border="0" cellpadding="0"
+    cellspacing="10" width="37%">
+      <tr>
+        <td width="16%"> </td>
+      </tr>
+    </table>
+</div>
+
+</TD>
+
+</TR>
+</TABLE>
+</DIV>
+<P>
+<CENTER>
+
+<DIV CLASS="base2" style="color:black"> Copyright © 1999 C++ Programmers Club </DIV>
+<DIV CLASS="base2" style="color:black">Author:  <a href="mailto:vnews@mail.ru">Kuklin Alexey</a>  All Rights Reserved </DIV>
+</CENTER>
+<P>&nbsp;
+
+</BODY>
+</HTML>
